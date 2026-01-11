@@ -1,0 +1,19 @@
+input_path: data/extracted/extracted_documents.jsonl
+output_path: data/processed/clean_documents.jsonl
+
+encoding: utf-8
+language: en
+
+repeated_lines:
+  min_len: 18
+  min_occ: 3
+  max_len: 140
+
+quality_thresholds:
+  min_words_warning: 300
+  min_chars_warning: 2000
+  min_avg_words_per_line_warning: 3
+
+output_fields:
+  include_sentences: true
+  include_debug: true

@@ -1,0 +1,11 @@
+raw_path: data/extracted/extracted_documents.jsonl
+clean_path: data/processed/clean_documents.jsonl
+
+min_text_length: 200
+encoding: utf-8
+
+checks:
+  drop_warn_pct: 85
+  repeat_min_len: 30
+  repeat_topk: 8
+  repeat_warn_count: 10
