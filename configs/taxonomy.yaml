@@ -1,0 +1,112 @@
+taxonomy:
+  Monetary Policy:
+    Inflation:
+      - inflation
+      - cpi
+      - consumer prices
+      - price pressures
+      - inflation outlook
+
+    Interest Rates:
+      - policy rate
+      - interest rate
+      - monetary tightening
+      - monetary easing
+      - rate hike
+      - rate cut
+
+    Exchange Rate Policy:
+      - exchange rate
+      - exchange rates
+      - fx
+      - foreign exchange
+      - currency
+      - depreciation
+      - appreciation
+
+  Fiscal Policy:
+    Government Budget:
+      - fiscal deficit
+      - budget deficit
+      - government spending
+      - public expenditure
+      - fiscal balance
+      - revenue
+
+    Public Debt:
+      - public debt
+      - debt sustainability
+      - debt-to-gdp
+      - sovereign debt
+      - fiscal space
+
+    Tax Policy:
+      - tax reform
+      - taxation
+      - tax revenue
+      - tax collection
+
+  Financial Stability:
+    Banking:
+      - capital adequacy
+      - basel
+      - prudential
+      - banking sector
+      - supervision
+      - non-performing loans
+      - npl
+
+    Risk Assessment:
+      - systemic risk
+      - financial vulnerabilities
+      - vulnerabilities
+      - stress test
+      - stress testing
+      - macroprudential
+      - financial stability risk
+
+    Financial Regulation:
+      - regulation
+      - supervisory framework
+      - prudential regulation
+      - regulatory requirements
+
+  External Sector:
+    Balance of Payments:
+      - balance of payments
+      - bop
+      - current account
+      - capital flows
+      - financial account
+      - external financing
+
+    Trade:
+      - exports
+      - imports
+      - trade balance
+      - trade performance
+
+    Reserves and FX:
+      - foreign reserves
+      - international reserves
+      - reserve adequacy
+      - fx reserves
+
+  Economic Outlook:
+    Growth:
+      - gdp growth
+      - economic growth
+      - growth outlook
+      - output growth
+
+    Forecasts:
+      - economic outlook
+      - projections
+      - forecast
+      - medium-term outlook
+
+    Risks:
+      - downside risks
+      - uncertainty
+      - global risks
+      - risk scenario
