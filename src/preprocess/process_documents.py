@@ -169,12 +169,8 @@ def split_sentences(nlp, text: str) -> List[str]:
     return [s for s in sents if s]
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--config", default="configs/process.yaml")
-    args = ap.parse_args()
-
-    cfg = load_config(Path(args.config))
+def main(config_path: str) -> None:
+    cfg = load_config(Path(config_path))
 
     in_path = Path(cfg["input_path"])
     out_path = Path(cfg["output_path"])
@@ -261,4 +257,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", required=True, help="Path to process.yaml")
+    args = parser.parse_args()
+
+    main(args.config)

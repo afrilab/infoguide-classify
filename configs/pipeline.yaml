@@ -1,0 +1,11 @@
+# configs/pipeline.yaml
+
+steps:
+  step1_ingestion:
+    enabled: true
+    script: "src/ingestion/document_ingestion.py"
+    config: "configs/document_ingestion.yaml"
+  step2_processing:
+    enabled: true
+    script: "src/preprocess/process_documents.py"
+    config: "configs/process.yaml"

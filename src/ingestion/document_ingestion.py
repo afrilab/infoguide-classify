@@ -6,6 +6,7 @@ import yaml
 import pdfplumber
 import logging
 from bs4 import BeautifulSoup
+import argparse
 
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
@@ -200,4 +201,8 @@ def run_ingestion(config_path: str):
 
 
 if __name__ == "__main__":
-    run_ingestion("configs/document_ingestion.yaml")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", required=True)
+    args = parser.parse_args()
+
+    run_ingestion(args.config)
