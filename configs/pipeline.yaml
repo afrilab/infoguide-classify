@@ -9,3 +9,8 @@ steps:
     enabled: true
     script: "src/preprocess/process_documents.py"
     config: "configs/process.yaml"
+  step3_anonymization:
+    enabled: true
+    script: "src/anonymization/anonymizer.py"
+    config: "configs/anonymization.yaml"
+     

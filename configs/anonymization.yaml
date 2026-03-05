@@ -1,0 +1,103 @@
+# configs/anonymization.yaml
+
+paths:
+  input: "data/processed/clean_documents.jsonl"
+  output_docs: "data/anonymized/anonymized_documents.jsonl"
+  output_logs: "logs/pii_reports.jsonl"
+
+language: "en"
+
+# spaCy model used by Presidio's NLP engine
+spacy_model: "en_core_web_sm"
+
+# Output placeholders
+placeholders:
+  PERSON: "[PERSON]"
+  ORG: "[ORG]"
+  LOCATION: "[LOCATION]"
+  EMAIL: "[EMAIL]"
+  URL: "[URL]"
+  PHONE: "[PHONE]"
+  IP_ADDRESS: "[IP]"
+  DATE: "[DATE]"
+  CREDIT_CARD: "[CREDIT_CARD]"
+  IBAN: "[IBAN]"
+
+# Detection Strategy
+# Which entity types are handled by regex vs NER
+regex_entities:
+  - EMAIL
+  - URL
+  - PHONE
+  - IP_ADDRESS
+  - IBAN
+  - CREDIT_CARD
+  - DATE
+
+ner_entities:
+  - PERSON
+  - ORG
+  - LOCATION
+
+# Precedence & Overlap Handling
+# Regex spans are frozen and win overlaps with NER spans
+precedence:
+  first: "regex"
+  overlap_policy: "regex_wins"   # options: regex_wins
+
+# Confidence thresholding to apply to NER-based detections
+ner_min_score: 0.50
+
+# Regex Patterns
+# Enable/disable recognizers and provide patterns.
+regex:
+  EMAIL:
+    enabled: true
+    patterns:
+      - '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b'
+
+  URL:
+    enabled: true
+    patterns:
+      - '\bhttps?://[^\s<>"''()]+\b'
+      - '\bwww\.[^\s<>"''()]+\b'
+
+  PHONE:
+    enabled: true
+    patterns:
+      - '\b(?:\+?\d{1,3}[\s-]?)?(?:\(?\d{2,4}\)?[\s-]?)?\d{3,4}[\s-]?\d{4}\b'
+
+  IP_ADDRESS:
+    enabled: true
+    patterns:
+      - '\b(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)\b'
+
+  IBAN:
+    enabled: true
+    patterns:
+      - '\b[A-Z]{2}\d{2}[A-Z0-9]{11,30}\b'
+
+  CREDIT_CARD:
+    enabled: true
+    patterns:
+      - '\b(?:\d[ -]*?){13,19}\b'
+
+  DATE:
+    enabled: true
+    patterns:
+      # ISO style: 2025-12-25
+      - '\b\d{4}-\d{2}-\d{2}\b'
+      # Slash style: 25/12/2025 or 12/25/2025
+      - '\b\d{1,2}/\d{1,2}/\d{2,4}\b'
+      # Month name style: March 20, 2024
+      - '\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+\d{1,2},\s+\d{4}\b'
+
+
+# NER Entity Toggles
+ner:
+  PERSON:
+    enabled: true
+  ORG:
+    enabled: true
+  LOCATION:
+    enabled: true
