@@ -1,0 +1,48 @@
+input_path: data/processed/clean_documents.jsonl
+output_path: data/classified/classification_results.jsonl
+text_fields_priority:
+  - processed_text
+  - clean_text
+  - text
+
+method: zero_shot
+model_name: facebook/bart-large-mnli
+device: -1
+
+head_only: false
+max_chars: 15000
+
+hypothesis_template: "This document is about {}."
+
+multi_label: false
+top_k: 4
+
+min_score: 0.25
+
+min_margin: 0.03
+
+use_label_descriptions: true
+
+labels:
+  - Policy
+  - Compliance
+  - Risk
+  - Finance
+
+label_descriptions:
+  Policy: >
+    overarching principles and high-level recommendations;
+    strategic direction and policy goals
+
+  Compliance: >
+    required actions and obligations;
+    supervisory expectations, legal or regulatory requirements,
+    enforcement and compliance programs
+
+  Risk: >
+    risk assessment focus: identifying and prioritizing risks;
+    risk factors, typologies, scenarios, and risk ratings
+
+  Finance: >
+    financial sector operations: banking, payments, markets,
+    accounting and financial reporting
