@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 assign_taxonomy.py
 
@@ -46,7 +45,6 @@ def write_jsonl(path: str, records: Iterable[Dict[str, Any]]) -> None:
 
 def normalize_text(text: str) -> str:
     text = text.lower()
-    # keep it conservative: normalize whitespace only
     text = re.sub(r"\s+", " ", text).strip()
     return text
 
@@ -86,7 +84,6 @@ def compile_taxonomy_patterns(taxonomy: Dict[str, Any]) -> List[Tuple[str, str, 
             for l3 in l3_list:
                 if not isinstance(l3, str) or not l3.strip():
                     continue
-                # word-boundary-ish matching but still works for multi-word phrases
                 phrase = tokenize_phrase(l3)
                 rx = re.compile(rf"(?<!\w){phrase}(?!\w)")
                 patterns.append((str(l1), str(l2), str(l3), rx))
@@ -99,7 +96,6 @@ def extract_doc_id(doc: Dict[str, Any]) -> Optional[str]:
     for key in ("doc_id", "document_id", "id"):
         if key in doc and isinstance(doc[key], str) and doc[key].strip():
             return doc[key].strip()
-    # sometimes stored in metadata
     meta = doc.get("metadata")
     if isinstance(meta, dict):
         for key in ("doc_id", "document_id", "id"):
@@ -109,12 +105,10 @@ def extract_doc_id(doc: Dict[str, Any]) -> Optional[str]:
 
 
 def extract_text(doc: dict) -> str:
-    # Your pipeline uses this key
     val = doc.get("processed_text")
     if isinstance(val, str) and val.strip():
         return val
 
-    # Fallbacks (keep these for robustness)
     for key in ("text", "clean_text", "content", "document_text", "text_clean", "body", "chunk_text"):
         val = doc.get(key)
         if isinstance(val, str) and val.strip():
@@ -195,7 +189,6 @@ def main() -> None:
         doc_id = extract_doc_id(doc)
         if not doc_id:
             missing_id += 1
-            # keep pipeline moving but still output something traceable
             doc_id = f"unknown_{missing_id}"
 
         text = extract_text(doc)
@@ -232,7 +225,7 @@ def main() -> None:
 
     write_jsonl(args.output, out_records)
 
-    print("✅ Taxonomy assignment complete")
+    print("Taxonomy assignment complete")
     print(f"Input:   {args.input}")
     print(f"Taxonomy:{args.taxonomy}")
     print(f"Output:  {args.output}")
