@@ -55,14 +55,19 @@ def _build_candidate_labels(
     return candidates
 
 
-def _slice_text(text: str, head_only: bool, max_chars: int) -> str:
-    t = (text or "").strip()
-    if max_chars and max_chars > 0 and len(t) > max_chars:
-        if head_only:
-            return t[:max_chars]
-        return t[:max_chars]
-    return t
+def _slice_text(text: str, max_chars: int, head_only: bool) -> str:
+    text = (text or "").strip()
+    if len(text) <= max_chars:
+        return text
 
+    if head_only:
+        return text[:max_chars]
+
+    half = max_chars // 2
+    head = text[:half]
+    tail = text[-half:]
+
+    return head + "\n...\n" + tail
 
 def classify_documents(cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
 

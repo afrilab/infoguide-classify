@@ -2,59 +2,58 @@
 
 ## 1. Overall Summary
 
-| n_docs | accuracy | macro_precision | macro_recall | macro_f1 | weighted_f1 | correct_docs | wrong_docs | needs_review_count |
-| -----: | -------: | --------------: | -----------: | -------: | ----------: | -----------: | ---------: | -----------------: |
-|     11 | 0.272727 |        0.407407 |          0.4 | 0.232323 |    0.217631 |            3 |          8 |                  1 |
+|   n_docs |   accuracy |   macro_precision |   macro_recall |   macro_f1 |   weighted_f1 |   correct_docs |   wrong_docs |   needs_review_count |
+|---------:|-----------:|------------------:|---------------:|-----------:|--------------:|---------------:|-------------:|---------------------:|
+|       11 |   0.545455 |          0.833333 |           0.55 |   0.642857 |      0.662338 |              6 |            5 |                    2 |
 
 ## 2. Per-Class Metrics
 
-| label      | precision | recall |       f1 | support |
-| :--------- | --------: | -----: | -------: | ------: |
-| Finance    |         0 |      0 |        0 |       4 |
-| Compliance |         1 |    0.2 | 0.333333 |       5 |
-| Risk       |  0.222222 |      1 | 0.363636 |       2 |
+| label      |   precision |   recall |       f1 |   support |
+|:-----------|------------:|---------:|---------:|----------:|
+| Finance    |         1   |     0.75 | 0.857143 |         4 |
+| Compliance |         1   |     0.4  | 0.571429 |         5 |
+| Risk       |         0.5 |     0.5  | 0.5      |         2 |
 
 ## 3. Confusion Matrix
 
-|            | Finance | Compliance | Risk |
-| :--------- | ------: | ---------: | ---: |
-| Finance    |       0 |          0 |    4 |
-| Compliance |       0 |          1 |    3 |
-| Risk       |       0 |          0 |    2 |
+|            |   Finance |   Compliance |   Risk |
+|:-----------|----------:|-------------:|-------:|
+| Finance    |         3 |            0 |      0 |
+| Compliance |         0 |            2 |      1 |
+| Risk       |         0 |            0 |      1 |
 
 ## 4. Misclassified Documents
 
-| doc_id   | true_label | predicted_label | confidence | second_best | second_score |    margin |
-| :------- | :--------- | :-------------- | ---------: | :---------- | -----------: | --------: |
-| doc_0001 | Finance    | Risk            |   0.384671 | Policy      |     0.282966 |  0.101705 |
-| doc_0002 | Finance    | Risk            |   0.331338 | Policy      |     0.252827 | 0.0785101 |
-| doc_0003 | Compliance | Needs_Review    |   0.267908 | Finance     |     0.255858 | 0.0120499 |
-| doc_0004 | Finance    | Risk            |   0.394173 | Finance     |     0.231132 |  0.163041 |
-| doc_0005 | Finance    | Risk            |   0.575453 | Compliance  |     0.191976 |  0.383477 |
-| doc_0007 | Compliance | Risk            |   0.356323 | Policy      |     0.253337 |  0.102986 |
-| doc_0009 | Compliance | Risk            |    0.58875 | Policy      |      0.18613 |   0.40262 |
-| doc_0010 | Compliance | Risk            |   0.361803 | Compliance  |      0.30978 | 0.0520229 |
+| doc_id   | true_label   | predicted_label   |   confidence | second_best   |   second_score |    margin |
+|:---------|:-------------|:------------------|-------------:|:--------------|---------------:|----------:|
+| doc_0002 | Finance      | Policy            |     0.48089  | Risk          |       0.238133 | 0.242757  |
+| doc_0006 | Risk         | Needs_Review      |     0.389842 | Risk          |       0.368616 | 0.0212257 |
+| doc_0007 | Compliance   | Policy            |     0.511105 | Compliance    |       0.197849 | 0.313256  |
+| doc_0009 | Compliance   | Risk              |     0.419025 | Policy        |       0.260236 | 0.158788  |
+| doc_0010 | Compliance   | Needs_Review      |     0.36183  | Risk          |       0.312061 | 0.0497682 |
 
 ## 5. Prediction Confidence Statistics
 
-| predicted_label | count | avg_confidence | avg_margin |
-| :-------------- | ----: | -------------: | ---------: |
-| Risk            |     9 |       0.417259 |   0.173767 |
-| Compliance      |     1 |       0.395571 |   0.044185 |
-| Needs_Review    |     1 |       0.267908 |  0.0120499 |
+| predicted_label   |   count |   avg_confidence |   avg_margin |
+|:------------------|--------:|-----------------:|-------------:|
+| Finance           |       3 |         0.537573 |     0.331687 |
+| Compliance        |       2 |         0.522608 |     0.342134 |
+| Needs_Review      |       2 |         0.375836 |     0.035497 |
+| Policy            |       2 |         0.495998 |     0.278006 |
+| Risk              |       2 |         0.506289 |     0.284761 |
 
 ## 6. sklearn Classification Report
 
 ```text
               precision    recall  f1-score   support
 
-     Finance     0.0000    0.0000    0.0000         4
-  Compliance     1.0000    0.2000    0.3333         5
-        Risk     0.2222    1.0000    0.3636         2
+     Finance     1.0000    0.7500    0.8571         4
+  Compliance     1.0000    0.4000    0.5714         5
+        Risk     0.5000    0.5000    0.5000         2
 
-   micro avg     0.3000    0.2727    0.2857        11
-   macro avg     0.4074    0.4000    0.2323        11
-weighted avg     0.4949    0.2727    0.2176        11
+   micro avg     0.8571    0.5455    0.6667        11
+   macro avg     0.8333    0.5500    0.6429        11
+weighted avg     0.9091    0.5455    0.6623        11
 
 ```
 
