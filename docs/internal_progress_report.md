@@ -49,3 +49,10 @@ Is responsible for taxonomy ownership, system-level integration, and evaluation.
 - Consolidation of experimental results into progress and final reports
 - Ensuring system-level reproducibility, including one-command execution aligned with DoD-4 requirements
 - Ensuring repository structure, documentation quality, and DoD compliance
+
+
+## Internal Contribution to SoTA items
+
+For the SoTA survey at docs/sota_survey.md the inetrnal contribution is as follows:
+- Doğa İzci --> A.1, A.2, A.3, A.4
+- Dilan Sataloğlu --> B.1, B.2, B.3, B.4
