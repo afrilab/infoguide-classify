@@ -407,6 +407,11 @@ def classify_documents(cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
             rows_in=rows_in, candidate_labels=candidate_labels,
             base_labels=base_labels, cfg=cfg, fields_priority=fields_priority,
         )
+    elif method == "embedding":
+        rows_out = _classify_embedding(
+            rows_in=rows_in, candidate_labels=candidate_labels,
+            base_labels=base_labels, cfg=cfg, fields_priority=fields_priority,
+        )
     else:
         raise ValueError(f"Unsupported classification method: {method}")
 

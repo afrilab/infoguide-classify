@@ -10,7 +10,7 @@ model_name: facebook/bart-large-mnli
 device: -1
 
 head_only: true
-max_chars: 3000
+max_chars: 6000
 
 hypothesis_template: "This document is about {}."
 
@@ -58,14 +58,16 @@ labels:
 
 label_descriptions:
   Policy_Procedure_Contract: >
-    Formal legal and regulatory documents. Policy statements, official regulations,
-    procedures, guidelines, contracts, compliance requirements, formal authorization.
-    Includes guidance documents, FATF recommendations, supervision rules, legal obligations.
+    Formal policy documents, regulatory guidance, supervision procedures, and official protocols.
+    Includes FATF guidance, anti-money laundering rules, AML/CFT requirements, compliance procedures,
+    formal recommendations, national assessments, legal frameworks, enforcement actions, regulations.
+    Examples: FATF guidance documents, supervision procedures, policy recommendations, regulatory rules.
 
   Reports: >
-    Analytical documents presenting research findings, assessment results, and analysis.
-    Includes World Bank reports, financial sector assessments, research papers,
-    audit findings, statistical analysis, vulnerability assessments, economic data.
+    Analytical reports presenting sector assessment, financial analysis, and research findings.
+    Includes World Bank assessments, FSAP reports, development reports, financial sector analysis,
+    policy research papers, vulnerability assessments, statistical analysis, academic research.
+    Examples: World Bank reports, FSAP country assessments, policy research papers, financial analysis.
 
   Internal_Communications: >
     Internal organizational memos and announcements for staff communication.

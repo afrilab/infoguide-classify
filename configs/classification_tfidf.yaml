@@ -1,0 +1,41 @@
+input_path: data/processed/clean_documents.jsonl
+output_path: data/classified/classification_results.jsonl
+text_fields_priority:
+- processed_text
+- clean_text
+- text
+method: tfidf
+head_only: true
+max_chars: 6000
+top_k: 4
+min_score: 0.1
+min_margin: 0.0
+use_label_descriptions: true
+tfidf_ngram_min: 1
+tfidf_ngram_max: 2
+tfidf_min_df: 1
+tfidf_stop_words: english
+labels:
+- Policy_Procedure_Contract
+- Reports
+- Internal_Communications
+- Emails
+- HR_Documents
+- Forms_Structured
+label_descriptions:
+  Policy_Procedure_Contract: Formal policy documents, regulatory guidance, supervision
+    procedures, and official protocols. Includes FATF guidance, anti-money laundering
+    rules, AML/CFT requirements, compliance procedures, formal recommendations, national
+    assessments, legal frameworks, enforcement actions, regulations.
+  Reports: Analytical reports presenting sector assessment, financial analysis, and
+    research findings. Includes World Bank assessments, FSAP reports, development
+    reports, financial sector analysis, policy research papers, vulnerability assessments,
+    statistical analysis, academic research.
+  Internal_Communications: Internal organizational memos, announcements, and communications
+    for staff. Includes meeting minutes, internal announcements, team updates, project
+    notes.
+  Emails: Email messages and electronic correspondence. Informal communication format.
+  HR_Documents: Personnel and employee-related documents. Employee records, human
+    resources, recruitment, compensation, employment agreements, performance evaluation.
+  Forms_Structured: Standardized forms with fields, templates, surveys, registration
+    documents, organized structured data collection documents.
