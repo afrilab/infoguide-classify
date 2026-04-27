@@ -17,32 +17,67 @@ hypothesis_template: "This document is about {}."
 multi_label: false
 top_k: 4
 
-min_score: 0.35
+min_score: 0.10
 
 min_margin: 0.08
 
 use_label_descriptions: true
 
+# ---------------------------------------------------------------------------
+# LABELING PROTOCOL
+#
+# Labels align with document types in the organization.
+# Each label describes a document's PRIMARY TYPE and CHARACTERISTICS.
+#
+# Document Type Classification:
+#   1. Policy / Procedure / Contract Documents
+#      - Formal, long, low but critical PII, context-based detection
+#   2. Reports (Financial / Incident / Audit)
+#      - Semi-formal, includes dates, organizations, and locations,
+#        contains some hidden PII
+#   3. Internal Communications (internal announcements, memos, meeting notes)
+#      - Mixed structure, combination of informal and formal tone,
+#        scattered PII
+#   4. Emails
+#      - High PII density, noisy, reflects real-world scenarios
+#   5. HR Documents / Communications (HR emails, employee records, internal HR messages)
+#      - Critical PII, sensitive data
+#   6. Forms / Structured Documents
+#      - Regex-heavy PII, structured fields
+#
+
+# ---------------------------------------------------------------------------
+
 labels:
-  - Policy
-  - Compliance
-  - Risk
-  - Finance
+  - Policy_Procedure_Contract
+  - Reports
+  - Internal_Communications
+  - Emails
+  - HR_Documents
+  - Forms_Structured
 
 label_descriptions:
-  Policy: >
-    high-level policy statements, strategic guidance, governance principles,
-    policy framework, organizational direction, general policy intent
+  Policy_Procedure_Contract: >
+    Formal legal and regulatory documents. Policy statements, official regulations,
+    procedures, guidelines, contracts, compliance requirements, formal authorization.
+    Includes guidance documents, FATF recommendations, supervision rules, legal obligations.
 
-  Compliance: >
-    mandatory legal or regulatory requirements, compliance obligations,
-    required controls, enforcement, supervision, audit requirements,
-    reporting duties, sanctions, formal compliance procedures
+  Reports: >
+    Analytical documents presenting research findings, assessment results, and analysis.
+    Includes World Bank reports, financial sector assessments, research papers,
+    audit findings, statistical analysis, vulnerability assessments, economic data.
 
-  Risk: >
-    risk identification, risk assessment, threat scenarios,
-    vulnerabilities, typologies, exposure analysis, risk ratings
+  Internal_Communications: >
+    Internal organizational memos and announcements for staff communication.
+    Includes meeting minutes, internal announcements, team updates, project notes.
 
-  Finance: >
-    accounting, budgeting, financial statements, payments,
-    banking operations, market activity, financial transactions
+  Emails: >
+    Email messages and electronic correspondence. Informal communication format.
+
+  HR_Documents: >
+    Personnel and employee-related documents. Employee records, human resources,
+    recruitment, compensation, employment agreements, performance evaluation.
+
+  Forms_Structured: >
+    Standardized forms with fields, templates, surveys, registration documents,
+    organized structured data collection documents.

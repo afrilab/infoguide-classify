@@ -10,25 +10,22 @@ from sklearn.metrics import (
 
 ROOT = Path(__file__).resolve().parents[2]
 PRED_PATH = ROOT / "data" / "classified" / "classification_results.jsonl"
+GT_PATH = ROOT / "data" / "eval" / "classification_gt.jsonl"
 OUT_DIR = ROOT / "logs"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# Ground truth: Doc1-Doc11
-ground_truth = {
-    "doc_0001": "Finance",
-    "doc_0002": "Finance",
-    "doc_0003": "Compliance",
-    "doc_0004": "Finance",
-    "doc_0005": "Finance",
-    "doc_0006": "Risk",
-    "doc_0007": "Compliance",
-    "doc_0008": "Compliance",
-    "doc_0009": "Compliance",
-    "doc_0010": "Compliance",
-    "doc_0011": "Risk",
-}
+TARGET_LABELS = ["Policy_Procedure_Contract", "Reports", "Internal_Communications", "Emails", "HR_Documents", "Forms_Structured"]
 
-TARGET_LABELS = ["Finance", "Compliance", "Risk"]
+
+def load_ground_truth(path: Path) -> pd.DataFrame:
+    rows = []
+    with path.open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                rows.append(json.loads(line))
+    df = pd.DataFrame(rows)
+    return df[["doc_id", "true_label"]]
 
 
 def load_predictions(path: Path) -> pd.DataFrame:
@@ -58,10 +55,7 @@ def load_predictions(path: Path) -> pd.DataFrame:
 
 def main():
     pred_df = load_predictions(PRED_PATH)
-
-    gt_df = pd.DataFrame(
-        {"doc_id": list(ground_truth.keys()), "true_label": list(ground_truth.values())}
-    )
+    gt_df = load_ground_truth(GT_PATH)
 
     eval_df = (
         gt_df.merge(pred_df, on="doc_id", how="left")
@@ -182,13 +176,7 @@ def main():
         f.write("## 6. sklearn Classification Report\n\n")
         f.write("```text\n")
         f.write(class_report_text)
-        f.write("\n```\n\n")
-
-        f.write("## 7. Interpretation\n\n")
-        f.write("- The model over-predicts **Risk**.\n")
-        f.write("- **Finance** is completely missed in this evaluation slice.\n")
-        f.write("- **Compliance** has high precision but low recall.\n")
-        f.write("- `Needs_Review` is treated as an incorrect prediction for label metrics.\n")
+        f.write("\n```\n")
 
     print("Saved:")
     print(OUT_DIR / "classification_report.md")
