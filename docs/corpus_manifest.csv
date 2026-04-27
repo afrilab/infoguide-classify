@@ -1,39 +1,43 @@
 doc_id,filename,file_format,source,source_url,language,retrieval_date,publication_date,license,simulated_banking_role
-doc_0001,784970BR0FSAP000Box377344B00PUBLIC0.pdf,pdf,world_bank,https://openknowledge.worldbank.org/server/api/core/bitstreams/a3ee3c65-1982-5537-b44f-096e93a04c63/content,en,2025-12-25,2011-11-x,open access,Risk Analyst / Financial Stability Analyst 
-doc_0002,WPS6577.pdf,pdf,world_bank,https://openknowledge.worldbank.org/server/api/core/bitstreams/7b175a77-5fc0-5b74-958a-63c8e13e17f3/content,en,2025-12-25,2013-08-x,open access,Risk Analyst / Financial Stability Analyst 
+doc_0001,784970BR0FSAP000Box377344B00PUBLIC0.pdf,pdf,world_bank,https://openknowledge.worldbank.org/server/api/core/bitstreams/a3ee3c65-1982-5537-b44f-096e93a04c63/content,en,2025-12-25,2011-11-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0002,WPS6577.pdf,pdf,world_bank,https://openknowledge.worldbank.org/server/api/core/bitstreams/7b175a77-5fc0-5b74-958a-63c8e13e17f3/content,en,2025-12-25,2013-08-x,open access,Risk Analyst / Financial Stability Analyst
 doc_0003,953890WP0Box380otection0August02013.pdf,pdf,world_bank,https://openknowledge.worldbank.org/server/api/core/bitstreams/63ca2de0-8c1d-5219-b197-64a57a062fa6/content,en,2025-12-25,2013-08-16,open access,Compliance Officer
-doc_0004,850110BR0FSAP00C0Disclosed020200140.pdf,pdf,world_bank,https://openknowledge.worldbank.org/server/api/core/bitstreams/0ae1ec08-f7e0-5b1a-b455-3c1db99748f8/content,en,2025-12-29,2014-01-x,open access,Risk Analyst / Financial Stability Analyst 
-doc_0005,926180FSAP0P1300PUBLIC00Vietnam0FSA.pdf,pdf,world_bank,https://openknowledge.worldbank.org/server/api/core/bitstreams/19fa3851-d567-5619-90fd-96242410e660/content,en,2025-12-29,2014-06-x,open access,Risk Analyst / Financial Stability Analyst 
-doc_0006,Guidance on Risk-Based Supervision.html,html,financial_action_task_force,https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Guidance-rba-supervision.html,en, 2025-12-29,2021-03-04,open access,Risk Analyst / Financial Stability Analyst 
+doc_0004,850110BR0FSAP00C0Disclosed020200140.pdf,pdf,world_bank,https://openknowledge.worldbank.org/server/api/core/bitstreams/0ae1ec08-f7e0-5b1a-b455-3c1db99748f8/content,en,2025-12-29,2014-01-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0005,926180FSAP0P1300PUBLIC00Vietnam0FSA.pdf,pdf,world_bank,https://openknowledge.worldbank.org/server/api/core/bitstreams/19fa3851-d567-5619-90fd-96242410e660/content,en,2025-12-29,2014-06-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0006,Guidance on Risk-Based Supervision.html,html,financial_action_task_force,https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Guidance-rba-supervision.html,en, 2025-12-29,2021-03-04,open access,Risk Analyst / Financial Stability Analyst
 doc_0007,Jurisdictions under Increased Monitoring - 24 October 2025.html,html,financial_action_task_force,https://www.fatf-gafi.org/content/fatf-gafi/en/publications/High-risk-and-other-monitored-jurisdictions/increased-monitoring-october-2025.html,en, 2025-12-29,2025-10-24,open access,Compliance Officer
 doc_0008,RBA-Effective-supervision-and-enforcement.pdf,pdf, financial_action_task_force,https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Rba-effective-supervision-and-enforcement.html, en,2025-12-25,2015-10-x,open access ,Risk Analyst / Financial Stability Analyst
 doc_0009,Guidance-Beneficial-Ownership-Transparency-Legal-Arrangements.pdf,pdf, financial_action_task_force,https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Guidance-Beneficial-Ownership-Transparency-Legal-Arrangements.html,en,2025-12-25,2024-03-x,open access,Compliance Officer
 doc_0010,RBA-Accounting-Profession.pdf, pdf, financial_action_task_force,https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Rba-accounting-profession.html,en,2025-12-25,2019-06-x,open access,Compliance Officer
 doc_0011,Money Laundering National Risk Assessment Toolkit.pdf, pdf, FAfinancial_action_task_force,https://www.fatf-gafi.org/en/publications/Methodsandtrends/Money-Laundering-National-Risk-Assessment-Toolkit-Annexes.html,en,2025-12-25,2025-08-x,open access,Risk Analyst / Financial Stability Analyst
-doc_0012,anonymization01.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0013,anonymization02.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0014,anonymization03.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0015,anonymization04.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0016,anonymization05.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0017,anonymization06.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0018,anonymization07.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0019,anonymization08.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0020,anonymization09.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0021,anonymization10.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0022,anonymization11.pdf,pdf,anonymization_data, ,en, , , ai-generated, ,
-doc_0023,Financial Inclusion Guidance-Public Consultation-Feb2025.docx,docx,financial_action_task_force,,en,,2025-02-x,open access,Compliance Officer
-doc_0024,Guidance-Correspondent-Banking-Services.pdf,pdf,financial_action_task_force,,en,,,open access,Compliance Officer
-doc_0025,Guidance-Financial-Inclusion-Anti-Money-Laundering-Terrorist-Financing-Measures.pdf,pdf,financial_action_task_force,,en,,,open access,Compliance Officer
-doc_0026,June2023-Targeted-Update-VA-VASP.pdf,pdf,financial_action_task_force,,en,,2023-06-x,open access,Compliance Officer
-doc_0027,Updated-2017-FATF-2013-Guidance.pdf,pdf,financial_action_task_force,,en,,2017-x,open access,Risk Analyst / Financial Stability Analyst
-doc_0028,aggregatereportonthecomprehensiveassessmentexsum201410.en.pdf,pdf,european_central_bank,,en,,2014-10-x,open access,Risk Analyst / Financial Stability Analyst
-doc_0029,aggregatereportonthecomprehensiveassessmentexsum201510.en.pdf,pdf,european_central_bank,,en,,2015-10-x,open access,Risk Analyst / Financial Stability Analyst
-doc_0030,ssm.aroutcomesrepitriskquestionnaire202007~9ed9aaa17d.en.pdf,pdf,european_central_bank,,en,,2020-07-x,open access,Risk Analyst / Financial Stability Analyst
-doc_0031,ssm.creditunderwriting202006~d2a9e3329c.en.pdf,pdf,european_central_bank,,en,,2020-06-x,open access,Risk Analyst / Financial Stability Analyst
-doc_0032,ssm.leveraged_transactions_guidance_201705.en.pdf,pdf,european_central_bank,,en,,2017-05-x,open access,Risk Analyst / Financial Stability Analyst
-doc_0033,ssm.reportbanksicaappractices202007~fc93bf05d9.en.pdf,pdf,european_central_bank,,en,,2020-07-x,open access,Risk Analyst / Financial Stability Analyst
-doc_0034,ssm.reportrecoveryplans201807.en.pdf,pdf,european_central_bank,,en,,2018-07-x,open access,Risk Analyst / Financial Stability Analyst
-doc_0035,ssm.supervisory_guides202401_manual.en.pdf,pdf,european_central_bank,,en,,2024-01-x,open access,Compliance Officer
-doc_0036,ssm.supervisory_guides240503_riskreporting.en.pdf,pdf,european_central_bank,,en,,2024-05-03,open access,Risk Analyst / Financial Stability Analyst
-doc_0037,ssmguidebankingsupervision201411.en.pdf,pdf,european_central_bank,,en,,2014-11-x,open access,Compliance Officer
-doc_0038,ssmqr20144.en.pdf,pdf,european_central_bank,,en,,2014-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0012,Financial Inclusion Guidance-Public Consultation-Feb2025.docx,docx,financial_action_task_force,,en,,2025-02-x,open access,Compliance Officer
+doc_0013,Guidance-Correspondent-Banking-Services.pdf,pdf,financial_action_task_force,,en,,,open access,Compliance Officer
+doc_0014,Guidance-Financial-Inclusion-Anti-Money-Laundering-Terrorist-Financing-Measures.pdf,pdf,financial_action_task_force,,en,,,open access,Compliance Officer
+doc_0015,June2023-Targeted-Update-VA-VASP.pdf,pdf,financial_action_task_force,,en,,2023-06-x,open access,Compliance Officer
+doc_0016,Updated-2017-FATF-2013-Guidance.pdf,pdf,financial_action_task_force,,en,,2017-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0017,aggregatereportonthecomprehensiveassessmentexsum201410.en.pdf,pdf,european_central_bank,,en,,2014-10-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0018,aggregatereportonthecomprehensiveassessmentexsum201510.en.pdf,pdf,european_central_bank,,en,,2015-10-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0019,ssm.aroutcomesrepitriskquestionnaire202007~9ed9aaa17d.en.pdf,pdf,european_central_bank,,en,,2020-07-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0020,ssm.creditunderwriting202006~d2a9e3329c.en.pdf,pdf,european_central_bank,,en,,2020-06-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0021,ssm.leveraged_transactions_guidance_201705.en.pdf,pdf,european_central_bank,,en,,2017-05-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0022,ssm.reportbanksicaappractices202007~fc93bf05d9.en.pdf,pdf,european_central_bank,,en,,2020-07-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0023,ssm.reportrecoveryplans201807.en.pdf,pdf,european_central_bank,,en,,2018-07-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0024,ssm.supervisory_guides202401_manual.en.pdf,pdf,european_central_bank,,en,,2024-01-x,open access,Compliance Officer
+doc_0025,ssm.supervisory_guides240503_riskreporting.en.pdf,pdf,european_central_bank,,en,,2024-05-03,open access,Risk Analyst / Financial Stability Analyst
+doc_0026,ssmguidebankingsupervision201411.en.pdf,pdf,european_central_bank,,en,,2014-11-x,open access,Compliance Officer
+doc_0027,ssmqr20144.en.pdf,pdf,european_central_bank,,en,,2014-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0028,d486.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d486.pdf,en,,2019-11-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0029,d487.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d487.pdf,en,,2019-11-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0030,d500.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d500.pdf,en,,2020-04-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0031,d509.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d509.pdf,en,,2020-08-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0032,d511.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d511.pdf,en,,2020-11-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0033,d513.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d513.pdf,en,,2020-12-x,open access,Compliance Officer
+doc_0034,d516.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d516.pdf,en,,2021-03-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0035,d539.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d539.pdf,en,,2022-09-x,open access,Compliance Officer
+doc_0036,d555.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d555.pdf,en,,2023-10-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0037,d556.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d556.pdf,en,,2023-10-17,open access,Compliance Officer
+doc_0038,d573.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d573.pdf,en,,2024-04-25,open access,Compliance Officer
+doc_0039,d574.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d574.pdf,en,,2024-04-30,open access,Risk Analyst / Financial Stability Analyst
+doc_0040,d584.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d584.pdf,en,,2025-01-31,open access,Risk Analyst / Financial Stability Analyst
+doc_0041,d588.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d588.pdf,en,,2024-12-x,open access,Risk Analyst / Financial Stability Analyst
+doc_0042,d591.pdf,pdf,bis,https://www.bis.org/bcbs/publ/d591.pdf,en,,2025-02-x,open access,Risk Analyst / Financial Stability Analyst
