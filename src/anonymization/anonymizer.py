@@ -141,13 +141,19 @@ def build_operators(placeholders: Dict[str, str]) -> Dict[str, OperatorConfig]:
     return ops
 
 
+ENTITY_TYPE_MAP = {
+    "ORGANIZATION": "ORG",
+}
+
 def build_prediction_output(doc_id: str, text: str, final_results) -> Dict[str, Any]:
     entities = []
 
     for result in final_results:
+        mapped_type = ENTITY_TYPE_MAP.get(result.entity_type, result.entity_type)
+
         entities.append(
             {
-                "type": result.entity_type,
+                "type": mapped_type,
                 "text": text[result.start:result.end],
                 "start": result.start,
                 "end": result.end,

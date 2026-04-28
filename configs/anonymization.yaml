@@ -13,7 +13,7 @@ spacy_model: "en_core_web_sm"
 # Output placeholders
 placeholders:
   PERSON: "[PERSON]"
-  ORG: "[ORG]"
+  ORGANIZATION: "[ORG]"
   LOCATION: "[LOCATION]"
   EMAIL: "[EMAIL]"
   PHONE: "[PHONE]"
@@ -32,7 +32,7 @@ regex_entities:
 
 ner_entities:
   - PERSON
-  - ORG
+  - ORGANIZATION
   - LOCATION
 
 # Precedence & Overlap Handling
@@ -55,7 +55,7 @@ regex:
   PHONE:
     enabled: true
     patterns:
-      - '\b(?:\+?\d{1,3}[\s-]?)?(?:\(?\d{2,4}\)?[\s-]?)?\d{3,4}[\s-]?\d{4}\b'
+      - '(?<!\w)(?:\+?\d{1,3}[\s-]?)?(?:\(?\d{2,4}\)?[\s-]?)?\d{3,4}[\s-]?\d{4}(?!\w)'
 
   IBAN:
     enabled: true
@@ -82,7 +82,7 @@ regex:
 ner:
   PERSON:
     enabled: true
-  ORG:
+  ORGANIZATION:
     enabled: true
   LOCATION:
     enabled: true
