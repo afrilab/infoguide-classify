@@ -10,10 +10,14 @@ steps:
     script: "src/preprocess/process_documents.py"
     config: "configs/process.yaml"
   step3_anonymization:
-    enabled: false
+    enabled: true
     script: "src/anonymization/anonymizer.py"
     config: "configs/anonymization.yaml"
-  step4_classification:
+  step4_anonymization_evaluation:
     enabled: true
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluator.yaml"
+  step5_classification:
+    enabled: false
     script: "src/classification/classify_documents.py"
     config: "configs/classification.yaml"
