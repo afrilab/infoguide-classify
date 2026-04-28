@@ -208,14 +208,22 @@ def main(config_path: str) -> None:
 
         step_debug: Dict[str, Any] = {}
 
-        text0 = normalize_whitespace(raw_text)
-        text1, dbg1 = remove_boilerplate(text0)
-        step_debug["remove_boilerplate"] = dbg1
+        if d.get("source") == "synthetic":
+            cleaned_text = raw_text
+            step_debug["synthetic_bypass"] = {
+                "enabled": True,
+                "reason": "Synthetic benchmark documents bypass preprocessing to preserve exact spans."
+            }
+        else:
+            text0 = normalize_whitespace(raw_text)
 
-        text2, removed_rep = drop_repeated_lines(text1, repeated_lines)
-        step_debug["drop_repeated_lines"] = {"removed_lines": removed_rep}
+            text1, dbg1 = remove_boilerplate(text0)
+            step_debug["remove_boilerplate"] = dbg1
 
-        cleaned_text = normalize_whitespace(text2)
+            text2, removed_rep = drop_repeated_lines(text1, repeated_lines)
+            step_debug["drop_repeated_lines"] = {"removed_lines": removed_rep}
+
+            cleaned_text = normalize_whitespace(text2)
 
         sentences = split_sentences(nlp, cleaned_text)
 
