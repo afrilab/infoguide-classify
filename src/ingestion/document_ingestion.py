@@ -46,18 +46,16 @@ def extract_text_from_pdf(pdf_path: Path) -> str:
 
     return "\n".join(text_chunks)
 
-# Function to extract text from .txt files
-def extract_text_from_txt(txt_path: Path) -> str:
-    with open(txt_path, "r", encoding="utf-8") as f:
+def extract_text_from_txt(txt_path: Path, encoding: str = "utf-8") -> str:
+    with open(txt_path, "r", encoding=encoding) as f:
         return f.read()
 
-# Function to extract text from html files using BeautifulSoup
-def extract_text_from_html(html_path: Path) -> str:
-    html = html_path.read_text(encoding="utf-8", errors="ignore")
-    soup = BeautifulSoup(html, "html.parser")
-    raw_text = soup.get_text(separator="\n")  # Extract all text
 
-    # Remove empty lines and extra whitespace
+def extract_text_from_html(html_path: Path, encoding: str = "utf-8") -> str:
+    html = html_path.read_text(encoding=encoding, errors="ignore")
+    soup = BeautifulSoup(html, "html.parser")
+    raw_text = soup.get_text(separator="\n")
+
     cleaned_lines = [
         line.strip()
         for line in raw_text.splitlines()
@@ -65,16 +63,16 @@ def extract_text_from_html(html_path: Path) -> str:
     ]
     return "\n".join(cleaned_lines)
 
-# Function to call the right text extraction function based on file format
-def extract_raw_text(file_path: Path) -> str:
+
+def extract_raw_text(file_path: Path, encoding: str = "utf-8") -> str:
     ext = file_path.suffix.lower()
 
     if ext == ".pdf":
         return extract_text_from_pdf(file_path)
     if ext == ".txt":
-        return extract_text_from_txt(file_path)
+        return extract_text_from_txt(file_path, encoding)
     if ext == ".html":
-        return extract_text_from_html(file_path)
+        return extract_text_from_html(file_path, encoding)
 
     raise ValueError(f"Unsupported file type: {ext}")
 
@@ -136,7 +134,7 @@ def assess_extraction_quality(stats: dict) -> dict:
     }
 
 # Function to combine manifest metadata + extracted text + analysis into a single record
-def build_document_record(doc_id: str, manifest_entry: dict, raw_text: str) -> dict:
+def build_document_record(manifest_entry: dict, raw_text: str) -> dict:
     stats = compute_text_stats(raw_text)
     quality = assess_extraction_quality(stats)
 
@@ -148,12 +146,101 @@ def build_document_record(doc_id: str, manifest_entry: dict, raw_text: str) -> d
 
     return record
 
-# Function to print a health report for the extraction process
-def print_ingestion_summary(results: list[dict]):
+def build_synthetic_manifest_entry(file_path: Path) -> dict:
+    doc_id = file_path.stem
+
+    return {
+        "doc_id": doc_id,
+        "filename": file_path.name,
+        "file_format": file_path.suffix.replace(".", "").lower(),
+        "source": "synthetic",
+        "source_url": "",
+        "language": "en",
+        "retrieval_date": "",
+        "publication_date": "",
+        "license": "synthetic",
+        "simulated_banking_role": "",
+        "document_type": "synthetic",
+    }
+
+
+def process_manifest_source(
+    source_cfg: dict,
+    output_file,
+    encoding: str,
+) -> list[dict]:
+    input_dir = source_cfg["input_dir"]
+    supported_types = source_cfg["supported_types"]
+    manifest_path = source_cfg["manifest_path"]
+
+    manifest = load_manifest(manifest_path)
+    files = discover_files(input_dir, supported_types)
+
+    results = []
+
+    for file_path in files:
+        filename = file_path.name
+        entry = find_manifest_entry(filename, manifest)
+
+        if entry is None:
+            print(f"[WARN] No manifest entry for {filename}, skipping.")
+            continue
+
+        raw_text = extract_raw_text(file_path, encoding)
+
+        doc = build_document_record(
+            manifest_entry=entry,
+            raw_text=raw_text,
+        )
+
+        output_file.write(json.dumps(doc, ensure_ascii=False) + "\n")
+        results.append(doc)
+
+        print(
+            f"[INGEST][corpus] {doc['doc_id']} | "
+            f"{doc['extraction_quality']['status']}"
+        )
+
+    return results
+
+
+def process_synthetic_source(
+    source_cfg: dict,
+    output_file,
+    encoding: str,
+) -> list[dict]:
+    input_dir = source_cfg["input_dir"]
+    supported_types = source_cfg["supported_types"]
+
+    files = discover_files(input_dir, supported_types)
+
+    results = []
+
+    for file_path in files:
+        raw_text = extract_raw_text(file_path, encoding)
+        entry = build_synthetic_manifest_entry(file_path)
+
+        doc = build_document_record(
+            manifest_entry=entry,
+            raw_text=raw_text,
+        )
+
+        output_file.write(json.dumps(doc, ensure_ascii=False) + "\n")
+        results.append(doc)
+
+        print(
+            f"[INGEST][synthetic] {doc['doc_id']} | "
+            f"{doc['extraction_quality']['status']}"
+        )
+
+    return results
+
+
+def print_ingestion_summary(results: list[dict]) -> None:
     total = len(results)
     warnings = sum(
-        1 for r in results
-        if r["extraction_quality"]["status"] == "warning"
+        1 for record in results
+        if record["extraction_quality"]["status"] == "warning"
     )
 
     print("\n--- INGESTION SUMMARY ---")
@@ -162,40 +249,41 @@ def print_ingestion_summary(results: list[dict]):
     print(f"Healthy: {total - warnings}")
 
 
-# Function that serves as main orcestrator, to run the whole pdf extraction pipeline
-def run_ingestion(config_path: str):
+def run_ingestion(config_path: str) -> None:
     cfg = load_config(config_path)
-    manifest = load_manifest(cfg["manifest_path"])
-    files = discover_files(cfg["input_dir"], cfg["supported_types"])
 
-    os.makedirs(Path(cfg["output_path"]).parent, exist_ok=True)
+    output_path = cfg["output_path"]
+    encoding = cfg.get("encoding", "utf-8")
+    sources = cfg.get("sources", {})
+
+    os.makedirs(Path(output_path).parent, exist_ok=True)
 
     results = []
 
-    with open(cfg["output_path"], "w", encoding="utf-8") as out_f:
-        for file_path in files:
-            filename = file_path.name
-            entry = find_manifest_entry(filename, manifest)
-
-            if entry is None:
-                print(f"[WARN] No manifest entry for {filename}, skipping.")
-                continue
-
-            raw_text = extract_raw_text(file_path)
-
-            doc = build_document_record(
-                doc_id=entry["doc_id"],
-                manifest_entry=entry,
-                raw_text=raw_text
+    with open(output_path, "w", encoding="utf-8") as out_f:
+        corpus_cfg = sources.get("corpus", {})
+        if corpus_cfg.get("enabled", False):
+            results.extend(
+                process_manifest_source(
+                    source_cfg=corpus_cfg,
+                    output_file=out_f,
+                    encoding=encoding,
+                )
             )
+        else:
+            print("[INGEST] corpus source disabled.")
 
-            out_f.write(json.dumps(doc, ensure_ascii=False) + "\n")
-            results.append(doc)
-
-            print(
-                f"[INGEST] {doc['doc_id']} | "
-                f"{doc['extraction_quality']['status']} "
+        synthetic_cfg = sources.get("synthetic", {})
+        if synthetic_cfg.get("enabled", False):
+            results.extend(
+                process_synthetic_source(
+                    source_cfg=synthetic_cfg,
+                    output_file=out_f,
+                    encoding=encoding,
+                )
             )
+        else:
+            print("[INGEST] synthetic source disabled.")
 
     print_ingestion_summary(results)
 
