@@ -5,12 +5,44 @@ from typing import Any, Dict, List, Tuple
 
 import yaml
 import spacy
-from presidio_analyzer import AnalyzerEngine
+from presidio_analyzer import AnalyzerEngine, Pattern, PatternRecognizer
 from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import OperatorConfig
 
-from regex_recognizers import build_regex_recognizers
+MODEL_NAME = "presidio"
+
+def build_regex_recognizers(regex_cfg: Dict[str, Any]) -> List[PatternRecognizer]:
+    """
+    Builds Presidio PatternRecognizers from configs/anonymization.yaml.
+    """
+    recognizers: List[PatternRecognizer] = []
+
+    for entity_type, cfg in regex_cfg.items():
+        enabled = bool(cfg.get("enabled", True))
+        if not enabled:
+            continue
+
+        presidio_patterns: List[Pattern] = []
+
+        for i, pattern_str in enumerate(cfg.get("patterns", [])):
+            presidio_patterns.append(
+                Pattern(
+                    name=f"{entity_type}_pattern_{i}",
+                    regex=pattern_str,
+                    score=1.0,
+                )
+            )
+
+        recognizer = PatternRecognizer(
+            supported_entity=entity_type,
+            patterns=presidio_patterns,
+            name=f"REGEX_{entity_type}",
+        )
+
+        recognizers.append(recognizer)
+
+    return recognizers
 
 # Load YAML config into a dict
 def load_yaml(path: str | Path) -> Dict[str, Any]:
@@ -109,10 +141,35 @@ def build_operators(placeholders: Dict[str, str]) -> Dict[str, OperatorConfig]:
     return ops
 
 
-# CLI entry: read config, run detection + anonymization, write outputs/logs
+def build_prediction_output(doc_id: str, text: str, final_results) -> Dict[str, Any]:
+    entities = []
+
+    for result in final_results:
+        entities.append(
+            {
+                "type": result.entity_type,
+                "text": text[result.start:result.end],
+                "start": result.start,
+                "end": result.end,
+                "score": float(result.score) if result.score is not None else None,
+            }
+        )
+
+    return {
+        "doc_id": doc_id,
+        "model": MODEL_NAME,
+        "entities": entities,
+    }
+
+
+# CLI entry: read config, run detection + anonymization, write pipeline and evaluation outputs
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config", required=True, help="Path to configs/anonymization.yaml")
+    parser.add_argument(
+        "--config",
+        required=True,
+        help="Path to configs/anonymization.yaml",
+    )
     args = parser.parse_args()
 
     cfg = load_yaml(args.config)
@@ -120,16 +177,18 @@ def main() -> None:
     spacy_model = cfg.get("spacy_model", "en_core_web_sm")
     placeholders = cfg["placeholders"]
 
-    # Entity scope: regex list is direct, NER list is filtered by per-entity toggles
     regex_entities = set(cfg.get("regex_entities", []))
+
     ner_entities_defined = set(cfg.get("ner_entities", []))
     ner_toggles = cfg.get("ner", {}) or {}
-    ner_entities = {
-        et for et in ner_entities_defined
-        if bool(ner_toggles.get(et, {}).get("enabled", True))
-    }
-    ner_min_score = float(cfg.get("ner_min_score", 0.50))
 
+    ner_entities = {
+        entity_type
+        for entity_type in ner_entities_defined
+        if bool(ner_toggles.get(entity_type, {}).get("enabled", True))
+    }
+
+    ner_min_score = float(cfg.get("ner_min_score", 0.50))
     regex_cfg = cfg.get("regex", {})
 
     analyzer = build_analyzer(spacy_model, regex_cfg)
@@ -137,33 +196,51 @@ def main() -> None:
     operators = build_operators(placeholders)
 
     paths = cfg["paths"]
+
     input_path = paths["input"]
+
+    # Pipeline output. Keep this path because the next pipeline step depends on it.
     out_docs_path = paths["output_docs"]
-    out_log_path = paths["output_logs"]
+
+    # Evaluation output. Used to compare this anonymizer against ground truth.
+    out_pred_path = paths["output_predictions"]
+
     docs = read_jsonl(input_path)
 
     out_docs: List[Dict[str, Any]] = []
-    pii_logs: List[Dict[str, Any]] = []
+    prediction_outputs: List[Dict[str, Any]] = []
 
     for doc in docs:
         doc_id = doc.get("doc_id")
         text = doc.get("processed_text", "")
 
-        # Fail-safe: if missing text, keep unchanged
         if not isinstance(text, str) or not text:
-            doc_out = {
-                 "doc_id": doc_id, 
-                 "anonymized_text": doc.get("processed_text", "")
-                 }
-            out_docs.append(doc_out)
+            out_docs.append(
+                {
+                    "doc_id": doc_id,
+                    "anonymized_text": "",
+                }
+            )
+
+            prediction_outputs.append(
+                {
+                    "doc_id": doc_id,
+                    "model": MODEL_NAME,
+                    "entities": [],
+                }
+            )
+
             continue
 
         try:
-            # Detect configured entity types
             entities_to_detect = sorted(regex_entities.union(ner_entities))
-            results = analyzer.analyze(text=text, language="en", entities=entities_to_detect)
 
-            # Apply overlap + threshold policy before anonymizing/logging
+            results = analyzer.analyze(
+                text=text,
+                language="en",
+                entities=entities_to_detect,
+            )
+
             final_results = filter_by_policy(
                 results=results,
                 regex_entities=regex_entities,
@@ -171,36 +248,48 @@ def main() -> None:
                 ner_min_score=ner_min_score,
             )
 
-            # Anonymize (replace with placeholders)
-            anon_res = anonymizer.anonymize(text=text, analyzer_results=final_results, operators=operators)
-            anonymized_text = anon_res.text
+            anonymized_result = anonymizer.anonymize(
+                text=text,
+                analyzer_results=final_results,
+                operators=operators,
+            )
 
-            doc_out = {"doc_id": doc_id, "anonymized_text": anonymized_text }
-            out_docs.append(doc_out)
+            out_docs.append(
+                {
+                    "doc_id": doc_id,
+                    "anonymized_text": anonymized_result.text,
+                }
+            )
 
-        
-            # Log the spans that are anonymized (offsets in original processed_text)
-            for r in final_results:
-                pii_logs.append(
-                    {
-                        "doc_id": doc_id,
-                        "pii_type": r.entity_type,
-                        "start": r.start,
-                        "end": r.end,
-                        "score": float(r.score) if r.score is not None else None,
-                    }
+            prediction_outputs.append(
+                build_prediction_output(
+                    doc_id=doc_id,
+                    text=text,
+                    final_results=final_results,
                 )
+            )
 
-            
-        except Exception:
-            # Failure handling: keep doc unchanged
-            doc_out = {
-                "doc_id": doc_id,
-                "anonymized_text": text}
-            out_docs.append(doc_out)
+        except Exception as exc:
+            out_docs.append(
+                {
+                    "doc_id": doc_id,
+                    "anonymized_text": text,
+                    "error": str(exc),
+                }
+            )
+
+            prediction_outputs.append(
+                {
+                    "doc_id": doc_id,
+                    "model": MODEL_NAME,
+                    "entities": [],
+                    "error": str(exc),
+                }
+            )
 
     write_jsonl(out_docs_path, out_docs)
-    write_jsonl(out_log_path, pii_logs)
+    write_jsonl(out_pred_path, prediction_outputs)
+
 
 if __name__ == "__main__":
     main()
