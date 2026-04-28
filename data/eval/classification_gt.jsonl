@@ -1,11 +1,67 @@
-{"doc_id": "doc_0001", "true_label": "Reports", "notes": "World Bank FSAP China — financial sector assessment report with detailed findings and analysis. Semi-formal analytical document with metrics and recommendations."}
-{"doc_id": "doc_0002", "true_label": "Reports", "notes": "World Bank Policy Research Working Paper analyzing deposit behavior during financial crises. Academic/research report with data analysis and findings."}
-{"doc_id": "doc_0003", "true_label": "Policy_Procedure_Contract", "notes": "Title: 'A Technical Guide for Bank Supervisors'. Formal guidance document establishing procedures and protocols for bank supervision."}
-{"doc_id": "doc_0004", "true_label": "Reports", "notes": "World Bank FSAP Poland — financial sector assessment report with detailed vulnerability analysis and findings."}
-{"doc_id": "doc_0005", "true_label": "Reports", "notes": "World Bank FSAP Vietnam — financial sector assessment report with comprehensive sector analysis and recommendations."}
-{"doc_id": "doc_0006", "true_label": "Policy_Procedure_Contract", "notes": "FATF Guidance on Risk-Based Supervision. Formal policy document establishing procedures and guidance for supervisory approaches. First ~2000 chars are web nav chrome (data quality issue)."}
-{"doc_id": "doc_0007", "true_label": "Policy_Procedure_Contract", "notes": "FATF grey-list announcement — formal policy statement with enforcement implications and regulatory procedures."}
-{"doc_id": "doc_0008", "true_label": "Policy_Procedure_Contract", "notes": "FATF paper on AML/CFT supervision and enforcement. Document explicitly self-describes as 'non-binding guidance paper' — policy guidance for supervisory approach."}
-{"doc_id": "doc_0009", "true_label": "Policy_Procedure_Contract", "notes": "Title: 'GUIDANCE on Beneficial Ownership and Transparency of Legal Arrangements'. Formal policy document establishing procedures for beneficial ownership reporting."}
-{"doc_id": "doc_0010", "true_label": "Policy_Procedure_Contract", "notes": "FATF Risk-Based Approach guidance for the Accounting Profession. Formal policy guidance document establishing procedures for accounting profession compliance."}
-{"doc_id": "doc_0011", "true_label": "Policy_Procedure_Contract", "notes": "FATF NRA Toolkit — formal methodology and procedures for conducting national risk assessments. Establishes standardized processes and guidelines."}
+{"doc_id": "doc_0001", "true_label": "Reports"}
+{"doc_id": "doc_0002", "true_label": "Reports"}
+{"doc_id": "doc_0003", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0004", "true_label": "Reports"}
+{"doc_id": "doc_0005", "true_label": "Reports"}
+{"doc_id": "doc_0006", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0007", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0008", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0009", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0010", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0011", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0012", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0013", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0014", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0015", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0016", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0017", "true_label": "Reports"}
+{"doc_id": "doc_0018", "true_label": "Reports"}
+{"doc_id": "doc_0019", "true_label": "Reports"}
+{"doc_id": "doc_0020", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0021", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0022", "true_label": "Reports"}
+{"doc_id": "doc_0023", "true_label": "Reports"}
+{"doc_id": "doc_0024", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0025", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0026", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0027", "true_label": "Reports"}
+{"doc_id": "doc_0028", "true_label": "Reports"}
+{"doc_id": "doc_0029", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0030", "true_label": "Reports"}
+{"doc_id": "doc_0031", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0032", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0033", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0034", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0035", "true_label": "Reports"}
+{"doc_id": "doc_0036", "true_label": "Reports"}
+{"doc_id": "doc_0037", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0038", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0039", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0040", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0041", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0042", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0043", "true_label": "Policy_Procedure_Contract"}
+{"doc_id": "doc_0044", "true_label": "Reports"}
+{"doc_id": "doc_0045", "true_label": "Reports"}
+{"doc_id": "doc_0046", "true_label": "Reports"}
+{"doc_id": "doc_0047", "true_label": "Reports"}
+{"doc_id": "doc_0048", "true_label": "Reports"}
+{"doc_id": "doc_0049", "true_label": "Reports"}
+{"doc_id": "doc_0050", "true_label": "Reports"}
+{"doc_id": "doc_0051", "true_label": "Reports"}
+{"doc_id": "doc_0052", "true_label": "Reports"}
+{"doc_id": "doc_0053", "true_label": "Reports"}
+{"doc_id": "doc_0054", "true_label": "Reports"}
+{"doc_id": "doc_0055", "true_label": "Reports"}
+{"doc_id": "doc_0056", "true_label": "Reports"}
+{"doc_id": "doc_0057", "true_label": "Reports"}
+{"doc_id": "doc_0058", "true_label": "Reports"}
+{"doc_id": "doc_0059", "true_label": "Reports"}
+{"doc_id": "doc_0060", "true_label": "Reports"}
+{"doc_id": "doc_0061", "true_label": "Reports"}
+{"doc_id": "doc_0062", "true_label": "Reports"}
+{"doc_id": "doc_0063", "true_label": "Reports"}
+{"doc_id": "doc_0064", "true_label": "Reports"}
+{"doc_id": "doc_0065", "true_label": "Reports"}
+{"doc_id": "doc_0066", "true_label": "Reports"}
+{"doc_id": "doc_0067", "true_label": "Reports"}
