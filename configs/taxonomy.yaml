@@ -1,112 +1,142 @@
 taxonomy:
   Monetary Policy:
     Inflation:
-      - inflation
-      - cpi
-      - consumer prices
-      - price pressures
-      - inflation outlook
+      description: Documents about inflation dynamics, CPI, consumer prices, price pressures, and inflation outlook.
+      keywords:
+        - inflation
+        - cpi
+        - consumer prices
+        - price pressures
+        - inflation outlook
 
     Interest Rates:
-      - policy rate
-      - interest rate
-      - monetary tightening
-      - monetary easing
-      - rate hike
-      - rate cut
+      description: Documents about policy rates, interest rate changes, monetary tightening, monetary easing, rate hikes, and rate cuts.
+      keywords:
+        - policy rate
+        - interest rate
+        - monetary tightening
+        - monetary easing
+        - rate hike
+        - rate cut
 
     Exchange Rate Policy:
-      - exchange rate
-      - exchange rates
-      - fx
-      - foreign exchange
-      - currency
-      - depreciation
-      - appreciation
+      description: Documents about exchange rate movements, foreign exchange markets, currency depreciation, appreciation, and FX policy.
+      keywords:
+        - exchange rate
+        - exchange rates
+        - fx
+        - foreign exchange
+        - currency
+        - depreciation
+        - appreciation
 
   Fiscal Policy:
     Government Budget:
-      - fiscal deficit
-      - budget deficit
-      - government spending
-      - public expenditure
-      - fiscal balance
-      - revenue
+      description: Documents about fiscal deficits, budget balance, government spending, public expenditure, and fiscal revenue.
+      keywords:
+        - fiscal deficit
+        - budget deficit
+        - government spending
+        - public expenditure
+        - fiscal balance
+        - revenue
 
     Public Debt:
-      - public debt
-      - debt sustainability
-      - debt-to-gdp
-      - sovereign debt
-      - fiscal space
+      description: Documents about public debt, sovereign debt, debt sustainability, debt-to-GDP, and fiscal space.
+      keywords:
+        - public debt
+        - debt sustainability
+        - debt-to-gdp
+        - sovereign debt
+        - fiscal space
 
     Tax Policy:
-      - tax reform
-      - taxation
-      - tax revenue
-      - tax collection
+      description: Documents about taxation, tax reform, tax revenue, and tax collection.
+      keywords:
+        - tax reform
+        - taxation
+        - tax revenue
+        - tax collection
 
   Financial Stability:
     Banking:
-      - capital adequacy
-      - basel
-      - prudential
-      - banking sector
-      - supervision
-      - non-performing loans
-      - npl
+      description: Documents about banking sector conditions, capital adequacy, prudential supervision, Basel standards, and non-performing loans.
+      keywords:
+        - capital adequacy
+        - basel
+        - prudential
+        - banking sector
+        - supervision
+        - non-performing loans
+        - npl
 
     Risk Assessment:
-      - systemic risk
-      - financial vulnerabilities
-      - vulnerabilities
-      - stress test
-      - stress testing
-      - macroprudential
-      - financial stability risk
+      description: Documents about systemic risk, financial vulnerabilities, stress testing, macroprudential analysis, and financial stability risks.
+      keywords:
+        - systemic risk
+        - financial vulnerabilities
+        - vulnerabilities
+        - stress test
+        - stress testing
+        - macroprudential
+        - financial stability risk
 
     Financial Regulation:
-      - regulation
-      - supervisory framework
-      - prudential regulation
-      - regulatory requirements
+      description: Documents about financial regulation, prudential regulation, supervisory frameworks, and regulatory requirements.
+      keywords:
+        - regulation
+        - supervisory framework
+        - prudential regulation
+        - regulatory requirements
 
   External Sector:
     Balance of Payments:
-      - balance of payments
-      - bop
-      - current account
-      - capital flows
-      - financial account
-      - external financing
+      description: Documents about the balance of payments, current account, capital flows, financial account, and external financing.
+      keywords:
+        - balance of payments
+        - bop
+        - current account
+        - capital flows
+        - financial account
+        - external financing
 
     Trade:
-      - exports
-      - imports
-      - trade balance
-      - trade performance
+      description: Documents about exports, imports, trade balance, and trade performance.
+      keywords:
+        - exports
+        - imports
+        - trade balance
+        - trade performance
 
     Reserves and FX:
-      - foreign reserves
-      - international reserves
-      - reserve adequacy
-      - fx reserves
+      description: Documents about foreign reserves, international reserves, reserve adequacy, and FX reserves.
+      keywords:
+        - foreign reserves
+        - international reserves
+        - reserve adequacy
+        - fx reserves
 
   Economic Outlook:
     Growth:
-      - gdp growth
-      - economic growth
-      - growth outlook
-      - output growth
+      description: Documents about GDP growth, economic growth, output growth, and growth outlook.
+      keywords:
+        - gdp growth
+        - economic growth
+        - growth outlook
+        - output growth
 
     Forecasts:
-      - economic outlook
-      - projections
-      - forecast
-      - medium-term outlook
+      description: Documents about economic forecasts, projections, and medium-term outlook.
+      keywords:
+        - economic outlook
+        - projections
+        - forecast
+        - medium-term outlook
 
     Risks:
-      - downside risks
-      - uncertainty
-      - global risks
-      - risk scenario
+      description: Documents about downside risks, uncertainty, global risks, and risk scenarios affecting the economy.
+      keywords:
+        - downside risks
+        - uncertainty
+        - global risks
+        - risk scenario
