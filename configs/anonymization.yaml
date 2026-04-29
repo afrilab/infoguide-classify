@@ -60,7 +60,10 @@ regex:
   IBAN:
     enabled: true
     patterns:
+      # Compact IBAN: TR330006100519786457841326
       - '\b[A-Z]{2}\d{2}[A-Z0-9]{11,30}\b'
+      # Spaced IBAN: TR33 0006 1005 1978 6457 8413 26
+      - '\b[A-Z]{2}\d{2}(?:\s?[A-Z0-9]{4}){2,7}\s?[A-Z0-9]{1,4}\b'
 
   CREDIT_CARD:
     enabled: true
@@ -76,6 +79,8 @@ regex:
       - '\b\d{1,2}/\d{1,2}/\d{2,4}\b'
       # Month name style: March 20, 2024
       - '\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+\d{1,2},\s+\d{4}\b'
+      # Day first: 20 March 2024
+      - '\b\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+\d{4}\b'
 
 
 # NER Entity Toggles
@@ -85,6 +90,4 @@ ner:
   ORGANIZATION:
     enabled: true
   LOCATION:
-    enabled: true
-  DATE:
     enabled: true
