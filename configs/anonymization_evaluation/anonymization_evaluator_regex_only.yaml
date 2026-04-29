@@ -1,0 +1,8 @@
+# configs/anonymization_evaluation/anonymization_evaluator_regex_only.yaml
+
+benchmark_path: data/synthetic/benchmark.json
+
+models:
+  - model: presidio_regex_only
+    prediction_path: outputs/anonymizer_outputs/presidio_regex_only_predictions.jsonl
+    output_dir: outputs/anonymizer_evaluation/presidio_regex_only

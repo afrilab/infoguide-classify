@@ -10,7 +10,7 @@ from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import OperatorConfig
 
-MODEL_NAME = "presidio"
+DEFAULT_MODEL_NAME = "presidio"
 
 def build_regex_recognizers(regex_cfg: Dict[str, Any]) -> List[PatternRecognizer]:
     """
@@ -145,7 +145,12 @@ ENTITY_TYPE_MAP = {
     "ORGANIZATION": "ORG",
 }
 
-def build_prediction_output(doc_id: str, text: str, final_results) -> Dict[str, Any]:
+def build_prediction_output(
+    doc_id: str,
+    text: str,
+    final_results,
+    model_name: str,
+) -> Dict[str, Any]:
     entities = []
 
     for result in final_results:
@@ -163,7 +168,7 @@ def build_prediction_output(doc_id: str, text: str, final_results) -> Dict[str, 
 
     return {
         "doc_id": doc_id,
-        "model": MODEL_NAME,
+        "model": model_name,
         "entities": entities,
     }
 
@@ -174,12 +179,13 @@ def main() -> None:
     parser.add_argument(
         "--config",
         required=True,
-        help="Path to configs/anonymization.yaml",
+        help="Path to an anonymization config YAML file",
     )
     args = parser.parse_args()
 
     cfg = load_yaml(args.config)
 
+    model_name = cfg.get("model_name", DEFAULT_MODEL_NAME)
     spacy_model = cfg.get("spacy_model", "en_core_web_sm")
     placeholders = cfg["placeholders"]
 
@@ -231,7 +237,7 @@ def main() -> None:
             prediction_outputs.append(
                 {
                     "doc_id": doc_id,
-                    "model": MODEL_NAME,
+                    "model": model_name,
                     "entities": [],
                 }
             )
@@ -272,6 +278,7 @@ def main() -> None:
                     doc_id=doc_id,
                     text=text,
                     final_results=final_results,
+                    model_name=model_name,
                 )
             )
 
@@ -287,7 +294,7 @@ def main() -> None:
             prediction_outputs.append(
                 {
                     "doc_id": doc_id,
-                    "model": MODEL_NAME,
+                    "model": model_name,
                     "entities": [],
                     "error": str(exc),
                 }

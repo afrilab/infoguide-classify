@@ -9,14 +9,30 @@ steps:
     enabled: true
     script: "src/preprocess/process_documents.py"
     config: "configs/process.yaml"
-  step3_anonymization:
+  step3a_anonymization_regex_only:
     enabled: true
     script: "src/anonymization/anonymizer.py"
-    config: "configs/anonymization.yaml"
-  step4_anonymization_evaluation:
+    config: "configs/anonymization/presidio_regex_only.yaml"
+  step3b_anonymization_ner_only:
+    enabled: true
+    script: "src/anonymization/anonymizer.py"
+    config: "configs/anonymization/presidio_ner_only.yaml"
+  step3c_anonymization_hybrid:
+    enabled: true
+    script: "src/anonymization/anonymizer.py"
+    config: "configs/anonymization/presidio_hybrid.yaml"
+  step4a_eval_regex_only:
     enabled: true
     script: "src/anonymization/evaluator.py"
-    config: "configs/anonymization_evaluator.yaml"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_regex_only.yaml"
+  step4b_eval_ner_only:
+    enabled: true
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_ner_only.yaml"
+  step4c_eval_hybrid:
+    enabled: true
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_hybrid.yaml"
   step5_classification:
     enabled: false
     script: "src/classification/classify_documents.py"

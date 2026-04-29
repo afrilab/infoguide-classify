@@ -1,9 +1,11 @@
 # configs/anonymization.yaml
 
+model_name: "presidio_hybrid"
+
 paths:
   input: "data/processed/clean_documents.jsonl"
-  output_docs: "data/anonymized/anonymized_documents.jsonl"
-  output_predictions: "outputs/anonymizer_outputs/presidio_pii_predictions.jsonl"
+  output_docs: "data/anonymized/presidio_hybrid_documents.jsonl"
+  output_predictions: "outputs/anonymizer_outputs/presidio_hybrid_predictions.jsonl"
 
 language: "en"
 
