@@ -23,19 +23,25 @@ labels:
 - HR_Documents
 - Forms_Structured
 label_descriptions:
-  Policy_Procedure_Contract: Formal policy documents, regulatory guidance, supervision
-    procedures, and official protocols. Includes FATF guidance, anti-money laundering
-    rules, AML/CFT requirements, compliance procedures, formal recommendations, national
-    assessments, legal frameworks, enforcement actions, regulations.
-  Reports: Analytical reports presenting sector assessment, financial analysis, and
-    research findings. Includes World Bank assessments, FSAP reports, development
-    reports, financial sector analysis, policy research papers, vulnerability assessments,
-    statistical analysis, academic research.
-  Internal_Communications: Internal organizational memos, announcements, and communications
-    for staff. Includes meeting minutes, internal announcements, team updates, project
-    notes.
-  Emails: Email messages and electronic correspondence. Informal communication format.
-  HR_Documents: Personnel and employee-related documents. Employee records, human
-    resources, recruitment, compensation, employment agreements, performance evaluation.
-  Forms_Structured: Standardized forms with fields, templates, surveys, registration
-    documents, organized structured data collection documents.
+  Policy_Procedure_Contract: >
+    Regulatory policy guidance procedure compliance rules obligations must shall required prohibited
+    AML CFT anti-money laundering FATF Basel supervision enforcement risk-based approach framework
+    requirements recommendations institutions expected follow comply mandate regulation directive.
+  Reports: >
+    Analytical assessment research evaluation findings conclusions country sector financial
+    World Bank FSAP public expenditure review BIS ECB monetary policy economic development
+    quarterly review vulnerability analysis data observed conditions performance results
+    study examination report findings recommendations assessment outcomes.
+  Internal_Communications: >
+    Internal memo announcement staff communication meeting minutes team updates project notes
+    organizational internal message bulletin notice circular.
+  Emails: >
+    Email correspondence electronic message informal communication reply forward inbox sent.
+  HR_Documents: >
+    Personnel employee human resources recruitment compensation employment agreement
+    performance evaluation staff records payroll benefits hiring contract workforce.
+  Forms_Structured: >
+    FFIEC 002 031 051 call report form OC-10 operating circular certificate authorizing resolution
+    letter agreement EBA participation correspondent banking term deposit agreement application
+    form fields tables sections structured filing certificate compliance participant listing
+    authorization transaction review banking form regulatory filing.

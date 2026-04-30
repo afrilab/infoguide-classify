@@ -1,0 +1,2 @@
+n_docs,accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,correct_docs,wrong_docs,needs_review_count
+98,0.8775510204081632,0.5457792207792208,0.6013468013468014,0.559140975258759,0.8968793030025428,86,12,0

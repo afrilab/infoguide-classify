@@ -1,4 +1,5 @@
 from pathlib import Path
+import argparse
 import json
 import pandas as pd
 from sklearn.metrics import (
@@ -9,7 +10,6 @@ from sklearn.metrics import (
 )
 
 ROOT = Path(__file__).resolve().parents[2]
-PRED_PATH = ROOT / "data" / "classified" / "classification_results.jsonl"
 GT_PATH = ROOT / "data" / "eval" / "classification_gt.jsonl"
 OUT_DIR = ROOT / "logs"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -54,7 +54,16 @@ def load_predictions(path: Path) -> pd.DataFrame:
 
 
 def main():
-    pred_df = load_predictions(PRED_PATH)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--pred", default=str(ROOT / "data" / "classified" / "classification_results.jsonl"),
+                    help="Path to predictions JSONL")
+    ap.add_argument("--name", default="", help="Report name suffix, e.g. v1_zeroshot")
+    args = ap.parse_args()
+
+    pred_path = Path(args.pred)
+    suffix = f"__{args.name}" if args.name else ""
+
+    pred_df = load_predictions(pred_path)
     gt_df = load_ground_truth(GT_PATH)
 
     eval_df = (
@@ -136,8 +145,16 @@ def main():
     )
 
     
+    # Write CSVs
+    summary_df.to_csv(OUT_DIR / f"classification_summary{suffix}.csv", index=False)
+    metrics_df.to_csv(OUT_DIR / f"classification_metrics{suffix}.csv", index=False)
+    cm_df.to_csv(OUT_DIR / f"confusion_matrix{suffix}.csv")
+    wrong_df.to_csv(OUT_DIR / f"misclassified_docs{suffix}.csv", index=False)
+    conf_stats_df.to_csv(OUT_DIR / f"prediction_confidence_stats{suffix}.csv", index=False)
+    eval_df.to_csv(OUT_DIR / f"doc_level_eval{suffix}.csv", index=False)
+
     # Markdown report
-    md_path = OUT_DIR / "classification_report.md"
+    md_path = OUT_DIR / f"classification_report{suffix}.md"
     with md_path.open("w", encoding="utf-8") as f:
         f.write("# Classification Evaluation Report\n\n")
 
@@ -179,13 +196,13 @@ def main():
         f.write("\n```\n")
 
     print("Saved:")
-    print(OUT_DIR / "classification_report.md")
-    print(OUT_DIR / "classification_summary.csv")
-    print(OUT_DIR / "classification_metrics.csv")
-    print(OUT_DIR / "confusion_matrix.csv")
-    print(OUT_DIR / "misclassified_docs.csv")
-    print(OUT_DIR / "prediction_confidence_stats.csv")
-    print(OUT_DIR / "doc_level_eval.csv")
+    print(f"  {md_path}")
+    print(f"  {OUT_DIR}/classification_summary{suffix}.csv")
+    print(f"  {OUT_DIR}/classification_metrics{suffix}.csv")
+    print(f"  {OUT_DIR}/confusion_matrix{suffix}.csv")
+    print(f"  {OUT_DIR}/misclassified_docs{suffix}.csv")
+    print(f"  {OUT_DIR}/prediction_confidence_stats{suffix}.csv")
+    print(f"  {OUT_DIR}/doc_level_eval{suffix}.csv")
 
     print("\nOverall Summary:")
     print(summary_df.to_string(index=False))

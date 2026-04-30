@@ -58,16 +58,19 @@ labels:
 
 label_descriptions:
   Policy_Procedure_Contract: >
-    Formal policy documents, regulatory guidance, supervision procedures, and official protocols.
-    Includes FATF guidance, anti-money laundering rules, AML/CFT requirements, compliance procedures,
-    formal recommendations, national assessments, legal frameworks, enforcement actions, regulations.
-    Examples: FATF guidance documents, supervision procedures, policy recommendations, regulatory rules.
+    Regulatory policy, guidance, or compliance procedure that prescribes rules and obligations for
+    financial institutions. Uses prescriptive language: must, shall, should, required, prohibited.
+    Includes FATF anti-money laundering guidance, AML/CFT requirements, Basel banking standards,
+    risk-based approach guidelines, supervision procedures, enforcement rules, compliance frameworks.
+    The document tells institutions what they are required or expected to do.
 
   Reports: >
-    Analytical reports presenting sector assessment, financial analysis, and research findings.
-    Includes World Bank assessments, FSAP reports, development reports, financial sector analysis,
-    policy research papers, vulnerability assessments, statistical analysis, academic research.
-    Examples: World Bank reports, FSAP country assessments, policy research papers, financial analysis.
+    Analytical assessment, research report, or evaluation that presents findings, data, and conclusions
+    about a country, sector, or institution. Describes and analyzes what is or was happening rather than
+    prescribing rules. Includes World Bank FSAP country assessments, financial sector vulnerability
+    assessments, public expenditure reviews, BIS research papers, ECB supervisory reports, monetary
+    policy analysis, economic development studies, quarterly banking reviews, country evaluations.
+    The document reports on observed conditions, performance, or research results.
 
   Internal_Communications: >
     Internal organizational memos and announcements for staff communication.
@@ -81,5 +84,8 @@ label_descriptions:
     recruitment, compensation, employment agreements, performance evaluation.
 
   Forms_Structured: >
-    Standardized forms with fields, templates, surveys, registration documents,
-    organized structured data collection documents.
+    Structured financial form, legal agreement, certificate, or regulatory filing with defined sections
+    and fields. Includes FFIEC bank call report forms (FFIEC 002, FFIEC 031, FFIEC 051), Federal Reserve
+    Operating Circular forms and certificates (OC-10), EBA participation agreements, correspondent banking
+    agreements, term deposit agreements, authorizing resolutions, letters of agreement, certificates of
+    compliance, participant listings, and standardized banking application forms with tables and fields.
