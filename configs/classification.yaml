@@ -1,5 +1,5 @@
 input_path: data/processed/clean_documents.jsonl
-output_path: data/classified/classification_results.jsonl
+output_path: data/classified/classification_results__v1_zeroshot.jsonl
 text_fields_priority:
   - processed_text
   - clean_text
@@ -19,7 +19,7 @@ top_k: 4
 
 min_score: 0.10
 
-min_margin: 0.08
+min_margin: 0.03
 
 use_label_descriptions: true
 

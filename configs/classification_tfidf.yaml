@@ -1,5 +1,5 @@
 input_path: data/processed/clean_documents.jsonl
-output_path: data/classified/classification_results.jsonl
+output_path: data/classified/classification_results__v2_tfidf.jsonl
 text_fields_priority:
 - processed_text
 - clean_text
@@ -8,7 +8,7 @@ method: tfidf
 head_only: true
 max_chars: 6000
 top_k: 4
-min_score: 0.1
+min_score: 0.01
 min_margin: 0.0
 use_label_descriptions: true
 tfidf_ngram_min: 1
