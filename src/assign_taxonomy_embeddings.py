@@ -182,33 +182,33 @@ def load_taxonomy(taxonomy_yaml: Dict[str, Any]) -> List[Level1Node]:
                 keywords_raw = []
 
             keywords = [str(x).strip() for x in keywords_raw if isinstance(x, str) and str(x).strip()]
-            level1_keywords.extend(keywords)
+            label_keywords = list(dict.fromkeys([str(l2), *keywords]))
+            level1_keywords.extend(label_keywords)
 
             level3_nodes: List[Level3Node] = []
-            for l3 in keywords:
-                rep_text_l3 = build_representation_text(
+            rep_text_l3 = build_representation_text(
+                level_1=str(l1),
+                level_2=str(l2),
+                level_3=str(l2),
+                keywords=label_keywords,
+            )
+            if description:
+                rep_text_l3 += f" Parent description: {description}"
+            level3_nodes.append(
+                Level3Node(
                     level_1=str(l1),
                     level_2=str(l2),
-                    level_3=str(l3),
-                    keywords=[l3],
+                    level_3=str(l2),
+                    keywords=label_keywords,
+                    rep_text=rep_text_l3,
                 )
-                if description:
-                    rep_text_l3 += f" Parent description: {description}"
-                level3_nodes.append(
-                    Level3Node(
-                        level_1=str(l1),
-                        level_2=str(l2),
-                        level_3=str(l3),
-                        keywords=[l3],
-                        rep_text=rep_text_l3,
-                    )
-                )
+            )
 
             rep_text_l2 = build_representation_text(
                 level_1=str(l1),
                 level_2=str(l2),
                 level_3=None,
-                keywords=keywords,
+                keywords=label_keywords,
             )
             if description:
                 rep_text_l2 += f" Description: {description}"
@@ -217,7 +217,7 @@ def load_taxonomy(taxonomy_yaml: Dict[str, Any]) -> List[Level1Node]:
                 Level2Node(
                     level_1=str(l1),
                     level_2=str(l2),
-                    keywords=keywords,
+                    keywords=label_keywords,
                     rep_text=rep_text_l2,
                     children=level3_nodes,
                 )

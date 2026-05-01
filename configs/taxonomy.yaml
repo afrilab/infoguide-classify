@@ -1,142 +1,121 @@
 taxonomy:
-  Monetary Policy:
-    Inflation:
-      description: Documents about inflation dynamics, CPI, consumer prices, price pressures, and inflation outlook.
+  Document Type:
+    Policy / Procedure / Contract Documents:
+      description: Formal, long documents with low but critical PII that often require context-based detection.
       keywords:
-        - inflation
-        - cpi
-        - consumer prices
-        - price pressures
-        - inflation outlook
+        - policy
+        - procedure
+        - contract
+        - agreement
+        - terms and conditions
+        - compliance policy
+        - standard operating procedure
+        - operating procedure
+        - legal agreement
+        - service agreement
+        - vendor contract
+        - data processing agreement
+        - privacy policy
+        - governance policy
+        - formal document
 
-    Interest Rates:
-      description: Documents about policy rates, interest rate changes, monetary tightening, monetary easing, rate hikes, and rate cuts.
+    Reports (Financial / Incident / Audit):
+      description: Semi-formal reports that include dates, organizations, locations, and some hidden PII.
       keywords:
-        - policy rate
-        - interest rate
-        - monetary tightening
-        - monetary easing
-        - rate hike
-        - rate cut
+        - report
+        - financial report
+        - incident report
+        - audit report
+        - audit finding
+        - risk report
+        - investigation report
+        - assessment report
+        - annual report
+        - financial statement
+        - incident
+        - audit
+        - findings
+        - observations
+        - executive summary
+        - methodology
+        - recommendations
 
-    Exchange Rate Policy:
-      description: Documents about exchange rate movements, foreign exchange markets, currency depreciation, appreciation, and FX policy.
+    Internal Communications:
+      description: Internal announcements, memos, and meeting notes with mixed structure, mixed tone, and scattered PII.
       keywords:
-        - exchange rate
-        - exchange rates
-        - fx
-        - foreign exchange
-        - currency
-        - depreciation
-        - appreciation
+        - internal communication
+        - internal announcement
+        - announcement
+        - memo
+        - memorandum
+        - meeting notes
+        - meeting minutes
+        - internal message
+        - staff notice
+        - team update
+        - internal update
+        - agenda
+        - action items
+        - notes
 
-  Fiscal Policy:
-    Government Budget:
-      description: Documents about fiscal deficits, budget balance, government spending, public expenditure, and fiscal revenue.
+    Emails:
+      description: Noisy real-world email messages with high PII density.
       keywords:
-        - fiscal deficit
-        - budget deficit
-        - government spending
-        - public expenditure
-        - fiscal balance
-        - revenue
+        - email
+        - e-mail
+        - from:
+        - to:
+        - cc:
+        - bcc:
+        - subject:
+        - inbox
+        - forwarded message
+        - original message
+        - reply
+        - sent
+        - message thread
+        - email address
 
-    Public Debt:
-      description: Documents about public debt, sovereign debt, debt sustainability, debt-to-GDP, and fiscal space.
+    HR Documents / Communications:
+      description: HR emails, employee records, and internal HR messages containing critical PII and sensitive data.
       keywords:
-        - public debt
-        - debt sustainability
-        - debt-to-gdp
-        - sovereign debt
-        - fiscal space
+        - hr
+        - human resources
+        - employee record
+        - employee records
+        - employee
+        - personnel file
+        - payroll
+        - salary
+        - benefits
+        - performance review
+        - performance evaluation
+        - leave request
+        - onboarding
+        - termination
+        - recruitment
+        - applicant
+        - social security
+        - employee id
 
-    Tax Policy:
-      description: Documents about taxation, tax reform, tax revenue, and tax collection.
+    Forms / Structured Documents:
+      description: Structured forms with regex-heavy PII and repeated fields.
       keywords:
-        - tax reform
-        - taxation
-        - tax revenue
-        - tax collection
-
-  Financial Stability:
-    Banking:
-      description: Documents about banking sector conditions, capital adequacy, prudential supervision, Basel standards, and non-performing loans.
-      keywords:
-        - capital adequacy
-        - basel
-        - prudential
-        - banking sector
-        - supervision
-        - non-performing loans
-        - npl
-
-    Risk Assessment:
-      description: Documents about systemic risk, financial vulnerabilities, stress testing, macroprudential analysis, and financial stability risks.
-      keywords:
-        - systemic risk
-        - financial vulnerabilities
-        - vulnerabilities
-        - stress test
-        - stress testing
-        - macroprudential
-        - financial stability risk
-
-    Financial Regulation:
-      description: Documents about financial regulation, prudential regulation, supervisory frameworks, and regulatory requirements.
-      keywords:
-        - regulation
-        - supervisory framework
-        - prudential regulation
-        - regulatory requirements
-
-  External Sector:
-    Balance of Payments:
-      description: Documents about the balance of payments, current account, capital flows, financial account, and external financing.
-      keywords:
-        - balance of payments
-        - bop
-        - current account
-        - capital flows
-        - financial account
-        - external financing
-
-    Trade:
-      description: Documents about exports, imports, trade balance, and trade performance.
-      keywords:
-        - exports
-        - imports
-        - trade balance
-        - trade performance
-
-    Reserves and FX:
-      description: Documents about foreign reserves, international reserves, reserve adequacy, and FX reserves.
-      keywords:
-        - foreign reserves
-        - international reserves
-        - reserve adequacy
-        - fx reserves
-
-  Economic Outlook:
-    Growth:
-      description: Documents about GDP growth, economic growth, output growth, and growth outlook.
-      keywords:
-        - gdp growth
-        - economic growth
-        - growth outlook
-        - output growth
-
-    Forecasts:
-      description: Documents about economic forecasts, projections, and medium-term outlook.
-      keywords:
-        - economic outlook
-        - projections
-        - forecast
-        - medium-term outlook
-
-    Risks:
-      description: Documents about downside risks, uncertainty, global risks, and risk scenarios affecting the economy.
-      keywords:
-        - downside risks
-        - uncertainty
-        - global risks
-        - risk scenario
+        - form
+        - structured document
+        - application form
+        - registration form
+        - tax form
+        - w-9
+        - w-4
+        - 1040
+        - field:
+        - fields:
+        - checkbox
+        - signature:
+        - date of birth
+        - ssn
+        - taxpayer identification number
+        - account number
+        - address:
+        - phone number

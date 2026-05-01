@@ -64,12 +64,14 @@ def compile_taxonomy_patterns(taxonomy: Dict[str, Any]) -> List[Tuple[str, str, 
 
     taxonomy:
       Level1:
-        Level2:
-          - level3_keyword_or_phrase_1
-          - level3_keyword_or_phrase_2
+        Final Label:
+          description: label description
+          keywords:
+            - keyword_or_phrase_1
+            - keyword_or_phrase_2
       ...
 
-    Returns list of tuples: (l1, l2, l3, compiled_regex)
+    Returns list of tuples: (l1, final_label, final_label, compiled_regex)
     """
     if "taxonomy" not in taxonomy or not isinstance(taxonomy["taxonomy"], dict):
         raise ValueError("taxonomy.yaml must contain a top-level key 'taxonomy' with a nested mapping.")
@@ -78,15 +80,30 @@ def compile_taxonomy_patterns(taxonomy: Dict[str, Any]) -> List[Tuple[str, str, 
     for l1, l2_map in taxonomy["taxonomy"].items():
         if not isinstance(l2_map, dict):
             continue
-        for l2, l3_list in l2_map.items():
-            if not isinstance(l3_list, list):
-                continue
-            for l3 in l3_list:
-                if not isinstance(l3, str) or not l3.strip():
+        for l2, l2_info in l2_map.items():
+            if isinstance(l2_info, dict):
+                keywords_raw = l2_info.get("keywords", [])
+            elif isinstance(l2_info, list):
+                keywords_raw = l2_info
+            else:
+                keywords_raw = []
+
+            if not isinstance(keywords_raw, list):
+                keywords_raw = []
+
+            final_label = str(l2)
+            keywords = list(dict.fromkeys([final_label, *[
+                str(item).strip()
+                for item in keywords_raw
+                if isinstance(item, str) and str(item).strip()
+            ]]))
+
+            for keyword in keywords:
+                if not keyword:
                     continue
-                phrase = tokenize_phrase(l3)
+                phrase = tokenize_phrase(keyword)
                 rx = re.compile(rf"(?<!\w){phrase}(?!\w)")
-                patterns.append((str(l1), str(l2), str(l3), rx))
+                patterns.append((str(l1), final_label, final_label, rx))
     if not patterns:
         raise ValueError("No taxonomy patterns found. Check your taxonomy.yaml structure.")
     return patterns
