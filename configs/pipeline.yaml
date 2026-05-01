@@ -22,18 +22,56 @@ steps:
     script: "src/anonymization/anonymizer.py"
     config: "configs/anonymization/presidio_hybrid.yaml"
   step4a_eval_regex_only:
-    enabled: true
+    enabled: false
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_regex_only.yaml"
   step4b_eval_ner_only:
-    enabled: true
+    enabled: false
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_ner_only.yaml"
   step4c_eval_hybrid:
-    enabled: true
+    enabled: false
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_hybrid.yaml"
-  step5_classification:
+  step5a_classification_tfidf:
+    enabled: true
+    script: "src/classification/classify_documents.py"
+    config: "configs/classification_tfidf.yaml"
+  step5b_classification_embedding:
+    enabled: true
+    script: "src/classification/classify_documents.py"
+    config: "configs/classification_embedding.yaml"
+  step5c_classification_zeroshot:
     enabled: false
     script: "src/classification/classify_documents.py"
     config: "configs/classification.yaml"
+  step6a_report_tfidf:
+    enabled: true
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__v2_tfidf.jsonl"
+      - "--name"
+      - "v2_tfidf"
+  step6b_report_embedding:
+    enabled: true
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__v3_embedding.jsonl"
+      - "--name"
+      - "v3_embedding"
+  step6c_report_zeroshot:
+    enabled: false
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__v1_zeroshot.jsonl"
+      - "--name"
+      - "v1_zeroshot"
+  step7_compare_classification_models:
+    enabled: true
+    script: "src/classification/compare_classification_runs.py"
+    args:
+      - "--name"
+      - "classification_model_comparison"

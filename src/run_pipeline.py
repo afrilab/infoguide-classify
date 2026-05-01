@@ -52,19 +52,25 @@ def main() -> None:
             continue
 
         # Ensure required fields exist
-        if "script" not in step_cfg or "config" not in step_cfg:
-            raise KeyError(f"Step '{step_name}' must define both 'script' and 'config'.")
+        if "script" not in step_cfg:
+            raise KeyError(f"Step '{step_name}' must define 'script'.")
+        if "config" not in step_cfg and "args" not in step_cfg:
+            raise KeyError(f"Step '{step_name}' must define 'config' or 'args'.")
 
         script = step_cfg["script"]
-        cfg = step_cfg["config"]
-
-        # Check files exist
         must_exist(script)
-        must_exist(cfg)
+
+        # Build command — support both --config and free-form args
+        cmd = [sys.executable, script]
+        if "config" in step_cfg:
+            must_exist(step_cfg["config"])
+            cmd += ["--config", step_cfg["config"]]
+        if "args" in step_cfg:
+            cmd += [str(a) for a in step_cfg["args"]]
 
         # Run pipeline step
         print(f"\nRunning {step_name}")
-        run_cmd([sys.executable, script, "--config", cfg])
+        run_cmd(cmd)
 
     print("\nPipeline finished.")
 

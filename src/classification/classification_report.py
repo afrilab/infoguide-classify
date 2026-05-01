@@ -5,7 +5,6 @@ import pandas as pd
 from sklearn.metrics import (
     accuracy_score,
     precision_recall_fscore_support,
-    classification_report,
     confusion_matrix,
 )
 
@@ -14,7 +13,24 @@ GT_PATH = ROOT / "data" / "eval" / "classification_gt.jsonl"
 OUT_DIR = ROOT / "logs"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-TARGET_LABELS = ["Policy_Procedure_Contract", "Reports", "Internal_Communications", "Emails", "HR_Documents", "Forms_Structured"]
+TARGET_LABELS = [
+    "Policy_Procedure_Contract",
+    "Reports",
+    "Internal_Communications",
+    "Emails",
+    "HR_Documents",
+    "Forms_Structured",
+]
+LABEL_SHORT = {
+    "Policy_Procedure_Contract": "Policy",
+    "Reports": "Reports",
+    "Internal_Communications": "Internal",
+    "Emails": "Emails",
+    "HR_Documents": "HR",
+    "Forms_Structured": "Forms",
+    "Needs_Review": "Needs_Review",
+    "MISSING": "MISSING",
+}
 
 
 def load_ground_truth(path: Path) -> pd.DataFrame:
@@ -24,8 +40,7 @@ def load_ground_truth(path: Path) -> pd.DataFrame:
             line = line.strip()
             if line:
                 rows.append(json.loads(line))
-    df = pd.DataFrame(rows)
-    return df[["doc_id", "true_label"]]
+    return pd.DataFrame(rows)[["doc_id", "true_label"]]
 
 
 def load_predictions(path: Path) -> pd.DataFrame:
@@ -35,22 +50,15 @@ def load_predictions(path: Path) -> pd.DataFrame:
             line = line.strip()
             if line:
                 rows.append(json.loads(line))
-
     df = pd.DataFrame(rows)
-
-    wanted_cols = [
-        "doc_id",
-        "predicted_label",
-        "confidence",
-        "second_best",
-        "second_score",
-        "margin",
-    ]
-    for col in wanted_cols:
+    for col in ["doc_id", "predicted_label", "confidence", "second_best", "second_score", "margin", "method"]:
         if col not in df.columns:
             df[col] = None
+    return df[["doc_id", "predicted_label", "confidence", "second_best", "second_score", "margin", "method"]]
 
-    return df[wanted_cols]
+
+def fmt_pct(v: float) -> str:
+    return f"{v * 100:.1f}%"
 
 
 def main():
@@ -62,6 +70,7 @@ def main():
 
     pred_path = Path(args.pred)
     suffix = f"__{args.name}" if args.name else ""
+    method_name = args.name.replace("_", " ").upper() if args.name else pred_path.stem
 
     pred_df = load_predictions(pred_path)
     gt_df = load_ground_truth(GT_PATH)
@@ -72,149 +81,93 @@ def main():
         .reset_index(drop=True)
     )
 
-    # any label outside target set stays as-is in doc-level output,
- 
     y_true = eval_df["true_label"].tolist()
     y_pred = eval_df["predicted_label"].fillna("MISSING").tolist()
-
     eval_df["is_correct"] = eval_df["true_label"] == eval_df["predicted_label"]
 
     accuracy = accuracy_score(y_true, y_pred)
+    correct = int(eval_df["is_correct"].sum())
+    needs_review = int((eval_df["predicted_label"] == "Needs_Review").sum())
 
     p, r, f1, support = precision_recall_fscore_support(
-        y_true,
-        y_pred,
-        labels=TARGET_LABELS,
-        zero_division=0,
+        y_true, y_pred, labels=TARGET_LABELS, zero_division=0,
     )
-
-    metrics_df = pd.DataFrame(
-        {
-            "label": TARGET_LABELS,
-            "precision": p,
-            "recall": r,
-            "f1": f1,
-            "support": support,
-        }
-    )
-
-    macro_precision = metrics_df["precision"].mean()
-    macro_recall = metrics_df["recall"].mean()
-    macro_f1 = metrics_df["f1"].mean()
-    weighted_f1 = (metrics_df["f1"] * metrics_df["support"]).sum() / metrics_df["support"].sum()
-
-    summary_df = pd.DataFrame(
-        [
-            {
-                "n_docs": len(eval_df),
-                "accuracy": accuracy,
-                "macro_precision": macro_precision,
-                "macro_recall": macro_recall,
-                "macro_f1": macro_f1,
-                "weighted_f1": weighted_f1,
-                "correct_docs": int(eval_df["is_correct"].sum()),
-                "wrong_docs": int((~eval_df["is_correct"]).sum()),
-                "needs_review_count": int((eval_df["predicted_label"] == "Needs_Review").sum()),
-            }
-        ]
+    active = [i for i, s in enumerate(support) if s > 0]
+    macro_f1 = f1[active].mean() if len(active) else 0.0
+    weighted_f1 = (
+        (f1 * support).sum() / support.sum() if support.sum() else 0.0
     )
 
     cm = confusion_matrix(y_true, y_pred, labels=TARGET_LABELS)
-    cm_df = pd.DataFrame(cm, index=TARGET_LABELS, columns=TARGET_LABELS)
 
     wrong_df = eval_df.loc[~eval_df["is_correct"]].copy()
 
-    # Confidence stats by predicted label
-    conf_stats_df = (
-        eval_df.groupby("predicted_label", dropna=False)
-        .agg(
-            count=("doc_id", "count"),
-            avg_confidence=("confidence", "mean"),
-            avg_margin=("margin", "mean"),
-        )
-        .reset_index()
-        .sort_values("count", ascending=False)
-    )
-
-    class_report_text = classification_report(
-        y_true,
-        y_pred,
-        labels=TARGET_LABELS,
-        zero_division=0,
-        digits=4,
-    )
-
-    
-    # Write CSVs
-    summary_df.to_csv(OUT_DIR / f"classification_summary{suffix}.csv", index=False)
-    metrics_df.to_csv(OUT_DIR / f"classification_metrics{suffix}.csv", index=False)
-    cm_df.to_csv(OUT_DIR / f"confusion_matrix{suffix}.csv")
-    wrong_df.to_csv(OUT_DIR / f"misclassified_docs{suffix}.csv", index=False)
-    conf_stats_df.to_csv(OUT_DIR / f"prediction_confidence_stats{suffix}.csv", index=False)
-    eval_df.to_csv(OUT_DIR / f"doc_level_eval{suffix}.csv", index=False)
-
-    # Markdown report
+    # --- Write Markdown ---
     md_path = OUT_DIR / f"classification_report{suffix}.md"
     with md_path.open("w", encoding="utf-8") as f:
-        f.write("# Classification Evaluation Report\n\n")
 
-        f.write("## 1. Overall Summary\n\n")
-        f.write(summary_df.to_markdown(index=False))
+        f.write(f"# Classification Report — {method_name}\n\n")
+
+        # 1. Overview
+        f.write("## Overview\n\n")
+        f.write(f"| Metric | Value |\n|---|---|\n")
+        f.write(f"| Documents evaluated | {len(eval_df)} |\n")
+        f.write(f"| Correct predictions | {correct} / {len(eval_df)} ({fmt_pct(accuracy)}) |\n")
+        f.write(f"| Needs Review | {needs_review} |\n")
+        f.write(f"| Macro F1 (active classes) | {fmt_pct(macro_f1)} |\n")
+        f.write(f"| Weighted F1 | {fmt_pct(weighted_f1)} |\n\n")
+
+        # 2. Per-class performance
+        f.write("## Per-Class Performance\n\n")
+        rows = []
+        for i, lbl in enumerate(TARGET_LABELS):
+            if support[i] == 0:
+                continue
+            correct_i = cm[i, i]
+            rows.append({
+                "Label": lbl,
+                "Support": int(support[i]),
+                "Correct": correct_i,
+                "Accuracy": fmt_pct(correct_i / support[i]),
+                "Precision": fmt_pct(p[i]),
+                "Recall": fmt_pct(r[i]),
+                "F1": fmt_pct(f1[i]),
+            })
+        f.write(pd.DataFrame(rows).to_markdown(index=False))
         f.write("\n\n")
 
-        f.write("## 2. Per-Class Metrics\n\n")
-        f.write(metrics_df.to_markdown(index=False))
-        f.write("\n\n")
-
-        f.write("## 3. Confusion Matrix\n\n")
+        # 3. Confusion matrix (short label names)
+        f.write("## Confusion Matrix\n\n")
+        active_labels = [TARGET_LABELS[i] for i in active]
+        short_labels = [LABEL_SHORT[l] for l in active_labels]
+        cm_active = cm[active][:, active]
+        cm_df = pd.DataFrame(cm_active, index=[f"TRUE {s}" for s in short_labels], columns=short_labels)
         f.write(cm_df.to_markdown())
         f.write("\n\n")
 
-        f.write("## 4. Misclassified Documents\n\n")
+        # 4. Misclassified docs
+        f.write("## Misclassified Documents\n\n")
         if wrong_df.empty:
             f.write("No misclassified documents.\n\n")
         else:
-            cols = [
-                "doc_id",
-                "true_label",
-                "predicted_label",
-                "confidence",
-                "second_best",
-                "second_score",
-                "margin",
-            ]
-            f.write(wrong_df[cols].to_markdown(index=False))
+            mis = wrong_df[["doc_id", "true_label", "predicted_label", "confidence", "margin"]].copy()
+            mis["confidence"] = mis["confidence"].apply(lambda x: f"{x:.3f}" if pd.notna(x) else "—")
+            mis["margin"] = mis["margin"].apply(lambda x: f"{x:.3f}" if pd.notna(x) else "—")
+            f.write(mis.to_markdown(index=False))
             f.write("\n\n")
 
-        f.write("## 5. Prediction Confidence Statistics\n\n")
-        f.write(conf_stats_df.to_markdown(index=False))
-        f.write("\n\n")
+    # --- Write single CSV ---
+    csv_path = OUT_DIR / f"doc_level_eval{suffix}.csv"
+    eval_df.to_csv(csv_path, index=False)
 
-        f.write("## 6. sklearn Classification Report\n\n")
-        f.write("```text\n")
-        f.write(class_report_text)
-        f.write("\n```\n")
-
-    print("Saved:")
-    print(f"  {md_path}")
-    print(f"  {OUT_DIR}/classification_summary{suffix}.csv")
-    print(f"  {OUT_DIR}/classification_metrics{suffix}.csv")
-    print(f"  {OUT_DIR}/confusion_matrix{suffix}.csv")
-    print(f"  {OUT_DIR}/misclassified_docs{suffix}.csv")
-    print(f"  {OUT_DIR}/prediction_confidence_stats{suffix}.csv")
-    print(f"  {OUT_DIR}/doc_level_eval{suffix}.csv")
-
-    print("\nOverall Summary:")
-    print(summary_df.to_string(index=False))
-
-    print("\nPer-Class Metrics:")
-    print(metrics_df.to_string(index=False))
-
-    print("\nConfusion Matrix:")
-    print(cm_df.to_string())
-
-    print("\nClassification Report:")
-    print(class_report_text)
+    print(f"Saved: {md_path}")
+    print(f"Saved: {csv_path}")
+    print(f"\nAccuracy : {fmt_pct(accuracy)}  ({correct}/{len(eval_df)})")
+    print(f"Macro F1 : {fmt_pct(macro_f1)}   Weighted F1: {fmt_pct(weighted_f1)}")
+    print(f"Needs Review: {needs_review}")
+    print()
+    for row in rows:
+        print(f"  {row['Label']:<35} F1={row['F1']}  ({row['Correct']}/{row['Support']})")
 
 
 if __name__ == "__main__":

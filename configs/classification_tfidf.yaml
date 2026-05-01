@@ -1,9 +1,8 @@
-input_path: data/processed/clean_documents.jsonl
+input_path: data/anonymized/presidio_hybrid_documents.jsonl
+anonymized_docs_path: data/anonymized/presidio_hybrid_documents.jsonl
 output_path: data/classified/classification_results__v2_tfidf.jsonl
 text_fields_priority:
-- processed_text
-- clean_text
-- text
+- anonymized_text
 method: tfidf
 head_only: true
 max_chars: 6000

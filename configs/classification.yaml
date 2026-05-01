@@ -1,18 +1,17 @@
-input_path: data/processed/clean_documents.jsonl
+input_path: data/anonymized/presidio_hybrid_documents.jsonl
+anonymized_docs_path: data/anonymized/presidio_hybrid_documents.jsonl
 output_path: data/classified/classification_results__v1_zeroshot.jsonl
 text_fields_priority:
-  - processed_text
-  - clean_text
-  - text
+  - anonymized_text
 
 method: zero_shot
 model_name: facebook/bart-large-mnli
 device: -1
 
 head_only: true
-max_chars: 6000
+max_chars: 800
 
-hypothesis_template: "This document is about {}."
+hypothesis_template: "This document is a {}."
 
 multi_label: false
 top_k: 4
@@ -58,34 +57,30 @@ labels:
 
 label_descriptions:
   Policy_Procedure_Contract: >
-    Regulatory policy, guidance, or compliance procedure that prescribes rules and obligations for
-    financial institutions. Uses prescriptive language: must, shall, should, required, prohibited.
-    Includes FATF anti-money laundering guidance, AML/CFT requirements, Basel banking standards,
-    risk-based approach guidelines, supervision procedures, enforcement rules, compliance frameworks.
-    The document tells institutions what they are required or expected to do.
+    regulatory compliance document prescribing rules, requirements, and obligations that financial
+    institutions must or shall follow. Countries and institutions are required to implement these
+    controls. The document mandates specific actions, procedures, or behaviours using language
+    like must, shall, should, required, prohibited, and recommended.
 
   Reports: >
-    Analytical assessment, research report, or evaluation that presents findings, data, and conclusions
-    about a country, sector, or institution. Describes and analyzes what is or was happening rather than
-    prescribing rules. Includes World Bank FSAP country assessments, financial sector vulnerability
-    assessments, public expenditure reviews, BIS research papers, ECB supervisory reports, monetary
-    policy analysis, economic development studies, quarterly banking reviews, country evaluations.
-    The document reports on observed conditions, performance, or research results.
+    financial sector assessment or research report presenting analytical findings, conclusions,
+    and data about a country's economy or financial system. The document describes and evaluates
+    what was observed, measured, or studied — such as a country evaluation, sector review,
+    or policy research paper — rather than prescribing rules.
 
   Internal_Communications: >
-    Internal organizational memos and announcements for staff communication.
-    Includes meeting minutes, internal announcements, team updates, project notes.
+    internal memo, staff announcement, meeting minutes, or team update circulated within
+    an organisation for internal communication purposes.
 
   Emails: >
-    Email messages and electronic correspondence. Informal communication format.
+    email message or electronic correspondence exchanged between individuals.
 
   HR_Documents: >
-    Personnel and employee-related documents. Employee records, human resources,
-    recruitment, compensation, employment agreements, performance evaluation.
+    personnel or human resources document relating to employees, including employment
+    agreements, performance evaluations, payroll, recruitment, or staff records.
 
   Forms_Structured: >
-    Structured financial form, legal agreement, certificate, or regulatory filing with defined sections
-    and fields. Includes FFIEC bank call report forms (FFIEC 002, FFIEC 031, FFIEC 051), Federal Reserve
-    Operating Circular forms and certificates (OC-10), EBA participation agreements, correspondent banking
-    agreements, term deposit agreements, authorizing resolutions, letters of agreement, certificates of
-    compliance, participant listings, and standardized banking application forms with tables and fields.
+    signed legal document, certificate, operating agreement, or structured banking form requiring
+    completion, authorisation, or formal signature. Examples include letters of agreement,
+    operating circular certifications, participation certificates, bank call report filings,
+    correspondent banking agreements, and term deposit authorisation forms.
