@@ -1,0 +1,41 @@
+Title: Regional Document Retention and Review Policy
+
+1. Purpose
+
+This policy defines the document retention and review requirements followed by Meridian Trust Bank across its regional banking operations. The policy applies to governance records, operational policy files, committee minutes, approved procedures, and internal control documents that must be preserved for auditability and regulatory traceability.
+
+The policy becomes effective on January 8, 2024, and replaces earlier local retention guidance issued by separate departments. Its purpose is to ensure that records are kept for an appropriate period, reviewed at defined intervals, and made available to authorized internal reviewers when required.
+
+2. Scope
+
+This policy applies to all business units operating under MTB, including the regional offices in Amsterdam, Dublin, and Madrid. It covers physical and digital records created during policy approval, procedure review, compliance monitoring, and internal governance meetings.
+
+The policy does not apply to customer transaction files, employee personnel records, or technical system logs unless those records are attached to a governance decision or formal policy review process. Such records must continue to follow the specific retention rules defined by their responsible departments.
+
+3. Governance Responsibilities
+
+The Corporate Governance Office is responsible for maintaining the central retention schedule and ensuring that each department understands its recordkeeping obligations. Department heads must confirm that their teams follow the approved schedule and that outdated documents are not removed without authorization.
+
+The annual review process is coordinated by Elena Rossi, who serves as the Regional Policy Coordinator for the governance function. Questions about document classification, retention periods, or review responsibility should be directed to the governance mailbox listed in this policy.
+
+Each regional office must assign a local records owner. The local records owner is responsible for confirming that policy files are complete, version histories are preserved, and approval evidence is stored with the final document package.
+
+4. Retention Requirements
+
+Approved internal policies must be retained for at least seven years after replacement or withdrawal. Procedure documents must be retained for five years after the last effective date unless a longer period is required by regulation, audit findings, or pending legal review.
+
+Documents that support board-level or executive-level decisions must be preserved in the central governance archive. The archive must include the final approved document, approval date, reviewer notes, and any supporting evidence used during the decision process.
+
+A document may not be deleted or permanently removed if it is linked to an active audit, regulatory request, or investigation. If uncertainty exists, the department must request guidance before taking action.
+
+5. Review Cycle
+
+Each policy owner must review assigned documents at least once every twelve months. The next standard review cycle begins on February 15, 2025. Policy owners should complete their review notes before the end of the quarter and submit them to the Corporate Governance Office.
+
+Documents with material changes must be sent through the approval workflow again. Minor formatting corrections, spelling fixes, or reference updates may be recorded without full committee approval, provided that the meaning of the document is not changed.
+
+6. Contact and References
+
+Questions about this policy may be sent to governance.records@meridiantrust.com. Additional guidance is available at https://www.meridiantrust.com/governance/retention-policy.
+
+This policy is maintained by the Corporate Governance Office and will be reviewed annually unless regulatory changes require an earlier update.

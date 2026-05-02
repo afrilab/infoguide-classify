@@ -1,0 +1,33 @@
+Client Registration Form
+
+Applicant Details
+
+Name (as per ID): Ahmed Hassan Ali
+DOB: 14-09-1987
+
+Contact Information
+
+Primary Email: ahmed.ali@example.com
+Contact Number: +971 55 987 1122
+Residence: Al Nahda Street 22, Sharjah, United Arab Emirates
+
+Account Setup
+
+Account Type Selected: Current Account
+Account Name: Ahmed Hassan Ali
+Bank Account (IBAN): AE120330000987654321000
+
+Alternate Contact
+
+Alt. Phone: +971 55 000 0000
+Alt. Email: a.h.ali@oldmail.com
+
+Internal Use Only
+
+Registration Code: REG-2024-06-221
+
+Declaration
+
+The applicant confirms that the above information is correct and agrees to the terms and conditions of account registration.
+
+Signed: Ahmed Hassan Ali

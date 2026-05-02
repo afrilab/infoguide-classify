@@ -1,0 +1,51 @@
+Financial Reporting Accuracy and Reconciliation Policy
+
+1. Introduction
+
+This policy establishes the standards and procedures for ensuring the accuracy, completeness, and consistency of financial reporting within Aurora Continental Bank. The objective is to maintain reliable financial disclosures and ensure that all reporting activities comply with internal governance frameworks and applicable regulatory requirements.
+
+This policy is effective as of June 18, 2023, and applies to all finance and accounting functions operating within Aurora Continental.
+
+2. Scope
+
+This policy applies to all financial reporting processes, including ledger management, account reconciliation, and regulatory reporting submissions. It covers operations conducted across regional offices located in Geneva, Luxembourg, and Barcelona.
+
+All finance teams must ensure that financial data is recorded accurately and that reconciliation procedures are followed consistently.
+
+3. Roles and Responsibilities
+
+The Chief Financial Officer, Marco De Santis, is responsible for overseeing the implementation of this policy and ensuring that reporting standards are maintained across all regions.
+
+Finance managers must ensure that all reconciliations are completed in a timely manner and that discrepancies are investigated and resolved appropriately. In such cases, Santis ensures that any unresolved discrepancies are escalated in accordance with internal procedures.
+
+The Financial Oversight Panel is responsible for reviewing major discrepancies and ensuring that corrective actions are implemented.
+
+4. Reconciliation Procedures
+
+All accounts must be reconciled on a monthly basis. Reconciliation reports must include detailed explanations of any variances and supporting documentation.
+
+Each reconciliation must reference the internal tracking code ARC-FIN-REP-2023-778 and must be approved by the responsible finance manager before submission.
+
+Discrepancies identified during reconciliation must be documented and escalated if they exceed predefined thresholds.
+
+5. Reporting Requirements
+
+Financial reports must be prepared in accordance with established reporting standards and must be submitted to the central reporting system no later than 25/01/2025.
+
+Reports must include all relevant supporting documentation and must be reviewed internally before submission.
+
+6. Data Integrity Controls
+
+All financial data must be validated before inclusion in official reports. Systems used for reporting must ensure data integrity and maintain a complete audit trail of all changes.
+
+Unauthorized modifications to financial data are strictly prohibited and must be reported immediately. The product code 532-123-4567 must be referenced in all audit logs.
+
+7. Contact Information
+
+For questions regarding financial reporting procedures, employees may contact the finance operations team at reporting.support @aurorabank.com or call the support line at +41 22 884 3300.
+
+Further documentation related to reporting standards is maintained internally by the finance operations division.
+
+8. Policy Review
+
+This policy is maintained by the Finance Governance Division of Aurora Continental Bank and is subject to periodic review to ensure ongoing compliance with regulatory requirements.

@@ -1,0 +1,30 @@
+Payment Details Form
+
+Payer Information
+
+Full Name: Rajesh Kumar Patel
+Email Address: rajesh.patel@example.com
+Billing Address: 14 MG Road, Bengaluru, India
+
+Payment Information
+
+Payment Method: Bank Transfer
+Account Holder Name: Rajesh Kumar Patel
+IBAN: IN29HDFC00012345678901
+
+Recipient Information
+
+Recipient Name: Aisha Khan
+Recipient Email: aisha.khan@example.com
+Recipient Address: Sheikh Zayed Road, Dubai, United Arab Emirates
+
+Transfer Details
+
+Transfer Date: June 2, 2024
+Payment Purpose: Account service payment
+
+Declaration
+
+I confirm that the payment and contact information provided in this form is accurate. I understand that incorrect banking information may delay transaction processing.
+
+Signature: Rajesh Kumar Patel

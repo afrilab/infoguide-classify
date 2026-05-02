@@ -1,0 +1,16 @@
+During the latest payroll validation process, a detailed review was conducted for the employee record associated with Anna Maria L.
+
+According to the current HR system, Anna Maria L. is registered with the email address anna.lopez@company.com and can be contacted via +34 612 778899. Her residential address is listed as Calle de Alcalá 45, Madrid, Spain.
+
+The payroll records indicate that salary payments are processed using the following account:
+
+Account Holder: Anna Maria L.
+IBAN: ES9121000418450200051332
+Primary Card: 4532 0151 1283 0366
+Secondary Card: 4716 2210 5188 5662
+
+However, during the reconciliation process, an additional reference labeled "IBAN Ref: 2024-05-AL" appeared in the payroll log. Based on its format and placement, this seems to be an internal reference rather than an actual bank account number, but it was recorded close to the IBAN field, which may lead to confusion.
+
+No discrepancies were found in the actual payment account or card details, but due to the presence of similar-looking identifiers, a manual verification step is recommended.
+
+All other employee data appears to be consistent at this time.

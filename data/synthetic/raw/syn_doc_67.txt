@@ -1,0 +1,36 @@
+Multi-Entry Payment Record
+
+Client Section
+
+Name: Carlos Eduardo Mendes
+Email: c.mendes@example.com
+Phone: +55 11 91234 5678
+Address: Avenida Paulista 1578, São Paulo, Brazil
+
+Payment Accounts
+
+Primary Account: BR1500001234567890123456
+
+Card Information
+
+Card Holder: Carlos Eduardo Mendes
+Card Number: 4532 9988 7766 5544
+
+Transaction Data
+
+Txn Date: June 12, 2024
+Txn Code: 4532998877660000
+Settlement Ref: 06112024
+
+Additional Notes
+
+- Primary account is valid and confirmed.
+- Secondary account appears to be a reference string and should not be used.
+- Temporary account field contains a numeric string copied from a system log.
+- Backup card reference is stored for traceability but is not a full payment credential.
+
+Declaration
+
+The client confirms that the primary account and listed card are valid for processing.
+
+Signature: Carlos Eduardo Mendes

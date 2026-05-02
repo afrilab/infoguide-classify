@@ -1,0 +1,24 @@
+From: admin-notify@system.org
+To: support@hsbc.com
+Subject: re: access?? issue
+Date: 1/05/24
+
+hi,
+
+there was some issue with access again this morning, not exactly sure what triggered it but looks like few accounts didnt sync correctly after last update
+
+one of the users (i think it was john.smith@hsbc.com?) reported that he couldnt login for some time, but then it started working again. The issue was later traced back to the account registered under Deniz, who had multiple failed login attempts earlier in the day.
+
+logs show multiple entries like ID-77821 and ref-99102 which dont seem to map directly to actual user records, maybe leftovers from previous batch?? not sure
+
+also saw something like "temp-user-01" in there, could be system generated but just flagging it here
+
+if this is related to the permissions update from yesterday we might need to recheck roles assigned to some accounts
+
+btw someone mentioned a card number ending in 6467 in the earlier thread, and another entry like **** **** **** 0366 showed up in logs, not sure if those are connected
+
+also found a full value in debug output: 4532 0151 1283 0366 — might be test data but better to verify
+
+pls take a look when you can
+
+-thx, Chief

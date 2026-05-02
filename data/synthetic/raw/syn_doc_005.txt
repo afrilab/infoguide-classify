@@ -1,0 +1,45 @@
+Title: Anti-Money Laundering and Know Your Customer (KYC) Policy
+
+1. Introduction
+
+This document establishes the Anti-Money Laundering (AML) and Know Your Customer (KYC) principles adopted by Horizon National Bank to prevent illicit financial activity and ensure compliance with international regulatory frameworks. The policy outlines the procedures and controls required to identify, assess, and mitigate risks associated with money laundering and terrorist financing.
+
+This policy becomes effective on 5 September 2023, and applies to all business units, subsidiaries, and affiliated entities operating under Horizon National Bank.
+
+2. Scope
+
+This policy applies to all employees, contractors, and third-party service providers engaged in customer onboarding, transaction monitoring, and compliance reporting activities. It includes operations conducted in regional offices located in Athens, Warsaw, and Prague.
+
+All departments must adhere to the requirements set forth in this document and ensure that appropriate due diligence is conducted for all customers.
+
+3. Customer Due Diligence (CDD)
+
+Customer Due Diligence procedures must be completed before establishing any business relationship. This includes verification of identity, assessment of risk level, and documentation of customer information.
+
+Compliance officers, such as Becker, are responsible for reviewing high-risk cases and ensuring that enhanced due diligence measures are applied where necessary.
+
+The Compliance Review Panel shall oversee the escalation of suspicious cases and provide recommendations for further investigation.
+
+4. Transaction Monitoring
+
+All transactions must be continuously monitored for unusual or suspicious activity. Monitoring systems must flag transactions that deviate from established customer profiles or exceed predefined thresholds.
+
+Suspicious activities must be reported to the central compliance system no later than 20/11/2024. All reports must include supporting documentation and justification for the classification of the activity.
+
+5. Record Keeping
+
+Customer identification records, transaction logs, and compliance reports must be retained for a minimum of five years following the termination of a business relationship.
+
+Records must be securely stored and accessible only to authorized personnel. Any requests for access must be documented and approved by the appropriate authority.
+
+6. Training and Awareness
+
+All employees must complete mandatory AML and KYC training on an annual basis. Training materials are provided by the Compliance Training Unit and must be reviewed prior to certification.
+
+7. Contact Information
+
+For questions regarding AML and KYC procedures, employees may contact the compliance support team at Aml.Support@horizonbank.com or call the compliance hotline at 22 678 4412.
+
+Additional guidance is available through the internal knowledge base at intranet.horizonbank/aml-guidelines.
+
+This policy is maintained by the Compliance Division of Horizon National Bank and is subject to periodic review and updates.

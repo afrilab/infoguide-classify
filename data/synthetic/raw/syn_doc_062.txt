@@ -1,0 +1,33 @@
+Employee Onboarding Form
+
+Personal Information
+
+Full Name: Mehmet Yılmaz
+Nationality: Turkish
+
+Contact Details
+
+Email Address: mehmet.yilmaz@company.com
+Mobile Number: +90 532 445 6677
+Home Address: Bağdat Caddesi 120, Istanbul, Turkey
+
+Employment Details
+
+Position: Operations Specialist
+Department: Financial Operations
+
+Banking Information
+
+Account Holder Name: Mehmet Yılmaz
+IBAN: TR330006100519786457841326
+
+Emergency Contact
+
+Contact Name: Ayşe Yılmaz
+Contact Phone: +90 532 778 8899
+
+Declaration
+
+I confirm that the information provided in this form is accurate and complete. I understand that any incorrect or outdated information may affect employment records and payroll processing.
+
+Signature: Mehmet Yılmaz

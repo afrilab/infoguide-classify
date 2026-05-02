@@ -1,0 +1,26 @@
+From: account-services@barclays.com.tr
+To: support@barclays.com
+Subject: card verification follow-up
+
+Hi,
+
+Following up on the card verification request that came in earlier this week.
+
+The client didn’t provide full details in the original message, but from what we can see, the payment was made using a card ending in 9876. There was also a note from the coordinator mentioning that the full card number had already been shared in a previous thread, but I couldn’t find that email.
+
+In one of the logs, I also noticed an entry formatted as **** **** **** 9876, which may correspond to the same card. Additionally, a full value 4716221051885662 appeared in a debug record, but it’s unclear whether this is production or test data.
+
+For completeness, the client also provided an account reference:
+IBAN: GB82 WEST 1234 5698 7654 32 or TR33-0006-1005-1978-6457-8413-26
+
+Can someone from your side check whether we have the complete card details and IBAN recorded correctly in the system?
+
+Also, just to confirm, the card appears under the name Michael Brown, but since this was referenced indirectly, it would be good to verify that it actually belongs to the correct account.
+
+If needed, we might have to ask the client to resend the full information before proceeding.
+
+Let me know what you find.
+
+Thanks,
+Account Services
+Barclays Bank PLC

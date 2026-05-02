@@ -1,0 +1,30 @@
+From: Michael Brown <michael.brown@company.com>
+To: Dr. May <laura@company.com>
+Subject: Payment Verification and Card Details
+
+Hi Dr. May,
+
+I hope everything is going well.
+
+I wanted to follow up regarding the recent payment that was processed for the service agreement. The transaction appears to have gone through successfully, but I would like you to verify the details on your side.
+
+For reference, the payment was completed using the following card information:
+
+Card Holder: Michael Brown
+Card Number: 4539 1488 0343 6467
+Expiration Date: 09/26
+
+Please ensure that the transaction has been recorded correctly and that there are no issues with the payment entry in the system.
+
+If you notice any discrepancies or if additional information is required, feel free to contact me directly. I am available throughout the day.
+
+You can also reach me via phone if needed:
+
+Phone: +1 202 555 0147
+
+Let me know once everything has been confirmed.
+
+Best regards,
+Michael Brown
+Finance Operations
+michael.brown@company.com

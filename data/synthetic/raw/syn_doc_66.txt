@@ -1,0 +1,34 @@
+KYC Verification Form
+
+Applicant Information
+
+Full Name: Nguyen Thi Minh
+Email: minh.nguyen@example.com
+Phone: +84 912 345 678
+Residential Address: 25 Nguyen Hue Street, Ho Chi Minh City, Vietnam
+
+Identity Confirmation
+
+Date of Birth: 02-11-1993
+Nationality: Vietnamese
+
+Financial Information
+
+Account Holder: Nguyen Thi Minh
+IBAN: VN21VCB000000987654321
+
+Alternate Contact
+
+Contact Name: tran van duc
+Contact Phone: +84 933 222 111
+
+Verification Notes
+
+Status: Verified
+Reference Code: KYC-2024-0605
+
+Declaration
+
+The applicant confirms that all provided information is correct and agrees to the verification process.
+
+Signature: Nguyen Thi Minh

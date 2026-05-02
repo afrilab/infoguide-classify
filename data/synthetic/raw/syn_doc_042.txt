@@ -1,0 +1,30 @@
+From: J. Smith <john.smith@company.com>
+To: M. Brown <michael.brown@company.com>
+Subject: Re: Payment check
+
+Hi Michael,
+
+Just wanted to quickly follow up on the payment we talked about earlier.
+
+I checked the system this morning, and it looks like the transaction went through, but I’m not 100% sure if all the related entries were updated properly. Could you take a quick look on your side and confirm?
+
+Also, the ref number we used (4532-7812-9944-1203, I think) might not be matching exactly with what’s in the report, so maybe double-check that as well.
+
+If everything is fine, we can go ahead and close this case today.
+
+You can reach me here or at john.smith@company.com if needed.
+
+Thanks,
+J. Smith
+
+--- Previous message ---
+From: M. Brown <michael.brown@company.com>
+To: J. Smith <john.smith@company.com>
+
+Hey,
+
+Yeah I processed it yesterday evening. Should be fine but I didn’t recheck the logs yet.
+
+Let me verify and get back to you.
+
+-M

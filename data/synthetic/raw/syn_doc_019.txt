@@ -1,0 +1,54 @@
+Internal Audit Review Report – Transaction Control Assessment
+
+Executive Summary
+
+This report summarizes the results of an internal audit review conducted within DeltaCore Banking Group. The purpose of the audit was to assess the effectiveness of transaction control mechanisms and identify potential areas for improvement.
+
+The audit was carried out over a two-week period from September 9, 2024 to September 20, 2024. The review covered selected operational units located in Jordan, nice, and Ho Chi Minh City.
+
+Background
+
+DeltaCore Banking Group maintains an internal audit framework designed to evaluate compliance with operational standards and ensure consistency across regional units. The current audit cycle was initiated following approval from the central audit function.
+
+The review was led by audit manager Cihan, who coordinated audit activities and consolidated findings from all participating units.
+
+Scope and Methodology
+
+The audit involved a sample-based review of transaction records and control documentation. A total of 110 records were selected for detailed examination.
+
+Audit procedures included:
+- verification of transaction approval workflows
+- review of supporting documentation
+- assessment of escalation practices
+
+Findings
+
+1. Incomplete Documentation
+
+Several transaction records reviewed in the Jordan unit were found to have incomplete supporting documentation. The reference code 22 678 4412 was used internally to track document batches during the review process. In particular, approval records were missing in a small number of cases.
+
+Cihan noted that similar documentation issues had been identified during a previous review cycle.
+
+2. Approval Process Deviations
+
+In the nice office, certain transactions were processed without the required secondary approval. While these instances were limited, they indicated inconsistency in applying established procedures.
+
+3. Escalation Timing
+
+The Ho Chi Minh City unit demonstrated minor delays in escalation. One issue identified on September 12, 2024 was formally escalated on September 16, 2024.
+
+Analysis
+
+The audit findings indicate that while control frameworks are generally functioning, execution varies across different units. Documentation gaps and approval inconsistencies suggest the need for improved monitoring and follow-up.
+
+During the review, the audit manager emphasized that repeated findings across multiple periods may indicate systemic weaknesses rather than isolated errors.
+
+Conclusion and Recommendations
+
+The audit concludes that transaction control mechanisms are partially effective but require improvement in consistency and enforcement.
+
+Recommended actions include strengthening documentation standards and ensuring strict adherence to approval requirements.
+
+The final audit report was submitted on 25/09/2024 to the central audit function for further evaluation.
+
+For additional information regarding this report, inquiries may be directed to audit.operations@deltacorebank.com.

@@ -1,0 +1,53 @@
+Internal Audit Report – Cross-Unit Control Effectiveness Assessment
+
+Executive Summary
+
+This report presents the findings of an internal audit conducted within NovaBridge Financial Group. The audit assessed the effectiveness and consistency of control implementation across selected operational units.
+
+The review was conducted between August 11, 2025 and August 26, 2025, with follow-up validation activities completed in early September 2025.
+
+Background
+
+NovaBridge Financial Group operates an internal audit framework designed to ensure compliance with operational standards and identify control deficiencies. The current audit cycle focused on transaction approval processes, documentation integrity, and escalation practices.
+
+The audit was led by senior auditor andrei petrescu, who coordinated the review across all participating units. andrei petrescu was responsible for consolidating findings and ensuring consistency in reporting.
+
+Scope and Methodology
+
+The audit included a structured review of transaction records and supporting documentation. A total of 135 records were examined across units located in Bucharest, Vienna, and Prague.
+
+Standard audit procedures were applied, including verification of approval workflows, validation of documentation completeness, and review of escalation timelines.
+
+Findings
+
+1. Documentation Consistency
+
+The Bucharest unit demonstrated inconsistencies in maintaining complete documentation. Several records lacked sufficient approval evidence, and some entries showed discrepancies between recorded timestamps and approval logs.
+
+andrei petrescu noted that similar issues had been identified during a previous audit conducted in July 2025.
+
+2. Approval Enforcement
+
+In the Vienna office, certain transactions were processed without the required secondary approval. Although limited in number, these instances indicated inconsistency in applying established procedures.
+
+The audit lead observed that such cases were not always clearly documented, making it difficult to determine whether they represented authorized exceptions.
+
+3. Escalation Practices
+
+The Prague unit showed delays in escalating identified issues. One control issue recorded on August 18, 2025 was not formally escalated until August 22, 2025.
+
+Additional review suggested that similar delays had occurred earlier in the audit period, although these were not consistently documented.
+
+Analysis
+
+The findings indicate that while control mechanisms are generally established, their application varies across units. Repeated documentation gaps and delays in escalation suggest weaknesses in monitoring and follow-up processes.
+
+During the audit, andrei petrescu emphasized that recurring findings across multiple cycles may indicate systemic issues rather than isolated cases.
+
+Conclusion and Recommendations
+
+The audit concludes that operational controls are partially effective but require improvement in consistency and enforcement. Recommended actions include strengthening documentation standards and reinforcing approval procedures.
+
+The final report was submitted on 03/09/2025 to the central audit function for further review.
+
+For additional information, inquiries may be directed to audit.final@novabridgebank.com.

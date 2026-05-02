@@ -1,0 +1,47 @@
+Meeting Notes: Incident Review and Risk Coordination
+
+Date: Last Monday
+Location: Frankfurt Office
+
+Attendees:
+- A. Demir (Compliance Lead)
+- M. Schneider (Risk Team)
+- L. Rossi (Operations)
+- K. Weber (Internal Audit)
+
+The meeting was held to review a recent operational incident that was initially reported during the previous review cycle. The discussion focused on identifying the root cause of the issue, assessing potential risks, and ensuring that corrective actions are implemented across relevant teams.
+
+A. Demir opened the meeting by summarizing the sequence of events. According to the summary, the issue was first noticed late last week when discrepancies were identified in internal reporting outputs. M. Schneider noted that similar inconsistencies had been observed in earlier reports, but they were not escalated at the time.
+
+L. Rossi explained that the operations team had already started investigating the problem and had identified possible gaps in the data validation process. However, she emphasized that further analysis would be required to confirm the exact cause.
+
+K. Weber raised concerns regarding audit readiness and pointed out that incomplete documentation could create challenges during future audit checks. He recommended that all related processes be reviewed and properly documented before the next evaluation period.
+
+Key discussion points included:
+
+- Review of the incident timeline and initial detection
+- Identification of gaps in validation and reporting processes
+- Coordination between compliance, risk, and operations teams
+- Preparation for upcoming audit reviews
+
+During the discussion, it was mentioned that the issue had been briefly referenced in a previous meeting, but no formal action was taken at that time. A. Demir acknowledged that earlier intervention could have reduced the impact and stressed the importance of timely escalation.
+
+The group agreed that improved communication between teams would be essential. M. Schneider suggested introducing a simple tracking mechanism to ensure that similar issues are not overlooked in the future.
+
+Action Items:
+
+- A. Demir to prepare a summary report outlining the incident details
+- M. Schneider to conduct a risk assessment based on current findings
+- L. Rossi to review validation procedures and suggest improvements
+- K. Weber to update audit documentation and highlight missing records
+
+Additional Notes:
+
+- A follow-up discussion is planned for next week
+- Teams are expected to provide updates before the next review session
+
+It was also noted that certain references used in internal discussions may not always be clearly documented. The group agreed to standardize how incidents are recorded and communicated to avoid confusion.
+
+For further questions, participants were advised to reach out to the compliance team or consult the shared documentation platform.
+
+The meeting concluded with agreement on the need for stronger coordination and more structured reporting practices moving forward.

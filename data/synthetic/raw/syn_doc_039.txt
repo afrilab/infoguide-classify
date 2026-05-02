@@ -1,0 +1,30 @@
+From: Dilara W. <dilara.wilson@company.com>
+To: Finance Team <finance@company.com>
+Subject: Transfer Confirmation and Account Details
+
+Hi team,
+
+I would like to confirm that the transfer requested by the Berlin Office has been completed successfully. The funds were sent earlier today, and the transaction should now be reflected in the system.
+
+Please find the account details used for the transfer below:
+
+Account Name: Dilara W.
+IBAN: DE89-3704-0044-0532-0130-00
+
+Kindly verify that the transaction has been recorded correctly and ensure that all related documentation is updated accordingly.
+
+If there are any issues or if additional confirmation is required, please contact me directly or reach out to the finance team through the usual channels.
+
+For urgent matters, I can also be reached by phone:
+
+Phone: 49 151 23456789
+
+In some internal system logs, references such as "finance.team@internal-ref" may appear, but these do not correspond to valid or active email addresses.
+
+Thank you for your cooperation.
+
+Best regards,
+Dilara W.
+Finance Department
+Berlin Office
+dilara.wilson@company.com
