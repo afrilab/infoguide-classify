@@ -1,0 +1,15 @@
+input_path: data/anonymized/presidio_hybrid_trf_documents.jsonl
+output_path: data/anonymized/presidio_hybrid_trf_generic_placeholder_documents.jsonl
+
+generic_placeholder: "[SENSITIVE_ENTITY]"
+
+typed_placeholders:
+  - "[PERSON]"
+  - "[ORG]"
+  - "[ORGANIZATION]"
+  - "[LOCATION]"
+  - "[EMAIL]"
+  - "[PHONE]"
+  - "[DATE]"
+  - "[CREDIT_CARD]"
+  - "[IBAN]"

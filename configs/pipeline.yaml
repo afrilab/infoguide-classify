@@ -29,6 +29,10 @@ steps:
     enabled: true
     script: "src/anonymization/anonymizer.py"
     config: "configs/anonymization/presidio_hybrid_trf.yaml"
+  step3e2_generic_placeholder_hybrid_trf:
+    enabled: true
+    script: "src/anonymization/create_generic_placeholder_docs.py"
+    config: "configs/anonymization/generic_placeholder_hybrid_trf.yaml"
   step3f_context_filter_hybrid_trf:
     enabled: true
     script: "src/anonymization/context_filter_regex_predictions.py"
