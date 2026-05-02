@@ -55,6 +55,18 @@ def compute_scores(tp: int, fp: int, fn: int) -> Dict[str, Any]:
         "fn": fn,
     }
 
+
+def get_variations(entity: Entity) -> List[str]:
+    variations = entity.get("variation")
+
+    if isinstance(variations, list):
+        return [str(variation) for variation in variations] or ["unknown"]
+
+    if variations:
+        return [str(variations)]
+
+    return ["unknown"]
+
 def spans_overlap(a: Entity, b: Entity) -> bool:
     return a["start"] < b["end"] and b["start"] < a["end"]
 
@@ -79,6 +91,7 @@ def normalize_entity(entity: Entity) -> Entity:
         "end": int(entity["end"]),
         **({"score": entity["score"]} if "score" in entity else {}),
         **({"difficulty": entity["difficulty"]} if "difficulty" in entity else {}),
+        **({"variation": entity["variation"]} if "variation" in entity else {}),
     }
 
 
@@ -196,6 +209,11 @@ def evaluate_model(model_config: Dict[str, Any], benchmark_path: str):
         "relaxed": {},
     }
 
+    per_type_variation = {
+        "strict": {},
+        "relaxed": {},
+    }
+
     per_difficulty = {
         "strict": {},
         "relaxed": {},
@@ -251,6 +269,12 @@ def evaluate_model(model_config: Dict[str, Any], benchmark_path: str):
                 difficulty = gt.get("difficulty", "unknown")
 
                 update_counter(per_type[mode], entity_type, tp=1)
+                for variation in get_variations(gt):
+                    update_counter(
+                        per_type_variation[mode],
+                        (entity_type, variation),
+                        tp=1,
+                    )
                 update_counter(per_difficulty[mode], difficulty, tp=1)
                 update_counter(per_doc_type[mode], doc_type, tp=1)
 
@@ -259,6 +283,12 @@ def evaluate_model(model_config: Dict[str, Any], benchmark_path: str):
                 difficulty = gt.get("difficulty", "unknown")
 
                 update_counter(per_type[mode], entity_type, fn=1)
+                for variation in get_variations(gt):
+                    update_counter(
+                        per_type_variation[mode],
+                        (entity_type, variation),
+                        fn=1,
+                    )
                 update_counter(per_difficulty[mode], difficulty, fn=1)
                 update_counter(per_doc_type[mode], doc_type, fn=1)
 
@@ -280,6 +310,11 @@ def evaluate_model(model_config: Dict[str, Any], benchmark_path: str):
                 entity_type = pred["type"]
 
                 update_counter(per_type[mode], entity_type, fp=1)
+                update_counter(
+                    per_type_variation[mode],
+                    (entity_type, "unknown"),
+                    fp=1,
+                )
                 update_counter(per_difficulty[mode], "unknown", fp=1)
                 update_counter(per_doc_type[mode], doc_type, fp=1)
 
@@ -401,6 +436,66 @@ def evaluate_model(model_config: Dict[str, Any], benchmark_path: str):
             "relaxed_fn",
         ],
         per_type_rows,
+    )
+
+    type_variation_names = sorted(
+        set(per_type_variation["strict"].keys())
+        | set(per_type_variation["relaxed"].keys())
+    )
+
+    per_type_variation_rows = []
+    for entity_type, variation in type_variation_names:
+        strict_scores = compute_scores(
+            **per_type_variation["strict"].get(
+                (entity_type, variation),
+                {"tp": 0, "fp": 0, "fn": 0},
+            )
+        )
+        relaxed_scores = compute_scores(
+            **per_type_variation["relaxed"].get(
+                (entity_type, variation),
+                {"tp": 0, "fp": 0, "fn": 0},
+            )
+        )
+
+        per_type_variation_rows.append(
+            {
+                "type": entity_type,
+                "variation": variation,
+                "strict_precision": format_score(strict_scores["precision"]),
+                "strict_recall": format_score(strict_scores["recall"]),
+                "strict_f1": format_score(strict_scores["f1"]),
+                "strict_tp": strict_scores["tp"],
+                "strict_fp": strict_scores["fp"],
+                "strict_fn": strict_scores["fn"],
+                "relaxed_precision": format_score(relaxed_scores["precision"]),
+                "relaxed_recall": format_score(relaxed_scores["recall"]),
+                "relaxed_f1": format_score(relaxed_scores["f1"]),
+                "relaxed_tp": relaxed_scores["tp"],
+                "relaxed_fp": relaxed_scores["fp"],
+                "relaxed_fn": relaxed_scores["fn"],
+            }
+        )
+
+    write_csv(
+        output_dir / "per_type_variation.csv",
+        [
+            "type",
+            "variation",
+            "strict_precision",
+            "strict_recall",
+            "strict_f1",
+            "strict_tp",
+            "strict_fp",
+            "strict_fn",
+            "relaxed_precision",
+            "relaxed_recall",
+            "relaxed_f1",
+            "relaxed_tp",
+            "relaxed_fp",
+            "relaxed_fn",
+        ],
+        per_type_variation_rows,
     )
 
     difficulty_names = sorted(
