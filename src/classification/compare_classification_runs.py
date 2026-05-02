@@ -28,6 +28,7 @@ DEFAULT_RUNS = {
     "embedding": ROOT / "data" / "classified" / "classification_results__embedding.jsonl",
     "embedding_large": ROOT / "data" / "classified" / "classification_results__embedding_large.jsonl",
     "zeroshot": ROOT / "data" / "classified" / "classification_results__zeroshot.jsonl",
+    "zeroshot_large": ROOT / "data" / "classified" / "classification_results__zeroshot_large.jsonl",
 }
 
 

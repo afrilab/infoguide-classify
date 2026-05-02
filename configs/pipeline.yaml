@@ -18,7 +18,7 @@ steps:
     script: "src/anonymization/anonymizer.py"
     config: "configs/anonymization/presidio_ner_only.yaml"
   step3c_anonymization_hybrid:
-    enabled: false
+    enabled: true
     script: "src/anonymization/anonymizer.py"
     config: "configs/anonymization/presidio_hybrid.yaml"
   step3d_anonymization_hybrid_lg:
@@ -58,13 +58,17 @@ steps:
     script: "src/classification/classify_documents.py"
     config: "configs/classification_embedding.yaml"
   step5b2_classification_embedding_large:
-    enabled: true
+    enabled: false
     script: "src/classification/classify_documents.py"
     config: "configs/classification_embedding_large.yaml"
   step5c_classification_zeroshot:
-    enabled: true
+    enabled: false
     script: "src/classification/classify_documents.py"
     config: "configs/classification.yaml"
+  step5d_classification_zeroshot_large:
+    enabled: true
+    script: "src/classification/classify_documents.py"
+    config: "configs/classification_zeroshot_large.yaml"
   step6a_report_tfidf:
     enabled: true
     script: "src/classification/classification_report.py"
@@ -103,6 +107,16 @@ steps:
       - "data/classified/classification_results__zeroshot.jsonl"
       - "--name"
       - "zeroshot"
+      - "--output-dir"
+      - "outputs/classification_outputs"
+  step6d_report_zeroshot_large:
+    enabled: true
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__zeroshot_large.jsonl"
+      - "--name"
+      - "zeroshot_large"
       - "--output-dir"
       - "outputs/classification_outputs"
   step7_compare_classification_models:
