@@ -1,0 +1,39 @@
+{"doc_id": "doc_0002", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.080173}
+{"doc_id": "doc_0004", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.229782}
+{"doc_id": "doc_0001", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.279809}
+{"doc_id": "doc_0003", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.110194}
+{"doc_id": "doc_0005", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.248418}
+{"doc_id": "doc_0116", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.285281}
+{"doc_id": "doc_0119", "taxonomy": {"level_1": "Document Type", "level_2": null, "level_3": null}, "status": "partially_assigned", "confidence": 0.103523}
+{"doc_id": "doc_0125", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.094994}
+{"doc_id": "doc_0122", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.251322}
+{"doc_id": "doc_0118", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.046493}
+{"doc_id": "doc_0112", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.288973}
+{"doc_id": "doc_0121", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.201982}
+{"doc_id": "doc_0111", "taxonomy": {"level_1": "Document Type", "level_2": "HR Documents / Communications", "level_3": "HR Documents / Communications"}, "status": "assigned", "confidence": 0.198193}
+{"doc_id": "doc_0110", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.145196}
+{"doc_id": "doc_0115", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.201417}
+{"doc_id": "doc_0120", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.22194}
+{"doc_id": "doc_0124", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.215377}
+{"doc_id": "doc_0113", "taxonomy": {"level_1": "Document Type", "level_2": "HR Documents / Communications", "level_3": "HR Documents / Communications"}, "status": "assigned", "confidence": 0.273785}
+{"doc_id": "doc_0117", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.234701}
+{"doc_id": "doc_0123", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.094688}
+{"doc_id": "doc_0114", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.300226}
+{"doc_id": "doc_0107", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.228798}
+{"doc_id": "doc_0103", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.134253}
+{"doc_id": "doc_0104", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.335996}
+{"doc_id": "doc_0126", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.139812}
+{"doc_id": "doc_0133", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.187173}
+{"doc_id": "doc_0128", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.175231}
+{"doc_id": "doc_0134", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.31751}
+{"doc_id": "doc_0129", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.175958}
+{"doc_id": "doc_0132", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.138064}
+{"doc_id": "doc_0131", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.173323}
+{"doc_id": "doc_0127", "taxonomy": {"level_1": "Document Type", "level_2": "Internal Communications", "level_3": "Internal Communications"}, "status": "assigned", "confidence": 0.207792}
+{"doc_id": "doc_0130", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.073671}
+{"doc_id": "doc_0008", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.270696}
+{"doc_id": "doc_0007", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.225942}
+{"doc_id": "doc_0010", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.291195}
+{"doc_id": "doc_0011", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.093211}
+{"doc_id": "doc_0006", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.225942}
+{"doc_id": "doc_0009", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.208454}
