@@ -2,11 +2,11 @@
 
 steps:
   step1_ingestion:
-    enabled: true
+    enabled: false
     script: "src/ingestion/document_ingestion.py"
     config: "configs/document_ingestion.yaml"
   step2_processing:
-    enabled: true
+    enabled: false
     script: "src/preprocess/process_documents.py"
     config: "configs/process.yaml"
   step3a_anonymization_regex_only:
@@ -18,7 +18,7 @@ steps:
     script: "src/anonymization/anonymizer.py"
     config: "configs/anonymization/presidio_ner_only.yaml"
   step3c_anonymization_hybrid:
-    enabled: true
+    enabled: false
     script: "src/anonymization/anonymizer.py"
     config: "configs/anonymization/presidio_hybrid.yaml"
   step3d_anonymization_hybrid_lg:
@@ -50,15 +50,19 @@ steps:
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_hybrid_trf.yaml"
   step5a_classification_tfidf:
-    enabled: true
+    enabled: false
     script: "src/classification/classify_documents.py"
     config: "configs/classification_tfidf.yaml"
   step5b_classification_embedding:
-    enabled: true
+    enabled: false
     script: "src/classification/classify_documents.py"
     config: "configs/classification_embedding.yaml"
+  step5b2_classification_embedding_large:
+    enabled: true
+    script: "src/classification/classify_documents.py"
+    config: "configs/classification_embedding_large.yaml"
   step5c_classification_zeroshot:
-    enabled: false
+    enabled: true
     script: "src/classification/classify_documents.py"
     config: "configs/classification.yaml"
   step6a_report_tfidf:
@@ -66,28 +70,46 @@ steps:
     script: "src/classification/classification_report.py"
     args:
       - "--pred"
-      - "data/classified/classification_results__v2_tfidf.jsonl"
+      - "data/classified/classification_results__tfidf.jsonl"
       - "--name"
-      - "v2_tfidf"
+      - "tfidf"
+      - "--output-dir"
+      - "outputs/classification_outputs"
   step6b_report_embedding:
     enabled: true
     script: "src/classification/classification_report.py"
     args:
       - "--pred"
-      - "data/classified/classification_results__v3_embedding.jsonl"
+      - "data/classified/classification_results__embedding.jsonl"
       - "--name"
-      - "v3_embedding"
-  step6c_report_zeroshot:
-    enabled: false
+      - "embedding"
+      - "--output-dir"
+      - "outputs/classification_outputs"
+  step6b2_report_embedding_large:
+    enabled: true
     script: "src/classification/classification_report.py"
     args:
       - "--pred"
-      - "data/classified/classification_results__v1_zeroshot.jsonl"
+      - "data/classified/classification_results__embedding_large.jsonl"
       - "--name"
-      - "v1_zeroshot"
+      - "embedding_large"
+      - "--output-dir"
+      - "outputs/classification_outputs"
+  step6c_report_zeroshot:
+    enabled: true
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__zeroshot.jsonl"
+      - "--name"
+      - "zeroshot"
+      - "--output-dir"
+      - "outputs/classification_outputs"
   step7_compare_classification_models:
     enabled: true
     script: "src/classification/compare_classification_runs.py"
     args:
       - "--name"
       - "classification_model_comparison"
+      - "--output-dir"
+      - "outputs/classification_outputs"

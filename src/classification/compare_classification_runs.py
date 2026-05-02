@@ -11,8 +11,7 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 ROOT = Path(__file__).resolve().parents[2]
 GT_PATH = ROOT / "data" / "eval" / "classification_gt.jsonl"
-OUT_DIR = ROOT / "logs"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
+DEFAULT_OUT_DIR = ROOT / "outputs" / "classification_outputs"
 
 TARGET_LABELS = [
     "Policy_Procedure_Contract",
@@ -25,9 +24,10 @@ TARGET_LABELS = [
 
 
 DEFAULT_RUNS = {
-    "tfidf": ROOT / "data" / "classified" / "classification_results__v2_tfidf.jsonl",
-    "embedding": ROOT / "data" / "classified" / "classification_results__v3_embedding.jsonl",
-    "zeroshot": ROOT / "data" / "classified" / "classification_results__v1_zeroshot.jsonl",
+    "tfidf": ROOT / "data" / "classified" / "classification_results__tfidf.jsonl",
+    "embedding": ROOT / "data" / "classified" / "classification_results__embedding.jsonl",
+    "embedding_large": ROOT / "data" / "classified" / "classification_results__embedding_large.jsonl",
+    "zeroshot": ROOT / "data" / "classified" / "classification_results__zeroshot.jsonl",
 }
 
 
@@ -88,7 +88,11 @@ def main() -> None:
         help="Classification run in name=path format. Defaults to tfidf, embedding, zeroshot.",
     )
     parser.add_argument("--name", default="classification_model_comparison")
+    parser.add_argument("--output-dir", default=str(DEFAULT_OUT_DIR), help="Directory to write output files")
     args = parser.parse_args()
+
+    out_dir = Path(args.output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     runs = dict(args.run) if args.run else {k: v for k, v in DEFAULT_RUNS.items() if v.exists()}
     if not runs:
@@ -140,8 +144,8 @@ def main() -> None:
     )
 
     base_name = args.name.strip() or "classification_model_comparison"
-    csv_path = OUT_DIR / f"{base_name}.csv"
-    md_path = OUT_DIR / f"{base_name}.md"
+    csv_path = out_dir / f"{base_name}.csv"
+    md_path = out_dir / f"{base_name}.md"
 
     comparison_df.to_csv(csv_path, index=False)
 

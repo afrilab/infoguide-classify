@@ -1,15 +1,19 @@
 input_path: data/anonymized/presidio_hybrid_documents.jsonl
 anonymized_docs_path: data/anonymized/presidio_hybrid_documents.jsonl
-output_path: data/classified/classification_results__v3_embedding.jsonl
+output_path: data/classified/classification_results__embedding.jsonl
 text_fields_priority:
 - anonymized_text
+- processed_text
+- clean_text
+- text
 method: embedding
-model_name: sentence-transformers/all-MiniLM-L6-v2
+model_name: BAAI/bge-small-en-v1.5
+query_instruction: "Represent this sentence for searching relevant passages: "
 head_only: true
 max_chars: 6000
 top_k: 4
-min_score: 0.1
-min_margin: 0.03
+min_score: 0.05
+min_margin: 0.01
 use_label_descriptions: true
 labels:
 - Policy_Procedure_Contract
@@ -20,24 +24,26 @@ labels:
 - Forms_Structured
 label_descriptions:
   Policy_Procedure_Contract: >
-    Regulatory policy guidance procedure compliance rules obligations must shall required prohibited
-    AML CFT anti-money laundering FATF Basel supervision enforcement risk-based approach framework
-    requirements recommendations institutions expected follow comply mandate regulation directive.
+    Regulatory compliance mandate institutions must shall required prohibited framework
+    AML CFT FATF Basel supervision enforcement risk-based obligations directive rules
+    requirements recommended procedures controls financial sector regulation.
   Reports: >
-    Analytical assessment research evaluation findings conclusions country sector financial
-    World Bank FSAP public expenditure review BIS ECB monetary policy economic development
-    quarterly review vulnerability analysis data observed conditions performance results
-    study examination report findings recommendations assessment outcomes.
+    Analytical assessment findings conclusions country sector evaluation financial
+    World Bank FSAP BIS ECB research data observed conditions performance results
+    study examination vulnerabilities outcomes analysis indicators statistics trends
+    quarterly annual review economic monetary policy development expenditure.
   Internal_Communications: >
-    Internal memo announcement staff communication meeting minutes team updates project notes
-    organizational internal message bulletin notice circular.
+    Internal memo announcement staff communication meeting minutes team updates project
+    organizational internal message bulletin notice circular colleagues agenda decisions.
   Emails: >
-    Email correspondence electronic message informal communication reply forward inbox sent.
+    Email From To Subject correspondence inbox forwarded reply thread message sender
+    recipient electronic communication personal informal contact attachment regards.
   HR_Documents: >
     Personnel employee human resources recruitment compensation employment agreement
-    performance evaluation staff records payroll benefits hiring contract workforce.
+    performance evaluation staff records payroll benefits hiring contract workforce
+    salary position job title leave appraisal onboarding termination candidate.
   Forms_Structured: >
-    FFIEC 002 031 051 call report form OC-10 operating circular certificate authorizing resolution
-    letter agreement EBA participation correspondent banking term deposit agreement application
-    form fields tables sections structured filing certificate compliance participant listing
-    authorization transaction review banking form regulatory filing.
+    FFIEC 002 031 051 call report form OC-10 operating circular certificate authorizing
+    resolution letter agreement EBA participation correspondent banking term deposit
+    structured fields tables sections checkboxes completion signature authorisation
+    filing regulatory submission banking form participant listing transaction review.

@@ -10,8 +10,7 @@ from sklearn.metrics import (
 
 ROOT = Path(__file__).resolve().parents[2]
 GT_PATH = ROOT / "data" / "eval" / "classification_gt.jsonl"
-OUT_DIR = ROOT / "logs"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
+DEFAULT_OUT_DIR = ROOT / "outputs" / "classification_outputs"
 
 TARGET_LABELS = [
     "Policy_Procedure_Contract",
@@ -66,7 +65,11 @@ def main():
     ap.add_argument("--pred", default=str(ROOT / "data" / "classified" / "classification_results.jsonl"),
                     help="Path to predictions JSONL")
     ap.add_argument("--name", default="", help="Report name suffix, e.g. v1_zeroshot")
+    ap.add_argument("--output-dir", default=str(DEFAULT_OUT_DIR), help="Directory to write report files")
     args = ap.parse_args()
+
+    out_dir = Path(args.output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     pred_path = Path(args.pred)
     suffix = f"__{args.name}" if args.name else ""
@@ -103,7 +106,7 @@ def main():
     wrong_df = eval_df.loc[~eval_df["is_correct"]].copy()
 
     # --- Write Markdown ---
-    md_path = OUT_DIR / f"classification_report{suffix}.md"
+    md_path = out_dir / f"classification_report{suffix}.md"
     with md_path.open("w", encoding="utf-8") as f:
 
         f.write(f"# Classification Report — {method_name}\n\n")
@@ -157,7 +160,7 @@ def main():
             f.write("\n\n")
 
     # --- Write single CSV ---
-    csv_path = OUT_DIR / f"doc_level_eval{suffix}.csv"
+    csv_path = out_dir / f"doc_level_eval{suffix}.csv"
     eval_df.to_csv(csv_path, index=False)
 
     print(f"Saved: {md_path}")

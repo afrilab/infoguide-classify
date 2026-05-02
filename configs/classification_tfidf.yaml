@@ -1,6 +1,6 @@
 input_path: data/anonymized/presidio_hybrid_documents.jsonl
 anonymized_docs_path: data/anonymized/presidio_hybrid_documents.jsonl
-output_path: data/classified/classification_results__v2_tfidf.jsonl
+output_path: data/classified/classification_results__tfidf.jsonl
 text_fields_priority:
 - anonymized_text
 method: tfidf

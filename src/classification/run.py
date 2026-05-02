@@ -319,6 +319,7 @@ def _classify_embedding(
         ) from e
 
     model_name = cfg.get("model_name") or "sentence-transformers/all-MiniLM-L6-v2"
+    query_instruction = (cfg.get("query_instruction") or "").strip()
     top_k = int(cfg.get("top_k", len(base_labels) if base_labels else 1))
     min_score = float(cfg.get("min_score", 0.0))
     min_margin = float(cfg.get("min_margin", 0.0))
@@ -341,7 +342,8 @@ def _classify_embedding(
 
     sim_by_doc_idx: Dict[int, List[float]] = {}
     if nonempty_texts:
-        doc_emb = model.encode(nonempty_texts, convert_to_numpy=True, show_progress_bar=False)
+        encode_texts = [query_instruction + t for t in nonempty_texts] if query_instruction else nonempty_texts
+        doc_emb = model.encode(encode_texts, convert_to_numpy=True, show_progress_bar=False)
         label_emb = model.encode(candidate_labels, convert_to_numpy=True, show_progress_bar=False)
         sim = cosine_similarity(doc_emb, label_emb)
         for local_i, doc_i in enumerate(nonempty_indices):

@@ -1,8 +1,11 @@
 input_path: data/anonymized/presidio_hybrid_documents.jsonl
 anonymized_docs_path: data/anonymized/presidio_hybrid_documents.jsonl
-output_path: data/classified/classification_results__v1_zeroshot.jsonl
+output_path: data/classified/classification_results__zeroshot.jsonl
 text_fields_priority:
   - anonymized_text
+  - processed_text
+  - clean_text
+  - text
 
 method: zero_shot
 model_name: facebook/bart-large-mnli
@@ -11,7 +14,7 @@ device: -1
 head_only: true
 max_chars: 800
 
-hypothesis_template: "This document is a {}."
+hypothesis_template: "The type of this document is {}."
 
 multi_label: false
 top_k: 4
@@ -21,31 +24,6 @@ min_score: 0.10
 min_margin: 0.03
 
 use_label_descriptions: true
-
-# ---------------------------------------------------------------------------
-# LABELING PROTOCOL
-#
-# Labels align with document types in the organization.
-# Each label describes a document's PRIMARY TYPE and CHARACTERISTICS.
-#
-# Document Type Classification:
-#   1. Policy / Procedure / Contract Documents
-#      - Formal, long, low but critical PII, context-based detection
-#   2. Reports (Financial / Incident / Audit)
-#      - Semi-formal, includes dates, organizations, and locations,
-#        contains some hidden PII
-#   3. Internal Communications (internal announcements, memos, meeting notes)
-#      - Mixed structure, combination of informal and formal tone,
-#        scattered PII
-#   4. Emails
-#      - High PII density, noisy, reflects real-world scenarios
-#   5. HR Documents / Communications (HR emails, employee records, internal HR messages)
-#      - Critical PII, sensitive data
-#   6. Forms / Structured Documents
-#      - Regex-heavy PII, structured fields
-#
-
-# ---------------------------------------------------------------------------
 
 labels:
   - Policy_Procedure_Contract
@@ -57,30 +35,21 @@ labels:
 
 label_descriptions:
   Policy_Procedure_Contract: >
-    regulatory compliance document prescribing rules, requirements, and obligations that financial
-    institutions must or shall follow. Countries and institutions are required to implement these
-    controls. The document mandates specific actions, procedures, or behaviours using language
-    like must, shall, should, required, prohibited, and recommended.
+    prescriptive rules that institutions must and shall comply with, prohibiting or requiring
+    specific behaviours under penalty of non-compliance.
 
   Reports: >
-    financial sector assessment or research report presenting analytical findings, conclusions,
-    and data about a country's economy or financial system. The document describes and evaluates
-    what was observed, measured, or studied — such as a country evaluation, sector review,
-    or policy research paper — rather than prescribing rules.
+    research paper presenting observed data, analytical findings, and conclusions about
+    economic or financial conditions.
 
   Internal_Communications: >
-    internal memo, staff announcement, meeting minutes, or team update circulated within
-    an organisation for internal communication purposes.
+    internal memo or announcement sent to colleagues and staff within the organisation.
 
   Emails: >
-    email message or electronic correspondence exchanged between individuals.
+    personal email with a sender, recipient, and subject line.
 
   HR_Documents: >
-    personnel or human resources document relating to employees, including employment
-    agreements, performance evaluations, payroll, recruitment, or staff records.
+    employee record covering salary, performance, recruitment, or employment contract.
 
   Forms_Structured: >
-    signed legal document, certificate, operating agreement, or structured banking form requiring
-    completion, authorisation, or formal signature. Examples include letters of agreement,
-    operating circular certifications, participation certificates, bank call report filings,
-    correspondent banking agreements, and term deposit authorisation forms.
+    structured form with fields and tables requiring a signature or official authorisation.
