@@ -1,0 +1,6 @@
+benchmark_path: data/synthetic/benchmark.json
+
+models:
+  - model: presidio_hybrid_lg
+    prediction_path: outputs/anonymizer_outputs/presidio_hybrid_lg_predictions.jsonl
+    output_dir: outputs/anonymizer_evaluation/presidio_hybrid_lg
