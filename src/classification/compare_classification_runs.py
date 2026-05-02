@@ -42,8 +42,8 @@ def read_jsonl(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def load_ground_truth() -> pd.DataFrame:
-    return pd.DataFrame(read_jsonl(GT_PATH))[["doc_id", "true_label"]]
+def load_ground_truth(path: Path = GT_PATH) -> pd.DataFrame:
+    return pd.DataFrame(read_jsonl(path))[["doc_id", "true_label"]]
 
 
 def load_predictions(name: str, path: Path) -> pd.DataFrame:
@@ -90,6 +90,7 @@ def main() -> None:
     )
     parser.add_argument("--name", default="classification_model_comparison")
     parser.add_argument("--output-dir", default=str(DEFAULT_OUT_DIR), help="Directory to write output files")
+    parser.add_argument("--gt-path", default=None, help="Path to ground truth JSONL (overrides default)")
     args = parser.parse_args()
 
     out_dir = Path(args.output_dir)
@@ -99,7 +100,7 @@ def main() -> None:
     if not runs:
         print("No prediction files found — skipping comparison.")
         return
-    gt_df = load_ground_truth()
+    gt_df = load_ground_truth(Path(args.gt_path) if args.gt_path else GT_PATH)
 
     summary_rows: list[dict[str, Any]] = []
     comparison_df = gt_df.copy()

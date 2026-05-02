@@ -1,0 +1,45 @@
+input_path: data/anonymized/presidio_hybrid_trf_generic_placeholder_documents.jsonl
+output_path: data/classified/syn_tfidf_generic.jsonl
+text_fields_priority:
+- anonymized_text
+method: tfidf
+head_only: false
+max_chars: 6000
+top_k: 4
+min_score: 0.01
+min_margin: 0.0
+use_label_descriptions: true
+tfidf_ngram_min: 1
+tfidf_ngram_max: 2
+tfidf_min_df: 1
+tfidf_stop_words: english
+labels:
+- Policy_Procedure_Contract
+- Reports
+- Internal_Communications
+- Emails
+- HR_Documents
+- Forms_Structured
+label_descriptions:
+  Policy_Procedure_Contract: >
+    Regulatory policy guidance procedure compliance rules obligations must shall required prohibited
+    AML CFT anti-money laundering FATF Basel supervision enforcement risk-based approach framework
+    requirements recommendations institutions expected follow comply mandate regulation directive.
+  Reports: >
+    Analytical assessment research evaluation findings conclusions country sector financial
+    World Bank FSAP public expenditure review BIS ECB monetary policy economic development
+    quarterly review vulnerability analysis data observed conditions performance results
+    study examination report findings recommendations assessment outcomes.
+  Internal_Communications: >
+    Internal memo announcement staff communication meeting minutes team updates project notes
+    organizational internal message bulletin notice circular.
+  Emails: >
+    Email correspondence electronic message informal communication reply forward inbox sent.
+  HR_Documents: >
+    Personnel employee human resources recruitment compensation employment agreement
+    performance evaluation staff records payroll benefits hiring contract workforce.
+  Forms_Structured: >
+    FFIEC 002 031 051 call report form OC-10 operating circular certificate authorizing resolution
+    letter agreement EBA participation correspondent banking term deposit agreement application
+    form fields tables sections structured filing certificate compliance participant listing
+    authorization transaction review banking form regulatory filing.
