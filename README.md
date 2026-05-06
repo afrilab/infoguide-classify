@@ -2,21 +2,18 @@
 
 ## Taxonomy assignment
 
-The taxonomy in `configs/taxonomy.yaml` classifies documents into six document/PII-oriented labels:
+The taxonomy in `configs/taxonomy.yaml` assigns documents to a three-level banking taxonomy:
 
-- `Policy / Procedure / Contract Documents`
-- `Reports (Financial / Incident / Audit)`
-- `Internal Communications`
-- `Emails`
-- `HR Documents / Communications`
-- `Forms / Structured Documents`
+- Level 1: banking domain, such as `Governance & Policy`, `Risk & Compliance`, or `Financial Operations`
+- Level 2: functional category, such as `AML / KYC`, `Audit & Monitoring`, or `Reporting & Statements`
+- Level 3: specific topic, such as `Customer Due Diligence`, `Financial Stability Assessment`, or `Regulatory Reporting`
 
 Available taxonomy assigners:
 
 - `src/assign_taxonomy_baseline.py`: keyword baseline.
 - `src/assign_taxonomy_embeddings.py`: whole-document hierarchical embedding/keyword hybrid.
 - `src/assign_taxonomy_evidence.py`: chunk-evidence assigner that scores complete taxonomy paths, aggregates top supporting chunks, and flags low-margin cases for review.
-- `src/assign_taxonomy_rule_boosted.py`: recommended final taxonomy output; applies deterministic document-genre rules on top of the best hybrid output.
+- `src/assign_taxonomy_rule_boosted.py`: recommended final taxonomy output; applies deterministic banking-domain rules on top of the best hybrid output.
 
 ## Reproducible Pipeline
 
@@ -96,6 +93,12 @@ conda run -n infoguide_env python src/evaluate_taxonomy_accuracy.py \
   --show_errors
 ```
 
+Gold labels can be regenerated from the current reviewed/rule-normalized output:
+
+```bash
+conda run -n infoguide_env python scripts/build_taxonomy_gold_labels.py
+```
+
 ### 6. Run ablation study and plots
 
 ```bash
@@ -115,4 +118,4 @@ The recommended final taxonomy assignment file is:
 
 - `data/outputs/taxonomy_assignments_rule_boosted.jsonl`
 
-On the current 39-document gold set, the rule-boosted hybrid reaches `39/39` accuracy. This should be interpreted as a corpus-specific validation result, not a broad generalization claim; see `docs/taxonomy_evaluation.md` for limitations.
+On the current 123-document provisional gold set, the rule-boosted hierarchical output reaches `123/123` internal consistency. This should be interpreted as a corpus-specific regression result, not a broad generalization claim; see `docs/taxonomy_evaluation.md` for limitations.

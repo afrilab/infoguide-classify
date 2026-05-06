@@ -215,24 +215,59 @@ def load_taxonomy_paths(taxonomy_yaml: Dict[str, Any]) -> List[TaxonomyPath]:
                 if isinstance(item, str) and str(item).strip()
             )
 
-            label = str(l2)
-            expanded_keywords = tuple(dict.fromkeys((label, *keywords)))
-            paths.append(
-                TaxonomyPath(
-                    level_1=str(l1),
-                    level_2=label,
-                    level_3=label,
-                    description=description,
-                    keywords=expanded_keywords,
-                    rep_text=build_representation_text(
-                        str(l1),
-                        label,
-                        label,
-                        description,
-                        expanded_keywords,
-                    ),
+            topics = l2_info.get("topics", {}) if isinstance(l2_info, dict) else {}
+            if isinstance(topics, dict) and topics:
+                for l3, l3_info in topics.items():
+                    if isinstance(l3_info, dict):
+                        l3_description = str(l3_info.get("description", "")).strip()
+                        l3_keywords_raw = l3_info.get("keywords", [])
+                    else:
+                        l3_description = ""
+                        l3_keywords_raw = []
+                    if not isinstance(l3_keywords_raw, list):
+                        l3_keywords_raw = []
+                    l3_keywords = tuple(
+                        str(item).strip()
+                        for item in l3_keywords_raw
+                        if isinstance(item, str) and str(item).strip()
+                    )
+                    expanded_keywords = tuple(dict.fromkeys((str(l3), *l3_keywords, str(l2), *keywords)))
+                    path_description = " ".join(x for x in (l3_description, description) if x)
+                    paths.append(
+                        TaxonomyPath(
+                            level_1=str(l1),
+                            level_2=str(l2),
+                            level_3=str(l3),
+                            description=path_description,
+                            keywords=expanded_keywords,
+                            rep_text=build_representation_text(
+                                str(l1),
+                                str(l2),
+                                str(l3),
+                                path_description,
+                                expanded_keywords,
+                            ),
+                        )
+                    )
+            else:
+                label = str(l2)
+                expanded_keywords = tuple(dict.fromkeys((label, *keywords)))
+                paths.append(
+                    TaxonomyPath(
+                        level_1=str(l1),
+                        level_2=label,
+                        level_3=label,
+                        description=description,
+                        keywords=expanded_keywords,
+                        rep_text=build_representation_text(
+                            str(l1),
+                            label,
+                            label,
+                            description,
+                            expanded_keywords,
+                        ),
+                    )
                 )
-            )
 
     if not paths:
         raise ValueError("No valid taxonomy paths found in taxonomy.yaml.")

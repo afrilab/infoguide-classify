@@ -186,23 +186,62 @@ def load_taxonomy(taxonomy_yaml: Dict[str, Any]) -> List[Level1Node]:
             level1_keywords.extend(label_keywords)
 
             level3_nodes: List[Level3Node] = []
-            rep_text_l3 = build_representation_text(
-                level_1=str(l1),
-                level_2=str(l2),
-                level_3=str(l2),
-                keywords=label_keywords,
-            )
-            if description:
-                rep_text_l3 += f" Parent description: {description}"
-            level3_nodes.append(
-                Level3Node(
+            topics = l2_info.get("topics", {})
+            if isinstance(topics, dict) and topics:
+                for l3, l3_info in topics.items():
+                    if isinstance(l3_info, dict):
+                        l3_description = str(l3_info.get("description", "")).strip()
+                        l3_keywords_raw = l3_info.get("keywords", [])
+                    else:
+                        l3_description = ""
+                        l3_keywords_raw = []
+                    if not isinstance(l3_keywords_raw, list):
+                        l3_keywords_raw = []
+
+                    l3_keywords = [
+                        str(x).strip()
+                        for x in l3_keywords_raw
+                        if isinstance(x, str) and str(x).strip()
+                    ]
+                    topic_keywords = list(dict.fromkeys([str(l3), *l3_keywords, *label_keywords]))
+                    level1_keywords.extend(topic_keywords)
+                    rep_text_l3 = build_representation_text(
+                        level_1=str(l1),
+                        level_2=str(l2),
+                        level_3=str(l3),
+                        keywords=topic_keywords,
+                    )
+                    if l3_description:
+                        rep_text_l3 += f" Description: {l3_description}"
+                    if description:
+                        rep_text_l3 += f" Parent description: {description}"
+                    level3_nodes.append(
+                        Level3Node(
+                            level_1=str(l1),
+                            level_2=str(l2),
+                            level_3=str(l3),
+                            keywords=topic_keywords,
+                            rep_text=rep_text_l3,
+                        )
+                    )
+            else:
+                rep_text_l3 = build_representation_text(
                     level_1=str(l1),
                     level_2=str(l2),
                     level_3=str(l2),
                     keywords=label_keywords,
-                    rep_text=rep_text_l3,
                 )
-            )
+                if description:
+                    rep_text_l3 += f" Parent description: {description}"
+                level3_nodes.append(
+                    Level3Node(
+                        level_1=str(l1),
+                        level_2=str(l2),
+                        level_3=str(l2),
+                        keywords=label_keywords,
+                        rep_text=rep_text_l3,
+                    )
+                )
 
             rep_text_l2 = build_representation_text(
                 level_1=str(l1),

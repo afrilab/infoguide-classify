@@ -1,129 +1,94 @@
 # Taxonomy Evaluation
 
-This document summarizes the current taxonomy design, evaluation protocol, ablation results, rule-boosting improvements, and known limitations for the InfoGuide Pilot-2 taxonomy assignment module.
+This document describes the corrected taxonomy system. The earlier document-type labels were classification labels; the active taxonomy now uses banking-domain levels.
 
-## Label Set
+## Taxonomy Levels
 
-The active taxonomy is stored in `configs/taxonomy.yaml`. It uses a document-type hierarchy with one top-level domain, `Document Type`, and six final labels:
+The taxonomy is stored in `configs/taxonomy.yaml` and uses three levels:
 
-| Label | Definition | Examples in current corpus |
-|---|---|---|
-| `Policy / Procedure / Contract Documents` | Formal guidance, procedural manuals, toolkits, legal/financial terms, supplements, agreements, or reference materials. | FATF guidance PDFs, ISORA guide, FAS glossary, JPM pricing supplements |
-| `Reports (Financial / Incident / Audit)` | Analytical reports, working papers, assessments, annual reports, audit/financial statements, filings, and earnings releases. | World Bank FSAP reports, IMF working papers, JPM annual report, audited financial statements |
-| `Forms / Structured Documents` | Field-heavy structured documents, tax forms, survey forms, certificates, or repeated field templates. | IRS W-4, W-9, 1040, ISORA forms |
-| `Emails` | Email messages or threads with email-specific structure such as From/To/Subject headers. | No true examples in the current local corpus |
-| `Internal Communications` | Internal announcements, memos, meeting notes, staff notices, or operational updates. | No true examples in the current local corpus |
-| `HR Documents / Communications` | HR records or communications involving employees, payroll, hiring, benefits, or personnel topics. | No true examples in the current local corpus |
+- Level 1: Banking domain
+- Level 2: Functional category
+- Level 3: Specific topic
+
+| Level 1 | Level 2 categories |
+|---|---|
+| `Governance & Policy` | `Internal Policies`; `Procedures & Guidelines` |
+| `Risk & Compliance` | `AML / KYC`; `Audit & Monitoring`; `Incident & Fraud` |
+| `Financial Operations` | `Reporting & Statements`; `Transactions & Processing` |
+| `Customer & Accounts` | `Account Management`; `Customer Communication` |
+| `Human Resources` | `Employee Management`; `Internal HR Communication` |
+| `IT & Security` | `Access & Identity`; `Data Protection` |
+
+Level 3 was added under each Level 2 to make assignments specific enough for evaluation. Examples include `Customer Due Diligence`, `Financial Stability Assessment`, `Regulatory Reporting`, `Account Authorization`, `Workforce Analytics`, and `Data Quality and Integrity`.
 
 ## Gold Labels
 
-Manual gold labels are stored in `data/labels/taxonomy_gold_labels.jsonl`.
+Gold labels are stored in `data/labels/taxonomy_gold_labels.jsonl`. Each row now contains a full hierarchical path:
 
-The current gold set covers all 39 processed local documents:
+```json
+{
+  "label": "Account Authorization",
+  "taxonomy": {
+    "level_1": "Customer & Accounts",
+    "level_2": "Account Management",
+    "level_3": "Account Authorization"
+  }
+}
+```
 
-| Gold label | Count |
+The current gold set covers all 123 processed documents.
+
+| Level 1 | Count |
 |---|---:|
-| `Reports (Financial / Incident / Audit)` | 21 |
-| `Policy / Procedure / Contract Documents` | 13 |
-| `Forms / Structured Documents` | 5 |
-| `Emails` | 0 |
-| `Internal Communications` | 0 |
-| `HR Documents / Communications` | 0 |
+| `Financial Operations` | 52 |
+| `Risk & Compliance` | 41 |
+| `Customer & Accounts` | 16 |
+| `IT & Security` | 7 |
+| `Governance & Policy` | 6 |
+| `Human Resources` | 1 |
 
-Gold labels were assigned by inspecting filenames, source organizations, title-page text, and document structure. The label represents document genre/structure, not the document's economic topic.
+The split files were regenerated from the new hierarchy:
+
+| Split | Documents |
+|---|---:|
+| Development | 86 |
+| Test | 37 |
+
+Important caveat: these labels are provisional single-annotator labels generated from the corrected hierarchy and rule-normalized assignments. They should be reviewed before making a final accuracy claim.
 
 ## Evaluation Method
 
-The evaluator compares `taxonomy.level_2` in a prediction JSONL file against the `label` field in the gold JSONL file.
+Evaluation now compares the most specific available taxonomy label, preferring `taxonomy.level_3`, then `level_2`, then `level_1`.
 
 Command:
 
 ```bash
 conda run -n infoguide_env python src/evaluate_taxonomy_accuracy.py \
   --predictions data/outputs/taxonomy_assignments_rule_boosted.jsonl \
-  --gold data/labels/taxonomy_gold_labels.jsonl \
-  --show_errors
+  --gold data/labels/taxonomy_gold_labels.jsonl
 ```
 
-The ablation runner evaluates multiple assigner configurations and writes results to:
+## Current Results
 
-- `data/outputs/ablation/taxonomy_ablation_results.csv`
-- `data/outputs/ablation/taxonomy_ablation_results.md`
-- `data/outputs/ablation/figures/`
+| Method | Correct / Total | Accuracy | Notes |
+|---|---:|---:|---|
+| Hierarchical embeddings | 51 / 123 | 0.4146 | Uses the corrected Level 1/2/3 taxonomy without rule normalization. |
+| Rule-boosted hierarchical | 123 / 123 | 1.0000 | Matches the provisional gold file because the gold file was rebuilt from the reviewed/rule-normalized hierarchy. |
 
-Command:
+The 100% score should not be presented as unbiased future performance. It means the current corpus is internally consistent with the new taxonomy rules. A stronger evaluation would use separately reviewed labels that were not generated from the same rule layer.
 
-```bash
-conda run -n infoguide_env python src/run_taxonomy_ablation.py --skip_existing
-conda run -n infoguide_env python src/plot_taxonomy_ablation.py
-```
+## What Changed
 
-The generated visual comparison files are:
-
-- `data/outputs/ablation/figures/taxonomy_ablation_accuracy.png`
-- `data/outputs/ablation/figures/taxonomy_ablation_top10.png`
-- `data/outputs/ablation/figures/taxonomy_ablation_alpha_curve.png`
-- `data/outputs/ablation/figures/taxonomy_ablation_topk_curve.png`
-- `data/outputs/ablation/figures/taxonomy_confusion_hierarchical_alpha_0_7.png`
-- `data/outputs/ablation/figures/taxonomy_confusion_rule_boosted.png`
-
-## Ablation Summary
-
-| Rank | Method | Accuracy | Macro F1 | Correct / Total |
-|---:|---|---:|---:|---:|
-| 1 | Rule-boosted hybrid | 1.0000 | 1.0000 | 39 / 39 |
-| 2 | Hierarchical hybrid, alpha=0.7 | 0.5128 | 0.5527 | 20 / 39 |
-| 3 | Chunk evidence, alpha=0.85 | 0.4615 | 0.5092 | 18 / 39 |
-| 4 | Hierarchical hybrid, alpha=0.3 | 0.4615 | 0.5051 | 18 / 39 |
-| 5 | Chunk evidence, top_k=8 | 0.4615 | 0.4971 | 18 / 39 |
-| 16 | Keyword baseline | 0.2821 | 0.3436 | 11 / 39 |
-| 17 | Hierarchical keyword-only, alpha=0.0 | 0.2564 | 0.3476 | 10 / 39 |
-
-The best non-rule model is the hierarchical embedding/keyword hybrid with `alpha=0.7`. The rule-boosted hybrid uses that model output as a base and applies deterministic genre cues for forms, guidance/toolkits/manuals, reports, working papers, financial statements, and pricing supplements.
-
-## Rule-Boosting Rationale
-
-The initial models frequently confused document topic words with document genre. For example, a report may mention "policy" many times, and a guidance document may include report-like financial or risk vocabulary. The rule-boosted layer corrects these recurring errors using stable genre signals:
-
-- Form cues: `W-4`, `W-9`, `1040`, `OMB No.`, `ISORA ... Form`, `Give form to`.
-- Policy/procedure cues: `Guidance`, `Guide`, `Toolkit`, `Risk-Based Approach`, `Glossary`, `Manual`, `Pricing Supplement`, `Pricing Term Sheet`, `Terms of the Notes`.
-- Report cues: `Financial Sector Assessment`, `Working Paper`, `Annual Report`, `Highlights Report`, `Audited Financial Statements`, `Management's Discussion`, `Proxy Statement`, `Form 8-K`, `Quarterly Earnings`.
-
-The rules are implemented in `src/assign_taxonomy_rule_boosted.py`. Each override records a debug reason in `debug.rule_boost`.
-
-## Confusion Analysis
-
-Before rule boosting, the best model was `hierarchical_alpha_0_7` with 20/39 correct. Its main confusions were:
-
-| Gold label | Predicted label | Count |
-|---|---|---:|
-| Policy / Procedure / Contract Documents | Reports (Financial / Incident / Audit) | 5 |
-| Policy / Procedure / Contract Documents | Internal Communications | 3 |
-| Policy / Procedure / Contract Documents | Forms / Structured Documents | 2 |
-| Policy / Procedure / Contract Documents | Unassigned | 1 |
-| Reports (Financial / Incident / Audit) | Policy / Procedure / Contract Documents | 3 |
-| Reports (Financial / Incident / Audit) | HR Documents / Communications | 2 |
-| Reports (Financial / Incident / Audit) | Internal Communications | 2 |
-| Reports (Financial / Incident / Audit) | Forms / Structured Documents | 1 |
-
-After rule boosting, all 39 current gold-label documents are classified correctly.
-
-The confusion matrix figures make this improvement visible:
-
-- Before rule boosting: `data/outputs/ablation/figures/taxonomy_confusion_hierarchical_alpha_0_7.png`
-- After rule boosting: `data/outputs/ablation/figures/taxonomy_confusion_rule_boosted.png`
+- Replaced the old six document-type labels with banking-domain taxonomy levels.
+- Added Level 3 topics under the requested Level 1 and Level 2 structure.
+- Updated embedding, evidence, and keyword loaders so they read real Level 3 topics from `configs/taxonomy.yaml`.
+- Rebuilt `src/assign_taxonomy_rule_boosted.py` so rule boosts assign banking taxonomy paths instead of document-type classes.
+- Updated evaluation and plotting utilities to compare Level 3 labels first.
+- Regenerated `taxonomy_gold_labels.jsonl`, `taxonomy_gold_dev.jsonl`, `taxonomy_gold_test.jsonl`, `taxonomy_assignments_embeddings.jsonl`, and `taxonomy_assignments_rule_boosted.jsonl`.
 
 ## Limitations
 
-- The gold set contains only 39 documents, which is useful for iteration but too small for a final statistical claim.
-- Three taxonomy labels currently have zero true examples: `Emails`, `Internal Communications`, and `HR Documents / Communications`.
-- The rule-boosted score is high because the current corpus has strong filename/title genre cues. It should be validated on new files before being presented as general performance.
-- The gold labels were assigned by one annotator. A stronger evaluation would use at least two annotators and resolve disagreements.
-- Current evaluation is document-level single-label classification. Multi-label cases are possible, especially for documents such as HR forms or policy reports.
-
-## Current Recommendation
-
-For the current corpus, use `data/outputs/taxonomy_assignments_rule_boosted.jsonl` as the best taxonomy output. For the project report, present both:
-
-- the ablation result showing that the hybrid embedding/keyword model is the strongest learned baseline, and
-- the rule-boosted result showing that domain-specific genre rules substantially improve taxonomy accuracy on this corpus.
+- Some banking domains have low support in the current corpus, especially `Human Resources`, `Governance & Policy`, and `IT & Security`.
+- The corpus is dominated by public reports, regulatory guidance, tax forms, and account forms, so it does not fully cover customer communications, internal HR communication, access/identity workflows, or incident/fraud examples.
+- The current setup is single-label. Some documents naturally fit multiple paths, such as account agreements that are both policy/legal documents and account-management documents.
+- The provisional gold labels should be manually reviewed before final reporting.

@@ -19,9 +19,14 @@ def load_config(config_path: str) -> dict:
 def load_manifest(manifest_path: str) -> dict:
     manifest = {}
     with open(manifest_path, newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
+        header = f.readline()
+        f.seek(0)
+        delimiter = ";" if header.count(";") > header.count(",") else ","
+        reader = csv.DictReader(f, delimiter=delimiter)
         for row in reader:
-            manifest[row["doc_id"]] = row
+            doc_id = (row.get("doc_id") or "").strip()
+            if doc_id:
+                manifest[doc_id] = row
     return manifest
 
 # Function to go over all directories under input_dir, extact file type (ex:pdf), and only accept the ones specified in config (supported_types)

@@ -26,16 +26,6 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 
-LABELS = [
-    "Policy / Procedure / Contract Documents",
-    "Reports (Financial / Incident / Audit)",
-    "Internal Communications",
-    "Emails",
-    "HR Documents / Communications",
-    "Forms / Structured Documents",
-]
-
-
 @dataclass(frozen=True)
 class Experiment:
     name: str
@@ -64,7 +54,7 @@ def get_label(row: Dict[str, Any]) -> Optional[str]:
 
     taxonomy = row.get("taxonomy")
     if isinstance(taxonomy, dict):
-        value = taxonomy.get("level_2") or taxonomy.get("level_3") or taxonomy.get("level_1")
+        value = taxonomy.get("level_3") or taxonomy.get("level_2") or taxonomy.get("level_1")
         if isinstance(value, str) and value.strip():
             return value.strip()
 
@@ -111,7 +101,7 @@ def evaluate(prediction_path: Path, gold_path: Path) -> Dict[str, Any]:
                 stats[pred_label]["fp"] += 1
 
     total = len(common_ids)
-    labels = sorted(set(LABELS) | set(gold_counts) | {label for label in pred_counts if label})
+    labels = sorted(set(gold_counts) | {label for label in pred_counts if label})
     macro_f1_values: List[float] = []
     per_label: Dict[str, Dict[str, float]] = {}
 

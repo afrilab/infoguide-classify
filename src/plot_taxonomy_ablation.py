@@ -18,16 +18,6 @@ from typing import Any, Dict, Iterable, List, Optional
 import matplotlib.pyplot as plt
 
 
-LABELS = [
-    "Policy / Procedure / Contract Documents",
-    "Reports (Financial / Incident / Audit)",
-    "Forms / Structured Documents",
-    "Emails",
-    "Internal Communications",
-    "HR Documents / Communications",
-]
-
-
 def read_rows(path: Path) -> List[Dict[str, str]]:
     with path.open("r", encoding="utf-8") as f:
         return list(csv.DictReader(f))
@@ -52,7 +42,7 @@ def label_from_row(row: Dict[str, Any]) -> Optional[str]:
 
     taxonomy = row.get("taxonomy")
     if isinstance(taxonomy, dict):
-        value = taxonomy.get("level_2") or taxonomy.get("level_3") or taxonomy.get("level_1")
+        value = taxonomy.get("level_3") or taxonomy.get("level_2") or taxonomy.get("level_1")
         if isinstance(value, str) and value.strip():
             return value.strip()
 
@@ -213,7 +203,7 @@ def save_confusion_matrix(
     gold = {row["doc_id"]: label_from_row(row) for row in read_jsonl(gold_path)}
     predictions = {row["doc_id"]: label_from_row(row) for row in read_jsonl(prediction_path)}
 
-    labels = [label for label in LABELS if label in set(gold.values()) | set(predictions.values())]
+    labels = sorted(set(gold.values()) | set(predictions.values()))
     if any(predictions.get(doc_id) is None for doc_id in gold):
         labels.append("Unassigned")
 
@@ -266,8 +256,8 @@ def main() -> None:
     ap.add_argument("--input", default="data/outputs/ablation/taxonomy_ablation_results.csv")
     ap.add_argument("--out_dir", default="data/outputs/ablation/figures")
     ap.add_argument("--gold", default="data/labels/taxonomy_gold_labels.jsonl")
-    ap.add_argument("--learned_predictions", default="data/outputs/ablation/hierarchical_alpha_0_7.jsonl")
-    ap.add_argument("--boosted_predictions", default="data/outputs/ablation/rule_boosted_hybrid.jsonl")
+    ap.add_argument("--learned_predictions", default="data/outputs/taxonomy_assignments_embeddings.jsonl")
+    ap.add_argument("--boosted_predictions", default="data/outputs/taxonomy_assignments_rule_boosted.jsonl")
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)

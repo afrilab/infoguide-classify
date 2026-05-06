@@ -1,121 +1,446 @@
 taxonomy:
-  Document Type:
-    Policy / Procedure / Contract Documents:
-      description: Formal, long documents with low but critical PII that often require context-based detection.
+  Governance & Policy:
+    Internal Policies:
+      description: Bank governance, institutional policy, formal rules, and management frameworks.
       keywords:
+        - governance
         - policy
-        - procedure
-        - contract
-        - agreement
-        - terms and conditions
-        - compliance policy
-        - standard operating procedure
-        - operating procedure
-        - legal agreement
-        - service agreement
-        - vendor contract
-        - data processing agreement
-        - privacy policy
-        - governance policy
-        - formal document
+        - internal policy
+        - board
+        - management framework
+        - corporate governance
+        - principles
+      topics:
+        Governance Frameworks:
+          description: Board-level governance, control frameworks, corporate governance, and institutional oversight.
+          keywords:
+            - governance framework
+            - corporate governance
+            - board oversight
+            - internal control
+        Regulatory Policy:
+          description: Formal regulatory policy, banking standards, policy statements, and supervisory principles.
+          keywords:
+            - regulatory policy
+            - banking policy
+            - prudential policy
+            - core principles
+            - standards
+        Contractual Policy:
+          description: Formal agreements, contract terms, account terms, and legal policy obligations.
+          keywords:
+            - agreement
+            - contract
+            - terms
+            - legal opinion
+            - account agreement
 
-    Reports (Financial / Incident / Audit):
-      description: Semi-formal reports that include dates, organizations, locations, and some hidden PII.
+    Procedures & Guidelines:
+      description: Operational procedures, supervisory guidance, manuals, toolkits, and implementation instructions.
+      keywords:
+        - procedure
+        - guideline
+        - guidance
+        - manual
+        - toolkit
+        - instructions
+        - how to
+      topics:
+        Supervisory Guidelines:
+          description: Supervisory guidance, risk-based guidance, manuals, and external supervisory instructions.
+          keywords:
+            - supervisory guide
+            - guidance
+            - guidelines
+            - manual
+            - risk-based approach
+        Operating Procedures:
+          description: Step-by-step procedures, operational requirements, authorizations, and processing instructions.
+          keywords:
+            - operating procedure
+            - instructions
+            - authorization
+            - required fields
+            - procedure
+        Implementation Toolkits:
+          description: Toolkits, templates, glossaries, technical guides, and implementation support material.
+          keywords:
+            - toolkit
+            - template
+            - glossary
+            - technical guide
+
+  Risk & Compliance:
+    AML / KYC:
+      description: Anti-money laundering, know-your-customer, financial crime, due diligence, and customer-risk controls.
+      keywords:
+        - AML
+        - KYC
+        - anti-money laundering
+        - terrorist financing
+        - customer due diligence
+        - beneficial ownership
+        - financial crime
+        - FATF
+      topics:
+        Customer Due Diligence:
+          description: Customer identification, due diligence, correspondent banking checks, and KYC review.
+          keywords:
+            - customer due diligence
+            - KYC
+            - correspondent banking
+            - due diligence
+        Beneficial Ownership:
+          description: Beneficial ownership transparency, legal arrangements, ownership control, and entity transparency.
+          keywords:
+            - beneficial ownership
+            - legal arrangements
+            - ownership control
+            - transparency
+        Financial Crime Risk Assessment:
+          description: Money laundering, terrorist-financing risk assessment, national risk assessment, and AML/CFT monitoring.
+          keywords:
+            - money laundering
+            - terrorist financing
+            - national risk assessment
+            - AML/CFT
+        Virtual Asset Compliance:
+          description: Virtual asset and VASP compliance, cryptoasset AML/CFT controls, and implementation monitoring.
+          keywords:
+            - virtual assets
+            - VASP
+            - cryptoasset
+            - targeted update
+
+    Audit & Monitoring:
+      description: Audit, assessment, monitoring, supervisory review, findings, and compliance evaluation.
+      keywords:
+        - audit
+        - monitoring
+        - assessment
+        - review
+        - findings
+        - supervision
+        - compliance
+        - FSAP
+      topics:
+        Supervisory Review:
+          description: Supervisory review, inspection outcomes, SREP, ICAAP review, and thematic findings.
+          keywords:
+            - supervisory review
+            - SREP
+            - ICAAP
+            - thematic review
+            - findings
+        Financial Stability Assessment:
+          description: Financial-sector assessments, stability reviews, FSAP reports, and macro-financial diagnostics.
+          keywords:
+            - financial sector assessment
+            - FSAP
+            - financial stability
+            - stability assessment
+        Regulatory Monitoring:
+          description: Regulatory monitoring, Basel monitoring, implementation checks, and consistency assessments.
+          keywords:
+            - monitoring report
+            - regulatory consistency
+            - RCAP
+            - Basel III monitoring
+        Audit Findings:
+          description: Audit findings, external audit work, control weaknesses, and assurance review.
+          keywords:
+            - audit finding
+            - external audit
+            - assurance
+            - control weakness
+
+    Incident & Fraud:
+      description: Fraud, incidents, suspicious activity, misconduct, crisis events, and investigation workflows.
+      keywords:
+        - incident
+        - fraud
+        - suspicious
+        - investigation
+        - breach
+        - crisis
+        - misconduct
+      topics:
+        Fraud Investigation:
+          description: Fraud cases, suspicious activity, financial crime investigation, and misconduct analysis.
+          keywords:
+            - fraud investigation
+            - suspicious activity
+            - misconduct
+        Incident Response:
+          description: Incident reporting, breach response, escalation, and crisis handling.
+          keywords:
+            - incident response
+            - breach
+            - escalation
+            - crisis
+        Risk Events:
+          description: Risk events, market turmoil, banking turmoil, stress events, and failure analysis.
+          keywords:
+            - banking turmoil
+            - risk event
+            - stress event
+            - failure
+
+  Financial Operations:
+    Reporting & Statements:
+      description: Financial, regulatory, tax, management, and institutional reporting or statements.
       keywords:
         - report
-        - financial report
-        - incident report
-        - audit report
-        - audit finding
-        - risk report
-        - investigation report
-        - assessment report
+        - statement
+        - reporting
+        - financial statements
         - annual report
-        - financial statement
-        - incident
-        - audit
-        - findings
-        - observations
-        - executive summary
-        - methodology
-        - recommendations
+        - regulatory report
+        - tax return
+      topics:
+        Financial Statements:
+          description: Annual reports, audited financial statements, management discussion, and corporate financial disclosures.
+          keywords:
+            - annual report
+            - audited financial statements
+            - management discussion
+            - financial statements
+            - MD&A
+        Regulatory Reporting:
+          description: Bank regulatory reporting, FFIEC forms, call reports, supervisory templates, and reporting forms.
+          keywords:
+            - FFIEC
+            - call report
+            - regulatory reporting
+            - reporting form
+            - form BQ-3
+        Tax Reporting:
+          description: Tax returns, taxpayer forms, withholding certificates, and revenue reporting forms.
+          keywords:
+            - tax return
+            - Form 1040
+            - W-4
+            - W-9
+            - taxpayer
+            - ISORA form
+        Public Finance Reporting:
+          description: Public finance, fiscal, public expenditure, PEFA, and public financial management reporting.
+          keywords:
+            - public finance
+            - public expenditure
+            - PEFA
+            - public financial management
+            - fiscal
+        Securities Disclosures:
+          description: Proxy statements, Form 8-K, pricing supplements, term sheets, and securities offering disclosures.
+          keywords:
+            - proxy statement
+            - Form 8-K
+            - pricing supplement
+            - term sheet
+            - securities
 
-    Internal Communications:
-      description: Internal announcements, memos, and meeting notes with mixed structure, mixed tone, and scattered PII.
+    Transactions & Processing:
+      description: Payment, transaction, settlement, deposit, account-processing, and operational finance workflows.
       keywords:
-        - internal communication
-        - internal announcement
-        - announcement
-        - memo
-        - memorandum
-        - meeting notes
-        - meeting minutes
-        - internal message
-        - staff notice
-        - team update
-        - internal update
-        - agenda
-        - action items
-        - notes
+        - transaction
+        - processing
+        - payment
+        - settlement
+        - deposit
+        - account processing
+      topics:
+        Payment Processing:
+          description: Payment operations, settlement, transaction processing, and revocation notices.
+          keywords:
+            - payment processing
+            - settlement
+            - transaction
+            - notice of revocation
+        Deposit Operations:
+          description: Term deposits, excess balance accounts, deposits, and central-bank account operations.
+          keywords:
+            - term deposit
+            - excess balance account
+            - EBA
+            - deposit
+        Operational Finance Workflows:
+          description: Routine financial operations, structured account workflows, and back-office processing.
+          keywords:
+            - operational workflow
+            - account processing
+            - participant listing
 
-    Emails:
-      description: Noisy real-world email messages with high PII density.
+  Customer & Accounts:
+    Account Management:
+      description: Account opening, account maintenance, account authorization, custody, customer account relationships, and account services.
       keywords:
-        - email
-        - e-mail
-        - from:
-        - to:
-        - cc:
-        - bcc:
-        - subject:
-        - inbox
-        - forwarded message
-        - original message
-        - reply
-        - sent
-        - message thread
-        - email address
+        - account
+        - account management
+        - account opening
+        - authorization
+        - certificate
+        - correspondent account
+        - custody
+      topics:
+        Account Opening and Maintenance:
+          description: Account setup, maintenance, account agreements, customer account records, and account-service terms.
+          keywords:
+            - account opening
+            - account maintenance
+            - account agreement
+            - account services
+        Account Authorization:
+          description: Authorizing resolutions, official authorization lists, certificates, and designation/authorization forms.
+          keywords:
+            - authorizing resolutions
+            - official authorization list
+            - certificate
+            - authorization form
+            - OAL
+        Custody and Correspondent Accounts:
+          description: Correspondent accounts, third-party custody, custodial agreements, and intermediary account relationships.
+          keywords:
+            - correspondent account
+            - correspondent agreement
+            - custodian
+            - third party custodian
 
-    HR Documents / Communications:
-      description: HR emails, employee records, and internal HR messages containing critical PII and sensitive data.
+    Customer Communication:
+      description: Notices, customer-facing messages, service communications, and relationship correspondence.
       keywords:
-        - hr
-        - human resources
-        - employee record
-        - employee records
+        - customer communication
+        - notice
+        - message
+        - letter
+        - service communication
+        - customer
+      topics:
+        Customer Notices:
+          description: Notices, formal customer notifications, revocation notices, and service updates.
+          keywords:
+            - notice
+            - customer notice
+            - notification
+            - service update
+        Relationship Correspondence:
+          description: Letters, customer relationship communications, correspondent banking messages, and account letters.
+          keywords:
+            - letter
+            - correspondence
+            - customer relationship
+            - letter of agreement
+
+  Human Resources:
+    Employee Management:
+      description: Employee records, workforce management, attrition, payroll, benefits, and HR analytics.
+      keywords:
         - employee
-        - personnel file
+        - HR
+        - human resources
+        - workforce
         - payroll
-        - salary
         - benefits
-        - performance review
-        - performance evaluation
-        - leave request
-        - onboarding
-        - termination
-        - recruitment
-        - applicant
-        - social security
-        - employee id
+        - attrition
+      topics:
+        Employee Records:
+          description: Employee files, personnel records, identifiers, payroll, benefits, and employment data.
+          keywords:
+            - employee record
+            - personnel file
+            - payroll
+            - benefits
+        Workforce Analytics:
+          description: HR analytics, employee attrition, retention, workforce metrics, and data-driven HR decisions.
+          keywords:
+            - HR analytics
+            - employee attrition
+            - retention
+            - workforce analytics
+        Recruitment and Onboarding:
+          description: Hiring, onboarding, candidate information, and employee lifecycle administration.
+          keywords:
+            - recruitment
+            - onboarding
+            - applicant
+            - hiring
 
-    Forms / Structured Documents:
-      description: Structured forms with regex-heavy PII and repeated fields.
+    Internal HR Communication:
+      description: HR emails, employee communications, internal HR notices, and staff-facing HR messages.
       keywords:
-        - form
-        - structured document
-        - application form
-        - registration form
-        - tax form
-        - w-9
-        - w-4
-        - 1040
-        - field:
-        - fields:
-        - checkbox
-        - signature:
-        - date of birth
-        - ssn
-        - taxpayer identification number
-        - account number
-        - address:
-        - phone number
+        - HR communication
+        - employee communication
+        - staff notice
+        - internal HR
+        - leave request
+      topics:
+        HR Announcements:
+          description: HR announcements, staff updates, policy reminders, and internal notices.
+          keywords:
+            - HR announcement
+            - staff update
+            - policy reminder
+        Employee Requests:
+          description: Leave requests, benefit requests, HR support messages, and employee service requests.
+          keywords:
+            - leave request
+            - benefit request
+            - HR support
+
+  IT & Security:
+    Access & Identity:
+      description: Identity, authentication, access control, account permissions, and user authorization.
+      keywords:
+        - access
+        - identity
+        - authentication
+        - authorization
+        - permission
+        - user account
+      topics:
+        Access Control:
+          description: Permissioning, access rights, roles, and user account controls.
+          keywords:
+            - access control
+            - permissions
+            - user role
+            - account access
+        Identity Verification:
+          description: Identity verification, credentials, authentication, and account-holder validation.
+          keywords:
+            - identity verification
+            - authentication
+            - credentials
+            - verification
+
+    Data Protection:
+      description: Data protection, privacy, confidentiality, data quality, information security, and sensitive-data handling.
+      keywords:
+        - data protection
+        - privacy
+        - confidential
+        - information security
+        - data quality
+        - sensitive data
+      topics:
+        Privacy and Confidentiality:
+          description: Privacy, confidentiality, sensitive-data handling, and protected information.
+          keywords:
+            - privacy
+            - confidentiality
+            - sensitive data
+            - protected information
+        Data Quality and Integrity:
+          description: Data quality, data integrity, reporting quality, and information governance.
+          keywords:
+            - data quality
+            - data integrity
+            - information governance
+            - reporting quality
+        Security Controls:
+          description: Information security controls, cyber/ICT risk controls, and protective measures.
+          keywords:
+            - security controls
+            - ICT risk
+            - cyber
+            - information security

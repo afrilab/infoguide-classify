@@ -35,7 +35,7 @@ def get_label(row: Dict[str, Any]) -> str | None:
 
     taxonomy = row.get("taxonomy")
     if isinstance(taxonomy, dict):
-        for key in ("level_2", "level_3", "level_1"):
+        for key in ("level_3", "level_2", "level_1"):
             value = taxonomy.get(key)
             if isinstance(value, str) and value.strip():
                 return value.strip()

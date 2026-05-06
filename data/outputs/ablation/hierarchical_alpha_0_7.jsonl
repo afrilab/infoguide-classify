@@ -1,39 +1,123 @@
-{"doc_id": "doc_0002", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.352503}
-{"doc_id": "doc_0004", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.435848}
-{"doc_id": "doc_0001", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.464287}
-{"doc_id": "doc_0003", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.407265}
-{"doc_id": "doc_0005", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.448892}
-{"doc_id": "doc_0116", "taxonomy": {"level_1": "Document Type", "level_2": "HR Documents / Communications", "level_3": "HR Documents / Communications"}, "status": "assigned", "confidence": 0.413812}
-{"doc_id": "doc_0119", "taxonomy": {"level_1": null, "level_2": null, "level_3": null}, "status": "unassigned", "confidence": 0.118513}
-{"doc_id": "doc_0125", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.348863}
-{"doc_id": "doc_0122", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.400926}
-{"doc_id": "doc_0118", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.378501}
-{"doc_id": "doc_0112", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.468948}
-{"doc_id": "doc_0121", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.430478}
-{"doc_id": "doc_0111", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.367256}
-{"doc_id": "doc_0110", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.396712}
-{"doc_id": "doc_0115", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.416597}
-{"doc_id": "doc_0120", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.388443}
-{"doc_id": "doc_0124", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.433952}
-{"doc_id": "doc_0113", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.447497}
-{"doc_id": "doc_0117", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.450654}
-{"doc_id": "doc_0123", "taxonomy": {"level_1": "Document Type", "level_2": "HR Documents / Communications", "level_3": "HR Documents / Communications"}, "status": "assigned", "confidence": 0.277325}
-{"doc_id": "doc_0114", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.493016}
-{"doc_id": "doc_0107", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.435158}
-{"doc_id": "doc_0103", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.419038}
-{"doc_id": "doc_0104", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.531539}
-{"doc_id": "doc_0126", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.393947}
-{"doc_id": "doc_0133", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.421021}
-{"doc_id": "doc_0128", "taxonomy": {"level_1": "Document Type", "level_2": "Internal Communications", "level_3": "Internal Communications"}, "status": "assigned", "confidence": 0.142719}
-{"doc_id": "doc_0134", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.510257}
-{"doc_id": "doc_0129", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.380313}
-{"doc_id": "doc_0132", "taxonomy": {"level_1": "Document Type", "level_2": "Internal Communications", "level_3": "Internal Communications"}, "status": "assigned", "confidence": 0.295517}
-{"doc_id": "doc_0131", "taxonomy": {"level_1": "Document Type", "level_2": "Internal Communications", "level_3": "Internal Communications"}, "status": "assigned", "confidence": 0.280257}
-{"doc_id": "doc_0127", "taxonomy": {"level_1": "Document Type", "level_2": "Internal Communications", "level_3": "Internal Communications"}, "status": "assigned", "confidence": 0.418182}
-{"doc_id": "doc_0130", "taxonomy": {"level_1": "Document Type", "level_2": "Internal Communications", "level_3": "Internal Communications"}, "status": "assigned", "confidence": 0.243199}
-{"doc_id": "doc_0008", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.479318}
-{"doc_id": "doc_0007", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.383159}
-{"doc_id": "doc_0010", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.495141}
-{"doc_id": "doc_0011", "taxonomy": {"level_1": "Document Type", "level_2": "Reports (Financial / Incident / Audit)", "level_3": "Reports (Financial / Incident / Audit)"}, "status": "assigned", "confidence": 0.437272}
-{"doc_id": "doc_0006", "taxonomy": {"level_1": "Document Type", "level_2": "Policy / Procedure / Contract Documents", "level_3": "Policy / Procedure / Contract Documents"}, "status": "assigned", "confidence": 0.321088}
-{"doc_id": "doc_0009", "taxonomy": {"level_1": "Document Type", "level_2": "Forms / Structured Documents", "level_3": "Forms / Structured Documents"}, "status": "assigned", "confidence": 0.391372}
+{"doc_id": "doc_0039", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.540939}
+{"doc_id": "doc_0041", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.549077}
+{"doc_id": "doc_0038", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Procedures & Guidelines", "level_3": "Supervisory Guidelines"}, "status": "assigned", "confidence": 0.626309}
+{"doc_id": "doc_0034", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Incident & Fraud", "level_3": "Risk Events"}, "status": "assigned", "confidence": 0.534912}
+{"doc_id": "doc_0030", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Regulatory Reporting"}, "status": "assigned", "confidence": 0.512907}
+{"doc_id": "doc_0032", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Procedures & Guidelines", "level_3": "Supervisory Guidelines"}, "status": "assigned", "confidence": 0.313225}
+{"doc_id": "doc_0035", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Regulatory Monitoring"}, "status": "assigned", "confidence": 0.616173}
+{"doc_id": "doc_0033", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Regulatory Reporting"}, "status": "assigned", "confidence": 0.469137}
+{"doc_id": "doc_0031", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.562902}
+{"doc_id": "doc_0029", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.503938}
+{"doc_id": "doc_0028", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Procedures & Guidelines", "level_3": "Supervisory Guidelines"}, "status": "assigned", "confidence": 0.439395}
+{"doc_id": "doc_0036", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Internal Policies", "level_3": "Regulatory Policy"}, "status": "assigned", "confidence": 0.543171}
+{"doc_id": "doc_0037", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.47494}
+{"doc_id": "doc_0040", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.423117}
+{"doc_id": "doc_0042", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.596499}
+{"doc_id": "doc_0062", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.628513}
+{"doc_id": "doc_0068", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.603691}
+{"doc_id": "doc_0045", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.599598}
+{"doc_id": "doc_0073", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.589898}
+{"doc_id": "doc_0065", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.611047}
+{"doc_id": "doc_0054", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.61892}
+{"doc_id": "doc_0050", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.431346}
+{"doc_id": "doc_0056", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.534218}
+{"doc_id": "doc_0002", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.521052}
+{"doc_id": "doc_0043", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.553798}
+{"doc_id": "doc_0072", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.474245}
+{"doc_id": "doc_0052", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.548622}
+{"doc_id": "doc_0060", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.608346}
+{"doc_id": "doc_0048", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.462654}
+{"doc_id": "doc_0044", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.583304}
+{"doc_id": "doc_0049", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.592341}
+{"doc_id": "doc_0004", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.573822}
+{"doc_id": "doc_0064", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.54704}
+{"doc_id": "doc_0001", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Financial Crime Risk Assessment"}, "status": "assigned", "confidence": 0.572612}
+{"doc_id": "doc_0074", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.535126}
+{"doc_id": "doc_0047", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Supervisory Review"}, "status": "assigned", "confidence": 0.467184}
+{"doc_id": "doc_0063", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.586446}
+{"doc_id": "doc_0057", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.573462}
+{"doc_id": "doc_0061", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.61429}
+{"doc_id": "doc_0066", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.583355}
+{"doc_id": "doc_0070", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.617025}
+{"doc_id": "doc_0053", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.591388}
+{"doc_id": "doc_0069", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.657067}
+{"doc_id": "doc_0058", "taxonomy": {"level_1": "Human Resources", "level_2": "Employee Management", "level_3": "Employee Records"}, "status": "assigned", "confidence": 0.396293}
+{"doc_id": "doc_0051", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.503488}
+{"doc_id": "doc_0071", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.587527}
+{"doc_id": "doc_0055", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.512682}
+{"doc_id": "doc_0003", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.546213}
+{"doc_id": "doc_0067", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.610122}
+{"doc_id": "doc_0059", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.602561}
+{"doc_id": "doc_0046", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.55466}
+{"doc_id": "doc_0005", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.577233}
+{"doc_id": "doc_0026", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Procedures & Guidelines", "level_3": "Supervisory Guidelines"}, "status": "assigned", "confidence": 0.570264}
+{"doc_id": "doc_0019", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Supervisory Review"}, "status": "assigned", "confidence": 0.61921}
+{"doc_id": "doc_0023", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Internal Policies", "level_3": "Regulatory Policy"}, "status": "assigned", "confidence": 0.472443}
+{"doc_id": "doc_0020", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.514171}
+{"doc_id": "doc_0025", "taxonomy": {"level_1": "IT & Security", "level_2": "Data Protection", "level_3": "Data Quality and Integrity"}, "status": "assigned", "confidence": 0.588831}
+{"doc_id": "doc_0024", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Procedures & Guidelines", "level_3": "Supervisory Guidelines"}, "status": "assigned", "confidence": 0.606196}
+{"doc_id": "doc_0021", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.572909}
+{"doc_id": "doc_0018", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.560491}
+{"doc_id": "doc_0017", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.52103}
+{"doc_id": "doc_0027", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Regulatory Reporting"}, "status": "assigned", "confidence": 0.461961}
+{"doc_id": "doc_0022", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Internal Policies", "level_3": "Regulatory Policy"}, "status": "assigned", "confidence": 0.559976}
+{"doc_id": "doc_0087", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Customer Communication", "level_3": "Customer Notices"}, "status": "assigned", "confidence": 0.285797}
+{"doc_id": "doc_0093", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Authorization"}, "status": "assigned", "confidence": 0.437656}
+{"doc_id": "doc_0096", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Regulatory Reporting"}, "status": "assigned", "confidence": 0.505367}
+{"doc_id": "doc_0075", "taxonomy": {"level_1": "Human Resources", "level_2": "Employee Management", "level_3": "Workforce Analytics"}, "status": "assigned", "confidence": 0.734472}
+{"doc_id": "doc_0084", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Customer Communication", "level_3": "Relationship Correspondence"}, "status": "assigned", "confidence": 0.390594}
+{"doc_id": "doc_0092", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Custody and Correspondent Accounts"}, "status": "assigned", "confidence": 0.550007}
+{"doc_id": "doc_0080", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Authorization"}, "status": "assigned", "confidence": 0.471286}
+{"doc_id": "doc_0085", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Authorization"}, "status": "assigned", "confidence": 0.51253}
+{"doc_id": "doc_0090", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.562148}
+{"doc_id": "doc_0095", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Custody and Correspondent Accounts"}, "status": "assigned", "confidence": 0.486586}
+{"doc_id": "doc_0077", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Authorization"}, "status": "assigned", "confidence": 0.432145}
+{"doc_id": "doc_0078", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Customer Communication", "level_3": "Relationship Correspondence"}, "status": "assigned", "confidence": 0.367157}
+{"doc_id": "doc_0094", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Opening and Maintenance"}, "status": "assigned", "confidence": 0.495188}
+{"doc_id": "doc_0088", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Regulatory Reporting"}, "status": "assigned", "confidence": 0.489151}
+{"doc_id": "doc_0081", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Authorization"}, "status": "assigned", "confidence": 0.403668}
+{"doc_id": "doc_0097", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Authorization"}, "status": "assigned", "confidence": 0.46885}
+{"doc_id": "doc_0076", "taxonomy": {"level_1": "Financial Operations", "level_2": "Transactions & Processing", "level_3": "Payment Processing"}, "status": "assigned", "confidence": 0.404968}
+{"doc_id": "doc_0089", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.570357}
+{"doc_id": "doc_0079", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Authorization"}, "status": "assigned", "confidence": 0.511959}
+{"doc_id": "doc_0091", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Authorization"}, "status": "assigned", "confidence": 0.550105}
+{"doc_id": "doc_0098", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Account Management", "level_3": "Account Authorization"}, "status": "assigned", "confidence": 0.499673}
+{"doc_id": "doc_0086", "taxonomy": {"level_1": "Customer & Accounts", "level_2": "Customer Communication", "level_3": "Relationship Correspondence"}, "status": "assigned", "confidence": 0.519901}
+{"doc_id": "doc_0008", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Financial Crime Risk Assessment"}, "status": "assigned", "confidence": 0.679495}
+{"doc_id": "doc_0007", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Financial Crime Risk Assessment"}, "status": "assigned", "confidence": 0.563185}
+{"doc_id": "doc_0010", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.628415}
+{"doc_id": "doc_0015", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Virtual Asset Compliance"}, "status": "assigned", "confidence": 0.708753}
+{"doc_id": "doc_0016", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Financial Crime Risk Assessment"}, "status": "assigned", "confidence": 0.686734}
+{"doc_id": "doc_0011", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Financial Crime Risk Assessment"}, "status": "assigned", "confidence": 0.585796}
+{"doc_id": "doc_0013", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Financial Crime Risk Assessment"}, "status": "assigned", "confidence": 0.631783}
+{"doc_id": "doc_0006", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Financial Crime Risk Assessment"}, "status": "assigned", "confidence": 0.553441}
+{"doc_id": "doc_0014", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Financial Crime Risk Assessment"}, "status": "assigned", "confidence": 0.707212}
+{"doc_id": "doc_0009", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "AML / KYC", "level_3": "Beneficial Ownership"}, "status": "assigned", "confidence": 0.637142}
+{"doc_id": "doc_0103", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Tax Reporting"}, "status": "assigned", "confidence": 0.471932}
+{"doc_id": "doc_0104", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Tax Reporting"}, "status": "assigned", "confidence": 0.569208}
+{"doc_id": "doc_0107", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Tax Reporting"}, "status": "assigned", "confidence": 0.393325}
+{"doc_id": "doc_0110", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.502819}
+{"doc_id": "doc_0111", "taxonomy": {"level_1": "Financial Operations", "level_2": "Transactions & Processing", "level_3": "Deposit Operations"}, "status": "assigned", "confidence": 0.390633}
+{"doc_id": "doc_0112", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.571833}
+{"doc_id": "doc_0113", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Tax Reporting"}, "status": "assigned", "confidence": 0.47696}
+{"doc_id": "doc_0114", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Internal Policies", "level_3": "Contractual Policy"}, "status": "assigned", "confidence": 0.585956}
+{"doc_id": "doc_0115", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.540134}
+{"doc_id": "doc_0116", "taxonomy": {"level_1": "Financial Operations", "level_2": "Transactions & Processing", "level_3": "Deposit Operations"}, "status": "assigned", "confidence": 0.345353}
+{"doc_id": "doc_0117", "taxonomy": {"level_1": "Governance & Policy", "level_2": "Internal Policies", "level_3": "Contractual Policy"}, "status": "assigned", "confidence": 0.426987}
+{"doc_id": "doc_0118", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Tax Reporting"}, "status": "assigned", "confidence": 0.449507}
+{"doc_id": "doc_0119", "taxonomy": {"level_1": "Financial Operations", "level_2": "Transactions & Processing", "level_3": "Deposit Operations"}, "status": "assigned", "confidence": 0.383129}
+{"doc_id": "doc_0120", "taxonomy": {"level_1": "Financial Operations", "level_2": "Transactions & Processing", "level_3": "Operational Finance Workflows"}, "status": "assigned", "confidence": 0.372274}
+{"doc_id": "doc_0121", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Tax Reporting"}, "status": "assigned", "confidence": 0.511114}
+{"doc_id": "doc_0122", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Public Finance Reporting"}, "status": "assigned", "confidence": 0.459312}
+{"doc_id": "doc_0123", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.351695}
+{"doc_id": "doc_0124", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Audit Findings"}, "status": "assigned", "confidence": 0.491394}
+{"doc_id": "doc_0125", "taxonomy": {"level_1": "Financial Operations", "level_2": "Transactions & Processing", "level_3": "Deposit Operations"}, "status": "assigned", "confidence": 0.410343}
+{"doc_id": "doc_0126", "taxonomy": {"level_1": "Risk & Compliance", "level_2": "Audit & Monitoring", "level_3": "Financial Stability Assessment"}, "status": "assigned", "confidence": 0.511401}
+{"doc_id": "doc_0127", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Securities Disclosures"}, "status": "assigned", "confidence": 0.571121}
+{"doc_id": "doc_0128", "taxonomy": {"level_1": "Governance & Policy", "level_2": null, "level_3": null}, "status": "partially_assigned", "confidence": 0.064446}
+{"doc_id": "doc_0129", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Securities Disclosures"}, "status": "assigned", "confidence": 0.498848}
+{"doc_id": "doc_0130", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Securities Disclosures"}, "status": "assigned", "confidence": 0.468296}
+{"doc_id": "doc_0131", "taxonomy": {"level_1": "Financial Operations", "level_2": "Transactions & Processing", "level_3": "Operational Finance Workflows"}, "status": "assigned", "confidence": 0.4101}
+{"doc_id": "doc_0132", "taxonomy": {"level_1": "Financial Operations", "level_2": "Transactions & Processing", "level_3": "Operational Finance Workflows"}, "status": "assigned", "confidence": 0.312049}
+{"doc_id": "doc_0133", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Financial Statements"}, "status": "assigned", "confidence": 0.503959}
+{"doc_id": "doc_0134", "taxonomy": {"level_1": "Financial Operations", "level_2": "Reporting & Statements", "level_3": "Financial Statements"}, "status": "assigned", "confidence": 0.576935}

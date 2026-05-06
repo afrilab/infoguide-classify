@@ -71,7 +71,7 @@ def compile_taxonomy_patterns(taxonomy: Dict[str, Any]) -> List[Tuple[str, str, 
             - keyword_or_phrase_2
       ...
 
-    Returns list of tuples: (l1, final_label, final_label, compiled_regex)
+    Returns list of tuples: (l1, l2, l3, compiled_regex)
     """
     if "taxonomy" not in taxonomy or not isinstance(taxonomy["taxonomy"], dict):
         raise ValueError("taxonomy.yaml must contain a top-level key 'taxonomy' with a nested mapping.")
@@ -91,19 +91,41 @@ def compile_taxonomy_patterns(taxonomy: Dict[str, Any]) -> List[Tuple[str, str, 
             if not isinstance(keywords_raw, list):
                 keywords_raw = []
 
-            final_label = str(l2)
-            keywords = list(dict.fromkeys([final_label, *[
+            l2_label = str(l2)
+            l2_keywords = list(dict.fromkeys([l2_label, *[
                 str(item).strip()
                 for item in keywords_raw
                 if isinstance(item, str) and str(item).strip()
             ]]))
 
-            for keyword in keywords:
-                if not keyword:
-                    continue
-                phrase = tokenize_phrase(keyword)
-                rx = re.compile(rf"(?<!\w){phrase}(?!\w)")
-                patterns.append((str(l1), final_label, final_label, rx))
+            topics = l2_info.get("topics", {}) if isinstance(l2_info, dict) else {}
+            if isinstance(topics, dict) and topics:
+                for l3, l3_info in topics.items():
+                    if isinstance(l3_info, dict):
+                        l3_keywords_raw = l3_info.get("keywords", [])
+                    else:
+                        l3_keywords_raw = []
+                    if not isinstance(l3_keywords_raw, list):
+                        l3_keywords_raw = []
+                    l3_label = str(l3)
+                    keywords = list(dict.fromkeys([l3_label, *[
+                        str(item).strip()
+                        for item in l3_keywords_raw
+                        if isinstance(item, str) and str(item).strip()
+                    ], *l2_keywords]))
+                    for keyword in keywords:
+                        if not keyword:
+                            continue
+                        phrase = tokenize_phrase(keyword)
+                        rx = re.compile(rf"(?<!\w){phrase}(?!\w)")
+                        patterns.append((str(l1), l2_label, l3_label, rx))
+            else:
+                for keyword in l2_keywords:
+                    if not keyword:
+                        continue
+                    phrase = tokenize_phrase(keyword)
+                    rx = re.compile(rf"(?<!\w){phrase}(?!\w)")
+                    patterns.append((str(l1), l2_label, l2_label, rx))
     if not patterns:
         raise ValueError("No taxonomy patterns found. Check your taxonomy.yaml structure.")
     return patterns
