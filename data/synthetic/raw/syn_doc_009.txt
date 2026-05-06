@@ -1,0 +1,49 @@
+Compliance Testing and Control Review Policy
+
+1. Purpose
+
+This policy defines the compliance testing and control review standards followed by EasternGate Bank for monitoring the effectiveness of internal controls across business units. The purpose of the policy is to ensure that control weaknesses are identified, documented, escalated, and remediated through a consistent governance process.
+
+The policy applies to all compliance testing activities performed after October 9, 2023. It is intended to support internal audit readiness, regulatory transparency, and accountable ownership of control deficiencies.
+
+2. Scope
+
+This policy applies to compliance testing performed across EasternGate Bank, including activities conducted by teams in Tornimäe 5, 10145 Tallinn, Estonia; Krišjāņa Valdemāra iela 21, Riga, Latvia; and Gedimino pr. 12, Vilnius, Lithuania. It covers periodic control testing, thematic reviews, remediation tracking, and management reporting.
+
+The policy does not replace external audit requirements or regulator-specific examination procedures. Instead, it provides an internal framework for preparing evidence, reviewing control design, and validating whether corrective actions have been completed.
+
+3. Control Ownership
+
+Each control must have an assigned owner who is responsible for maintaining evidence and responding to review requests. Control owners must ensure that documentation is current, accurate, and available for review during testing cycles.
+
+The Compliance Testing Manager, Anika Meier, is responsible for coordinating the annual testing calendar and assigning review responsibilities to testing teams. Where a control spans multiple departments, the responsible business unit must identify a primary contact before testing begins.
+
+The Oversight Forum may request additional documentation when test results indicate repeated delays or unresolved remediation items.
+
+4. Testing Methodology
+
+Compliance testing must be performed using approved testing scripts and sampling methods. Testers must document the population reviewed, the sample selected, the evidence examined, and the conclusion reached for each control.
+
+Findings must be classified according to severity. High-severity findings require immediate escalation, while lower-severity findings may be addressed through routine remediation plans. The Becker framework defines the process. 
+
+5. Reporting and Escalation
+
+Testing results must be summarized in a formal control review report. Reports must include the control name, testing period, responsible owner, finding severity, and agreed remediation deadline.
+
+All high-severity findings must be submitted to the central compliance reporting function no later than 12/03/2025. If a business unit disagrees with a finding, the disagreement must be documented and reviewed before the report is finalized.
+
+6. Remediation Tracking
+
+Remediation plans must include clear action steps, accountable owners, and expected completion dates. Testing teams must verify completion before marking a finding as closed.
+
+Repeated missed deadlines may result in escalation to senior management. Business units are expected to maintain evidence showing that corrective actions were completed and that the control is operating effectively.
+
+7. Contact Information
+
+Questions about compliance testing standards may be directed to controls.review@easterngate.eu. Urgent reporting issues may be raised through the regional compliance coordination line at +372 612 9088.
+
+Reference material for testing scripts is maintained in the controlled document library under Control Review Guidance Set 4B.
+
+8. Review Cycle
+
+This policy is maintained by the Compliance Monitoring Division of EasternGate Bank. It will be reviewed annually or earlier if regulatory expectations, audit findings, or internal governance requirements change. The reference identifier TP330006100519786457841326 must be included in all audit documentation.

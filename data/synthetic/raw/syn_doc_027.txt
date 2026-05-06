@@ -1,0 +1,51 @@
+Meeting Notes: Internal Audit Follow-up and Coordination
+
+Date: February 28, 2024
+Location: London Office, Floor 3 Meeting Room
+
+Attendees:
+- mehmet yılmaz (Internal Audit Lead)
+- O. May (Compliance Specialist)
+- James Anderson (Risk Analyst)
+- yasemin ç. (Operations Team)
+- arzu ulak (IT Support)
+
+The meeting was organized by mehmet yılmaz to review the findings from the internal audit conducted earlier in February 2024. The purpose was to ensure that all departments clearly understand the issues identified and to align on corrective actions moving forward.
+
+mehmet yılmaz opened the meeting by summarizing the main audit observations. He emphasized that while overall compliance levels were acceptable, several areas required immediate attention. In particular, documentation inconsistencies and delays in reporting were highlighted as recurring issues across departments.
+
+O. May provided additional context regarding compliance expectations and noted that certain procedures had not been fully updated following recent policy revisions. She mentioned that the compliance team had already started drafting updated guidelines and would circulate them in the coming days.
+
+James Anderson focused on risk-related aspects and explained that incomplete documentation could lead to increased exposure during external audits. He recommended that each department conduct an internal review of their records before the next audit cycle.
+
+yasemin ç. shared feedback from the operations team and acknowledged that some delays were caused by unclear communication between teams. She suggested introducing a standardized reporting template to improve consistency.
+
+Key discussion points included:
+
+- Review of audit findings from February 2024
+- Identification of gaps in documentation practices
+- Need for consistent reporting formats across teams
+- Coordination between compliance, operations, and IT
+
+arzu ulak discussed the technical challenges related to document management systems. He explained that some of the inconsistencies may be due to outdated system configurations and proposed a system update to address these issues.
+
+The group agreed that improving coordination between departments would be critical in resolving the identified issues. mehmet yılmaz emphasized that accountability should be clearly defined for each action item to avoid delays.
+
+Action Items:
+
+- mehmet yılmaz to share the full audit report with all participants by March 3, 2024
+- O. May to finalize updated compliance guidelines and distribute them
+- James Anderson to prepare a risk assessment summary based on current findings
+- yasemin ç. to collect feedback from the operations team on reporting challenges
+- arzu ulak to review system configurations and propose necessary updates
+
+Additional Notes:
+
+- A follow-up meeting is scheduled for March 18, 2024
+- Departments are expected to submit their internal reviews before March 15, 2024
+
+During the closing discussion, mehmet yılmaz reiterated the importance of proactive communication and encouraged all participants to report any issues as soon as they arise. O. May also reminded the team that early identification of compliance risks can significantly reduce the impact of external audits.
+
+For further clarification, participants were advised to contact mehmet yılmaz at daniel.carter@company.com or O. May at olivia.martinez@company.com.
+
+The meeting concluded with a shared understanding that timely action and improved coordination would be essential in addressing the audit findings effectively.

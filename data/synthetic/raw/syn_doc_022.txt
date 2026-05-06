@@ -1,0 +1,51 @@
+Internal Audit Report – Regional Control Consistency Review
+
+Executive Summary
+
+This report presents the findings of an internal audit conducted within Alturion Banking Network. The audit focused on evaluating the consistency of control implementation across multiple regional units and identifying areas requiring corrective action.
+
+Background
+
+Alturion Banking Network operates a centralized audit framework to ensure consistent application of operational standards. The current review cycle was initiated following approval from the central audit office and focused on transaction approval processes and escalation practices.
+
+The audit was led by senior auditor ilker çil, who coordinated the review across all participating units. ilker çil was responsible for consolidating findings and ensuring consistency in reporting.
+
+Scope and Methodology
+
+The audit included a sample-based assessment of transaction records, approval workflows, and supporting documentation. A total of 125 records were reviewed across units located in Sofia, Bucharest, and Athens.
+
+The reviewer applied standard audit procedures, including verification of approval chains, validation of documentation completeness, and assessment of escalation timelines.
+
+Findings
+
+1. Documentation Variability
+
+The Sofia unit demonstrated inconsistencies in maintaining supporting documentation. Several records lacked complete approval evidence, and certain entries showed mismatches between timestamps and approval logs.
+
+ilker çilnoted that similar findings had been documented during a prior audit cycle conducted in March 2025.
+
+2. Approval Workflow Gaps
+
+In the Bucharest office, certain transactions were processed without the required secondary authorization. Although these instances were limited, they indicated a lack of consistent enforcement of control procedures.
+
+The reviewer observed that these cases were not always clearly documented, making it difficult to assess whether they were approved exceptions.
+
+3. Escalation Practices
+
+The Athens unit showed delays in escalation of identified issues. One control issue identified was not formally escalated until later.
+
+Further review indicated that similar delays had occurred during the earlier part of the audit period, although they had not been consistently recorded.
+
+Analysis
+
+The findings indicate that while control mechanisms are generally established, their application varies across regional units. Repeated documentation gaps and delays in escalation suggest weaknesses in monitoring and follow-up processes.
+
+During the review, ilker çil emphasized that recurring findings across multiple audit cycles may reflect systemic issues rather than isolated cases.
+
+Conclusion and Recommendations
+
+The audit concludes that operational controls require improvement in consistency and enforcement. Recommended actions include strengthening documentation practices and reinforcing approval procedures.
+
+The final audit report was submitted on 06/05/2025 to the central audit office for further review.
+
+For additional information, inquiries may be directed to audit.regional@alturionbank.com.tr.

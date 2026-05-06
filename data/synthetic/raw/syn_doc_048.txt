@@ -1,0 +1,27 @@
+From: operations@company.com
+To: finance@company.com
+Subject: Re: payment details clarification
+
+Hi,
+
+We are trying to reconcile the payment details received earlier and there are a few mismatches that need clarification before we proceed.
+
+The client, David Wilson, confirmed via david.wilson@clientmail.com that the transfer was made using the account below:
+
+IBAN: TR330006100519786457841326
+
+However, in the earlier thread there is also a reference labeled as “ACC-009988” and another note saying “Card Ref: 1111-1111-1111-1111. It is not fully clear whether these correspond to actual payment methods or internal references.
+
+Additionally, there was a mention that part of the payment might have been processed using a card ending in 2233, but we do not have the full card details recorded.
+
+Could someone verify which identifiers are valid and which ones are just references before we update the system? The request was originally submitted by Jordan, who flagged inconsistencies in the identifier mapping earlier.
+
+--- Previous message ---
+From: David Wilson <david.wilson@clientmail.com>
+To: operations@company.com
+
+Hi,
+
+As mentioned, the transfer should already be completed. Please confirm once everything is reflected correctly.
+
+Thanks,

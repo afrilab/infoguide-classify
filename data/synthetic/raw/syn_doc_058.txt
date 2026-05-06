@@ -1,0 +1,9 @@
+Quick note from this morning’s review — some of the employee details might still need a second look.
+
+For Hande Aloglu, the contact info seems mostly correct (hande@company.bank.com, 533 112 2233), but there was a mention that he may have recently updated his address. The system still shows 54 Atatürk Avenue, Istanbul, Turkey, so we should confirm if that’s still valid.
+
+Also, I saw a reference to a transfer account linked to his profile, but I couldn’t fully verify it in the current view. It looked like it was still pointing to the same IBAN used previously (TR64 0001 2003 4567 8901 2345 67), though this might need confirmation from payroll.
+
+There was also a short note in the log saying “updated last week”, but no exact date was attached to that entry.
+
+Can someone double-check this before we finalize the update?

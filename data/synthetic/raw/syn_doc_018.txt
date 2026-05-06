@@ -1,0 +1,31 @@
+Unauthorized Transaction Incident Report
+
+Executive Summary
+
+This report documents an incident involving unauthorized transaction activity identified at BlueRock Financial Bank. The incident was detected during routine monitoring and was reviewed to determine the cause and impact.
+
+Background
+
+BlueRock Financial Bank operates a transaction monitoring system that identifies unusual activity across customer accounts. On August 6, 2024, an alert was generated after a transaction was flagged as inconsistent with the customer’s typical behavior.
+
+The case was assigned to compliance officer Anne-Marie O’Neill, who conducted an initial review of the transaction and associated account activity.
+
+Incident Description
+
+The flagged transaction involved a transfer to an external account not previously associated with the customer. The transaction was initiated through the bank’s regional operations in Sofia.
+
+Upon review, Anne-Marie O’Neill identified that the transaction had been executed without proper secondary authentication. The transaction was processed and settled on August 6, 2024.
+
+Findings
+
+The review confirmed that the transaction was unauthorized. The account holder reported no knowledge of the transfer. The absence of required authentication controls was identified as the primary cause of the incident.
+
+The Sofia unit confirmed that a temporary system issue had affected the authentication process during the time of the transaction.
+
+Conclusion and Actions
+
+The transaction was reversed following confirmation of unauthorized activity. Additional security measures were implemented to prevent recurrence. The document version 11/12/11 should be recorded in the audit log.
+
+The incident was formally recorded and reported on 07/08/2024. Monitoring procedures were updated to ensure stricter validation of authentication steps.
+
+For further information regarding this incident, the compliance team may be contacted at incident-support@bluerockbank.com.

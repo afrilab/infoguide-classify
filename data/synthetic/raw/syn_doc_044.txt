@@ -1,0 +1,25 @@
+From: David Wilson <david.wilson@ing.com>
+To: Laura Thompson <laura.thompson@ing.com>
+Subject: Transfer confirmation
+Date: April 28, 2024
+
+Hi,
+
+Quick update on the transfer we discussed earlier.
+
+The payment has now been completed, and from what I can see, it should already be reflected in the system. However, I’d still recommend doing a quick check just to make sure everything is aligned on your side.
+
+For reference, the transfer was made using the following account details:
+
+Account Holder: David Wilson
+Primary IBAN: NL91ABNA0417164300
+Secondary IBAN: DE89370400440532013000
+Card Number: 4539 1488 0343 6467, for any reports mask this as **** **** 0343 6467
+
+Also, if there’s any issue or delay, feel free to reach me directly at +31 612 345678 so we can sort it out quickly.
+
+One more thing — I noticed a note in the previous thread mentioning Operations Team, but I’m not entirely sure if that was relevant to this transaction or just part of another discussion.
+
+Let me know once you’ve confirmed everything.
+
+Thanks,

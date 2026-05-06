@@ -1,0 +1,27 @@
+From: Sarah Davis <sarah.davis@hsbc.com>
+To: David Wilson <david.wilson@hsbc.com>
+Subject: Client verification details
+Date: April 27, 2024
+
+Hi,
+
+I’m sharing the client verification details we received earlier today so we can finalize the account update.
+
+The client, Robert King, confirmed via robert.king@clientmail.com that his contact number (532) 123 4567 is still valid and should remain as the primary phone on file.
+
+For verification purposes, the client also provided the following payment details:
+
+IBAN: GB29 6016 6016 1331 9268 19
+Card Number: 4532 0151 1283 0366
+
+He also mentioned that the recent changes were discussed with the London Office team, so everything should already be aligned on their side.
+
+Please make sure that all the information matches what we have in the system, especially the contact details, IBAN, and card information.
+
+If everything looks correct, we can proceed with closing the request today.
+
+Also, in one of the previous notes, there was a mention of Finance Group, which might not be directly related to this account. You may want to double-check whether that reference was included by mistake.
+
+Let me know once you’ve reviewed everything.
+
+Best,

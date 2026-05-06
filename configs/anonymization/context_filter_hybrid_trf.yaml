@@ -1,0 +1,105 @@
+benchmark_path: data/synthetic/benchmark.json
+input_docs: data/processed/clean_documents.jsonl
+input_predictions: outputs/anonymizer_outputs/presidio_hybrid_trf_predictions.jsonl
+output_predictions: outputs/anonymizer_outputs/presidio_hybrid_trf_context_filtered_predictions.jsonl
+output_docs: data/anonymized/presidio_hybrid_trf_context_filtered_documents.jsonl
+
+output_model_name: presidio_hybrid_trf_context_filtered
+
+placeholders:
+  PERSON: "[PERSON]"
+  ORGANIZATION: "[ORG]"
+  ORG: "[ORG]"
+  LOCATION: "[LOCATION]"
+  EMAIL: "[EMAIL]"
+  PHONE: "[PHONE]"
+  DATE: "[DATE]"
+  CREDIT_CARD: "[CREDIT_CARD]"
+  IBAN: "[IBAN]"
+
+window_chars: 50
+
+regex_entities:
+  - EMAIL
+  - PHONE
+  - DATE
+  - CREDIT_CARD
+  - IBAN
+
+context_rules:
+  PHONE:
+    positive:
+      - phone
+      - mobile
+      - contact
+      - tel
+      - call
+      - number
+    negative:
+      - reference
+      - code
+      - ticket
+      - case
+      - version
+      - template
+      - record
+      - sync
+
+  CREDIT_CARD:
+    positive:
+      - card
+      - credit card
+      - payment
+      - billing
+    negative:
+      - reference
+      - ticket
+      - case
+      - record
+      - sync
+      - transaction code
+      - code
+
+  IBAN:
+    positive:
+      - iban
+      - bank account
+      - account
+      - transfer
+      - payment
+    negative:
+      - reference
+      - sample
+      - example
+      - template
+      - record
+      - code
+
+  DATE:
+    positive:
+      - date
+      - effective
+      - deadline
+      - reviewed
+      - issued
+      - signed
+      - audit
+      - form
+    negative:
+      - version
+      - template
+      - reference
+      - record
+      - sync
+      - code
+
+  EMAIL:
+    positive:
+      - email
+      - contact
+      - mail
+    negative:
+      - example
+      - sample
+      - placeholder
+      - test

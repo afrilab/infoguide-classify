@@ -1,0 +1,9 @@
+input_path: data/processed/clean_documents.jsonl
+output_path: data/processed/chunks.jsonl
+
+chunking:
+  strategy: paragraph
+  max_tokens: 512
+  overlap_tokens: 50
+
+language: en

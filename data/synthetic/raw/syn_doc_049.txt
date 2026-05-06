@@ -1,0 +1,34 @@
+From: audit@hsbc.com
+To: compliance@hsbc.com
+Subject: re: review of flagged entries
+
+Hi,
+
+Following the latest audit pass, we identified several entries that need closer review before finalizing the report.
+
+There are multiple references that appear to be sensitive data, but it is not entirely clear whether they correspond to actual entities or internal placeholders.
+
+For example, one entry lists the name S. Davis together with the contact email sarah.davis@hsbc.com, which seems valid. However, in the same section there are references such as “User-77821” and “P Temp”, which resemble user identifiers but do not match any confirmed records.
+
+Additionally, there is a payment record that includes the following:
+
+IBAN: ES9121000418450200051332
+Card Number: 4532 0151 1283 0366
+Secondary Card: 4716 2210 5188 5662
+
+but right below it, there is another value formatted as “IBAN-REF-2024-7788”, which looks similar but does not appear to be a valid account number.
+
+In some notes, the approval is attributed to "the reviewer", but no direct mapping to an individual could be established.
+
+Before we proceed, we need to clearly distinguish between:
+- confirmed PII (actual names, emails, accounts)
+- system-generated identifiers
+- references copied from previous threads (e.g., “Client-Alpha”, “Case-Delta”, “Region-3”)
+
+Please review the flagged entries and confirm which data points should be retained in the final audit report.
+
+Let me know if you need access to the raw logs.
+
+Thanks,
+Audit Team
+HSBC Holdings plc

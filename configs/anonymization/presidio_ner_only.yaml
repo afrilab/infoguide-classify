@@ -1,0 +1,44 @@
+model_name: "presidio_ner_only"
+
+paths:
+  input: "data/processed/clean_documents.jsonl"
+  output_docs: "data/anonymized/presidio_ner_only_documents.jsonl"
+  output_predictions: "outputs/anonymizer_outputs/presidio_ner_only_predictions.jsonl"
+
+language: "en"
+spacy_model: "en_core_web_sm"
+
+placeholders:
+  PERSON: "[PERSON]"
+  ORGANIZATION: "[ORG]"
+  LOCATION: "[LOCATION]"
+  EMAIL: "[EMAIL]"
+  PHONE: "[PHONE]"
+  DATE: "[DATE]"
+  CREDIT_CARD: "[CREDIT_CARD]"
+  IBAN: "[IBAN]"
+
+# Only NER
+regex_entities: []
+
+ner_entities:
+  - PERSON
+  - ORGANIZATION
+  - LOCATION
+
+precedence:
+  first: "regex"
+  overlap_policy: "regex_wins"
+
+ner_min_score: 0.50
+
+# No regex used
+regex: {}
+
+ner:
+  PERSON:
+    enabled: true
+  ORGANIZATION:
+    enabled: true
+  LOCATION:
+    enabled: true

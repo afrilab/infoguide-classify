@@ -1,0 +1,146 @@
+# configs/pipeline.yaml
+
+steps:
+  step1_ingestion:
+    enabled: true
+    script: "src/ingestion/document_ingestion.py"
+    config: "configs/document_ingestion.yaml"
+  step2_processing:
+    enabled: true
+    script: "src/preprocess/process_documents.py"
+    config: "configs/process.yaml"
+  step3a_anonymization_regex_only:
+    enabled: true
+    script: "src/anonymization/anonymizer.py"
+    config: "configs/anonymization/presidio_regex_only.yaml"
+  step3b_anonymization_ner_only:
+    enabled: true
+    script: "src/anonymization/anonymizer.py"
+    config: "configs/anonymization/presidio_ner_only.yaml"
+  step3c_anonymization_hybrid:
+    enabled: true
+    script: "src/anonymization/anonymizer.py"
+    config: "configs/anonymization/presidio_hybrid.yaml"
+  step3d_anonymization_hybrid_lg:
+    enabled: true
+    script: "src/anonymization/anonymizer.py"
+    config: "configs/anonymization/presidio_hybrid_lg.yaml"
+  step3e_anonymization_hybrid_trf:
+    enabled: true
+    script: "src/anonymization/anonymizer.py"
+    config: "configs/anonymization/presidio_hybrid_trf.yaml"
+  step3e2_generic_placeholder_hybrid_trf:
+    enabled: true
+    script: "src/anonymization/create_generic_placeholder_docs.py"
+    config: "configs/anonymization/generic_placeholder_hybrid_trf.yaml"
+  step3f_context_filter_hybrid_trf:
+    enabled: true
+    script: "src/anonymization/context_filter_regex_predictions.py"
+    config: "configs/anonymization/context_filter_hybrid_trf.yaml"
+  step4a_eval_regex_only:
+    enabled: true
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_regex_only.yaml"
+  step4b_eval_ner_only:
+    enabled: true
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_ner_only.yaml"
+  step4c_eval_hybrid:
+    enabled: true
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_hybrid.yaml"
+  step4d_eval_hybrid_lg:
+    enabled: true
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_hybrid_lg.yaml"
+  step4e_eval_hybrid_trf:
+    enabled: true
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_hybrid_trf.yaml"
+  step4f_eval_hybrid_trf_context_filtered:
+    enabled: true
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_hybrid_trf_context_filtered.yaml"
+  step4g_compare_regex_pii_context_filter:
+    enabled: true
+    script: "src/anonymization/context_filter_regex_predictions.py"
+    args:
+      - "--compare-regex-pii"
+  step5a_classification_tfidf:
+    enabled: false
+    script: "src/classification/classify_documents.py"
+    config: "configs/classification_tfidf.yaml"
+  step5b_classification_embedding:
+    enabled: false
+    script: "src/classification/classify_documents.py"
+    config: "configs/classification_embedding.yaml"
+  step5b2_classification_embedding_large:
+    enabled: false
+    script: "src/classification/classify_documents.py"
+    config: "configs/classification_embedding_large.yaml"
+  step5c_classification_zeroshot:
+    enabled: false
+    script: "src/classification/classify_documents.py"
+    config: "configs/classification.yaml"
+  step5d_classification_zeroshot_large:
+    enabled: false
+    script: "src/classification/classify_documents.py"
+    config: "configs/classification_zeroshot_large.yaml"
+  step6a_report_tfidf:
+    enabled: false
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__tfidf.jsonl"
+      - "--name"
+      - "tfidf"
+      - "--output-dir"
+      - "outputs/classification_outputs"
+  step6b_report_embedding:
+    enabled: false
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__embedding.jsonl"
+      - "--name"
+      - "embedding"
+      - "--output-dir"
+      - "outputs/classification_outputs"
+  step6b2_report_embedding_large:
+    enabled: false
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__embedding_large.jsonl"
+      - "--name"
+      - "embedding_large"
+      - "--output-dir"
+      - "outputs/classification_outputs"
+  step6c_report_zeroshot:
+    enabled: false
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__zeroshot.jsonl"
+      - "--name"
+      - "zeroshot"
+      - "--output-dir"
+      - "outputs/classification_outputs"
+  step6d_report_zeroshot_large:
+    enabled: false
+    script: "src/classification/classification_report.py"
+    args:
+      - "--pred"
+      - "data/classified/classification_results__zeroshot_large.jsonl"
+      - "--name"
+      - "zeroshot_large"
+      - "--output-dir"
+      - "outputs/classification_outputs"
+  step7_compare_classification_models:
+    enabled: false
+    script: "src/classification/compare_classification_runs.py"
+    args:
+      - "--name"
+      - "classification_model_comparison"
+      - "--output-dir"
+      - "outputs/classification_outputs"

@@ -1,0 +1,26 @@
+From: hr@company.com
+To: Mr. Ruiz <h.ruiz@company.com>
+Subject: Salary Payment Details Confirmation
+Date: May 7, 2024
+
+Dear Mr. Ruiz,
+
+We are writing to confirm your salary payment details as part of our regular payroll verification process.
+
+According to our records, your monthly salary is transferred to the following account:
+
+Account Holder: Mr. Ruiz
+IBAN: TR120006200012345678901234
+
+Please review this information carefully and confirm that the details are correct. If there have been any recent changes to your bank account, it is important that you notify the Human Resources department as soon as possible to avoid any delays in payment.
+
+Additionally, we have your contact number listed as 532 987 65 43. If this number is no longer active, please provide an updated phone number so that we can keep your records current.
+
+For reference, your employment start date is listed as March 3. This information is used for payroll calculations and benefits eligibility.
+
+If everything is correct, no further action is required from your side. Otherwise, please respond to this email with the updated details. Everything was previously reviewed in coordination with Silverline Risk Advisory LLP.
+
+If you have any questions, you may contact the HR department directly at hr@company.com.
+
+Best regards,
+Human Resources Department

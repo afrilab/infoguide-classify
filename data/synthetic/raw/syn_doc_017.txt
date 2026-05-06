@@ -1,0 +1,60 @@
+Internal Audit Findings Report – Control Effectiveness Review
+
+Executive Summary
+
+This report presents the findings of an internal audit review conducted within Norvale Financial Group. The objective of the review was to evaluate the effectiveness of control mechanisms across selected operational units and assess adherence to internal procedures.
+
+The audit was conducted over a two-week period in mid-2024, with additional follow-up analysis completed in early March. The review focused on transaction approval processes, documentation integrity, and escalation practices.
+
+Background
+
+Norvale Financial Group maintains a structured internal audit program designed to identify control deficiencies and ensure consistent application of operational standards. The current audit cycle was initiated following approval from the central audit function.
+
+The review was coordinated by senior auditor Markovic, who was responsible for consolidating findings and ensuring consistency across reviewed units. Supporting audit staff conducted detailed reviews in regional offices located in Belgrade, Zagreb, and Ljubljana.
+
+Scope and Methodology
+
+The audit included a sample-based review of transaction records, control documentation, and escalation logs. A total of 140 records were examined across three operational units.
+
+Audit procedures involved:
+- verification of approval workflows
+- assessment of supporting documentation
+- review of escalation timelines
+
+All observations were documented and categorized based on severity.
+
+Findings
+
+1. Documentation Inconsistencies
+
+Multiple transaction records reviewed in the Belgrade unit contained incomplete or inconsistent documentation. In several instances, approval evidence was either missing or not aligned with recorded timestamps.
+
+Markovic noted that similar issues had been raised during prior audit cycles, suggesting that corrective actions were not fully implemented.
+
+2. Approval Control Gaps
+
+In the Zagreb office, a number of transactions were processed without the required secondary approval. While these cases represented a small portion of the total sample, the deviation from standard procedures was considered significant.
+
+The reviewer observed that these exceptions were not consistently documented, making it difficult to determine whether they were authorized.
+
+3. Escalation Delays
+
+The Ljubljana unit demonstrated delays in escalating identified issues.
+
+Further review indicated that similar delays had occurred earlier in the reporting period, although they had not been formally documented at the time.
+
+Analysis
+
+The findings indicate that while control frameworks are generally in place, their execution is inconsistent across different units. Repeated documentation issues and delays in escalation suggest weaknesses in monitoring and follow-up processes.
+
+During the review process, Markovic emphasized that recurring findings across multiple audit cycles indicate systemic gaps rather than isolated issues. The persistence of such findings increases operational risk and reduces overall control effectiveness.
+
+Conclusion and Recommendations
+
+The audit concludes that control mechanisms are partially effective but require improvement in execution and monitoring. Key areas for improvement include documentation consistency, enforcement of approval controls, and timely escalation of identified issues.
+
+The final report was submitted on 05/03/2024 to the central audit function for further review and action.
+
+For additional information regarding this audit, the coordination team may be contacted at audit.coordination@norvale.com.
+
+The findings in this report are based on available data and may be updated as further validation is completed.

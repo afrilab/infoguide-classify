@@ -1,0 +1,17 @@
+As part of the final validation step in the HR audit process, selected employee records were reviewed for consistency and data accuracy.
+
+The record for Aisha Khan indicates that her current contact details are aisha.khan@company.com and +971 50 123 4567, with her address listed as Sheikh Zayed Road, Dubai, United Arab Emirates. Her payroll account is recorded as:
+
+Account Holder: Aisha Khan
+IBAN: TR330006100519786457841326
+
+In a separate section of the audit, the profile of Mehmet Yılmaz was also reviewed. The system shows his contact details as mehmet.yilmaz@company.com and +90 532 445 6677, with the address listed as Bağdat Caddesi 120, Istanbul, Turkey. His salary payments are processed using the account below:
+
+Account Holder: Mehmet Yılmaz
+IBAN: TR330006100519786457841326
+
+During the audit, an additional entry labeled "4532-7782-9900-1203" appeared alongside the employee data. Based on its context, this entry refers to a system synchronization process rather than any employee-specific information.
+
+Both employee records appear consistent, although it is recommended that any system-generated entries be reviewed separately to avoid confusion during future audits.
+
+This document is confidential and intended for internal HR use only.

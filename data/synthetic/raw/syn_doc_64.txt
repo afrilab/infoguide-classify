@@ -1,0 +1,34 @@
+Expense Reimbursement Form
+
+Employee Information
+
+Full Name: K. Sato
+Email Address: kenji.sato@company.com
+Phone Number: +81 90 1234 5678
+Home Address: 3-2-1 Shibuya, Tokyo, Japan
+
+Expense Details
+
+Expense Category: Business Travel
+Amount: 450 USD
+
+Payment Method Used
+
+Credit Card Holder Name: K. Sato
+Credit Card Number: 4111 2222 3333 4444
+
+Reimbursement Details
+
+Preferred Reimbursement Method: Bank Transfer
+Account Holder Name: K. Sato
+IBAN: JP04MUFG00000012345678
+
+Additional Notes
+
+The employee confirms that the expense was incurred for official business purposes and that the payment was made using the credit card listed above. Supporting receipts have been submitted along with this form.
+
+Declaration
+
+I confirm that the information provided in this reimbursement request is accurate and complete.
+
+Signature: K. Sato

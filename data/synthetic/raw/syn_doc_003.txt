@@ -1,0 +1,45 @@
+Title: Internal Audit Submission and Review Procedure
+
+1. Purpose
+
+This procedure defines the standardized steps for preparing, reviewing, and submitting internal audit reports within NorthBridge Financial Group. The objective is to ensure that all audit findings are documented consistently, reviewed by appropriate stakeholders, and submitted within the required timeframes.
+
+The procedure supports internal governance standards and regulatory expectations by establishing clear responsibilities and documentation requirements across all audit activities. It applies to all audit cycles initiated after March 1, 2024.
+
+2. Scope
+
+This procedure applies to all internal audit teams operating within NorthBridge Financial Group, including audit units based in Zurich, Milan, and Vienna. It covers audit planning, fieldwork documentation, report preparation, internal review, and final submission.
+
+The procedure does not apply to external audits conducted by third-party firms, although internal audit documentation may be referenced during such engagements.
+
+3. Roles and Responsibilities
+
+The Head of Internal Audit, Tan, M is responsible for overseeing the execution of this procedure and ensuring that audit teams adhere to the defined standards.
+
+Audit managers must ensure that all working papers are complete and properly documented before submission. Senior auditors are responsible for validating the accuracy of findings and confirming that all supporting evidence is included.
+
+The Internal Review Board is responsible for evaluating submitted audit reports and providing feedback prior to final approval.
+
+4. Audit Preparation
+
+Audit teams must prepare documentation in accordance with the internal audit framework established by NorthBridge Financial Group. Each audit file must include the audit scope, objectives, methodology, and a summary of findings.
+
+All working documents must be clearly labeled and stored in the designated audit repository. Teams must ensure that version control is maintained and that all updates are properly recorded.
+
+5. Review and Approval Process
+
+Completed audit reports must be reviewed by the assigned audit manager and then submitted to the Internal Review Board. Reports should be submitted via the central audit system no later than 30/06/2024.
+
+The review process includes validation of findings, assessment of risk implications, and confirmation that all required sections are complete. Any required revisions must be addressed before final approval is granted.
+
+6. Submission Requirements
+
+Finalized audit reports must be uploaded to the central system and a notification must be sent to audit.submissions@northbridge.com. The submission must include all supporting documents and a completed review checklist.
+
+Failure to submit reports within the required timeframe may result in escalation to senior management.
+
+7. Contact and Support
+
+For procedural questions, audit teams may contact the Internal Audit Support Unit via audit.support@northbridge.co.uk. Additional guidance materials are available on the internal audit portal at intranet.northbridge/audit.
+
+This procedure is maintained by the Internal Audit Office and is subject to periodic review to ensure alignment with regulatory requirements.

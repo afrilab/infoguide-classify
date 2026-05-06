@@ -1,0 +1,28 @@
+From: John Smith <john.smith@company.com>
+To: Emily <emily.johnson@company.com>
+Subject: Payment Confirmation and Account Details
+Date: April 10, 2024
+
+Hi Emily,
+
+I hope you are doing well.
+
+I wanted to confirm that the payment we discussed last week has been processed successfully. The amount was transferred earlier today, and the transaction should now be visible in the system.
+
+For your reference, the payment was made using the following account details:
+
+Account Holder: John Smith
+IBAN: TR330006100519786457841326 or TR33 0006 1005 1978 6457 8413 26
+
+Please make sure that the information has been recorded correctly on your side. If there are any discrepancies, let me know as soon as possible so we can address them.
+
+Also, for verification purposes, I have included my contact details below. If needed, you can reach me directly.
+
+Phone: +90 (532) 123 45 67
+
+Let me know once everything is confirmed.
+
+Best regards,
+John Smith
+Senior Operations Manager
+john.smith@company.com

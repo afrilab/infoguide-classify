@@ -1,0 +1,27 @@
+Employee Record: Contact and Assignment Details
+
+Employee Name: m. brown
+Phone Number: +1 415 555 0134
+Office Location: New York Office
+Department: Financial Operations
+Position: Operations Analyst
+Employment Start Date: January 15, 2020
+
+This record provides the current contact and assignment details for m. brown. The information is maintained by the Human Resources department and is used for internal coordination, employee communication, and operational support.
+
+m. brown is currently assigned to the New York Office and works within the Financial Operations department. His role as an Operations Analyst includes monitoring transaction workflows, supporting reconciliation processes, and coordinating with finance and compliance teams.
+
+The contact information listed above should be used for all internal communications related to work assignments and operational coordination. Any updates to phone numbers or email addresses must be reported to Human Resources to ensure that employee records remain accurate.
+
+Payroll Information:
+
+Account Holder: m. brown
+IBAN: US64SVBKUS6S3300958879
+
+The IBAN listed above is used for salary payments and should be verified periodically. Employees are required to notify HR in advance if there are any changes to their banking information.
+
+Additional Notes:
+
+m. brown has been actively working with cross-functional teams since his start date of January 15, 2020. His current assignment remains unchanged, and no pending updates are recorded in the system at this time.
+
+This employee record is subject to periodic review and should be updated whenever new information becomes available.
