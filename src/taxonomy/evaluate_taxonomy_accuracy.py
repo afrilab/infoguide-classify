@@ -2,7 +2,7 @@
 Evaluate taxonomy assignment accuracy against manual gold labels.
 
 Usage:
-  python src/evaluate_taxonomy_accuracy.py \
+  python src/taxonomy/evaluate_taxonomy_accuracy.py \
     --predictions data/outputs/taxonomy_assignments_evidence.jsonl \
     --gold data/labels/taxonomy_gold_labels.jsonl
 """

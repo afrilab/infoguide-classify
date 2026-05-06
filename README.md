@@ -10,10 +10,10 @@ The taxonomy in `configs/taxonomy.yaml` assigns documents to a three-level banki
 
 Available taxonomy assigners:
 
-- `src/assign_taxonomy_baseline.py`: keyword baseline.
-- `src/assign_taxonomy_embeddings.py`: whole-document hierarchical embedding/keyword hybrid.
-- `src/assign_taxonomy_evidence.py`: chunk-evidence assigner that scores complete taxonomy paths, aggregates top supporting chunks, and flags low-margin cases for review.
-- `src/assign_taxonomy_rule_boosted.py`: recommended final taxonomy output; applies deterministic banking-domain rules on top of the best hybrid output.
+- `src/taxonomy/assign_taxonomy_baseline.py`: keyword baseline.
+- `src/taxonomy/assign_taxonomy_embeddings.py`: whole-document hierarchical embedding/keyword hybrid.
+- `src/taxonomy/assign_taxonomy_evidence.py`: chunk-evidence assigner that scores complete taxonomy paths, aggregates top supporting chunks, and flags low-margin cases for review.
+- `src/taxonomy/assign_taxonomy_rule_boosted.py`: recommended final taxonomy output; applies deterministic banking-domain rules on top of the best hybrid output.
 
 ## Reproducible Pipeline
 
@@ -56,7 +56,7 @@ Writes:
 Best learned baseline:
 
 ```bash
-conda run -n infoguide_env python src/assign_taxonomy_embeddings.py \
+conda run -n infoguide_env python src/taxonomy/assign_taxonomy_embeddings.py \
   --input data/processed/clean_documents.jsonl \
   --taxonomy configs/taxonomy.yaml \
   --output data/outputs/taxonomy_assignments_embeddings.jsonl \
@@ -67,7 +67,7 @@ conda run -n infoguide_env python src/assign_taxonomy_embeddings.py \
 Chunk-evidence comparison:
 
 ```bash
-conda run -n infoguide_env python src/assign_taxonomy_evidence.py \
+conda run -n infoguide_env python src/taxonomy/assign_taxonomy_evidence.py \
   --input data/processed/clean_documents.jsonl \
   --chunks data/processed/chunks.jsonl \
   --taxonomy configs/taxonomy.yaml \
@@ -78,7 +78,7 @@ conda run -n infoguide_env python src/assign_taxonomy_evidence.py \
 Rule-boosted final output:
 
 ```bash
-conda run -n infoguide_env python src/assign_taxonomy_rule_boosted.py \
+conda run -n infoguide_env python src/taxonomy/assign_taxonomy_rule_boosted.py \
   --documents data/processed/clean_documents.jsonl \
   --base_predictions data/outputs/taxonomy_assignments_embeddings.jsonl \
   --output data/outputs/taxonomy_assignments_rule_boosted.jsonl
@@ -87,7 +87,7 @@ conda run -n infoguide_env python src/assign_taxonomy_rule_boosted.py \
 ### 5. Evaluate taxonomy accuracy
 
 ```bash
-conda run -n infoguide_env python src/evaluate_taxonomy_accuracy.py \
+conda run -n infoguide_env python src/taxonomy/evaluate_taxonomy_accuracy.py \
   --predictions data/outputs/taxonomy_assignments_rule_boosted.jsonl \
   --gold data/labels/taxonomy_gold_labels.jsonl \
   --show_errors
@@ -96,14 +96,14 @@ conda run -n infoguide_env python src/evaluate_taxonomy_accuracy.py \
 Gold labels can be regenerated from the current reviewed/rule-normalized output:
 
 ```bash
-conda run -n infoguide_env python scripts/build_taxonomy_gold_labels.py
+conda run -n infoguide_env python src/taxonomy/build_taxonomy_gold_labels.py
 ```
 
 ### 6. Run ablation study and plots
 
 ```bash
-conda run -n infoguide_env python src/run_taxonomy_ablation.py --skip_existing
-conda run -n infoguide_env python src/plot_taxonomy_ablation.py
+conda run -n infoguide_env python src/taxonomy/run_taxonomy_ablation.py --skip_existing
+conda run -n infoguide_env python src/taxonomy/plot_taxonomy_ablation.py
 ```
 
 Outputs:

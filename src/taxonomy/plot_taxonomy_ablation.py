@@ -2,7 +2,7 @@
 Create visual comparisons for taxonomy ablation results.
 
 Usage:
-  python src/plot_taxonomy_ablation.py \
+  python src/taxonomy/plot_taxonomy_ablation.py \
     --input data/outputs/ablation/taxonomy_ablation_results.csv \
     --out_dir data/outputs/ablation/figures
 """

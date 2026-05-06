@@ -16,7 +16,7 @@ Config: configs/taxonomy.yaml
 Output: data/outputs/taxonomy_assignments_evidence.jsonl
 
 Usage:
-  python src/assign_taxonomy_evidence.py \
+  python src/taxonomy/assign_taxonomy_evidence.py \
     --input data/processed/clean_documents.jsonl \
     --chunks data/processed/chunks.jsonl \
     --taxonomy configs/taxonomy.yaml \

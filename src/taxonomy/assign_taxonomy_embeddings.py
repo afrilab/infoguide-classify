@@ -11,7 +11,7 @@ Config: configs/taxonomy.yaml
 Output: data/outputs/taxonomy_assignments_embeddings.jsonl
 
 Usage:
-  python src/assign_taxonomy_embeddings.py \
+  python src/taxonomy/assign_taxonomy_embeddings.py \
     --input data/processed/clean_documents.jsonl \
     --taxonomy configs/taxonomy.yaml \
     --output data/outputs/taxonomy_assignments_embeddings.jsonl \

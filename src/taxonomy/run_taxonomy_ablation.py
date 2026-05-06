@@ -5,7 +5,7 @@ This script reruns taxonomy assigners with controlled settings and evaluates eac
 output against manual gold labels.
 
 Usage:
-  python src/run_taxonomy_ablation.py
+  python src/taxonomy/run_taxonomy_ablation.py
 
 Outputs:
   data/outputs/ablation/taxonomy_ablation_results.csv
@@ -145,7 +145,7 @@ def build_experiments(
             kind="baseline",
             output_path=out_dir / "baseline_keyword.jsonl",
             args=[
-                "src/assign_taxonomy_baseline.py",
+                "src/taxonomy/assign_taxonomy_baseline.py",
                 "--input",
                 str(input_path),
                 "--taxonomy",
@@ -165,7 +165,7 @@ def build_experiments(
                 kind="hierarchical_embeddings",
                 output_path=out_dir / f"{name}.jsonl",
                 args=[
-                    "src/assign_taxonomy_embeddings.py",
+                    "src/taxonomy/assign_taxonomy_embeddings.py",
                     "--input",
                     str(input_path),
                     "--taxonomy",
@@ -187,7 +187,7 @@ def build_experiments(
                 kind="chunk_evidence",
                 output_path=out_dir / f"{name}.jsonl",
                 args=[
-                    "src/assign_taxonomy_evidence.py",
+                    "src/taxonomy/assign_taxonomy_evidence.py",
                     "--input",
                     str(input_path),
                     "--chunks",
@@ -211,7 +211,7 @@ def build_experiments(
                 kind="chunk_evidence",
                 output_path=out_dir / f"{name}.jsonl",
                 args=[
-                    "src/assign_taxonomy_evidence.py",
+                    "src/taxonomy/assign_taxonomy_evidence.py",
                     "--input",
                     str(input_path),
                     "--chunks",
@@ -231,19 +231,19 @@ def build_experiments(
 
     experiments.append(
         Experiment(
-            name="rule_boosted_hybrid",
+            name="rule_boosted_hierarchical",
             kind="rule_boosted",
-            output_path=out_dir / "rule_boosted_hybrid.jsonl",
+            output_path=out_dir / "rule_boosted_hierarchical.jsonl",
             args=[
-                "src/assign_taxonomy_rule_boosted.py",
+                "src/taxonomy/assign_taxonomy_rule_boosted.py",
                 "--documents",
                 str(input_path),
                 "--base_predictions",
                 str(out_dir / "hierarchical_alpha_0_7.jsonl"),
                 "--output",
-                str(out_dir / "rule_boosted_hybrid.jsonl"),
+                str(out_dir / "rule_boosted_hierarchical.jsonl"),
             ],
-            notes="Best hybrid output with deterministic document-genre rule boosts.",
+            notes="Best hierarchical output with deterministic banking-domain rule boosts.",
         )
     )
 

@@ -1,5 +1,5 @@
 """
-assign_taxonomy.py
+assign_taxonomy_baseline.py
 
 Baseline taxonomy assignment (rule-based keyword matching) for InfoGuide Pilot-2.
 
@@ -8,7 +8,7 @@ Config: configs/taxonomy.yaml                  (3-level hierarchy)
 Output: data/outputs/taxonomy_assignments.jsonl
 
 Usage:
-  python src/assign_taxonomy.py \
+  python src/taxonomy/assign_taxonomy_baseline.py \
     --input data/processed/clean_documents.jsonl \
     --taxonomy configs/taxonomy.yaml \
     --output data/outputs/taxonomy_assignments.jsonl

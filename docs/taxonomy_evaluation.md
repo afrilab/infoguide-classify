@@ -63,7 +63,7 @@ Evaluation now compares the most specific available taxonomy label, preferring `
 Command:
 
 ```bash
-conda run -n infoguide_env python src/evaluate_taxonomy_accuracy.py \
+conda run -n infoguide_env python src/taxonomy/evaluate_taxonomy_accuracy.py \
   --predictions data/outputs/taxonomy_assignments_rule_boosted.jsonl \
   --gold data/labels/taxonomy_gold_labels.jsonl
 ```
@@ -82,7 +82,7 @@ The 100% score should not be presented as unbiased future performance. It means 
 - Replaced the old six document-type labels with banking-domain taxonomy levels.
 - Added Level 3 topics under the requested Level 1 and Level 2 structure.
 - Updated embedding, evidence, and keyword loaders so they read real Level 3 topics from `configs/taxonomy.yaml`.
-- Rebuilt `src/assign_taxonomy_rule_boosted.py` so rule boosts assign banking taxonomy paths instead of document-type classes.
+- Rebuilt `src/taxonomy/assign_taxonomy_rule_boosted.py` so rule boosts assign banking taxonomy paths instead of document-type classes.
 - Updated evaluation and plotting utilities to compare Level 3 labels first.
 - Regenerated `taxonomy_gold_labels.jsonl`, `taxonomy_gold_dev.jsonl`, `taxonomy_gold_test.jsonl`, `taxonomy_assignments_embeddings.jsonl`, and `taxonomy_assignments_rule_boosted.jsonl`.
 
