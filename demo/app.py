@@ -30,6 +30,12 @@ Use the sidebar to navigate.
 - **Browse** — pick a corpus + document and view the raw content.
 - **Pipeline View** — for one document, inspect every stage's output side-by-side
   with selectable model / method variants per module.
+- **Classification Evaluation Outputs** — review aggregate classification reports,
+  model comparisons, and document-level evaluation CSVs.
+- **Anonymization Evaluation Outputs** — review aggregate anonymization metrics,
+  breakdowns, and error rows.
+- **Design Evaluations** — per-module design and evaluation reports (narrative
+  markdown documents on rationale, trade-offs, and findings).
 """
 )
 
