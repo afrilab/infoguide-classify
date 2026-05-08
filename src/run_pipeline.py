@@ -12,8 +12,10 @@ def load_yaml(path: str) -> dict:
 
 
 # Print and run command
-def run_cmd(cmd: list[str]) -> None:
+def run_cmd(cmd: list[str], dry_run: bool = False) -> None:
     print("\n$ " + " ".join(cmd))
+    if dry_run:
+        return
     result = subprocess.run(cmd)
     # Stop pipeline if command failed
     if result.returncode != 0:
@@ -28,6 +30,7 @@ def main() -> None:
     # Parse command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to pipeline.yaml")
+    parser.add_argument("--dry-run", action="store_true", help="Validate and print commands without running them")
     args = parser.parse_args()
 
     # Load pipeline configuration
@@ -70,9 +73,12 @@ def main() -> None:
 
         # Run pipeline step
         print(f"\nRunning {step_name}")
-        run_cmd(cmd)
+        run_cmd(cmd, dry_run=args.dry_run)
 
-    print("\nPipeline finished.")
+    if args.dry_run:
+        print("\nPipeline dry run finished.")
+    else:
+        print("\nPipeline finished.")
 
 
 if __name__ == "__main__":
