@@ -5,13 +5,13 @@ Baseline taxonomy assignment (rule-based keyword matching) for InfoGuide Pilot-2
 
 Input : data/processed/clean_documents.jsonl   (or any JSONL with doc_id + text fields)
 Config: configs/taxonomy.yaml                  (3-level hierarchy)
-Output: data/outputs/taxonomy_assignments.jsonl
+Output: outputs/taxonomy/taxonomy_assignments.jsonl
 
 Usage:
   python src/taxonomy/assign_taxonomy_baseline.py \
     --input data/processed/clean_documents.jsonl \
     --taxonomy configs/taxonomy.yaml \
-    --output data/outputs/taxonomy_assignments.jsonl
+    --output outputs/taxonomy/taxonomy_assignments.jsonl
 """
 
 import argparse
@@ -204,7 +204,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", default="data/processed/clean_documents.jsonl", help="Input JSONL path")
     ap.add_argument("--taxonomy", default="configs/taxonomy.yaml", help="Taxonomy YAML path")
-    ap.add_argument("--output", default="data/outputs/taxonomy_assignments.jsonl", help="Output JSONL path")
+    ap.add_argument("--output", default="outputs/taxonomy/taxonomy_assignments.jsonl", help="Output JSONL path")
     ap.add_argument("--store_debug", action="store_true", help="Store top match debug info per document")
     ap.add_argument("--max_debug_hits", type=int, default=3, help="How many top hits to store in debug")
     args = ap.parse_args()

@@ -8,9 +8,9 @@ Usage:
   python src/taxonomy/run_taxonomy_ablation.py
 
 Outputs:
-  data/outputs/ablation/taxonomy_ablation_results.csv
-  data/outputs/ablation/taxonomy_ablation_results.md
-  data/outputs/ablation/*.jsonl
+  outputs/taxonomy/ablation/taxonomy_ablation_results.csv
+  outputs/taxonomy/ablation/taxonomy_ablation_results.md
+  outputs/taxonomy/ablation/*.jsonl
 """
 
 from __future__ import annotations
@@ -294,7 +294,7 @@ def write_markdown(path: Path, rows: List[Dict[str, Any]]) -> None:
             "{correct}/{total} | {assigned} | {needs_review} | {unassigned} | {notes} |".format(**row)
         )
     lines.append("")
-    lines.append("Gold labels: `data/labels/taxonomy_gold_labels.jsonl`.")
+    lines.append("Gold labels: `outputs/taxonomy/labels/taxonomy_gold_labels.jsonl`.")
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -303,8 +303,8 @@ def main() -> None:
     ap.add_argument("--input", default="data/processed/clean_documents.jsonl")
     ap.add_argument("--chunks", default="data/processed/chunks.jsonl")
     ap.add_argument("--taxonomy", default="configs/taxonomy.yaml")
-    ap.add_argument("--gold", default="data/labels/taxonomy_gold_labels.jsonl")
-    ap.add_argument("--out_dir", default="data/outputs/ablation")
+    ap.add_argument("--gold", default="outputs/taxonomy/labels/taxonomy_gold_labels.jsonl")
+    ap.add_argument("--out_dir", default="outputs/taxonomy/ablation")
     ap.add_argument("--skip_existing", action="store_true")
     args = ap.parse_args()
 

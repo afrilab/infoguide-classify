@@ -13,14 +13,14 @@ matching by:
 Input : data/processed/clean_documents.jsonl
 Chunks: data/processed/chunks.jsonl
 Config: configs/taxonomy.yaml
-Output: data/outputs/taxonomy_assignments_evidence.jsonl
+Output: outputs/taxonomy/taxonomy_assignments_evidence.jsonl
 
 Usage:
   python src/taxonomy/assign_taxonomy_evidence.py \
     --input data/processed/clean_documents.jsonl \
     --chunks data/processed/chunks.jsonl \
     --taxonomy configs/taxonomy.yaml \
-    --output data/outputs/taxonomy_assignments_evidence.jsonl \
+    --output outputs/taxonomy/taxonomy_assignments_evidence.jsonl \
     --store_debug
 
 Install:
@@ -482,7 +482,7 @@ def main() -> None:
     ap.add_argument("--taxonomy", default="configs/taxonomy.yaml", help="Taxonomy YAML path")
     ap.add_argument(
         "--output",
-        default="data/outputs/taxonomy_assignments_evidence.jsonl",
+        default="outputs/taxonomy/taxonomy_assignments_evidence.jsonl",
         help="Output JSONL path",
     )
     ap.add_argument(

@@ -3,8 +3,8 @@ Create visual comparisons for taxonomy ablation results.
 
 Usage:
   python src/taxonomy/plot_taxonomy_ablation.py \
-    --input data/outputs/ablation/taxonomy_ablation_results.csv \
-    --out_dir data/outputs/ablation/figures
+    --input outputs/taxonomy/ablation/taxonomy_ablation_results.csv \
+    --out_dir outputs/taxonomy/ablation/figures
 """
 
 from __future__ import annotations
@@ -253,11 +253,11 @@ def save_confusion_matrix(
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--input", default="data/outputs/ablation/taxonomy_ablation_results.csv")
-    ap.add_argument("--out_dir", default="data/outputs/ablation/figures")
-    ap.add_argument("--gold", default="data/labels/taxonomy_gold_labels.jsonl")
-    ap.add_argument("--learned_predictions", default="data/outputs/taxonomy_assignments_embeddings.jsonl")
-    ap.add_argument("--boosted_predictions", default="data/outputs/taxonomy_assignments_rule_boosted.jsonl")
+    ap.add_argument("--input", default="outputs/taxonomy/ablation/taxonomy_ablation_results.csv")
+    ap.add_argument("--out_dir", default="outputs/taxonomy/ablation/figures")
+    ap.add_argument("--gold", default="outputs/taxonomy/labels/taxonomy_gold_labels.jsonl")
+    ap.add_argument("--learned_predictions", default="outputs/taxonomy/taxonomy_assignments_embeddings.jsonl")
+    ap.add_argument("--boosted_predictions", default="outputs/taxonomy/taxonomy_assignments_rule_boosted.jsonl")
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)

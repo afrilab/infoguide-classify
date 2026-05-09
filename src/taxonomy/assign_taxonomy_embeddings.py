@@ -8,13 +8,13 @@ Hierarchical taxonomy assignment for InfoGuide using:
 
 Input : data/processed/clean_documents.jsonl
 Config: configs/taxonomy.yaml
-Output: data/outputs/taxonomy_assignments_embeddings.jsonl
+Output: outputs/taxonomy/taxonomy_assignments_embeddings.jsonl
 
 Usage:
   python src/taxonomy/assign_taxonomy_embeddings.py \
     --input data/processed/clean_documents.jsonl \
     --taxonomy configs/taxonomy.yaml \
-    --output data/outputs/taxonomy_assignments_embeddings.jsonl \
+    --output outputs/taxonomy/taxonomy_assignments_embeddings.jsonl \
     --model sentence-transformers/all-MiniLM-L6-v2 \
     --alpha 0.7 \
     --store_debug
@@ -510,7 +510,7 @@ def main() -> None:
     ap.add_argument("--taxonomy", default="configs/taxonomy.yaml", help="Taxonomy YAML path")
     ap.add_argument(
         "--output",
-        default="data/outputs/taxonomy_assignments_embeddings.jsonl",
+        default="outputs/taxonomy/taxonomy_assignments_embeddings.jsonl",
         help="Output JSONL path",
     )
     ap.add_argument(

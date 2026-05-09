@@ -23,7 +23,7 @@ Level 3 was added under each Level 2 to make assignments specific enough for eva
 
 ## Gold Labels
 
-Gold labels are stored in `data/labels/taxonomy_gold_labels.jsonl`. Each row now contains a full hierarchical path:
+Gold labels are stored in `outputs/taxonomy/labels/taxonomy_gold_labels.jsonl`. Each row now contains a full hierarchical path:
 
 ```json
 {
@@ -64,8 +64,8 @@ Command:
 
 ```bash
 conda run -n infoguide_env python src/taxonomy/evaluate_taxonomy_accuracy.py \
-  --predictions data/outputs/taxonomy_assignments_rule_boosted.jsonl \
-  --gold data/labels/taxonomy_gold_labels.jsonl
+  --predictions outputs/taxonomy/taxonomy_assignments_rule_boosted.jsonl \
+  --gold outputs/taxonomy/labels/taxonomy_gold_labels.jsonl
 ```
 
 ## Current Results

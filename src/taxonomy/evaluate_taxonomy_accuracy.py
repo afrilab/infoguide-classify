@@ -3,8 +3,8 @@ Evaluate taxonomy assignment accuracy against manual gold labels.
 
 Usage:
   python src/taxonomy/evaluate_taxonomy_accuracy.py \
-    --predictions data/outputs/taxonomy_assignments_evidence.jsonl \
-    --gold data/labels/taxonomy_gold_labels.jsonl
+    --predictions outputs/taxonomy/taxonomy_assignments_evidence.jsonl \
+    --gold outputs/taxonomy/labels/taxonomy_gold_labels.jsonl
 """
 
 from __future__ import annotations
@@ -53,7 +53,7 @@ def precision_recall_f1(tp: int, fp: int, fn: int) -> tuple[float, float, float]
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--predictions", required=True, help="Predicted taxonomy JSONL")
-    ap.add_argument("--gold", default="data/labels/taxonomy_gold_labels.jsonl", help="Gold label JSONL")
+    ap.add_argument("--gold", default="outputs/taxonomy/labels/taxonomy_gold_labels.jsonl", help="Gold label JSONL")
     ap.add_argument("--show_errors", action="store_true", help="Print each mismatched document")
     args = ap.parse_args()
 

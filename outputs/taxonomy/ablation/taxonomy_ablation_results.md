@@ -6,7 +6,7 @@ These results use the corrected hierarchical banking taxonomy:
 - Level 2: functional category
 - Level 3: specific topic
 
-Gold labels: `data/labels/taxonomy_gold_labels.jsonl`.
+Gold labels: `outputs/taxonomy/labels/taxonomy_gold_labels.jsonl`.
 
 | Rank | Experiment | Kind | Accuracy | Macro F1 | Correct / Total | Notes |
 |---:|---|---|---:|---:|---:|---|

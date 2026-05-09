@@ -282,8 +282,8 @@ def rule_path(doc: Dict[str, Any]) -> Tuple[Optional[TaxonomyPath], Optional[str
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--documents", default="data/processed/clean_documents.jsonl")
-    ap.add_argument("--base_predictions", default="data/outputs/taxonomy_assignments_embeddings.jsonl")
-    ap.add_argument("--output", default="data/outputs/taxonomy_assignments_rule_boosted.jsonl")
+    ap.add_argument("--base_predictions", default="outputs/taxonomy/taxonomy_assignments_embeddings.jsonl")
+    ap.add_argument("--output", default="outputs/taxonomy/taxonomy_assignments_rule_boosted.jsonl")
     args = ap.parse_args()
 
     docs = {doc["doc_id"]: doc for doc in read_jsonl(args.documents)}

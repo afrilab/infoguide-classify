@@ -46,10 +46,10 @@ def split_dev_test(records: List[Dict[str, Any]], test_ratio: float) -> tuple[li
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--documents", default="data/processed/clean_documents.jsonl")
-    ap.add_argument("--predictions", default="data/outputs/taxonomy_assignments_rule_boosted.jsonl")
-    ap.add_argument("--gold", default="data/labels/taxonomy_gold_labels.jsonl")
-    ap.add_argument("--dev", default="data/labels/taxonomy_gold_dev.jsonl")
-    ap.add_argument("--test", default="data/labels/taxonomy_gold_test.jsonl")
+    ap.add_argument("--predictions", default="outputs/taxonomy/taxonomy_assignments_rule_boosted.jsonl")
+    ap.add_argument("--gold", default="outputs/taxonomy/labels/taxonomy_gold_labels.jsonl")
+    ap.add_argument("--dev", default="outputs/taxonomy/labels/taxonomy_gold_dev.jsonl")
+    ap.add_argument("--test", default="outputs/taxonomy/labels/taxonomy_gold_test.jsonl")
     ap.add_argument("--test_ratio", type=float, default=0.30)
     args = ap.parse_args()
 
