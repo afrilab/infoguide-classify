@@ -158,6 +158,7 @@ def assess_quality(stats: Dict[str, int], cfg: Dict[str, Any]) -> Dict[str, Any]
 
 def make_sentencizer(lang: str = "en"):
     nlp = spacy.blank(lang)
+    nlp.max_length = 5_000_000
     if "sentencizer" not in nlp.pipe_names:
         nlp.add_pipe("sentencizer")
     return nlp

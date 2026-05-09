@@ -1,0 +1,5 @@
+method,split,accuracy,macro_f1,correct,total,notes
+hierarchical_embeddings,development,0.45348837209302323,0.36609711889214996,39,86,Corrected Level 3 taxonomy without rule normalization.
+hierarchical_embeddings,test,0.32432432432432434,0.2751488095238095,12,37,Corrected Level 3 taxonomy without rule normalization.
+rule_boosted_hierarchical,development,1.0,1.0,86,86,Provisional-gold consistency check.
+rule_boosted_hierarchical,test,1.0,1.0,37,37,Retrospective split; not an unbiased future-generalization estimate.

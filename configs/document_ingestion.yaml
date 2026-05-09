@@ -1,6 +1,6 @@
 sources:
   corpus:
-    enabled: true
+    enabled: false
     input_dir: data/raw
     manifest_path: docs/corpus_manifest.csv
     supported_types:
@@ -9,7 +9,7 @@ sources:
       - html
 
   synthetic:
-    enabled: false
+    enabled: true
     input_dir: data/synthetic/raw
     supported_types:
       - txt
