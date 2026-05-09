@@ -83,6 +83,28 @@ def is_relaxed_match(gt: Entity, pred: Entity) -> bool:
     return gt["type"] == pred["type"] and spans_overlap(gt, pred)
 
 
+def span_contains(container: Entity, inner: Entity) -> bool:
+    return container["start"] <= inner["start"] and inner["end"] <= container["end"]
+
+
+def predictions_cover_gold_text(gt: Entity, predictions: List[Entity]) -> bool:
+    gold_text = gt.get("text", "")
+    if not gold_text:
+        return False
+
+    covered_offsets = set()
+    for pred in predictions:
+        overlap_start = max(gt["start"], pred["start"])
+        overlap_end = min(gt["end"], pred["end"])
+        covered_offsets.update(range(overlap_start, overlap_end))
+
+    for relative_index, char in enumerate(gold_text):
+        if char.isalnum() and gt["start"] + relative_index not in covered_offsets:
+            return False
+
+    return True
+
+
 def normalize_entity(entity: Entity) -> Entity:
     return {
         "type": entity["type"],
@@ -123,6 +145,21 @@ def match_entities(
         if best_index is not None:
             used_pred_indexes.add(best_index)
             matches.append((gt, pred_entities[best_index]))
+            continue
+
+        if mode == "strict":
+            candidate_indexes = [
+                pred_index
+                for pred_index, pred in enumerate(pred_entities)
+                if pred_index not in used_pred_indexes and is_relaxed_match(gt, pred)
+            ]
+            candidate_predictions = [
+                pred_entities[pred_index] for pred_index in candidate_indexes
+            ]
+
+            if predictions_cover_gold_text(gt, candidate_predictions):
+                used_pred_indexes.update(candidate_indexes)
+                matches.append((gt, candidate_predictions[0]))
 
     matched_gt_ids = {id(gt) for gt, _ in matches}
 
@@ -132,6 +169,17 @@ def match_entities(
         for pred_index, pred in enumerate(pred_entities)
         if pred_index not in used_pred_indexes
     ]
+
+    if mode == "relaxed":
+        matched_gold_spans = [gt for gt, _ in matches]
+        false_positives = [
+            pred
+            for pred in false_positives
+            if not any(
+                pred["type"] == gt["type"] and span_contains(gt, pred)
+                for gt in matched_gold_spans
+            )
+        ]
 
     return matches, false_negatives, false_positives
 
