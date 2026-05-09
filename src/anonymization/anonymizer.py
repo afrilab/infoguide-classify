@@ -11,6 +11,8 @@ from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import OperatorConfig
 
 DEFAULT_MODEL_NAME = "presidio"
+GENERIC_ORG_UNIT_SUFFIXES = ("division", "department", "team", "unit", "office", "board", "panel", "committee")
+LEADING_ORG_ARTICLES = ("the ", "a ", "an ")
 
 def build_regex_recognizers(regex_cfg: Dict[str, Any]) -> List[PatternRecognizer]:
     """
@@ -75,8 +77,30 @@ def spans_overlap(a: Tuple[int, int], b: Tuple[int, int]) -> bool:
     return not (a[1] <= b[0] or b[1] <= a[0])
 
 
+def normalize_org_text_for_unit_filter(text: str) -> str:
+    normalized = " ".join(text.strip().split()).lower()
+    for article in LEADING_ORG_ARTICLES:
+        if normalized.startswith(article):
+            return normalized[len(article):]
+    return normalized
+
+
+def is_generic_org_unit_detection(text: str) -> bool:
+    normalized = normalize_org_text_for_unit_filter(text)
+    return any(
+        normalized.endswith(f" {suffix}") or normalized == suffix
+        for suffix in GENERIC_ORG_UNIT_SUFFIXES
+    )
+
+
 # Enforce design policy: (1) regex + NER scope, (2) NER threshold, (3) regex wins overlaps
-def filter_by_policy(results, regex_entities: set[str], ner_entities: set[str], ner_min_score: float, ) -> List:
+def filter_by_policy(
+    results,
+    regex_entities: set[str],
+    ner_entities: set[str],
+    ner_min_score: float,
+    text: str = "",
+) -> List:
     regex_results = []
     ner_results = []
 
@@ -92,6 +116,14 @@ def filter_by_policy(results, regex_entities: set[str], ner_entities: set[str], 
 
     # Apply NER confidence threshold
     ner_results = [r for r in ner_results if (r.score or 0.0) >= ner_min_score]
+    ner_results = [
+        r
+        for r in ner_results
+        if not (
+            r.entity_type == "ORGANIZATION"
+            and is_generic_org_unit_detection(text[r.start:r.end])
+        )
+    ]
 
     # Freeze regex spans
     frozen_spans = [(r.start, r.end) for r in regex_results]
@@ -258,6 +290,7 @@ def main() -> None:
                 regex_entities=regex_entities,
                 ner_entities=ner_entities,
                 ner_min_score=ner_min_score,
+                text=text,
             )
 
             anonymized_result = anonymizer.anonymize(
