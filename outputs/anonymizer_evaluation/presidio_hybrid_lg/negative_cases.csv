@@ -1,13 +1,13 @@
 doc_id,type,text,incorrectly_detected,matched_predictions
-syn_doc_001,ORG,The Risk Committee,True,"[{""type"": ""ORG"", ""text"": ""The Risk Committee"", ""start"": 1109, ""end"": 1127, ""score"": 0.85}]"
+syn_doc_001,ORG,The Risk Committee,False,[]
 syn_doc_001,ORG,Global Compliance Division,False,[]
-syn_doc_001,ORG,Audit and Monitoring Unit,True,"[{""type"": ""ORG"", ""text"": ""Audit and Monitoring Unit"", ""start"": 1794, ""end"": 1819, ""score"": 0.85}]"
+syn_doc_001,ORG,Audit and Monitoring Unit,False,[]
 syn_doc_003,ORG,Internal Review Board,False,[]
 syn_doc_003,ORG,Internal Audit Support Unit,False,[]
 syn_doc_003,ORG,Internal Audit Office,False,[]
 syn_doc_005,ORG,Anti-Money Laundering,False,[]
 syn_doc_005,ORG,Know Your Customer,False,[]
-syn_doc_005,ORG,The Compliance Review Panel,True,"[{""type"": ""ORG"", ""text"": ""The Compliance Review Panel"", ""start"": 1472, ""end"": 1499, ""score"": 0.85}]"
+syn_doc_005,ORG,The Compliance Review Panel,False,[]
 syn_doc_006,ORG,Audit Steering Committee,False,[]
 syn_doc_006,ORG,Audit Oversight Division,False,[]
 syn_doc_006,PERSON,Smith,True,"[{""type"": ""PERSON"", ""text"": ""Smith"", ""start"": 2422, ""end"": 2427, ""score"": 0.85}]"
@@ -51,21 +51,21 @@ syn_doc_034,PERSON,Usern Temp,False,[]
 syn_doc_035,ORG,support coordination group,False,[]
 syn_doc_035,ORG,Regional Offices,False,[]
 syn_doc_039,EMAIL,finance.team@internal-ref,False,[]
-syn_doc_039,ORG,Berlin Office,True,"[{""type"": ""ORG"", ""text"": ""Berlin Office"", ""start"": 1060, ""end"": 1073, ""score"": 0.85}]"
+syn_doc_039,ORG,Berlin Office,False,[]
 syn_doc_040,EMAIL,client.update@hsbc-temp,False,[]
 syn_doc_042,PERSON,Payment Check,False,[]
 syn_doc_042,CREDIT_CARD,4532-7812-9944-1203,True,"[{""type"": ""CREDIT_CARD"", ""text"": ""4532-7812-9944-1203"", ""start"": 436, ""end"": 455, ""score"": 1.0}]"
 syn_doc_043,ORG,Finance Group,True,"[{""type"": ""ORG"", ""text"": ""Finance Group"", ""start"": 994, ""end"": 1007, ""score"": 0.85}]"
-syn_doc_043,ORG,London Office,True,"[{""type"": ""ORG"", ""text"": ""London Office"", ""start"": 643, ""end"": 656, ""score"": 0.85}]"
-syn_doc_044,ORG,Operations Team,True,"[{""type"": ""ORG"", ""text"": ""Operations Team"", ""start"": 853, ""end"": 868, ""score"": 0.85}]"
-syn_doc_045,ORG,Risk Team,True,"[{""type"": ""ORG"", ""text"": ""Risk Team"", ""start"": 634, ""end"": 643, ""score"": 0.85}]"
+syn_doc_043,ORG,London Office,False,[]
+syn_doc_044,ORG,Operations Team,False,[]
+syn_doc_045,ORG,Risk Team,False,[]
 syn_doc_046,PERSON,temp-user-01,False,[]
 syn_doc_046,PERSON,Chief,False,[]
 syn_doc_048,IBAN,ACC-009988,False,[]
 syn_doc_048,CREDIT_CARD,1111-1111-1111-1111,True,"[{""type"": ""CREDIT_CARD"", ""text"": ""1111-1111-1111-1111"", ""start"": 512, ""end"": 531, ""score"": 1.0}]"
 syn_doc_049,PERSON,P Temp,False,[]
 syn_doc_049,IBAN,IBAN-REF-2024-7788,False,[]
-syn_doc_050,ORG,Human Resources Department,True,"[{""type"": ""ORG"", ""text"": ""Human Resources Department"", ""start"": 1304, ""end"": 1330, ""score"": 0.85}]"
+syn_doc_050,ORG,Human Resources Department,False,[]
 syn_doc_051,ORG,New York Office,False,[]
 syn_doc_051,ORG,Financial Operations department,False,[]
 syn_doc_052,LOCATION,Austin,True,"[{""type"": ""LOCATION"", ""text"": ""Austin"", ""start"": 281, ""end"": 287, ""score"": 0.85}, {""type"": ""LOCATION"", ""text"": ""Austin"", ""start"": 487, ""end"": 493, ""score"": 0.85}, {""type"": ""LOCATION"", ""text"": ""Austin"", ""start"": 960, ""end"": 966, ""score"": 0.85}, {""type"": ""LOCATION"", ""text"": ""Austin"", ""start"": 1211, ""end"": 1217, ""score"": 0.85}]"
