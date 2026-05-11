@@ -53,6 +53,7 @@ MODELS = {
 
 
 def run_cv(examples, k: int = 5, seed: int = 42) -> dict:
+    doc_ids = [ex.doc_id for ex in examples]
     texts = [ex.text for ex in examples]
     labels = [ex.label for ex in examples]
     class_labels = sorted(set(labels))
@@ -68,6 +69,7 @@ def run_cv(examples, k: int = 5, seed: int = 42) -> dict:
 
     for model_name, factory in MODELS.items():
         fold_metrics = []
+        predictions: list[dict] = []
         for fold_i, (train_idx, test_idx) in enumerate(folds):
             X_train = [texts[i] for i in train_idx]
             y_train = [labels[i] for i in train_idx]
@@ -83,6 +85,16 @@ def run_cv(examples, k: int = 5, seed: int = 42) -> dict:
             pipe.fit(X_train, y_train)
             y_pred = pipe.predict(X_test)
 
+            for idx, pred in zip(test_idx, y_pred):
+                predictions.append(
+                    {
+                        "doc_id": doc_ids[idx],
+                        "fold": fold_i,
+                        "y_true": labels[idx],
+                        "y_pred": str(pred),
+                    }
+                )
+
             m = score_predictions(list(y_test), list(y_pred), class_labels)
             m["fold"] = fold_i
             fold_metrics.append(m)
@@ -91,6 +103,7 @@ def run_cv(examples, k: int = 5, seed: int = 42) -> dict:
         results["models"][model_name] = {
             "fold_metrics": fold_metrics,
             "aggregate": agg,
+            "predictions": predictions,
         }
         print(
             f"{model_name:>20s}: "

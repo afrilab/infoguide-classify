@@ -136,7 +136,27 @@ steps:
       - "zeroshot_large"
       - "--output-dir"
       - "outputs/classification_outputs"
-  step7_compare_classification_models:
+  step7_supervised_baselines_cv:
+    enabled: false
+    script: "src/classification/supervised_baselines.py"
+    args: []
+  step8_finetune_distilbert_cv:
+    enabled: false
+    script: "src/classification/finetune_transformer.py"
+    args: []
+  step9_threshold_calibration:
+    enabled: false
+    script: "src/classification/threshold_calibration.py"
+    args: []
+  step10_render_methods_table:
+    enabled: false
+    script: "src/classification/render_methods_table.py"
+    args: []
+  step11_make_slide_artifacts:
+    enabled: false
+    script: "src/classification/make_slide_artifacts.py"
+    args: []
+  step12_compare_classification_models:
     enabled: false
     script: "src/classification/compare_classification_runs.py"
     args:

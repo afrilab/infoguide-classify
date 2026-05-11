@@ -117,7 +117,573 @@
         "recall_Reports_std": 0.08314794192830981,
         "weighted_f1_mean": 0.902564168330558,
         "weighted_f1_std": 0.06277402746496064
-      }
+      },
+      "predictions": [
+        {
+          "doc_id": "doc_0007",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0013",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0019",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0023",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0024",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0026",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0027",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0028",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0038",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0053",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0056",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0059",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0062",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0071",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0076",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0077",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0092",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0095",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0096",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0008",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0011",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0022",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0031",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0032",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0033",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0040",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0044",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0045",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0047",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0048",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0049",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0057",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0066",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0072",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0078",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0086",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0089",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0090",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0002",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0003",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0004",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0006",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0015",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0030",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0034",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0036",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0041",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0042",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0061",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0064",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0067",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0068",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0070",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0084",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0088",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0094",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0097",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0010",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0014",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0017",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0020",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0029",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0035",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0037",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0039",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0051",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0052",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0054",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0055",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0058",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0063",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0073",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0079",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0087",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0091",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0093",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0001",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0005",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0009",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0016",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0018",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0021",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0025",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0043",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0046",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0050",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0060",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0065",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0069",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0074",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0080",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0081",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0085",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0098",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        }
+      ]
     },
     "LinearSVM": {
       "fold_metrics": [
@@ -224,7 +790,573 @@
         "recall_Reports_std": 0.08888888888888889,
         "weighted_f1_mean": 0.8797616937967815,
         "weighted_f1_std": 0.09369516074491335
-      }
+      },
+      "predictions": [
+        {
+          "doc_id": "doc_0007",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0013",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0019",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0023",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0024",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0026",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0027",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0028",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0038",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0053",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0056",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0059",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0062",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0071",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0076",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0077",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0092",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0095",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0096",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0008",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0011",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0022",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0031",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0032",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0033",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0040",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0044",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0045",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0047",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0048",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0049",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0057",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0066",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0072",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0078",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0086",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0089",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0090",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0002",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0003",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0004",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0006",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0015",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0030",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0034",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0036",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0041",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0042",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0061",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0064",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0067",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0068",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0070",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0084",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0088",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0094",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0097",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0010",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0014",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0017",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0020",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0029",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0035",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0037",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0039",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0051",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0052",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0054",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0055",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0058",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0063",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0073",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0079",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0087",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0091",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0093",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0001",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0005",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0009",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0016",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0018",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0021",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0025",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0043",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0046",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0050",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0060",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0065",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0069",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0074",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0080",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0081",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0085",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0098",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        }
+      ]
     },
     "MultinomialNB": {
       "fold_metrics": [
@@ -331,7 +1463,573 @@
         "recall_Reports_std": 0.0,
         "weighted_f1_mean": 0.7916062884483938,
         "weighted_f1_std": 0.02695955264221562
-      }
+      },
+      "predictions": [
+        {
+          "doc_id": "doc_0007",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0013",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0019",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0023",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0024",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0026",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0027",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0028",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0038",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0053",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0056",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0059",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0062",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0071",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0076",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0077",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0092",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0095",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0096",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0008",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0011",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0022",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0031",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0032",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0033",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0040",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0044",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0045",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0047",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0048",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0049",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0057",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0066",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0072",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0078",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0086",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0089",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0090",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0002",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0003",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0004",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0006",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0015",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0030",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0034",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0036",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0041",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0042",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0061",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0064",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0067",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0068",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0070",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0084",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0088",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0094",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0097",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0010",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0014",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0017",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0020",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0029",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0035",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0037",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0039",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0051",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0052",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0054",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0055",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0058",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0063",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0073",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0079",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0087",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0091",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0093",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0001",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0005",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0009",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0016",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0018",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0021",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0025",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0043",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0046",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0050",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0060",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0065",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0069",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0074",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0080",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0081",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0085",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0098",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        }
+      ]
     },
     "RandomForest": {
       "fold_metrics": [
@@ -438,7 +2136,573 @@
         "recall_Reports_std": 0.12957670877434002,
         "weighted_f1_mean": 0.8916766320782941,
         "weighted_f1_std": 0.08816570444285232
-      }
+      },
+      "predictions": [
+        {
+          "doc_id": "doc_0007",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0013",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0019",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0023",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0024",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0026",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0027",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0028",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0038",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0053",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0056",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0059",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0062",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0071",
+          "fold": 0,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0076",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0077",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0092",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0095",
+          "fold": 0,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0096",
+          "fold": 0,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0008",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0011",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0022",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0031",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0032",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0033",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0040",
+          "fold": 1,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0044",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0045",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0047",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0048",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0049",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0057",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0066",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0072",
+          "fold": 1,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0078",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0086",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0089",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0090",
+          "fold": 1,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0002",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0003",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0004",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0006",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0015",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0030",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0034",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0036",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0041",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0042",
+          "fold": 2,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0061",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0064",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0067",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0068",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0070",
+          "fold": 2,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0084",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0088",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0094",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0097",
+          "fold": 2,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0010",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0014",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0017",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0020",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0029",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0035",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0037",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0039",
+          "fold": 3,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0051",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0052",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0054",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0055",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0058",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0063",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0073",
+          "fold": 3,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0079",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0087",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0091",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0093",
+          "fold": 3,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0001",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0005",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0009",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0016",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0018",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0021",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Policy_Procedure_Contract"
+        },
+        {
+          "doc_id": "doc_0025",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0043",
+          "fold": 4,
+          "y_true": "Policy_Procedure_Contract",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0046",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0050",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0060",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0065",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0069",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0074",
+          "fold": 4,
+          "y_true": "Reports",
+          "y_pred": "Reports"
+        },
+        {
+          "doc_id": "doc_0080",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0081",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0085",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        },
+        {
+          "doc_id": "doc_0098",
+          "fold": 4,
+          "y_true": "Forms_Structured",
+          "y_pred": "Forms_Structured"
+        }
+      ]
     }
   }
 }
