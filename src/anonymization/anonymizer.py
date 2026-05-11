@@ -143,7 +143,10 @@ def filter_by_policy(
 
 
 # Build Presidio AnalyzerEngine with spaCy NER + custom regex recognizers from YAML
-def build_analyzer(spacy_model: str, regex_cfg: Dict[str, Any]) -> AnalyzerEngine:
+def build_analyzer(spacy_model: str, regex_cfg: Dict[str, Any], use_gpu: bool = False) -> AnalyzerEngine:
+    if use_gpu:
+        gpu_enabled = spacy.prefer_gpu()
+        print(f"[ANONYMIZER] spaCy GPU requested; enabled={gpu_enabled}")
     # Ensure spaCy model is available
     spacy.load(spacy_model)
 
@@ -219,6 +222,7 @@ def main() -> None:
 
     model_name = cfg.get("model_name", DEFAULT_MODEL_NAME)
     spacy_model = cfg.get("spacy_model", "en_core_web_sm")
+    use_gpu = bool(cfg.get("use_gpu", False) or os.environ.get("INFOGUIDE_SPACY_GPU") == "1")
     placeholders = cfg["placeholders"]
 
     regex_entities = set(cfg.get("regex_entities", []))
@@ -235,7 +239,7 @@ def main() -> None:
     ner_min_score = float(cfg.get("ner_min_score", 0.50))
     regex_cfg = cfg.get("regex", {})
 
-    analyzer = build_analyzer(spacy_model, regex_cfg)
+    analyzer = build_analyzer(spacy_model, regex_cfg, use_gpu=use_gpu)
     anonymizer = AnonymizerEngine()
     operators = build_operators(placeholders)
 

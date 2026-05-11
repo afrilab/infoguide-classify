@@ -1,0 +1,50 @@
+input_path: data/anonymized/presidio_hybrid_documents.jsonl
+anonymized_docs_path: data/anonymized/presidio_hybrid_documents.jsonl
+output_path: data/classified/classification_results__zeroshot_large_gpu_full_pipeline.jsonl
+text_fields_priority:
+- anonymized_text
+- processed_text
+- clean_text
+- text
+method: zero_shot
+model_name: cross-encoder/nli-deberta-v3-large
+device: 0
+head_only: true
+max_chars: 800
+hypothesis_template: The type of this document is {}.
+multi_label: false
+top_k: 4
+min_score: 0.1
+min_margin: 0.03
+use_label_descriptions: true
+labels:
+- Policy_Procedure_Contract
+- Reports
+- Internal_Communications
+- Emails
+- HR_Documents
+- Forms_Structured
+label_descriptions:
+  Policy_Procedure_Contract: 'prescriptive rules that institutions must and shall
+    comply with, prohibiting or requiring specific behaviours under penalty of non-compliance.
+
+    '
+  Reports: 'research paper presenting observed data, analytical findings, and conclusions
+    about economic or financial conditions.
+
+    '
+  Internal_Communications: 'internal memo or announcement sent to colleagues and staff
+    within the organisation.
+
+    '
+  Emails: 'personal email with a sender, recipient, and subject line.
+
+    '
+  HR_Documents: 'employee record covering salary, performance, recruitment, or employment
+    contract.
+
+    '
+  Forms_Structured: 'structured form with fields and tables requiring a signature
+    or official authorisation.
+
+    '

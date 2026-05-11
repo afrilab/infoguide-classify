@@ -111,10 +111,12 @@ def sparse_cosine(vec_a: Dict[str, float], vec_b: Dict[str, float]) -> float:
     return sum(weight * vec_b.get(term, 0.0) for term, weight in vec_a.items())
 
 
-def load_sentence_transformer(model_name: str) -> Tuple[Optional[Any], Optional[Any], Optional[str]]:
+def load_sentence_transformer(model_name: str, device: Optional[str] = None) -> Tuple[Optional[Any], Optional[Any], Optional[str]]:
     try:
         from sentence_transformers import SentenceTransformer, util
 
+        if device:
+            return SentenceTransformer(model_name, device=device), util, None
         return SentenceTransformer(model_name), util, None
     except Exception as e:  # pragma: no cover - depends on local ML environment
         return None, None, f"{type(e).__name__}: {e}"
@@ -490,6 +492,11 @@ def main() -> None:
         default="sentence-transformers/all-MiniLM-L6-v2",
         help="SentenceTransformer model name",
     )
+    ap.add_argument(
+        "--device",
+        default=os.environ.get("INFOGUIDE_ST_DEVICE"),
+        help="SentenceTransformer device, for example cpu or cuda",
+    )
     ap.add_argument("--alpha", type=float, default=0.68, help="Embedding score weight")
     ap.add_argument("--top_k_chunks", type=int, default=4, help="Evidence chunks to aggregate per taxonomy path")
     ap.add_argument("--support_threshold", type=float, default=0.32, help="Chunk score counted as supporting evidence")
@@ -515,7 +522,9 @@ def main() -> None:
     print(f"Loaded chunks for {len(chunks_by_doc)} documents")
 
     print(f"Loading embedding model: {args.model}")
-    model, sentence_util, model_error = load_sentence_transformer(args.model)
+    if args.device:
+        print(f"Using embedding device: {args.device}")
+    model, sentence_util, model_error = load_sentence_transformer(args.model, device=args.device)
     if model is not None:
         path_embeddings = model.encode(
             [path.rep_text for path in paths],

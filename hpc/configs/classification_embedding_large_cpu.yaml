@@ -1,0 +1,60 @@
+input_path: data/anonymized/presidio_hybrid_documents.jsonl
+anonymized_docs_path: data/anonymized/presidio_hybrid_documents.jsonl
+output_path: data/classified/classification_results__embedding_large_cpu_full_pipeline.jsonl
+text_fields_priority:
+- anonymized_text
+- processed_text
+- clean_text
+- text
+method: embedding
+model_name: BAAI/bge-large-en-v1.5
+query_instruction: 'Represent this sentence for searching relevant passages: '
+head_only: true
+max_chars: 6000
+top_k: 4
+min_score: 0.05
+min_margin: 0.01
+use_label_descriptions: true
+labels:
+- Policy_Procedure_Contract
+- Reports
+- Internal_Communications
+- Emails
+- HR_Documents
+- Forms_Structured
+label_descriptions:
+  Policy_Procedure_Contract: 'Regulatory compliance mandate institutions must shall
+    required prohibited framework AML CFT FATF Basel supervision enforcement risk-based
+    obligations directive rules requirements recommended procedures controls financial
+    sector regulation.
+
+    '
+  Reports: 'Analytical assessment findings conclusions country sector evaluation financial
+    World Bank FSAP BIS ECB research data observed conditions performance results
+    study examination vulnerabilities outcomes analysis indicators statistics trends
+    quarterly annual review economic monetary policy development expenditure.
+
+    '
+  Internal_Communications: 'Internal memo announcement staff communication meeting
+    minutes team updates project organizational internal message bulletin notice circular
+    colleagues agenda decisions.
+
+    '
+  Emails: 'Email From To Subject correspondence inbox forwarded reply thread message
+    sender recipient electronic communication personal informal contact attachment
+    regards.
+
+    '
+  HR_Documents: 'Personnel employee human resources recruitment compensation employment
+    agreement performance evaluation staff records payroll benefits hiring contract
+    workforce salary position job title leave appraisal onboarding termination candidate.
+
+    '
+  Forms_Structured: 'FFIEC 002 031 051 call report form OC-10 operating circular certificate
+    authorizing resolution letter agreement EBA participation correspondent banking
+    term deposit structured fields tables sections checkboxes completion signature
+    authorisation filing regulatory submission banking form participant listing transaction
+    review.
+
+    '
+device: cpu

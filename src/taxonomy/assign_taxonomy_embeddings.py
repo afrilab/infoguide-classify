@@ -519,6 +519,11 @@ def main() -> None:
         help="SentenceTransformer model name",
     )
     ap.add_argument(
+        "--device",
+        default=os.environ.get("INFOGUIDE_ST_DEVICE"),
+        help="SentenceTransformer device, for example cpu or cuda",
+    )
+    ap.add_argument(
         "--alpha",
         type=float,
         default=0.7,
@@ -539,7 +544,11 @@ def main() -> None:
         tax = yaml.safe_load(f)
 
     print(f"Loading embedding model: {args.model}")
-    model = SentenceTransformer(args.model)
+    if args.device:
+        print(f"Using embedding device: {args.device}")
+        model = SentenceTransformer(args.model, device=args.device)
+    else:
+        model = SentenceTransformer(args.model)
 
     print("Loading taxonomy...")
     level1_nodes = load_taxonomy(tax)

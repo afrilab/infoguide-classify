@@ -326,7 +326,12 @@ def _classify_embedding(
     head_only = bool(cfg.get("head_only", False))
     max_chars = int(cfg.get("max_chars", 6000))
 
-    model = SentenceTransformer(model_name)
+    device = cfg.get("device")
+    if device == 0:
+        device = "cuda"
+    elif device == -1:
+        device = "cpu"
+    model = SentenceTransformer(model_name, device=device) if device else SentenceTransformer(model_name)
 
     texts: List[str] = []
     metas: List[Dict[str, Any]] = []

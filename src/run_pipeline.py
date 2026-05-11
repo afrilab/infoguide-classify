@@ -1,6 +1,8 @@
 import argparse
+import json
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import yaml
@@ -12,14 +14,17 @@ def load_yaml(path: str) -> dict:
 
 
 # Print and run command
-def run_cmd(cmd: list[str], dry_run: bool = False) -> None:
+def run_cmd(cmd: list[str], dry_run: bool = False) -> dict:
     print("\n$ " + " ".join(cmd))
     if dry_run:
-        return
+        return {"runtime_seconds": 0.0, "returncode": None}
+    start = time.time()
     result = subprocess.run(cmd)
+    runtime = time.time() - start
     # Stop pipeline if command failed
     if result.returncode != 0:
         raise SystemExit(result.returncode)
+    return {"runtime_seconds": round(runtime, 4), "returncode": result.returncode}
 
 # Ensure file exists
 def must_exist(path: str) -> None:
@@ -31,6 +36,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to pipeline.yaml")
     parser.add_argument("--dry-run", action="store_true", help="Validate and print commands without running them")
+    parser.add_argument("--metrics-output", help="Optional JSONL file for per-step runtime metrics")
     args = parser.parse_args()
 
     # Load pipeline configuration
@@ -41,6 +47,8 @@ def main() -> None:
     # Validate steps structure
     if not isinstance(steps, dict) or not steps:
         raise ValueError("pipeline.yaml must contain a non-empty 'steps' mapping.")
+
+    metrics = []
 
     # Iterate over pipeline steps
     for step_name, step_cfg in steps.items():
@@ -73,11 +81,27 @@ def main() -> None:
 
         # Run pipeline step
         print(f"\nRunning {step_name}")
-        run_cmd(cmd, dry_run=args.dry_run)
+        step_metric = run_cmd(cmd, dry_run=args.dry_run)
+        metrics.append(
+            {
+                "step": step_name,
+                "script": script,
+                "config": step_cfg.get("config"),
+                "args": step_cfg.get("args", []),
+                **step_metric,
+            }
+        )
 
     if args.dry_run:
         print("\nPipeline dry run finished.")
     else:
+        if args.metrics_output:
+            metrics_path = Path(args.metrics_output)
+            metrics_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(metrics_path, "w", encoding="utf-8") as f:
+                for metric in metrics:
+                    f.write(json.dumps(metric, ensure_ascii=False) + "\n")
+            print(f"\nPipeline metrics written to {args.metrics_output}")
         print("\nPipeline finished.")
 
 
