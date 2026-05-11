@@ -1,0 +1,11 @@
+rank,model,type,accuracy,accuracy_std,macro_f1,macro_f1_std,weighted_f1,f1_Forms_Structured,f1_Policy_Procedure_Contract,f1_Reports
+1,TF-IDF cosine,Unsupervised (label desc),0.9043,0.0000,0.9162,0.0000,0.9138,0.9500,0.8772,0.9213
+2,BGE Large embedding,Unsupervised (label desc),0.8617,0.0000,0.9052,0.0000,0.9034,0.9500,0.8462,0.9195
+3,Logistic Regression,Supervised (lexical),0.9047,0.0610,0.9016,0.0681,0.9026,0.9231,0.8814,0.9111
+4,Random Forest,Supervised (lexical),0.8936,0.0881,0.8989,0.0838,0.8917,0.9756,0.8214,0.9011
+5,BGE Small embedding,Unsupervised (label desc),0.8511,0.0000,0.8890,0.0000,0.8860,0.9524,0.8077,0.9070
+6,Linear SVM,Supervised (lexical),0.8836,0.0901,0.8802,0.0944,0.8798,0.9231,0.8364,0.8936
+7,Multinomial NB,Supervised (lexical),0.8088,0.0238,0.7871,0.0198,0.7916,0.8571,0.7111,0.8333
+8,DistilBERT,Supervised (transformer),0.7982,0.0898,0.7712,0.1094,0.7661,0.9500,0.5581,0.8381
+9,BART zero-shot NLI,Zero-shot NLI,0.5000,0.0000,0.4486,0.0000,0.4936,0.5667,0.0000,0.7792
+10,DeBERTa zero-shot NLI,Zero-shot NLI,0.2553,0.0000,0.3332,0.0000,0.3629,0.4000,0.0541,0.5455

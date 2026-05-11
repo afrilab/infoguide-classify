@@ -27,6 +27,7 @@ CLASSIFIED_DIR = DATA / "classified"
 
 ANON_EVAL_DIR = OUTPUTS / "anonymizer_evaluation"
 CLASSIFICATION_OUTPUTS_DIR = OUTPUTS / "classification_outputs"
+CLASSIFICATION_RESULTS_DIR = OUTPUTS / "classification_results"
 
 ANONYMIZATION_VARIANTS: dict[str, str] = {
     "presidio_hybrid (sm, base)": "presidio_hybrid_documents.jsonl",
