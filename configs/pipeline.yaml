@@ -68,6 +68,10 @@ steps:
     enabled: true
     script: "src/anonymization/context_filter_regex_predictions.py"
     config: "configs/anonymization/context_filter_hybrid_trf.yaml"
+  step3g_anonymization_gliner_baseline:
+    enabled: false
+    script: "src/anonymization/gliner_baseline.py"
+    config: "configs/anonymization/gliner_baseline.yaml"
   step4a_eval_regex_only:
     enabled: true
     script: "src/anonymization/evaluator.py"
@@ -97,6 +101,10 @@ steps:
     script: "src/anonymization/context_filter_regex_predictions.py"
     args:
       - "--compare-regex-pii"
+  step4h_eval_gliner_baseline:
+    enabled: false
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_gliner.yaml"
   step5a_classification_tfidf:
     enabled: false
     script: "src/classification/classify_documents.py"

@@ -1,0 +1,34 @@
+model_name: "gliner_baseline"
+model_id: "urchade/gliner_multi-v2.1"
+
+paths:
+  input: "data/synthetic/benchmark.json"
+  output_predictions: "outputs/anonymizer_outputs/gliner_baseline_predictions.jsonl"
+
+# Evaluation is performed only on synthetic benchmark documents.
+doc_id_prefixes:
+  - "syn_doc"
+
+text_field: "text"
+
+threshold: 0.50
+max_chars: 1200
+overlap_chars: 150
+
+labels:
+  - label: "person"
+    type: "PERSON"
+  - label: "organization"
+    type: "ORG"
+  - label: "location"
+    type: "LOCATION"
+  - label: "email"
+    type: "EMAIL"
+  - label: "phone number"
+    type: "PHONE"
+  - label: "date"
+    type: "DATE"
+  - label: "credit card number"
+    type: "CREDIT_CARD"
+  - label: "iban"
+    type: "IBAN"

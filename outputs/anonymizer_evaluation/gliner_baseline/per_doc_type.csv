@@ -1,0 +1,7 @@
+doc_type,strict_precision,strict_recall,strict_f1,relaxed_precision,relaxed_recall,relaxed_f1,tp,fp,fn
+Emails,0.5226,0.5625,0.5418,0.5455,0.5833,0.5638,81,74,63
+Forms / Structured Documents,0.7288,0.7544,0.7414,0.8214,0.8070,0.8142,43,16,14
+HR Documents / Communications,0.4960,0.6596,0.5662,0.5546,0.7021,0.6197,62,63,32
+Internal Communications,0.6491,0.9407,0.7682,0.6647,0.9576,0.7847,111,60,7
+Policy / Procedure / Contract,0.5660,0.8054,0.6648,0.6127,0.8389,0.7082,120,92,29
+Reports (Financial / Incident / Audit),0.7040,0.8579,0.7734,0.7130,0.8689,0.7833,157,66,26
