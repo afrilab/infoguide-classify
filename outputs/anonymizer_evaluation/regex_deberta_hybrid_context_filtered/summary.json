@@ -1,24 +1,24 @@
 {
   "model": "regex_deberta_hybrid_context_filtered",
   "strict": {
-    "precision": 0.8087,
+    "precision": 0.8797,
     "recall": 0.8738,
-    "f1": 0.84,
+    "f1": 0.8768,
     "tp": 651,
-    "fp": 154,
+    "fp": 89,
     "fn": 94
   },
   "relaxed": {
-    "precision": 0.8557,
-    "recall": 0.9074,
-    "f1": 0.8808,
-    "tp": 676,
-    "fp": 114,
-    "fn": 69
+    "precision": 0.931,
+    "recall": 0.906,
+    "f1": 0.9184,
+    "tp": 675,
+    "fp": 50,
+    "fn": 70
   },
   "negative_cases": {
     "total": 80,
-    "incorrectly_detected": 25,
-    "false_positive_rate": 0.3125
+    "incorrectly_detected": 13,
+    "false_positive_rate": 0.1625
   }
 }

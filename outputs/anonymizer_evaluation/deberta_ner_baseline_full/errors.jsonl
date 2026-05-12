@@ -2,50 +2,26 @@
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "DATE", "ground_truth": {"text": "15/04/2024", "start": 1335, "end": 1345}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "EMAIL", "ground_truth": {"text": "compliance@gbank.com", "start": 2071, "end": 2091}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "PHONE", "ground_truth": {"text": "+44 20 7946 0958", "start": 2135, "end": 2151}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Global Compliance Division", "start": 455, "end": 481}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Risk Committee", "start": 1113, "end": 1127}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Compliance Division", "start": 1543, "end": 1562}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Audit and Monitoring Unit", "start": 1794, "end": 1819}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Global Compliance Division", "start": 1844, "end": 1870}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "DATE", "ground_truth": {"text": "March 12, 2023", "start": 243, "end": 257}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "DATE", "ground_truth": {"text": "15/04/2024", "start": 1335, "end": 1345}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "EMAIL", "ground_truth": {"text": "compliance@gbank.com", "start": 2071, "end": 2091}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "PHONE", "ground_truth": {"text": "+44 20 7946 0958", "start": 2135, "end": 2151}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Global Compliance Division", "start": 455, "end": 481}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Risk Committee", "start": 1113, "end": 1127}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Compliance Division", "start": 1543, "end": 1562}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Audit and Monitoring Unit", "start": 1794, "end": 1819}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "Global Compliance Division", "start": 1844, "end": 1870}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_002", "type": "DATE", "ground_truth": {"text": "January 8, 2024", "start": 446, "end": 461}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_002", "type": "ORG", "ground_truth": {"text": "MTB", "start": 782, "end": 785}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_002", "type": "DATE", "ground_truth": {"text": "February 15, 2025", "start": 3104, "end": 3121}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_002", "type": "EMAIL", "ground_truth": {"text": "governance.records@meridiantrust.com", "start": 3582, "end": 3618}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_002", "type": "ORG", "prediction": {"text": "Corporate Governance Office", "start": 1346, "end": 1373}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_002", "type": "ORG", "prediction": {"text": "Corporate Governance Office", "start": 3225, "end": 3252}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_002", "type": "ORG", "prediction": {"text": "Corporate Governance Office", "start": 3749, "end": 3776}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_002", "type": "DATE", "ground_truth": {"text": "January 8, 2024", "start": 446, "end": 461}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_002", "type": "ORG", "ground_truth": {"text": "MTB", "start": 782, "end": 785}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_002", "type": "DATE", "ground_truth": {"text": "February 15, 2025", "start": 3104, "end": 3121}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_002", "type": "EMAIL", "ground_truth": {"text": "governance.records@meridiantrust.com", "start": 3582, "end": 3618}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_002", "type": "ORG", "prediction": {"text": "Corporate Governance Office", "start": 1346, "end": 1373}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_002", "type": "ORG", "prediction": {"text": "Corporate Governance Office", "start": 3225, "end": 3252}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_002", "type": "ORG", "prediction": {"text": "Corporate Governance Office", "start": 3749, "end": 3776}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "DATE", "ground_truth": {"text": "March 1, 2024", "start": 605, "end": 618}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "DATE", "ground_truth": {"text": "30/06/2024", "start": 2283, "end": 2293}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "EMAIL", "ground_truth": {"text": "audit.submissions@northbridge.com", "start": 2641, "end": 2674}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "EMAIL", "ground_truth": {"text": "audit.support@northbridge.co.uk", "start": 2978, "end": 3009}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "ORG", "prediction": {"text": "Internal Review Board", "start": 1492, "end": 1513}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "ORG", "prediction": {"text": "Internal Review Board", "start": 2189, "end": 2210}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "ORG", "prediction": {"text": "Internal Audit Support Unit", "start": 2946, "end": 2973}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "ORG", "prediction": {"text": "Internal Audit Office", "start": 3152, "end": 3173}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "DATE", "ground_truth": {"text": "March 1, 2024", "start": 605, "end": 618}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "DATE", "ground_truth": {"text": "30/06/2024", "start": 2283, "end": 2293}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "EMAIL", "ground_truth": {"text": "audit.submissions@northbridge.com", "start": 2641, "end": 2674}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "EMAIL", "ground_truth": {"text": "audit.support@northbridge.co.uk", "start": 2978, "end": 3009}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "ORG", "prediction": {"text": "Internal Review Board", "start": 1492, "end": 1513}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "ORG", "prediction": {"text": "Internal Review Board", "start": 2189, "end": 2210}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "ORG", "prediction": {"text": "Internal Audit Support Unit", "start": 2946, "end": 2973}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "ORG", "prediction": {"text": "Internal Audit Office", "start": 3152, "end": 3173}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_004", "type": "DATE", "ground_truth": {"text": "July 10, 2023", "start": 533, "end": 546}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_004", "type": "EMAIL", "ground_truth": {"text": "contracts@silverlinebank.corn", "start": 3235, "end": 3264}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_004", "type": "PHONE", "ground_truth": {"text": "32 2 555 0199", "start": 3299, "end": 3312}}
@@ -57,31 +33,19 @@
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "DATE", "ground_truth": {"text": "20/11/2024", "start": 1926, "end": 1936}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "EMAIL", "ground_truth": {"text": "Aml.Support@horizonbank.com", "start": 2745, "end": 2772}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "PHONE", "ground_truth": {"text": "22 678 4412", "start": 2807, "end": 2818}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "ORG", "prediction": {"text": "Compliance Review Panel", "start": 1476, "end": 1499}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "ORG", "prediction": {"text": "Compliance Training Unit", "start": 2549, "end": 2573}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "ORG", "prediction": {"text": "Compliance Division", "start": 2964, "end": 2983}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "DATE", "ground_truth": {"text": "5 September 2023", "start": 505, "end": 521}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "PERSON", "ground_truth": {"text": "Becker", "start": 1338, "end": 1344}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "DATE", "ground_truth": {"text": "20/11/2024", "start": 1926, "end": 1936}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "EMAIL", "ground_truth": {"text": "Aml.Support@horizonbank.com", "start": 2745, "end": 2772}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "PHONE", "ground_truth": {"text": "22 678 4412", "start": 2807, "end": 2818}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "ORG", "prediction": {"text": "Compliance Review Panel", "start": 1476, "end": 1499}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "ORG", "prediction": {"text": "Compliance Training Unit", "start": 2549, "end": 2573}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "ORG", "prediction": {"text": "Compliance Division", "start": 2964, "end": 2983}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "DATE", "ground_truth": {"text": "April 2, 2024", "start": 473, "end": 486}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "DATE", "ground_truth": {"text": "05/08/2024", "start": 1915, "end": 1925}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "EMAIL", "ground_truth": {"text": "audit-monitoring@vertexfs.com", "start": 2596, "end": 2625}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "PHONE", "ground_truth": {"text": "+46 8 512 334 21", "start": 2663, "end": 2679}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "ORG", "prediction": {"text": "Audit Steering Committee", "start": 1320, "end": 1344}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "ORG", "prediction": {"text": "Audit Steering Committee", "start": 2042, "end": 2066}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "ORG", "prediction": {"text": "Audit Oversight Division", "start": 2819, "end": 2843}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "DATE", "ground_truth": {"text": "April 2, 2024", "start": 473, "end": 486}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "DATE", "ground_truth": {"text": "05/08/2024", "start": 1915, "end": 1925}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "EMAIL", "ground_truth": {"text": "audit-monitoring@vertexfs.com", "start": 2596, "end": 2625}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "PHONE", "ground_truth": {"text": "+46 8 512 334 21", "start": 2663, "end": 2679}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "ORG", "prediction": {"text": "Audit Steering Committee", "start": 1320, "end": 1344}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "ORG", "prediction": {"text": "Audit Steering Committee", "start": 2042, "end": 2066}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "ORG", "prediction": {"text": "Audit Oversight Division", "start": 2819, "end": 2843}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_007", "type": "DATE", "ground_truth": {"text": "November 2022", "start": 455, "end": 468}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_007", "type": "DATE", "ground_truth": {"text": "10/02/24", "start": 1988, "end": 1996}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_007", "type": "EMAIL", "ground_truth": {"text": "agreements@orionbank.com", "start": 2899, "end": 2923}}
@@ -95,15 +59,11 @@
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "DATE", "ground_truth": {"text": "25/01/2025", "start": 2226, "end": 2236}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "EMAIL", "ground_truth": {"text": "reporting.support @aurorabank.com", "start": 2865, "end": 2898}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "PHONE", "ground_truth": {"text": "+41 22 884 3300", "start": 2927, "end": 2942}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "ORG", "prediction": {"text": "Financial Oversight Panel", "start": 1449, "end": 1474}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "ORG", "prediction": {"text": "Finance Governance Division", "start": 3111, "end": 3138}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "DATE", "ground_truth": {"text": "June 18, 2023", "start": 454, "end": 467}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "PERSON", "ground_truth": {"text": "Santis", "start": 1341, "end": 1347}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "DATE", "ground_truth": {"text": "25/01/2025", "start": 2226, "end": 2236}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "EMAIL", "ground_truth": {"text": "reporting.support @aurorabank.com", "start": 2865, "end": 2898}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "PHONE", "ground_truth": {"text": "+41 22 884 3300", "start": 2927, "end": 2942}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "ORG", "prediction": {"text": "Financial Oversight Panel", "start": 1449, "end": 1474}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "ORG", "prediction": {"text": "Finance Governance Division", "start": 3111, "end": 3138}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "DATE", "ground_truth": {"text": "October 9, 2023", "start": 467, "end": 482}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "ground_truth": {"text": "Tornimäe 5, 10145 Tallinn, Estonia", "start": 743, "end": 777}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "DATE", "ground_truth": {"text": "12/03/2025", "start": 2718, "end": 2728}}
@@ -114,13 +74,11 @@
 {"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "prediction": {"text": "Tallinn", "start": 761, "end": 768}}
 {"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "prediction": {"text": "Estonia", "start": 770, "end": 777}}
 {"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "ORG", "prediction": {"text": "Oversight Forum", "start": 1778, "end": 1793}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "ORG", "prediction": {"text": "Compliance Monitoring Division", "start": 3679, "end": 3709}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "DATE", "ground_truth": {"text": "October 9, 2023", "start": 467, "end": 482}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "DATE", "ground_truth": {"text": "12/03/2025", "start": 2718, "end": 2728}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "EMAIL", "ground_truth": {"text": "controls.review@easterngate.eu", "start": 3363, "end": 3393}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "PHONE", "ground_truth": {"text": "+372 612 9088", "start": 3486, "end": 3499}}
 {"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "ORG", "prediction": {"text": "Oversight Forum", "start": 1778, "end": 1793}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "ORG", "prediction": {"text": "Compliance Monitoring Division", "start": 3679, "end": 3709}}
 {"error_type": "boundary_error", "doc_id": "syn_doc_009", "type": "LOCATION", "ground_truth": {"text": "Tornimäe 5, 10145 Tallinn, Estonia", "start": 743, "end": 777}, "prediction": {"text": "Tornimäe 5", "start": 743, "end": 753}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "DATE", "ground_truth": {"text": "April 11, 2024", "start": 411, "end": 425}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "ORG", "ground_truth": {"text": "HBC", "start": 1632, "end": 1635}}
@@ -128,14 +86,12 @@
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "EMAIL", "ground_truth": {"text": "policy.governance+hr@heliosbank.com", "start": 2424, "end": 2459}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "PHONE", "ground_truth": {"text": "(532) 123 4567", "start": 2488, "end": 2502}}
 {"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "ORG", "prediction": {"text": "Documentation Review Council", "start": 1240, "end": 1268}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "ORG", "prediction": {"text": "Governance and Documentation Division", "start": 2703, "end": 2740}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "DATE", "ground_truth": {"text": "April 11, 2024", "start": 411, "end": 425}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "ORG", "ground_truth": {"text": "HBC", "start": 1632, "end": 1635}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "DATE", "ground_truth": {"text": "09/06/2025", "start": 2198, "end": 2208}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "EMAIL", "ground_truth": {"text": "policy.governance+hr@heliosbank.com", "start": 2424, "end": 2459}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "PHONE", "ground_truth": {"text": "(532) 123 4567", "start": 2488, "end": 2502}}
 {"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "ORG", "prediction": {"text": "Documentation Review Council", "start": 1240, "end": 1268}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "ORG", "prediction": {"text": "Governance and Documentation Division", "start": 2703, "end": 2740}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "DATE", "ground_truth": {"text": "January 12, 24", "start": 122, "end": 136}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "ground_truth": {"text": "Marina Bay Financial Centre Tower 3, Singapore 018982", "start": 816, "end": 869}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "EMAIL", "ground_truth": {"text": "legal.policy@orionglobal.bank.com", "start": 3005, "end": 3038}}
@@ -243,13 +199,11 @@
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "November 11, 2024", "start": 905, "end": 922}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "October 2024", "start": 1326, "end": 1338}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "12/11/2024", "start": 2862, "end": 2872}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_020", "type": "ORG", "prediction": {"text": "Internal Coordination Office", "start": 1822, "end": 1850}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "November 11, 2024", "start": 446, "end": 463}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "November 8", "start": 890, "end": 900}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "November 11, 2024", "start": 905, "end": 922}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "October 2024", "start": 1326, "end": 1338}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "12/11/2024", "start": 2862, "end": 2872}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_020", "type": "ORG", "prediction": {"text": "Internal Coordination Office", "start": 1822, "end": 1850}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "DATE", "ground_truth": {"text": "February 2025", "start": 1426, "end": 1439}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "DATE", "ground_truth": {"text": "April and May 2025", "start": 1743, "end": 1761}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "LOCATION", "ground_truth": {"text": "Kartal", "start": 1947, "end": 1953}}
@@ -428,7 +382,6 @@
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "PERSON", "ground_truth": {"text": "Dilara W.", "start": 1031, "end": 1040}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 1060, "end": 1066}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "dilara.wilson@company.com", "start": 1074, "end": 1099}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "ORG", "prediction": {"text": "Berlin Office", "start": 204, "end": 217}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "PERSON", "ground_truth": {"text": "Dilara W.", "start": 6, "end": 15}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "dilara.wilson@company.com", "start": 17, "end": 42}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "finance@company.com", "start": 62, "end": 81}}
@@ -439,7 +392,6 @@
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "PERSON", "ground_truth": {"text": "Dilara W.", "start": 1031, "end": 1040}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 1060, "end": 1066}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "dilara.wilson@company.com", "start": 1074, "end": 1099}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "ORG", "prediction": {"text": "Berlin Office", "start": 204, "end": 217}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@hsbc.com", "start": 21, "end": 43}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "support@hsbc.com", "start": 67, "end": 83}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "DATE", "ground_truth": {"text": "April 18, 2024", "start": 134, "end": 148}}
@@ -497,7 +449,6 @@
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "IBAN", "ground_truth": {"text": "GB29 6016 6016 1331 9268 19", "start": 515, "end": 542}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 556, "end": 575}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "LOCATION", "ground_truth": {"text": "London", "start": 643, "end": 649}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "ORG", "prediction": {"text": "Office", "start": 650, "end": 656}}
 {"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "ORG", "prediction": {"text": "Finance Group", "start": 994, "end": 1007}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "EMAIL", "ground_truth": {"text": "sarah.davis@hsbc.com", "start": 19, "end": 39}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "EMAIL", "ground_truth": {"text": "david.wilson@hsbc.com", "start": 59, "end": 80}}
@@ -507,7 +458,6 @@
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "IBAN", "ground_truth": {"text": "GB29 6016 6016 1331 9268 19", "start": 515, "end": 542}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 556, "end": 575}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "LOCATION", "ground_truth": {"text": "London", "start": 643, "end": 649}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "ORG", "prediction": {"text": "Office", "start": 650, "end": 656}}
 {"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "ORG", "prediction": {"text": "Finance Group", "start": 994, "end": 1007}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "EMAIL", "ground_truth": {"text": "david.wilson@ing.com", "start": 20, "end": 40}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "EMAIL", "ground_truth": {"text": "laura.thompson@ing.com", "start": 62, "end": 84}}
@@ -530,13 +480,11 @@
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "robert.king@clientmail.com", "start": 474, "end": 500}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "PHONE", "ground_truth": {"text": "+1-212-555-0187", "start": 546, "end": 561}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 1045, "end": 1070}}
-{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "ORG", "prediction": {"text": "Risk Team", "start": 634, "end": 643}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 21, "end": 46}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 67, "end": 92}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "robert.king@clientmail.com", "start": 474, "end": 500}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "PHONE", "ground_truth": {"text": "+1-212-555-0187", "start": 546, "end": 561}}
 {"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 1045, "end": 1070}}
-{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "ORG", "prediction": {"text": "Risk Team", "start": 634, "end": 643}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "EMAIL", "ground_truth": {"text": "admin-notify@system.org", "start": 6, "end": 29}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "EMAIL", "ground_truth": {"text": "support@hsbc.com", "start": 34, "end": 50}}
 {"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "DATE", "ground_truth": {"text": "1/05/24", "start": 85, "end": 92}}

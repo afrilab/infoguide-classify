@@ -1,0 +1,24 @@
+{
+  "model": "regex_spacy_hybrid_lg",
+  "strict": {
+    "precision": 0.6691,
+    "recall": 0.7463,
+    "f1": 0.7056,
+    "tp": 556,
+    "fp": 275,
+    "fn": 189
+  },
+  "relaxed": {
+    "precision": 0.7669,
+    "recall": 0.8215,
+    "f1": 0.7933,
+    "tp": 612,
+    "fp": 186,
+    "fn": 133
+  },
+  "negative_cases": {
+    "total": 80,
+    "incorrectly_detected": 27,
+    "false_positive_rate": 0.3375
+  }
+}
