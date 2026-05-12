@@ -1,0 +1,28 @@
+model_name: "deberta_ner_baseline"
+model_id: "RashidNLP/NER-Deberta"
+
+paths:
+  input: "data/synthetic/benchmark.json"
+  output_predictions: "outputs/anonymizer_outputs/deberta_ner_baseline_predictions.jsonl"
+
+text_field: "text"
+doc_id_prefixes:
+  - "syn_doc"
+
+threshold: 0.50
+max_chars: 1200
+overlap_chars: 150
+device: -1
+
+label_map:
+  PERSON:
+    - "person"
+    - "per"
+  ORG:
+    - "organisation"
+    - "organization"
+    - "org"
+  LOCATION:
+    - "location"
+    - "loc"
+    - "building"

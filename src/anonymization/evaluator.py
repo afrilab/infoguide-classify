@@ -241,6 +241,7 @@ def evaluate_model(model_config: Dict[str, Any], benchmark_path: str):
     model_name = model_config["model"]
     prediction_path = model_config["prediction_path"]
     output_dir = Path(model_config["output_dir"])
+    entity_types = set(model_config.get("entity_types", []))
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -283,11 +284,13 @@ def evaluate_model(model_config: Dict[str, Any], benchmark_path: str):
         gt_entities = [
             normalize_entity(entity)
             for entity in benchmark_doc.get("entities", [])
+            if not entity_types or entity.get("type") in entity_types
         ]
 
         pred_entities = [
             normalize_entity(entity)
             for entity in prediction_doc.get("entities", [])
+            if not entity_types or entity.get("type") in entity_types
         ]
 
         doc_type = benchmark_doc.get("doc_type", "unknown")
