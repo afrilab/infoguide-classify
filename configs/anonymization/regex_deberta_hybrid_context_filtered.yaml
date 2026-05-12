@@ -20,6 +20,7 @@ placeholders:
   IBAN: "[IBAN]"
 
 window_chars: 50
+apply_generic_org_filter: true
 
 regex_entities:
   - EMAIL

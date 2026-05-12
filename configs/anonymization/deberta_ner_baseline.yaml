@@ -13,6 +13,7 @@ threshold: 0.50
 max_chars: 1200
 overlap_chars: 150
 device: -1
+apply_generic_org_filter: true
 
 label_map:
   PERSON:

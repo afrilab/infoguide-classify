@@ -11,6 +11,7 @@ from context_filter_regex_predictions import (
     make_text_map,
     write_jsonl,
 )
+from entity_filters import filter_generic_org_units
 
 
 Document = Dict[str, Any]
@@ -120,6 +121,7 @@ def main() -> None:
     window_chars = int(cfg.get("window_chars", 50))
     context_rules = cfg.get("context_rules", {}) or {}
     placeholders = cfg.get("placeholders", {}) or {}
+    apply_generic_org_filter = bool(cfg.get("apply_generic_org_filter", True))
 
     text_map = make_text_map(source_docs)
 
@@ -140,6 +142,10 @@ def main() -> None:
         ner_entities=ner_entities,
         output_model_name=output_model_name,
     )
+
+    if apply_generic_org_filter:
+        for doc in combined_docs:
+            doc["entities"] = filter_generic_org_units(doc.get("entities", []))
 
     write_jsonl(cfg["output_predictions"], combined_docs)
 

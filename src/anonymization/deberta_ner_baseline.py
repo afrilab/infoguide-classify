@@ -5,6 +5,8 @@ from typing import Any, Dict, Iterable, List, Tuple
 
 import yaml
 
+from entity_filters import filter_generic_org_units
+
 
 Document = Dict[str, Any]
 Entity = Dict[str, Any]
@@ -202,6 +204,7 @@ def main() -> None:
     device = int(cfg.get("device", -1))
     text_field = str(cfg.get("text_field", "processed_text"))
     doc_id_prefixes = [str(prefix) for prefix in cfg.get("doc_id_prefixes", [])]
+    apply_generic_org_filter = bool(cfg.get("apply_generic_org_filter", True))
     label_lookup = build_label_lookup(cfg["label_map"])
 
     ner_pipeline = load_pipeline(model_id, device)
@@ -226,6 +229,8 @@ def main() -> None:
             max_chars=max_chars,
             overlap_chars=overlap_chars,
         )
+        if apply_generic_org_filter:
+            entities = filter_generic_org_units(entities)
         outputs.append({"doc_id": doc_id, "model": model_name, "entities": entities})
 
     write_jsonl(paths["output_predictions"], outputs)
