@@ -1,12 +1,15 @@
 import argparse
 import json
 import re
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
 import yaml
 import spacy
+
+from metrics import build_run_metrics, default_metrics_path, write_metrics
 
 DEFAULT_MODEL_NAME = "anonymizer"
 DEFAULT_NER_SCORE = 0.85
@@ -245,6 +248,7 @@ def build_prediction_output(
 
 # CLI entry: read config, run detection + anonymization, write pipeline and evaluation outputs
 def main() -> None:
+    run_started = time.perf_counter()
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--config",
@@ -290,8 +294,11 @@ def main() -> None:
 
     out_docs: List[Dict[str, Any]] = []
     prediction_outputs: List[Dict[str, Any]] = []
+    document_latencies_seconds: List[float] = []
+    char_count = 0
 
     for doc in docs:
+        doc_started = time.perf_counter()
         doc_id = doc.get("doc_id")
         text = doc.get("processed_text", "")
 
@@ -311,7 +318,10 @@ def main() -> None:
                 }
             )
 
+            document_latencies_seconds.append(time.perf_counter() - doc_started)
             continue
+
+        char_count += len(text)
 
         try:
             results = detect_regex_entities(text, regex_patterns)
@@ -360,9 +370,26 @@ def main() -> None:
                     "error": str(exc),
                 }
             )
+        finally:
+            document_latencies_seconds.append(time.perf_counter() - doc_started)
 
     write_jsonl(out_docs_path, out_docs)
     write_jsonl(out_pred_path, prediction_outputs)
+
+    runtime_seconds = time.perf_counter() - run_started
+    metrics = build_run_metrics(
+        variant_name=model_name,
+        stage_name="anonymization",
+        doc_count=len(docs),
+        char_count=char_count,
+        entity_count=sum(len(doc.get("entities", [])) for doc in prediction_outputs),
+        runtime_seconds=runtime_seconds,
+        document_latencies_seconds=document_latencies_seconds,
+        config_path=args.config,
+    )
+    metrics_path = cfg.get("metrics_path", default_metrics_path(model_name))
+    write_metrics(metrics_path, metrics)
+    print(f"Metrics: {metrics_path}")
 
 
 if __name__ == "__main__":

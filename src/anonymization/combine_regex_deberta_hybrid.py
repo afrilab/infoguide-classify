@@ -1,4 +1,5 @@
 import argparse
+import time
 from pathlib import Path
 from typing import Any, Dict, List, Set, Tuple
 
@@ -12,6 +13,7 @@ from context_filter_regex_predictions import (
     write_jsonl,
 )
 from entity_filters import filter_generic_org_units
+from metrics import build_run_metrics, default_metrics_path, write_metrics
 
 
 Document = Dict[str, Any]
@@ -65,6 +67,7 @@ def combine_predictions(
     regex_entities: Set[str],
     ner_entities: Set[str],
     output_model_name: str,
+    document_latencies_seconds: List[float] | None = None,
 ) -> List[Document]:
     regex_map = make_prediction_map(regex_docs)
     ner_map = make_prediction_map(ner_docs)
@@ -72,6 +75,7 @@ def combine_predictions(
     combined_docs: List[Document] = []
 
     for source_doc in source_docs:
+        doc_started = time.perf_counter()
         doc_id = str(source_doc.get("doc_id", ""))
         if not doc_id:
             continue
@@ -98,11 +102,14 @@ def combine_predictions(
                 "entities": deduplicate_entities(regex_predictions + kept_ner),
             }
         )
+        if document_latencies_seconds is not None:
+            document_latencies_seconds.append(time.perf_counter() - doc_started)
 
     return combined_docs
 
 
 def main() -> None:
+    run_started = time.perf_counter()
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to regex + DeBERTa hybrid config")
     args = parser.parse_args()
@@ -124,6 +131,7 @@ def main() -> None:
     apply_generic_org_filter = bool(cfg.get("apply_generic_org_filter", True))
 
     text_map = make_text_map(source_docs)
+    document_latencies_seconds: List[float] = []
 
     filtered_regex_docs = filter_predictions(
         prediction_docs=regex_docs,
@@ -141,6 +149,7 @@ def main() -> None:
         regex_entities=regex_entities,
         ner_entities=ner_entities,
         output_model_name=output_model_name,
+        document_latencies_seconds=document_latencies_seconds,
     )
 
     if apply_generic_org_filter:
@@ -162,6 +171,20 @@ def main() -> None:
     total_regex_after = sum(len(doc.get("entities", [])) for doc in filtered_regex_docs)
     total_ner = sum(len(doc.get("entities", [])) for doc in ner_docs)
     total_combined = sum(len(doc.get("entities", [])) for doc in combined_docs)
+    runtime_seconds = time.perf_counter() - run_started
+    char_count = sum(len(text_map.get(doc.get("doc_id"), "")) for doc in combined_docs)
+    metrics = build_run_metrics(
+        variant_name=output_model_name,
+        stage_name="hybrid_combination",
+        doc_count=len(combined_docs),
+        char_count=char_count,
+        entity_count=total_combined,
+        runtime_seconds=runtime_seconds,
+        document_latencies_seconds=document_latencies_seconds,
+        config_path=args.config,
+    )
+    metrics_path = cfg.get("metrics_path", default_metrics_path(output_model_name))
+    write_metrics(metrics_path, metrics)
 
     print("Regex + DeBERTa hybrid completed.")
     print(f"Regex entities before filter: {total_regex_before}")
@@ -171,6 +194,7 @@ def main() -> None:
     print(f"Output predictions: {cfg['output_predictions']}")
     if output_docs:
         print(f"Output anonymized docs: {output_docs}")
+    print(f"Metrics: {metrics_path}")
 
 
 if __name__ == "__main__":

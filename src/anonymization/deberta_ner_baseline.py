@@ -1,5 +1,6 @@
 import argparse
 import json
+import time
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
 
@@ -7,6 +8,7 @@ import yaml
 
 from context_filter_regex_predictions import build_anonymized_docs
 from entity_filters import filter_generic_org_units
+from metrics import build_run_metrics, default_metrics_path, write_metrics
 
 
 Document = Dict[str, Any]
@@ -191,6 +193,7 @@ def predict_doc_entities(
 
 
 def main() -> None:
+    run_started = time.perf_counter()
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to DeBERTa NER baseline YAML config")
     args = parser.parse_args()
@@ -213,7 +216,10 @@ def main() -> None:
     docs = read_json_or_jsonl(paths["input"])
 
     outputs: List[Document] = []
+    document_latencies_seconds: List[float] = []
+    char_count = 0
     for doc in docs:
+        doc_started = time.perf_counter()
         doc_id = str(doc.get("doc_id", ""))
         if not should_process_doc(doc_id, doc_id_prefixes):
             continue
@@ -221,8 +227,10 @@ def main() -> None:
         text = doc.get(text_field, "")
         if not isinstance(text, str) or not text:
             outputs.append({"doc_id": doc_id, "model": model_name, "entities": []})
+            document_latencies_seconds.append(time.perf_counter() - doc_started)
             continue
 
+        char_count += len(text)
         entities = predict_doc_entities(
             ner_pipeline=ner_pipeline,
             text=text,
@@ -234,6 +242,7 @@ def main() -> None:
         if apply_generic_org_filter:
             entities = filter_generic_org_units(entities)
         outputs.append({"doc_id": doc_id, "model": model_name, "entities": entities})
+        document_latencies_seconds.append(time.perf_counter() - doc_started)
 
     write_jsonl(paths["output_predictions"], outputs)
 
@@ -245,6 +254,21 @@ def main() -> None:
             placeholders=placeholders,
         )
         write_jsonl(output_docs, anonymized_docs)
+
+    runtime_seconds = time.perf_counter() - run_started
+    metrics = build_run_metrics(
+        variant_name=model_name,
+        stage_name="anonymization",
+        doc_count=len(outputs),
+        char_count=char_count,
+        entity_count=sum(len(doc.get("entities", [])) for doc in outputs),
+        runtime_seconds=runtime_seconds,
+        document_latencies_seconds=document_latencies_seconds,
+        config_path=args.config,
+    )
+    metrics_path = cfg.get("metrics_path", default_metrics_path(model_name))
+    write_metrics(metrics_path, metrics)
+    print(f"Metrics: {metrics_path}")
 
 
 if __name__ == "__main__":

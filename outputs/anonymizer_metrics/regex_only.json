@@ -1,0 +1,16 @@
+{
+  "variant": "regex_only",
+  "stage": "anonymization",
+  "config_path": "configs/anonymization/regex_only.yaml",
+  "created_at": "2026-05-12T14:10:54.347469+00:00",
+  "doc_count": 66,
+  "char_count": 146695,
+  "entity_count": 282,
+  "runtime_seconds": 0.04107770894188434,
+  "throughput_docs_per_sec": 1606.7108341746873,
+  "throughput_chars_per_sec": 3571158.2699887236,
+  "latency_avg_ms": 0.4736065677592926,
+  "latency_p50_ms": 0.4493330488912761,
+  "latency_p95_ms": 0.8385722467210144,
+  "latency_max_ms": 0.9870410431176424
+}
