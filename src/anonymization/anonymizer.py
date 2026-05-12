@@ -1,50 +1,32 @@
 import argparse
 import json
+import re
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
 import yaml
 import spacy
-from presidio_analyzer import AnalyzerEngine, Pattern, PatternRecognizer
-from presidio_analyzer.nlp_engine import NlpEngineProvider
-from presidio_anonymizer import AnonymizerEngine
-from presidio_anonymizer.entities import OperatorConfig
 
 DEFAULT_MODEL_NAME = "presidio"
+DEFAULT_NER_SCORE = 0.85
 GENERIC_ORG_UNIT_SUFFIXES = ("division", "department", "team", "unit", "office", "board", "panel", "committee")
 LEADING_ORG_ARTICLES = ("the ", "a ", "an ")
+SPACY_TO_PRESIDIO_ENTITY = {
+    "PERSON": "PERSON",
+    "PER": "PERSON",
+    "ORG": "ORGANIZATION",
+    "GPE": "LOCATION",
+    "LOC": "LOCATION",
+}
 
-def build_regex_recognizers(regex_cfg: Dict[str, Any]) -> List[PatternRecognizer]:
-    """
-    Builds Presidio PatternRecognizers from configs/anonymization.yaml.
-    """
-    recognizers: List[PatternRecognizer] = []
 
-    for entity_type, cfg in regex_cfg.items():
-        enabled = bool(cfg.get("enabled", True))
-        if not enabled:
-            continue
-
-        presidio_patterns: List[Pattern] = []
-
-        for i, pattern_str in enumerate(cfg.get("patterns", [])):
-            presidio_patterns.append(
-                Pattern(
-                    name=f"{entity_type}_pattern_{i}",
-                    regex=pattern_str,
-                    score=1.0,
-                )
-            )
-
-        recognizer = PatternRecognizer(
-            supported_entity=entity_type,
-            patterns=presidio_patterns,
-            name=f"REGEX_{entity_type}",
-        )
-
-        recognizers.append(recognizer)
-
-    return recognizers
+@dataclass
+class DetectionResult:
+    entity_type: str
+    start: int
+    end: int
+    score: float | None
 
 # Load YAML config into a dict
 def load_yaml(path: str | Path) -> Dict[str, Any]:
@@ -142,35 +124,91 @@ def filter_by_policy(
     return final_results
 
 
-# Build Presidio AnalyzerEngine with spaCy NER + custom regex recognizers from YAML
-def build_analyzer(spacy_model: str, regex_cfg: Dict[str, Any]) -> AnalyzerEngine:
-    # Ensure spaCy model is available
-    spacy.load(spacy_model)
+def build_regex_patterns(regex_cfg: Dict[str, Any], regex_entities: set[str]) -> List[Tuple[str, re.Pattern]]:
+    patterns: List[Tuple[str, re.Pattern]] = []
 
-    provider = NlpEngineProvider(
-        nlp_configuration={
-            "nlp_engine_name": "spacy",
-            "models": [{"lang_code": "en", "model_name": spacy_model}],
-        }
-    )
-    nlp_engine = provider.create_engine()
+    for entity_type, cfg in regex_cfg.items():
+        if entity_type not in regex_entities or not bool(cfg.get("enabled", True)):
+            continue
 
-    analyzer = AnalyzerEngine(nlp_engine=nlp_engine, supported_languages=["en"])
+        for pattern_str in cfg.get("patterns", []):
+            patterns.append(
+                (
+                    entity_type,
+                    re.compile(pattern_str, flags=re.IGNORECASE | re.MULTILINE | re.DOTALL),
+                )
+            )
 
-    # Add regex recognizers (PatternRecognizers) from YAML
-    recognizers = build_regex_recognizers(regex_cfg)
-    for rec in recognizers:
-        analyzer.registry.add_recognizer(rec)
-
-    return analyzer
+    return patterns
 
 
-def build_operators(placeholders: Dict[str, str]) -> Dict[str, OperatorConfig]:
-    # Replace entity spans with placeholders
-    ops: Dict[str, OperatorConfig] = {}
-    for entity_type, placeholder in placeholders.items():
-        ops[entity_type] = OperatorConfig("replace", {"new_value": placeholder})
-    return ops
+def detect_regex_entities(text: str, patterns: List[Tuple[str, re.Pattern]]) -> List[DetectionResult]:
+    results: List[DetectionResult] = []
+
+    for entity_type, pattern in patterns:
+        for match in pattern.finditer(text):
+            if match.start() == match.end():
+                continue
+            results.append(
+                DetectionResult(
+                    entity_type=entity_type,
+                    start=match.start(),
+                    end=match.end(),
+                    score=1.0,
+                )
+            )
+
+    return results
+
+
+def detect_ner_entities(nlp, text: str, ner_entities: set[str]) -> List[DetectionResult]:
+    if nlp is None or not ner_entities:
+        return []
+
+    results: List[DetectionResult] = []
+    doc = nlp(text)
+
+    for ent in doc.ents:
+        entity_type = SPACY_TO_PRESIDIO_ENTITY.get(ent.label_)
+        if entity_type not in ner_entities:
+            continue
+
+        results.append(
+            DetectionResult(
+                entity_type=entity_type,
+                start=ent.start_char,
+                end=ent.end_char,
+                score=DEFAULT_NER_SCORE,
+            )
+        )
+
+    return results
+
+
+def resolve_overlapping_results(results: List[DetectionResult]) -> List[DetectionResult]:
+    selected: List[DetectionResult] = []
+
+    for result in sorted(
+        results,
+        key=lambda r: (-(r.score or 0.0), -(r.end - r.start), r.start, r.end),
+    ):
+        span = (result.start, result.end)
+        if any(spans_overlap(span, (kept.start, kept.end)) for kept in selected):
+            continue
+        selected.append(result)
+
+    selected.sort(key=lambda r: (r.start, r.end))
+    return selected
+
+
+def anonymize_text(text: str, results: List[DetectionResult], placeholders: Dict[str, str]) -> str:
+    anonymized = text
+
+    for result in sorted(results, key=lambda r: (r.start, r.end), reverse=True):
+        placeholder = placeholders.get(result.entity_type, f"[{result.entity_type}]")
+        anonymized = anonymized[: result.start] + placeholder + anonymized[result.end :]
+
+    return anonymized
 
 
 ENTITY_TYPE_MAP = {
@@ -235,9 +273,8 @@ def main() -> None:
     ner_min_score = float(cfg.get("ner_min_score", 0.50))
     regex_cfg = cfg.get("regex", {})
 
-    analyzer = build_analyzer(spacy_model, regex_cfg)
-    anonymizer = AnonymizerEngine()
-    operators = build_operators(placeholders)
+    regex_patterns = build_regex_patterns(regex_cfg, regex_entities)
+    nlp = spacy.load(spacy_model) if ner_entities else None
 
     paths = cfg["paths"]
 
@@ -277,13 +314,8 @@ def main() -> None:
             continue
 
         try:
-            entities_to_detect = sorted(regex_entities.union(ner_entities))
-
-            results = analyzer.analyze(
-                text=text,
-                language="en",
-                entities=entities_to_detect,
-            )
+            results = detect_regex_entities(text, regex_patterns)
+            results.extend(detect_ner_entities(nlp, text, ner_entities))
 
             final_results = filter_by_policy(
                 results=results,
@@ -292,17 +324,13 @@ def main() -> None:
                 ner_min_score=ner_min_score,
                 text=text,
             )
-
-            anonymized_result = anonymizer.anonymize(
-                text=text,
-                analyzer_results=final_results,
-                operators=operators,
-            )
+            final_results = resolve_overlapping_results(final_results)
+            anonymized_text = anonymize_text(text, final_results, placeholders)
 
             out_docs.append(
                 {
                     "doc_id": doc_id,
-                    "anonymized_text": anonymized_result.text,
+                    "anonymized_text": anonymized_text,
                 }
             )
 
