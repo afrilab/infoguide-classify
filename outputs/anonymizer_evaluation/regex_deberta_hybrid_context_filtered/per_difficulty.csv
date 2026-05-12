@@ -1,0 +1,4 @@
+difficulty,strict_precision,strict_recall,strict_f1,relaxed_precision,relaxed_recall,relaxed_f1,tp,fp,fn
+easy,1.0000,0.9174,0.9569,1.0000,0.9321,0.9649,500,0,45
+hard,1.0000,0.7550,0.8604,1.0000,0.8400,0.9130,151,0,49
+unknown,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0,154,0

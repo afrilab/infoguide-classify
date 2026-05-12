@@ -76,6 +76,10 @@ steps:
     enabled: false
     script: "src/anonymization/deberta_ner_baseline.py"
     config: "configs/anonymization/deberta_ner_baseline.yaml"
+  step3i_anonymization_regex_deberta_hybrid:
+    enabled: false
+    script: "src/anonymization/combine_regex_deberta_hybrid.py"
+    config: "configs/anonymization/regex_deberta_hybrid_context_filtered.yaml"
   step4a_eval_regex_only:
     enabled: true
     script: "src/anonymization/evaluator.py"
@@ -117,6 +121,10 @@ steps:
     enabled: false
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_deberta_ner_full.yaml"
+  step4k_eval_regex_deberta_hybrid:
+    enabled: false
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_regex_deberta_hybrid_context_filtered.yaml"
   step5a_classification_tfidf:
     enabled: false
     script: "src/classification/classify_documents.py"

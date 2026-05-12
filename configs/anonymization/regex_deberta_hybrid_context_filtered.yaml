@@ -1,0 +1,112 @@
+benchmark_path: data/synthetic/benchmark.json
+input_docs: data/synthetic/benchmark.json
+
+regex_predictions: outputs/anonymizer_outputs/presidio_regex_only_predictions.jsonl
+ner_predictions: outputs/anonymizer_outputs/deberta_ner_baseline_predictions.jsonl
+
+output_predictions: outputs/anonymizer_outputs/regex_deberta_hybrid_context_filtered_predictions.jsonl
+output_docs: data/anonymized/regex_deberta_hybrid_context_filtered_documents.jsonl
+output_model_name: regex_deberta_hybrid_context_filtered
+
+placeholders:
+  PERSON: "[PERSON]"
+  ORGANIZATION: "[ORG]"
+  ORG: "[ORG]"
+  LOCATION: "[LOCATION]"
+  EMAIL: "[EMAIL]"
+  PHONE: "[PHONE]"
+  DATE: "[DATE]"
+  CREDIT_CARD: "[CREDIT_CARD]"
+  IBAN: "[IBAN]"
+
+window_chars: 50
+
+regex_entities:
+  - EMAIL
+  - PHONE
+  - DATE
+  - CREDIT_CARD
+  - IBAN
+
+ner_entities:
+  - PERSON
+  - ORG
+  - LOCATION
+
+context_rules:
+  PHONE:
+    positive:
+      - phone
+      - mobile
+      - contact
+      - tel
+      - call
+      - number
+    negative:
+      - reference
+      - code
+      - ticket
+      - case
+      - version
+      - template
+      - record
+      - sync
+
+  CREDIT_CARD:
+    positive:
+      - card
+      - credit card
+      - payment
+      - billing
+    negative:
+      - reference
+      - ticket
+      - case
+      - record
+      - sync
+      - transaction code
+      - code
+
+  IBAN:
+    positive:
+      - iban
+      - bank account
+      - account
+      - transfer
+      - payment
+    negative:
+      - reference
+      - sample
+      - example
+      - template
+      - record
+      - code
+
+  DATE:
+    positive:
+      - date
+      - effective
+      - deadline
+      - reviewed
+      - issued
+      - signed
+      - audit
+      - form
+    negative:
+      - version
+      - template
+      - reference
+      - record
+      - sync
+      - code
+
+  EMAIL:
+    positive:
+      - email
+      - contact
+      - mail
+    negative:
+      - example
+      - sample
+      - placeholder
+      - test

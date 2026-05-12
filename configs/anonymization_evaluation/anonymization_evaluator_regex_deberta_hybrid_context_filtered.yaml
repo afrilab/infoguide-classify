@@ -1,0 +1,6 @@
+benchmark_path: data/synthetic/benchmark.json
+
+models:
+  - model: regex_deberta_hybrid_context_filtered
+    prediction_path: outputs/anonymizer_outputs/regex_deberta_hybrid_context_filtered_predictions.jsonl
+    output_dir: outputs/anonymizer_evaluation/regex_deberta_hybrid_context_filtered
