@@ -3,7 +3,19 @@ model_id: "urchade/gliner_multi-v2.1"
 
 paths:
   input: "data/synthetic/benchmark.json"
+  output_docs: "data/anonymized/gliner_baseline_documents.jsonl"
   output_predictions: "outputs/anonymizer_outputs/gliner_baseline_predictions.jsonl"
+
+placeholders:
+  PERSON: "[PERSON]"
+  ORG: "[ORG]"
+  ORGANIZATION: "[ORG]"
+  LOCATION: "[LOCATION]"
+  EMAIL: "[EMAIL]"
+  PHONE: "[PHONE]"
+  DATE: "[DATE]"
+  CREDIT_CARD: "[CREDIT_CARD]"
+  IBAN: "[IBAN]"
 
 # Evaluation is performed only on synthetic benchmark documents.
 doc_id_prefixes:

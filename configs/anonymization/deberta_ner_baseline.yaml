@@ -3,7 +3,19 @@ model_id: "RashidNLP/NER-Deberta"
 
 paths:
   input: "data/synthetic/benchmark.json"
+  output_docs: "data/anonymized/deberta_ner_baseline_documents.jsonl"
   output_predictions: "outputs/anonymizer_outputs/deberta_ner_baseline_predictions.jsonl"
+
+placeholders:
+  PERSON: "[PERSON]"
+  ORG: "[ORG]"
+  ORGANIZATION: "[ORG]"
+  LOCATION: "[LOCATION]"
+  EMAIL: "[EMAIL]"
+  PHONE: "[PHONE]"
+  DATE: "[DATE]"
+  CREDIT_CARD: "[CREDIT_CARD]"
+  IBAN: "[IBAN]"
 
 text_field: "text"
 doc_id_prefixes:

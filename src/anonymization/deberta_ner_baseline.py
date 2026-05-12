@@ -5,6 +5,7 @@ from typing import Any, Dict, Iterable, List, Tuple
 
 import yaml
 
+from context_filter_regex_predictions import build_anonymized_docs
 from entity_filters import filter_generic_org_units
 
 
@@ -198,6 +199,7 @@ def main() -> None:
     paths = cfg["paths"]
     model_name = cfg.get("model_name", "deberta_ner_baseline")
     model_id = cfg.get("model_id", "RashidNLP/NER-Deberta")
+    placeholders = cfg.get("placeholders", {}) or {}
     threshold = float(cfg.get("threshold", 0.5))
     max_chars = int(cfg.get("max_chars", 1200))
     overlap_chars = int(cfg.get("overlap_chars", 150))
@@ -234,6 +236,15 @@ def main() -> None:
         outputs.append({"doc_id": doc_id, "model": model_name, "entities": entities})
 
     write_jsonl(paths["output_predictions"], outputs)
+
+    output_docs = paths.get("output_docs")
+    if output_docs:
+        anonymized_docs = build_anonymized_docs(
+            source_docs=docs,
+            prediction_docs=outputs,
+            placeholders=placeholders,
+        )
+        write_jsonl(output_docs, anonymized_docs)
 
 
 if __name__ == "__main__":
