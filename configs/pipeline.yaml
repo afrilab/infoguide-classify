@@ -72,6 +72,10 @@ steps:
     enabled: false
     script: "src/anonymization/gliner_baseline.py"
     config: "configs/anonymization/gliner_baseline.yaml"
+  step3h_anonymization_deberta_ner_baseline:
+    enabled: false
+    script: "src/anonymization/deberta_ner_baseline.py"
+    config: "configs/anonymization/deberta_ner_baseline.yaml"
   step4a_eval_regex_only:
     enabled: true
     script: "src/anonymization/evaluator.py"
@@ -105,6 +109,14 @@ steps:
     enabled: false
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_gliner.yaml"
+  step4i_eval_deberta_ner_baseline:
+    enabled: false
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_deberta_ner.yaml"
+  step4j_eval_deberta_ner_baseline_full:
+    enabled: false
+    script: "src/anonymization/evaluator.py"
+    config: "configs/anonymization_evaluation/anonymization_evaluator_deberta_ner_full.yaml"
   step5a_classification_tfidf:
     enabled: false
     script: "src/classification/classify_documents.py"
