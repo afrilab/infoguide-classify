@@ -1,9 +1,9 @@
-model_name: "presidio_hybrid_lg"
+model_name: "regex_spacy_hybrid_lg"
 spacy_model: "en_core_web_lg"
 paths:
   input: "data/processed/clean_documents.jsonl"
-  output_docs: "data/anonymized/presidio_hybrid_lg_documents.jsonl"
-  output_predictions: "outputs/anonymizer_outputs/presidio_hybrid_lg_predictions.jsonl"
+  output_docs: "data/anonymized/regex_spacy_hybrid_lg_documents.jsonl"
+  output_predictions: "outputs/anonymizer_outputs/regex_spacy_hybrid_lg_predictions.jsonl"
 
 language: "en"
 

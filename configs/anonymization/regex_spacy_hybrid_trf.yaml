@@ -1,13 +1,13 @@
-model_name: "presidio_regex_only"
-
+model_name: "regex_spacy_hybrid_trf"
+spacy_model: "en_core_web_trf"
 paths:
   input: "data/processed/clean_documents.jsonl"
-  output_docs: "data/anonymized/presidio_regex_only_documents.jsonl"
-  output_predictions: "outputs/anonymizer_outputs/presidio_regex_only_predictions.jsonl"
+  output_docs: "data/anonymized/regex_spacy_hybrid_trf_documents.jsonl"
+  output_predictions: "outputs/anonymizer_outputs/regex_spacy_hybrid_trf_predictions.jsonl"
 
 language: "en"
-spacy_model: "en_core_web_sm"
 
+# Output placeholders
 placeholders:
   PERSON: "[PERSON]"
   ORGANIZATION: "[ORG]"
@@ -18,7 +18,8 @@ placeholders:
   CREDIT_CARD: "[CREDIT_CARD]"
   IBAN: "[IBAN]"
 
-# Only regex
+# Detection Strategy
+# Which entity types are handled by regex vs NER
 regex_entities:
   - EMAIL
   - PHONE
@@ -26,12 +27,18 @@ regex_entities:
   - CREDIT_CARD
   - DATE
 
-ner_entities: []
+ner_entities:
+  - PERSON
+  - ORGANIZATION
+  - LOCATION
 
+# Precedence & Overlap Handling
+# Regex spans are frozen and win overlaps with NER spans
 precedence:
   first: "regex"
-  overlap_policy: "regex_wins"
+  overlap_policy: "regex_wins"   # options: regex_wins
 
+# Confidence thresholding to apply to NER-based detections
 ner_min_score: 0.50
 
 # Regex Patterns
@@ -77,4 +84,12 @@ regex:
       # Month and year only: June 2025
       - '\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+\d{4}\b'
 
-ner: {}
+
+# NER Entity Toggles
+ner:
+  PERSON:
+    enabled: true
+  ORGANIZATION:
+    enabled: true
+  LOCATION:
+    enabled: true

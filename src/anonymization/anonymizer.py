@@ -8,11 +8,11 @@ from typing import Any, Dict, List, Tuple
 import yaml
 import spacy
 
-DEFAULT_MODEL_NAME = "presidio"
+DEFAULT_MODEL_NAME = "anonymizer"
 DEFAULT_NER_SCORE = 0.85
 GENERIC_ORG_UNIT_SUFFIXES = ("division", "department", "team", "unit", "office", "board", "panel", "committee")
 LEADING_ORG_ARTICLES = ("the ", "a ", "an ")
-SPACY_TO_PRESIDIO_ENTITY = {
+SPACY_TO_PIPELINE_ENTITY = {
     "PERSON": "PERSON",
     "PER": "PERSON",
     "ORG": "ORGANIZATION",
@@ -169,7 +169,7 @@ def detect_ner_entities(nlp, text: str, ner_entities: set[str]) -> List[Detectio
     doc = nlp(text)
 
     for ent in doc.ents:
-        entity_type = SPACY_TO_PRESIDIO_ENTITY.get(ent.label_)
+        entity_type = SPACY_TO_PIPELINE_ENTITY.get(ent.label_)
         if entity_type not in ner_entities:
             continue
 

@@ -10,7 +10,7 @@ steps:
     script: "src/preprocess/process_documents.py"
     config: "configs/process.yaml"
   step2b_taxonomy_embeddings:
-    enabled: true
+    enabled: false
     script: "src/taxonomy/assign_taxonomy_embeddings.py"
     args:
       - "--input"
@@ -23,7 +23,7 @@ steps:
       - "0.7"
       - "--store_debug"
   step2c_taxonomy_rule_boosted:
-    enabled: true
+    enabled: false
     script: "src/taxonomy/assign_taxonomy_rule_boosted.py"
     args:
       - "--documents"
@@ -33,7 +33,7 @@ steps:
       - "--output"
       - "outputs/taxonomy/taxonomy_assignments_rule_boosted.jsonl"
   step2d_taxonomy_evaluation:
-    enabled: true
+    enabled: false
     script: "src/taxonomy/evaluate_taxonomy_accuracy.py"
     args:
       - "--predictions"
@@ -43,23 +43,23 @@ steps:
   step3a_anonymization_regex_only:
     enabled: true
     script: "src/anonymization/anonymizer.py"
-    config: "configs/anonymization/presidio_regex_only.yaml"
+    config: "configs/anonymization/regex_only.yaml"
   step3b_anonymization_ner_only:
     enabled: true
     script: "src/anonymization/anonymizer.py"
-    config: "configs/anonymization/presidio_ner_only.yaml"
+    config: "configs/anonymization/spacy_ner_only.yaml"
   step3c_anonymization_hybrid:
     enabled: true
     script: "src/anonymization/anonymizer.py"
-    config: "configs/anonymization/presidio_hybrid.yaml"
+    config: "configs/anonymization/regex_spacy_hybrid.yaml"
   step3d_anonymization_hybrid_lg:
     enabled: true
     script: "src/anonymization/anonymizer.py"
-    config: "configs/anonymization/presidio_hybrid_lg.yaml"
+    config: "configs/anonymization/regex_spacy_hybrid_lg.yaml"
   step3e_anonymization_hybrid_trf:
     enabled: true
     script: "src/anonymization/anonymizer.py"
-    config: "configs/anonymization/presidio_hybrid_trf.yaml"
+    config: "configs/anonymization/regex_spacy_hybrid_trf.yaml"
   step3e2_generic_placeholder_hybrid_trf:
     enabled: true
     script: "src/anonymization/create_generic_placeholder_docs.py"
@@ -69,15 +69,15 @@ steps:
     script: "src/anonymization/context_filter_regex_predictions.py"
     config: "configs/anonymization/context_filter_hybrid_trf.yaml"
   step3g_anonymization_gliner_baseline:
-    enabled: false
+    enabled: true
     script: "src/anonymization/gliner_baseline.py"
     config: "configs/anonymization/gliner_baseline.yaml"
   step3h_anonymization_deberta_ner_baseline:
-    enabled: false
+    enabled: true
     script: "src/anonymization/deberta_ner_baseline.py"
     config: "configs/anonymization/deberta_ner_baseline.yaml"
   step3i_anonymization_regex_deberta_hybrid:
-    enabled: false
+    enabled: true
     script: "src/anonymization/combine_regex_deberta_hybrid.py"
     config: "configs/anonymization/regex_deberta_hybrid_context_filtered.yaml"
   step4a_eval_regex_only:
@@ -110,19 +110,19 @@ steps:
     args:
       - "--compare-regex-pii"
   step4h_eval_gliner_baseline:
-    enabled: false
+    enabled: true
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_gliner.yaml"
   step4i_eval_deberta_ner_baseline:
-    enabled: false
+    enabled: true
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_deberta_ner.yaml"
   step4j_eval_deberta_ner_baseline_full:
-    enabled: false
+    enabled: true
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_deberta_ner_full.yaml"
   step4k_eval_regex_deberta_hybrid:
-    enabled: false
+    enabled: true
     script: "src/anonymization/evaluator.py"
     config: "configs/anonymization_evaluation/anonymization_evaluator_regex_deberta_hybrid_context_filtered.yaml"
   step5a_classification_tfidf:

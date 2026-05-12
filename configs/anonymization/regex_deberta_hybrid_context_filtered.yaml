@@ -1,7 +1,7 @@
 benchmark_path: data/synthetic/benchmark.json
 input_docs: data/synthetic/benchmark.json
 
-regex_predictions: outputs/anonymizer_outputs/presidio_regex_only_predictions.jsonl
+regex_predictions: outputs/anonymizer_outputs/regex_only_predictions.jsonl
 ner_predictions: outputs/anonymizer_outputs/deberta_ner_baseline_predictions.jsonl
 
 output_predictions: outputs/anonymizer_outputs/regex_deberta_hybrid_context_filtered_predictions.jsonl

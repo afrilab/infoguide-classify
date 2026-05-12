@@ -1,11 +1,16 @@
-model_name: "presidio_hybrid_trf"
-spacy_model: "en_core_web_trf"
+# configs/anonymization.yaml
+
+model_name: "regex_spacy_hybrid"
+
 paths:
   input: "data/processed/clean_documents.jsonl"
-  output_docs: "data/anonymized/presidio_hybrid_trf_documents.jsonl"
-  output_predictions: "outputs/anonymizer_outputs/presidio_hybrid_trf_predictions.jsonl"
+  output_docs: "data/anonymized/regex_spacy_hybrid_documents.jsonl"
+  output_predictions: "outputs/anonymizer_outputs/regex_spacy_hybrid_predictions.jsonl"
 
 language: "en"
+
+# spaCy model used by spaCy NER pipeline
+spacy_model: "en_core_web_sm"
 
 # Output placeholders
 placeholders:
@@ -83,7 +88,6 @@ regex:
       - '\b\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*(?:\s+\d{4})?\b'
       # Month and year only: June 2025
       - '\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+\d{4}\b'
-
 
 # NER Entity Toggles
 ner:

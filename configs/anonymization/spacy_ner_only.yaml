@@ -1,9 +1,9 @@
-model_name: "presidio_ner_only"
+model_name: "spacy_ner_only"
 
 paths:
   input: "data/processed/clean_documents.jsonl"
-  output_docs: "data/anonymized/presidio_ner_only_documents.jsonl"
-  output_predictions: "outputs/anonymizer_outputs/presidio_ner_only_predictions.jsonl"
+  output_docs: "data/anonymized/spacy_ner_only_documents.jsonl"
+  output_predictions: "outputs/anonymizer_outputs/spacy_ner_only_predictions.jsonl"
 
 language: "en"
 spacy_model: "en_core_web_sm"

@@ -11,15 +11,15 @@ Entity = Dict[str, Any]
 CsvRow = Dict[str, str]
 
 DEFAULT_BEFORE_PATH = (
-    "outputs/anonymizer_evaluation/presidio_hybrid_trf/per_type.csv"
+    "outputs/anonymizer_evaluation/regex_spacy_hybrid_trf/per_type.csv"
 )
 DEFAULT_AFTER_PATH = (
     "outputs/anonymizer_evaluation/"
-    "presidio_hybrid_trf_context_filtered/per_type.csv"
+    "regex_spacy_hybrid_trf_context_filtered/per_type.csv"
 )
 DEFAULT_COMPARISON_OUTPUT_PATH = (
     "outputs/anonymizer_evaluation/"
-    "presidio_hybrid_trf_context_filtered/comparison_table.csv"
+    "regex_spacy_hybrid_trf_context_filtered/comparison_table.csv"
 )
 DEFAULT_REGEX_TYPES = [
     "EMAIL",

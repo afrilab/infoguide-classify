@@ -1,10 +1,10 @@
 benchmark_path: data/synthetic/benchmark.json
 input_docs: data/processed/clean_documents.jsonl
-input_predictions: outputs/anonymizer_outputs/presidio_hybrid_trf_predictions.jsonl
-output_predictions: outputs/anonymizer_outputs/presidio_hybrid_trf_context_filtered_predictions.jsonl
-output_docs: data/anonymized/presidio_hybrid_trf_context_filtered_documents.jsonl
+input_predictions: outputs/anonymizer_outputs/regex_spacy_hybrid_trf_predictions.jsonl
+output_predictions: outputs/anonymizer_outputs/regex_spacy_hybrid_trf_context_filtered_predictions.jsonl
+output_docs: data/anonymized/regex_spacy_hybrid_trf_context_filtered_documents.jsonl
 
-output_model_name: presidio_hybrid_trf_context_filtered
+output_model_name: regex_spacy_hybrid_trf_context_filtered
 
 placeholders:
   PERSON: "[PERSON]"
