@@ -1,6 +1,6 @@
 benchmark_path: data/synthetic/benchmark.json
 
 models:
-  - model: presidio_hybrid_trf_context_filtered
-    prediction_path: outputs/anonymizer_outputs/presidio_hybrid_trf_context_filtered_predictions.jsonl
-    output_dir: outputs/anonymizer_evaluation/presidio_hybrid_trf_context_filtered
+  - model: regex_spacy_hybrid_trf_context_filtered
+    prediction_path: outputs/anonymizer_outputs/regex_spacy_hybrid_trf_context_filtered_predictions.jsonl
+    output_dir: outputs/anonymizer_evaluation/regex_spacy_hybrid_trf_context_filtered

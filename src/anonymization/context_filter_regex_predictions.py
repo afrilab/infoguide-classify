@@ -1,25 +1,28 @@
 import argparse
 import csv
 import json
+import time
 from pathlib import Path
 from typing import Any, Dict, List, Set
 
 import yaml
+
+from metrics import build_run_metrics, default_metrics_path, write_metrics
 
 Document = Dict[str, Any]
 Entity = Dict[str, Any]
 CsvRow = Dict[str, str]
 
 DEFAULT_BEFORE_PATH = (
-    "outputs/anonymizer_evaluation/presidio_hybrid_trf/per_type.csv"
+    "outputs/anonymizer_evaluation/regex_spacy_hybrid_trf/per_type.csv"
 )
 DEFAULT_AFTER_PATH = (
     "outputs/anonymizer_evaluation/"
-    "presidio_hybrid_trf_context_filtered/per_type.csv"
+    "regex_spacy_hybrid_trf_context_filtered/per_type.csv"
 )
 DEFAULT_COMPARISON_OUTPUT_PATH = (
     "outputs/anonymizer_evaluation/"
-    "presidio_hybrid_trf_context_filtered/comparison_table.csv"
+    "regex_spacy_hybrid_trf_context_filtered/comparison_table.csv"
 )
 DEFAULT_REGEX_TYPES = [
     "EMAIL",
@@ -161,10 +164,12 @@ def filter_predictions(
     context_rules: Dict[str, Any],
     window_chars: int,
     output_model_name: str | None = None,
+    document_latencies_seconds: List[float] | None = None,
 ) -> List[Document]:
     filtered_docs = []
 
     for pred_doc in prediction_docs:
+        doc_started = time.perf_counter()
         doc_id = pred_doc.get("doc_id")
         text = text_map.get(doc_id, "")
 
@@ -196,6 +201,8 @@ def filter_predictions(
             filtered_doc["removed_entities"] = removed_entities
 
         filtered_docs.append(filtered_doc)
+        if document_latencies_seconds is not None:
+            document_latencies_seconds.append(time.perf_counter() - doc_started)
 
     return filtered_docs
 
@@ -346,6 +353,7 @@ def write_comparison_table(
 
 
 def run_context_filter(config_path: str) -> None:
+    run_started = time.perf_counter()
     with open(config_path, "r", encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
 
@@ -365,6 +373,7 @@ def run_context_filter(config_path: str) -> None:
     prediction_docs = load_json_or_jsonl(input_predictions)
 
     text_map = make_text_map(source_docs)
+    document_latencies_seconds: List[float] = []
 
     filtered_docs = filter_predictions(
         prediction_docs=prediction_docs,
@@ -373,6 +382,7 @@ def run_context_filter(config_path: str) -> None:
         context_rules=context_rules,
         window_chars=window_chars,
         output_model_name=output_model_name,
+        document_latencies_seconds=document_latencies_seconds,
     )
 
     write_jsonl(output_predictions, filtered_docs)
@@ -388,6 +398,21 @@ def run_context_filter(config_path: str) -> None:
     total_before = sum(len(doc.get("entities", [])) for doc in prediction_docs)
     total_after = sum(len(doc.get("entities", [])) for doc in filtered_docs)
     removed = total_before - total_after
+    runtime_seconds = time.perf_counter() - run_started
+    variant_name = output_model_name or "context_filtered"
+    char_count = sum(len(text_map.get(doc.get("doc_id"), "")) for doc in prediction_docs)
+    metrics = build_run_metrics(
+        variant_name=variant_name,
+        stage_name="context_filtering",
+        doc_count=len(filtered_docs),
+        char_count=char_count,
+        entity_count=total_after,
+        runtime_seconds=runtime_seconds,
+        document_latencies_seconds=document_latencies_seconds,
+        config_path=config_path,
+    )
+    metrics_path = cfg.get("metrics_path", default_metrics_path(variant_name))
+    write_metrics(metrics_path, metrics)
 
     print("Context filtering completed.")
     print(f"Input predictions: {input_predictions}")
@@ -397,6 +422,7 @@ def run_context_filter(config_path: str) -> None:
     print(f"Entities before: {total_before}")
     print(f"Entities after: {total_after}")
     print(f"Removed entities: {removed}")
+    print(f"Metrics: {metrics_path}")
 
 
 def main() -> None:

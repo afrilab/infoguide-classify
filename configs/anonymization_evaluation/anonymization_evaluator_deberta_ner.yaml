@@ -1,0 +1,10 @@
+benchmark_path: data/synthetic/benchmark.json
+
+models:
+  - model: deberta_ner_baseline
+    prediction_path: outputs/anonymizer_outputs/deberta_ner_baseline_predictions.jsonl
+    output_dir: outputs/anonymizer_evaluation/deberta_ner_baseline
+    entity_types:
+      - PERSON
+      - ORG
+      - LOCATION

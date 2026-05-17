@@ -1,0 +1,6 @@
+type,strict_fp_before,strict_fp_after,strict_fp_delta,strict_precision_before,strict_precision_after,strict_precision_delta,strict_recall_before,strict_recall_after,strict_recall_delta,relaxed_fp_before,relaxed_fp_after,relaxed_fp_delta,relaxed_precision_before,relaxed_precision_after,relaxed_precision_delta,relaxed_recall_before,relaxed_recall_after,relaxed_recall_delta
+EMAIL,8,8,0,0.9167,0.9158,-0.0009,0.9778,0.9667,-0.0111,7,7,0,0.9271,0.9263,-0.0008,0.9889,0.9778,-0.0111
+PHONE,9,6,-3,0.7568,0.8182,0.0614,0.7179,0.6923,-0.0256,7,4,-3,0.8108,0.8788,0.0680,0.7692,0.7436,-0.0256
+DATE,16,15,-1,0.8447,0.8500,0.0053,0.8969,0.8763,-0.0206,12,11,-1,0.8835,0.8900,0.0065,0.9381,0.9175,-0.0206
+CREDIT_CARD,6,4,-2,0.6667,0.7500,0.0833,0.6667,0.6667,0.0000,6,4,-2,0.6667,0.7500,0.0833,0.6667,0.6667,0.0000
+IBAN,2,0,-2,0.9286,1.0000,0.0714,1.0000,1.0000,0.0000,2,0,-2,0.9286,1.0000,0.0714,1.0000,1.0000,0.0000

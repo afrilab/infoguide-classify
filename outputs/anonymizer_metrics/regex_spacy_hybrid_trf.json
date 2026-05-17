@@ -1,0 +1,121 @@
+{
+  "variant": "regex_spacy_hybrid_trf",
+  "stage": "anonymization",
+  "config_path": "configs/anonymization/regex_spacy_hybrid_trf.yaml",
+  "updated_at": "2026-05-16T17:01:56.644210+00:00",
+  "run_count": 10,
+  "runs_dir": "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf",
+  "run_files": [
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T164343401551Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T164651657752Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T164859806956Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T165051218542Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T165235801249Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T165420500841Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T165604711510Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T165824491809Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T170013790712Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf/20260516T170156642228Z.json"
+  ],
+  "latest_run": {
+    "variant": "regex_spacy_hybrid_trf",
+    "stage": "anonymization",
+    "config_path": "configs/anonymization/regex_spacy_hybrid_trf.yaml",
+    "created_at": "2026-05-16T17:01:56.641751+00:00",
+    "doc_count": 66,
+    "char_count": 146695,
+    "entity_count": 820,
+    "runtime_seconds": 12.440136791206896,
+    "throughput_docs_per_sec": 5.3054078992645,
+    "throughput_chars_per_sec": 11792.072905797058,
+    "latency_avg_ms": 151.01451700496855,
+    "latency_p50_ms": 152.3609170690179,
+    "latency_p95_ms": 220.26382299372926,
+    "latency_max_ms": 248.6929998267442,
+    "run_id": "20260516T170156642228Z"
+  },
+  "averages": {
+    "char_count": 146695.0,
+    "doc_count": 66.0,
+    "entity_count": 820.0,
+    "latency_avg_ms": 153.17792240424419,
+    "latency_max_ms": 257.5450915377587,
+    "latency_p50_ms": 156.3084957189858,
+    "latency_p95_ms": 229.4098646787461,
+    "runtime_seconds": 12.530432883440517,
+    "throughput_chars_per_sec": 11719.876056264842,
+    "throughput_docs_per_sec": 5.272925591966185
+  },
+  "metric_stats": {
+    "char_count": {
+      "avg": 146695.0,
+      "min": 146695.0,
+      "max": 146695.0,
+      "stddev": 0.0
+    },
+    "doc_count": {
+      "avg": 66.0,
+      "min": 66.0,
+      "max": 66.0,
+      "stddev": 0.0
+    },
+    "entity_count": {
+      "avg": 820.0,
+      "min": 820.0,
+      "max": 820.0,
+      "stddev": 0.0
+    },
+    "latency_avg_ms": {
+      "avg": 153.17792240424419,
+      "min": 143.25310663799897,
+      "max": 164.18955429231352,
+      "stddev": 6.8275918435805085
+    },
+    "latency_max_ms": {
+      "avg": 257.5450915377587,
+      "min": 230.0315829925239,
+      "max": 300.184375140816,
+      "stddev": 20.05379843149853
+    },
+    "latency_p50_ms": {
+      "avg": 156.3084957189858,
+      "min": 148.77508394420147,
+      "max": 165.3810414718464,
+      "stddev": 5.490737795716641
+    },
+    "latency_p95_ms": {
+      "avg": 229.4098646787461,
+      "min": 207.66245777485892,
+      "max": 267.27865677094087,
+      "stddev": 19.135541309565113
+    },
+    "runtime_seconds": {
+      "avg": 12.530432883440517,
+      "min": 11.747122916858643,
+      "max": 13.293151332996786,
+      "stddev": 0.4351405002903644
+    },
+    "throughput_chars_per_sec": {
+      "avg": 11719.876056264842,
+      "min": 11035.38177857555,
+      "max": 12487.738575500362,
+      "stddev": 409.21993975084325
+    },
+    "throughput_docs_per_sec": {
+      "avg": 5.272925591966185,
+      "min": 4.964962659845163,
+      "max": 5.618396986829979,
+      "stddev": 0.18411340552544828
+    }
+  },
+  "char_count": 146695.0,
+  "doc_count": 66.0,
+  "entity_count": 820.0,
+  "latency_avg_ms": 153.17792240424419,
+  "latency_max_ms": 257.5450915377587,
+  "latency_p50_ms": 156.3084957189858,
+  "latency_p95_ms": 229.4098646787461,
+  "runtime_seconds": 12.530432883440517,
+  "throughput_chars_per_sec": 11719.876056264842,
+  "throughput_docs_per_sec": 5.272925591966185
+}
