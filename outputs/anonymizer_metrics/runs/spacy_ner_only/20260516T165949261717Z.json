@@ -1,0 +1,17 @@
+{
+  "variant": "spacy_ner_only",
+  "stage": "anonymization",
+  "config_path": "configs/anonymization/spacy_ner_only.yaml",
+  "created_at": "2026-05-16T16:59:49.261330+00:00",
+  "doc_count": 66,
+  "char_count": 146695,
+  "entity_count": 541,
+  "runtime_seconds": 4.011694083921611,
+  "throughput_docs_per_sec": 16.451902517821605,
+  "throughput_chars_per_sec": 36566.84605836122,
+  "latency_avg_ms": 46.9198699998246,
+  "latency_p50_ms": 50.33656244631857,
+  "latency_p95_ms": 79.58540628897026,
+  "latency_max_ms": 84.33991717174649,
+  "run_id": "20260516T165949261717Z"
+}

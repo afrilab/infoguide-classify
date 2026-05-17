@@ -1,0 +1,17 @@
+{
+  "variant": "regex_spacy_hybrid_trf_context_filtered",
+  "stage": "context_filtering",
+  "config_path": "configs/anonymization/context_filter_hybrid_trf.yaml",
+  "created_at": "2026-05-16T16:49:00.222655+00:00",
+  "doc_count": 66,
+  "char_count": 146695,
+  "entity_count": 808,
+  "runtime_seconds": 0.007220459170639515,
+  "throughput_docs_per_sec": 9140.692917200498,
+  "throughput_chars_per_sec": 20316574.96195041,
+  "latency_avg_ms": 0.010192454228121223,
+  "latency_p50_ms": 0.009624985978007317,
+  "latency_p95_ms": 0.019853701815009117,
+  "latency_max_ms": 0.03208313137292862,
+  "run_id": "20260516T164900222932Z"
+}

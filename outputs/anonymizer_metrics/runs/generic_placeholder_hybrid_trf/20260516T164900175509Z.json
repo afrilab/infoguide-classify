@@ -1,0 +1,17 @@
+{
+  "variant": "generic_placeholder_hybrid_trf",
+  "stage": "generic_placeholder_conversion",
+  "config_path": "configs/anonymization/generic_placeholder_hybrid_trf.yaml",
+  "created_at": "2026-05-16T16:49:00.175205+00:00",
+  "doc_count": 66,
+  "char_count": 150157,
+  "entity_count": 0,
+  "runtime_seconds": 0.0048397500067949295,
+  "throughput_docs_per_sec": 13637.06801122725,
+  "throughput_chars_per_sec": 31025776.081240155,
+  "latency_avg_ms": 0.01019893115329923,
+  "latency_p50_ms": 0.008103903383016586,
+  "latency_p95_ms": 0.01298985444009304,
+  "latency_max_ms": 0.09645894169807434,
+  "run_id": "20260516T164900175509Z"
+}

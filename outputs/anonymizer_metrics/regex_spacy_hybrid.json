@@ -2,15 +2,120 @@
   "variant": "regex_spacy_hybrid",
   "stage": "anonymization",
   "config_path": "configs/anonymization/regex_spacy_hybrid.yaml",
-  "created_at": "2026-05-12T14:11:04.445554+00:00",
-  "doc_count": 66,
-  "char_count": 146695,
-  "entity_count": 813,
-  "runtime_seconds": 4.02091904100962,
-  "throughput_docs_per_sec": 16.41415788949283,
-  "throughput_chars_per_sec": 36482.95290301744,
-  "latency_avg_ms": 47.180273982865565,
-  "latency_p50_ms": 50.473792012780905,
-  "latency_p95_ms": 79.17857269058004,
-  "latency_max_ms": 85.03804099746048
+  "updated_at": "2026-05-16T17:01:37.205172+00:00",
+  "run_count": 10,
+  "runs_dir": "outputs/anonymizer_metrics/runs/regex_spacy_hybrid",
+  "run_files": [
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T164324535104Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T164632585828Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T164840315325Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T165032056103Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T165215302926Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T165400332156Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T165546175140Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T165804905272Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T165954294241Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid/20260516T170137202980Z.json"
+  ],
+  "latest_run": {
+    "variant": "regex_spacy_hybrid",
+    "stage": "anonymization",
+    "config_path": "configs/anonymization/regex_spacy_hybrid.yaml",
+    "created_at": "2026-05-16T17:01:37.202556+00:00",
+    "doc_count": 66,
+    "char_count": 146695,
+    "entity_count": 813,
+    "runtime_seconds": 4.052563792094588,
+    "throughput_docs_per_sec": 16.285986695322954,
+    "throughput_chars_per_sec": 36198.07300409698,
+    "latency_avg_ms": 47.57303662358247,
+    "latency_p50_ms": 51.37018742971122,
+    "latency_p95_ms": 78.37689615553245,
+    "latency_max_ms": 86.00195799954236,
+    "run_id": "20260516T170137202980Z"
+  },
+  "averages": {
+    "char_count": 146695.0,
+    "doc_count": 66.0,
+    "entity_count": 813.0,
+    "latency_avg_ms": 47.738730337710656,
+    "latency_max_ms": 86.72494576312602,
+    "latency_p50_ms": 50.99783125333488,
+    "latency_p95_ms": 78.83058540173806,
+    "runtime_seconds": 4.063931783405133,
+    "throughput_chars_per_sec": 36103.62406623039,
+    "throughput_docs_per_sec": 16.243492882315046
+  },
+  "metric_stats": {
+    "char_count": {
+      "avg": 146695.0,
+      "min": 146695.0,
+      "max": 146695.0,
+      "stddev": 0.0
+    },
+    "doc_count": {
+      "avg": 66.0,
+      "min": 66.0,
+      "max": 66.0,
+      "stddev": 0.0
+    },
+    "entity_count": {
+      "avg": 813.0,
+      "min": 813.0,
+      "max": 813.0,
+      "stddev": 0.0
+    },
+    "latency_avg_ms": {
+      "avg": 47.738730337710656,
+      "min": 46.74736424490358,
+      "max": 49.25982316490263,
+      "stddev": 0.7630036010806049
+    },
+    "latency_max_ms": {
+      "avg": 86.72494576312602,
+      "min": 84.67374998144805,
+      "max": 93.91520894132555,
+      "stddev": 2.859114480864585
+    },
+    "latency_p50_ms": {
+      "avg": 50.99783125333488,
+      "min": 49.91991654969752,
+      "max": 51.88950011506677,
+      "stddev": 0.7105152168465086
+    },
+    "latency_p95_ms": {
+      "avg": 78.83058540173806,
+      "min": 77.26842683041468,
+      "max": 82.93536491692066,
+      "stddev": 1.6278328558486705
+    },
+    "runtime_seconds": {
+      "avg": 4.063931783405133,
+      "min": 4.000470916973427,
+      "max": 4.176020875107497,
+      "stddev": 0.05916463695630943
+    },
+    "throughput_chars_per_sec": {
+      "avg": 36103.62406623039,
+      "min": 35127.93742828784,
+      "max": 36669.43293540619,
+      "stddev": 519.5960525703313
+    },
+    "throughput_docs_per_sec": {
+      "avg": 16.243492882315046,
+      "min": 15.80451869707214,
+      "max": 16.498057696150575,
+      "stddev": 0.23377306295130665
+    }
+  },
+  "char_count": 146695.0,
+  "doc_count": 66.0,
+  "entity_count": 813.0,
+  "latency_avg_ms": 47.738730337710656,
+  "latency_max_ms": 86.72494576312602,
+  "latency_p50_ms": 50.99783125333488,
+  "latency_p95_ms": 78.83058540173806,
+  "runtime_seconds": 4.063931783405133,
+  "throughput_chars_per_sec": 36103.62406623039,
+  "throughput_docs_per_sec": 16.243492882315046
 }

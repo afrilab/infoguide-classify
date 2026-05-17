@@ -2,15 +2,120 @@
   "variant": "regex_spacy_hybrid_trf_context_filtered",
   "stage": "context_filtering",
   "config_path": "configs/anonymization/context_filter_hybrid_trf.yaml",
-  "created_at": "2026-05-12T14:11:24.207704+00:00",
-  "doc_count": 66,
-  "char_count": 146695,
-  "entity_count": 808,
-  "runtime_seconds": 0.00841570901684463,
-  "throughput_docs_per_sec": 7842.476476776512,
-  "throughput_chars_per_sec": 17431092.22364743,
-  "latency_avg_ms": 0.010203877040608362,
-  "latency_p50_ms": 0.00954145798459649,
-  "latency_p95_ms": 0.019969011191278696,
-  "latency_max_ms": 0.03129197284579277
+  "updated_at": "2026-05-16T17:01:56.998929+00:00",
+  "run_count": 10,
+  "runs_dir": "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered",
+  "run_files": [
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T164343739331Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T164652005489Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T164900222932Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T165051620340Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T165236163966Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T165420979882Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T165605091155Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T165824857965Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T170014177219Z.json",
+    "outputs/anonymizer_metrics/runs/regex_spacy_hybrid_trf_context_filtered/20260516T170156997463Z.json"
+  ],
+  "latest_run": {
+    "variant": "regex_spacy_hybrid_trf_context_filtered",
+    "stage": "context_filtering",
+    "config_path": "configs/anonymization/context_filter_hybrid_trf.yaml",
+    "created_at": "2026-05-16T17:01:56.997031+00:00",
+    "doc_count": 66,
+    "char_count": 146695,
+    "entity_count": 808,
+    "runtime_seconds": 0.007990541867911816,
+    "throughput_docs_per_sec": 8259.7652438367,
+    "throughput_chars_per_sec": 18358579.734009467,
+    "latency_avg_ms": 0.010941290494167444,
+    "latency_p50_ms": 0.010124524123966694,
+    "latency_p95_ms": 0.023604254238307476,
+    "latency_max_ms": 0.034665921702980995,
+    "run_id": "20260516T170156997463Z"
+  },
+  "averages": {
+    "char_count": 146695.0,
+    "doc_count": 66.0,
+    "entity_count": 808.0,
+    "latency_avg_ms": 0.010306601215041044,
+    "latency_max_ms": 0.0324582913890481,
+    "latency_p50_ms": 0.009629235137254,
+    "latency_p95_ms": 0.020194699754938483,
+    "runtime_seconds": 0.007531991670839488,
+    "throughput_chars_per_sec": 19494179.129709654,
+    "throughput_docs_per_sec": 8770.686271248762
+  },
+  "metric_stats": {
+    "char_count": {
+      "avg": 146695.0,
+      "min": 146695.0,
+      "max": 146695.0,
+      "stddev": 0.0
+    },
+    "doc_count": {
+      "avg": 66.0,
+      "min": 66.0,
+      "max": 66.0,
+      "stddev": 0.0
+    },
+    "entity_count": {
+      "avg": 808.0,
+      "min": 808.0,
+      "max": 808.0,
+      "stddev": 0.0
+    },
+    "latency_avg_ms": {
+      "avg": 0.010306601215041044,
+      "min": 0.00998862511055036,
+      "max": 0.010941290494167444,
+      "stddev": 0.00030122938665515784
+    },
+    "latency_max_ms": {
+      "avg": 0.0324582913890481,
+      "min": 0.030082883313298225,
+      "max": 0.03554206341505051,
+      "stddev": 0.001988093959401551
+    },
+    "latency_p50_ms": {
+      "avg": 0.009629235137254,
+      "min": 0.009208451956510544,
+      "max": 0.010187970474362373,
+      "stddev": 0.00032533386045809873
+    },
+    "latency_p95_ms": {
+      "avg": 0.020194699754938483,
+      "min": 0.019229017198085785,
+      "max": 0.023604254238307476,
+      "stddev": 0.0012329749677423376
+    },
+    "runtime_seconds": {
+      "avg": 0.007531991670839488,
+      "min": 0.007220459170639515,
+      "max": 0.007990541867911816,
+      "stddev": 0.00024232544201463238
+    },
+    "throughput_chars_per_sec": {
+      "avg": 19494179.129709654,
+      "min": 18358579.734009467,
+      "max": 20316574.96195041,
+      "stddev": 619313.2191046171
+    },
+    "throughput_docs_per_sec": {
+      "avg": 8770.686271248762,
+      "min": 8259.7652438367,
+      "max": 9140.692917200498,
+      "stddev": 278.6371209714355
+    }
+  },
+  "char_count": 146695.0,
+  "doc_count": 66.0,
+  "entity_count": 808.0,
+  "latency_avg_ms": 0.010306601215041044,
+  "latency_max_ms": 0.0324582913890481,
+  "latency_p50_ms": 0.009629235137254,
+  "latency_p95_ms": 0.020194699754938483,
+  "runtime_seconds": 0.007531991670839488,
+  "throughput_chars_per_sec": 19494179.129709654,
+  "throughput_docs_per_sec": 8770.686271248762
 }
