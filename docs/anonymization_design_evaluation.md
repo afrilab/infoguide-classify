@@ -1,235 +1,259 @@
-# Anonymization Module Design
+# Anonymization Module: Design and Evaluation
 
-## Overview
+## 1. Purpose
 
-- This document defines the design of the PII Detection and Anonymization module in InfoGuide Pilot-2
-- The module detects and masks personally identifiable information (PII)
-- Detected entities are replaced with typed placeholders such as [PERSON], [ORG], [EMAIL]
+The anonymization module detects sensitive entities in processed documents and replaces them with standardized placeholders. It is designed as a configurable preprocessing stage for the larger document pipeline, so downstream classification and taxonomy steps can operate on text with reduced exposure of personally identifiable or sensitive information.
 
-## Input
+The module focuses on eight entity categories:
 
-- The module takes input from the preprocessing stage
-- Each document contains:
-  - doc_id
-  - metadata fields (source, url, etc.)
-  - processed_text
+| Category | Placeholder | Detection method |
+|---|---:|---|
+| PERSON | `[PERSON]` | NER |
+| ORGANIZATION / ORG | `[ORG]` | NER |
+| LOCATION | `[LOCATION]` | NER |
+| EMAIL | `[EMAIL]` | Regex |
+| PHONE | `[PHONE]` | Regex |
+| DATE | `[DATE]` | Regex |
+| IBAN | `[IBAN]` | Regex |
+| CREDIT_CARD | `[CREDIT_CARD]` | Regex |
 
-## Output
+This scope separates contextual entities, which require language understanding, from structured identifiers, which can be detected reliably through format-based recognizers.
 
-### Anonymized Documents
+## 2. Design Overview
 
-- Each document is extended with:
-  - anonymized_text
-- The original processed_text is preserved
+The anonymization module uses a hybrid detection architecture:
 
-### PII Detection Logs
+1. Regex recognizers detect structured PII such as email addresses, phone numbers, dates, IBANs, and credit card numbers.
+2. NER recognizers detect contextual entities such as people, organizations, and locations.
+3. A precedence policy resolves overlaps between recognizers.
+4. Optional post-processing filters reduce false positives.
+5. Final spans are replaced with placeholders in the anonymized output text.
 
-- Each detected entity is stored with:
-  - doc_id
-  - pii_type
-  - start
-  - end
-  - score
+The main implementation is in `src/anonymization/anonymizer.py`. Configuration is externalized in YAML files under `configs/anonymization/`, which keeps model choice, regex patterns, enabled entity types, placeholder mappings, thresholds, and output paths reproducible across experiments.
 
-## PII Scope
+## 3. Hybrid Detection Strategy
 
-- PERSON
-- ORG
-- LOCATION
-- EMAIL
-- URL
-- PHONE
-- IP_ADDRESS
-- DATE
-- CREDIT_CARD
-- IBAN
+### 3.1 Regex-Based Structured Detection
 
-## Placeholder Schema
+Regex detection is used for entity types whose surface form is relatively regular:
 
-- PERSON → [PERSON]
-- ORG → [ORG]
-- LOCATION → [LOCATION]
-- EMAIL → [EMAIL]
-- URL → [URL]
-- PHONE → [PHONE]
-- IP_ADDRESS → [IP]
-- DATE → [DATE]
-- CREDIT_CARD → [CREDIT_CARD]
-- IBAN → [IBAN]
+- `EMAIL`
+- `PHONE`
+- `DATE`
+- `IBAN`
+- `CREDIT_CARD`
 
-## Detection Strategy
+This approach gives strong precision for clearly formatted identifiers, but it does not cover contextual entities and can still produce false positives when non-sensitive values look similar to PII. Examples include template IDs, reference numbers, record codes, and transaction-like strings.
 
-### Rule-based (Regex)
+### 3.2 NER-Based Contextual Detection
 
-- EMAIL
-- URL
-- PHONE
-- IP_ADDRESS
-- IBAN
-- CREDIT_CARD
-- DATE
+NER is used for contextual entity types:
 
-### NER-based (spaCy via Presidio)
+- `PERSON`
+- `ORGANIZATION` / `ORG`
+- `LOCATION`
 
-- PERSON
-- ORG
-- LOCATION
+These entities depend more heavily on surrounding language. For example, a person name may appear with a title, as a partial name, in lowercase, or inside a sentence where fixed patterns are not enough. The project evaluates several contextual NER options:
 
-### Orchestration (Presidio)
+- spaCy `en_core_web_sm`
+- spaCy `en_core_web_lg`
+- spaCy `en_core_web_trf`
+- DeBERTa NER baseline
+- GLiNER open-vocabulary NER baseline
 
-- Combines regex and NER detections into a unified pipeline
-- Assigns confidence scores to detected entities
-- Applies anonymization using defined placeholders
+The spaCy variants are evaluated inside the primary hybrid pipeline. DeBERTa is evaluated both as a contextual baseline and as a replacement NER component in a regex + DeBERTa hybrid. GLiNER is evaluated as an external open-vocabulary baseline.
 
-## Precedence and Overlap Handling
+## 4. Overlap and Precedence Policy
 
-- Regex detections are applied first
-- Regex spans are treated as high-confidence and frozen
-- NER detections are applied afterward
-- If overlap occurs: regex span is preserved
+Hybrid systems can produce overlapping spans. The module applies a deterministic precedence rule:
 
-## Confidence Thresholding
+- Regex spans are treated as high-confidence structured PII.
+- When a regex span overlaps an NER span, the regex span is kept.
+- The overlapping NER span is removed.
+- Remaining spans are sorted by character offset before anonymization.
 
-- PERSON / ORG / LOCATION (NER-based): ≥ 0.50
-- Regex-based detections (EMAIL, URL, PHONE, IP_ADDRESS, IBAN, CREDIT_CARD, DATE): no confidence threshold is applied
-  - These are pattern-matched and treated as high-precision detections
-- Only entities above threshold (for NER) are anonymized
+This prevents duplicate masking and avoids cases where a contextual NER prediction partially overrides a structured identifier. The same principle is used when combining regex predictions with DeBERTa predictions in `src/anonymization/combine_regex_deberta_hybrid.py`.
 
-## Language Assumption
+## 5. Post-Processing Filters
 
-- Documents are assumed to be in English
+### 5.1 Generic Organization Filter
 
-## Failure Handling
+Organization detection is especially prone to false positives because many generic business phrases look like organization names. The module filters generic institutional unit names ending in terms such as:
 
-- If anonymization fails, the document remains unchanged
-- anonymized_text = processed_text
+- `division`
+- `department`
+- `team`
+- `unit`
+- `office`
+- `board`
+- `panel`
+- `committee`
 
-## Configurability
+For example, phrases such as `Compliance Division` or `Internal Audit Committee` are treated as functional descriptions rather than sensitive organizations. This filter helps preserve specific organization masking while avoiding unnecessary anonymization of generic internal structures.
 
-- All parameters are configurable via YAML files (not hardcoded in Python)
+### 5.2 Regex Context Filter
 
-- Configurable elements include:
-  - PII entity types
-  - placeholder mappings
-  - confidence thresholds
-  - regex patterns
-  - enabled/disabled recognizers
+Structured identifiers can also create false positives. The context filter in `src/anonymization/context_filter_regex_predictions.py` checks a configurable character window around each regex match. The current configuration uses a 50-character window.
 
-- Motivation:
-  - enables experimentation
-  - supports comparison of configurations
-  - enables ablation studies
+The filter removes a regex match when negative context appears without positive support. For example:
 
-## Evaluation Plan
+| Entity type | Positive cues | Negative cues |
+|---|---|---|
+| PHONE | `phone`, `mobile`, `contact`, `tel`, `call` | `reference`, `code`, `ticket`, `case`, `template` |
+| CREDIT_CARD | `card`, `credit card`, `payment`, `billing` | `reference`, `ticket`, `case`, `record`, `code` |
+| IBAN | `iban`, `bank account`, `account`, `transfer`, `payment` | `reference`, `sample`, `example`, `template`, `code` |
+| DATE | `date`, `effective`, `deadline`, `issued`, `signed` | `version`, `template`, `reference`, `record`, `code` |
+| EMAIL | `email`, `contact`, `mail` | `example`, `sample`, `placeholder`, `test` |
 
-The goal of this evaluation is to assess the accuracy of the anonymization module in detecting and replacing personally identifiable information (PII). The evaluation was conducted on a small dataset consisting of 11 synthetic documents created by generative ai, specifically for the task of testing the anonymization pipeline. Document id's for this task are: 0012, 0013...0022. Each document contains one or more instances of PII belonging to the entity types defined in the anonymization configuration.
+This filter is intentionally conservative. It mainly targets obvious lookalike values while preserving true sensitive identifiers when the surrounding text supports them.
 
-For evalution an answer key was manually created for each document. The evaluation was performed manually using the following process:
+## 6. Synthetic Benchmark Dataset
 
-- For each document, the processed text, anonymized output, and answer key were inspected.
+The anonymization module is evaluated on a synthetic benchmark because real enterprise documents contain limited labeled sensitive information. The benchmark contains 66 documents across policies, reports, emails, internal communications, HR documents, and structured forms.
 
-- Each PII instance listed in the answer key was checked to determine whether:
+The dataset includes 745 labeled entities across the target PII categories and 80 negative cases designed to test lookalike non-PII patterns. The synthetic dataset is used only as a controlled benchmark for entity-level evaluation; it is not treated as representative production data.
 
-  - it was correctly detected and anonymized
+## 7. Evaluation Methodology
 
-  - it was missed by the system
+The evaluator compares predicted entities against ground truth spans and reports precision, recall, and F1.
 
-  - it was incorrectly labeled.
+Two matching modes are used:
 
-- The following outcomes were recorded:
+| Mode | Definition |
+|---|---|
+| Strict | Entity type, start offset, and end offset must match exactly. |
+| Relaxed | Entity type must match and the predicted span must overlap the gold span. |
 
-  - True Positive (TP): A PII entity that exists in the answer key and was correctly detected and anonymized.
+The evaluator also reports:
 
-  - False Negative (FN): A PII entity present in the answer key that was not detected or anonymized.
+- per-entity-type metrics
+- per-document-type metrics
+- per-difficulty metrics
+- per-variation metrics
+- negative-case false positive rate
+- error files containing false positives, false negatives, and boundary errors
 
-  - False Positive (FP): A span that was anonymized by the system but does not correspond to a true PII instance.
+Runtime metrics are tracked separately under `outputs/anonymizer_metrics/`, including average runtime, throughput, and document-level latency.
 
-- Counts were aggregated across all documents to compute evaluation metrics.
+## 8. Evaluation Blocks
 
-## Results Summary
+| Evaluation block | Configurations | Purpose |
+|---|---|---|
+| Component contribution | Regex-only, spaCy-sm NER-only, regex + spaCy-sm hybrid | Measures the separate and combined value of structured regex detection and contextual NER. |
+| spaCy backbone comparison | Regex + spaCy-sm, regex + spaCy-lg, regex + spaCy-trf | Tests whether stronger spaCy NER backbones improve contextual detection. |
+| Regex context filtering | Regex + spaCy-trf, regex + spaCy-trf + context filter | Measures whether local context reduces structured-PII false positives. |
+| External hybrid replacement | Regex + spaCy-trf + context filter, regex + DeBERTa + context filter | Tests whether replacing spaCy with DeBERTa improves anonymization quality. |
+| Open-vocabulary baseline | GLiNER | Evaluates a prompt-driven NER architecture as an alternative baseline. |
 
-### Document-Level Results
+## 9. Overall Results
 
-| Document | True Positives | False Negatives | False Positives |
-|--------|--------|--------|--------|
-| Document 1 | 6 | 2 | 0 |
-| Document 2 | 5 | 2 | 1 |
-| Document 3 | 5 | 3 | 0 |
-| Document 4 | 4 | 2 | 1 |
-| Document 5 | 3 | 3 | 1 |
-| Document 6 | 4 | 1 | 0 |
-| Document 7 | 3 | 2 | 0 |
-| Document 8 | 2 | 2 | 0 |
-| Document 9 | 2 | 1 | 0 |
-| Document 10 | 2 | 2 | 0 |
-| Document 11 | 6 | 2 | 0 |
+| Model | Strict precision | Strict recall | Strict F1 | Relaxed precision | Relaxed recall | Relaxed F1 | Negative FP rate |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Regex-only | 0.8546 | 0.3235 | 0.4693 | 0.8794 | 0.3329 | 0.4830 | 0.1625 |
+| spaCy-sm NER-only | 0.5066 | 0.3624 | 0.4225 | 0.6329 | 0.4282 | 0.5108 | 0.1375 |
+| Regex + spaCy-sm | 0.6348 | 0.6859 | 0.6594 | 0.7297 | 0.7611 | 0.7451 | 0.3000 |
+| Regex + spaCy-lg | 0.6691 | 0.7463 | 0.7056 | 0.7669 | 0.8215 | 0.7933 | 0.3375 |
+| Regex + spaCy-trf | 0.7727 | 0.8443 | 0.8069 | 0.8808 | 0.9221 | 0.9010 | 0.2875 |
+| Regex + spaCy-trf + context filter | 0.7793 | 0.8389 | 0.8080 | 0.8893 | 0.9168 | 0.9028 | 0.2125 |
+| DeBERTa NER baseline | 0.8868 | 0.8737 | 0.8802 | 0.9473 | 0.9074 | 0.9269 | 0.0750 |
+| Regex + DeBERTa + context filter | 0.8797 | 0.8738 | 0.8768 | 0.9310 | 0.9060 | 0.9184 | 0.1625 |
+| GLiNER baseline | 0.6519 | 0.7691 | 0.7057 | 0.6884 | 0.7946 | 0.7377 | 0.2250 |
 
----
+## 10. Interpretation
 
-### Aggregated Results
+### 10.1 Regex and NER Are Complementary
 
-| Metric | Count |
-|------|------|
-| True Positives (TP) | 42 |
-| False Negatives (FN) | 20 |
-| False Positives (FP) | 3 |
+Regex-only detection has high precision but low recall because it covers only structured identifiers. NER-only detection finds contextual entities but misses structured types and produces more false positives. The hybrid spaCy-sm model improves over both isolated components, confirming that the two approaches cover different parts of the anonymization problem.
 
----
+### 10.2 Larger spaCy Backbones Improve Contextual Detection
 
-### Precision
+The spaCy backbone comparison shows a steady improvement from `sm` to `lg` to `trf`. The regex-detected entity types remain mostly unchanged across these runs because the regex component is fixed. The gains come mainly from contextual entity types: `PERSON`, `ORG`, and `LOCATION`.
 
-Precision measures the proportion of detected entities that are correct.
+The transformer-based spaCy model gives the best spaCy-based quality:
 
-Precision = TP / (TP + FP)
+- strict F1 improves from 0.6594 with spaCy-sm to 0.8069 with spaCy-trf
+- relaxed F1 improves from 0.7451 with spaCy-sm to 0.9010 with spaCy-trf
 
-Precision = 42 / (42 + 3) = **0.93**
+This improvement comes with higher runtime cost.
 
-A high precision indicates that the anonymization system rarely replaces non-PII text.
+| Model | Average runtime | Average latency |
+|---|---:|---:|
+| Regex + spaCy-sm | 4.06 s | 47.74 ms |
+| Regex + spaCy-lg | 4.81 s | 51.95 ms |
+| Regex + spaCy-trf | 12.53 s | 153.18 ms |
 
----
+### 10.3 Context Filtering Reduces Structured False Positives
 
-### Recall
+Adding the regex context filter to the spaCy-trf hybrid slightly improves precision and reduces negative-case false positives:
 
-Recall measures the proportion of true PII instances that were successfully detected.
+- strict precision increases from 0.7727 to 0.7793
+- relaxed precision increases from 0.8808 to 0.8893
+- negative-case false positive rate decreases from 0.2875 to 0.2125
 
-Recall = TP / (TP + FN)
+The clearest per-type improvements are for `IBAN`, `PHONE`, and `CREDIT_CARD`. `IBAN` reaches perfect precision and recall after filtering in the current benchmark. The filter has a smaller effect on `EMAIL`, which is already handled by a precise regex pattern.
 
-Recall = 42 / (42 + 20) = **0.68**
+### 10.4 DeBERTa Improves Accuracy but Costs More Runtime
 
-This indicates that while most detected entities are correct, the system fails to identify some true PII instances.
+The regex + DeBERTa + context-filtered hybrid achieves the strongest F1 among the full hybrid systems:
 
----
+- strict F1: 0.8768
+- relaxed F1: 0.9184
 
-### F1 Score
+Compared with regex + spaCy-trf + context filter, the DeBERTa hybrid has much higher precision and fewer false positives. However, DeBERTa is slower than the spaCy-trf hybrid backbone:
 
-The F1 score combines precision and recall into a single metric.
+| Model | Average runtime | Average latency |
+|---|---:|---:|
+| Regex + spaCy-trf | 12.53 s | 153.18 ms |
+| DeBERTa NER baseline | 23.71 s | 291.62 ms |
 
-F1 = 2 × (Precision × Recall) / (Precision + Recall)
+The context-filtered hybrid combination metrics are not used for runtime comparison because that stage measures only post-processing and combination, not full NER inference.
 
-F1 ≈ **0.78**
+### 10.5 GLiNER Is Flexible but Not Best for This Setup
 
----
+GLiNER is useful as an open-vocabulary NER baseline because it can detect prompted entity types without being restricted to a fixed model label set. In this benchmark, however, it produces more false positives and runs slower than the strongest alternatives:
 
-### Error Analysis
+- strict F1: 0.7057
+- relaxed F1: 0.7377
+- average runtime: 39.50 s
+- average latency: 408.44 ms
 
-Most **false negatives** occurred in the following situations:
+For this module, GLiNER is better treated as an exploratory baseline than as the selected anonymization approach.
 
-- organization names that were not recognized by the spaCy NER model  
-- URLs that were not captured by the regex recognizers  
-- secondary mentions of person names in free-text paragraphs  
+## 11. Final Model Selection
 
-False positives were relatively rare and typically occurred when numeric patterns were incorrectly matched as phone numbers or other identifiers.
+The selected pipeline configuration is:
 
-Overall, the system demonstrates **high precision but moderate recall**, indicating that the anonymization approach is conservative: it avoids incorrect anonymizations but sometimes fails to detect all PII instances.
+**Regex + spaCy-trf + regex context filter**
 
----
+This configuration is selected because it provides the best practical balance for the full pipeline:
 
-### Limitations
+- it is the strongest spaCy-based hybrid configuration
+- it achieves high relaxed F1 at 0.9028
+- it improves precision through context filtering
+- it is substantially faster than the DeBERTa and GLiNER alternatives
+- it keeps the implementation simple and configurable within the main anonymization pipeline
 
-This evaluation has several limitations.
+The regex + DeBERTa + context-filtered hybrid achieves higher F1, but it introduces a larger inference cost. It is therefore a strong accuracy-oriented alternative, while the spaCy-trf context-filtered hybrid is the preferred production-facing choice for the current pipeline.
 
-- The dataset size is small (11 documents), which limits the ability to generalize the results.
-- The documents used for testing were synthetically generated rather than collected from real-world sources.
-- Manual annotation and manual evaluation may introduce minor inconsistencies or human errors.
+## 12. Outputs
 
-Future work will evaluate the anonymization system on larger and more diverse real-world corpora in order to better assess its performance in practical scenarios.
+The anonymization module produces two main outputs:
+
+| Output | Purpose |
+|---|---|
+| `data/anonymized/*_documents.jsonl` | Document-level anonymized text used by downstream pipeline stages. |
+| `outputs/anonymizer_outputs/*_predictions.jsonl` | Entity predictions used for evaluation and error analysis. |
+
+Evaluation artifacts are written under `outputs/anonymizer_evaluation/`, and runtime summaries are written under `outputs/anonymizer_metrics/`.
+
+## 13. Limitations and Next Steps
+
+The current system is effective for the defined PII categories, but several limitations remain:
+
+- organization names remain difficult because the boundary between sensitive organizations and generic business units is sometimes ambiguous
+- context filtering is rule-based and may miss subtler false positives
+- regex patterns for structured identifiers can be further tuned for domain-specific formats
+- DeBERTa improves quality but requires a runtime trade-off
+- evaluation depends on synthetic benchmark coverage, so future validation on manually labeled real documents would strengthen confidence
+
+Potential improvements include weighted context filtering, more entity-specific negative rules, calibration of NER thresholds, and a more formal comparison of accuracy versus runtime for production deployment.
