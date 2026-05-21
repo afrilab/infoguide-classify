@@ -156,7 +156,11 @@ steps:
     enabled: false
     script: "src/classification/make_slide_artifacts.py"
     args: []
-  step12_compare_classification_models:
+  step12_discriminative_terms:
+    enabled: false
+    script: "src/classification/discriminative_terms.py"
+    args: []
+  step13_compare_classification_models:
     enabled: false
     script: "src/classification/compare_classification_runs.py"
     args:
