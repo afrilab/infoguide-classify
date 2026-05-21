@@ -2,13 +2,18 @@
 
 ## Summary
 
-| model           | prediction_file                                                                                                     |   documents |   correct | accuracy   | macro_f1   | weighted_f1   |   needs_review |   anonymized_field_docs |
-|:----------------|:--------------------------------------------------------------------------------------------------------------------|------------:|----------:|:-----------|:-----------|:--------------|---------------:|------------------------:|
-| tfidf           | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__tfidf.jsonl           |          98 |        86 | 87.8%      | 83.9%      | 89.7%         |              0 |                      95 |
-| embedding_large | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__embedding_large.jsonl |          98 |        82 | 83.7%      | 83.0%      | 88.6%         |              8 |                      95 |
-| embedding       | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__embedding.jsonl       |          98 |        81 | 82.7%      | 90.2%      | 87.3%         |              8 |                      95 |
-| zeroshot        | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__zeroshot.jsonl        |          98 |        47 | 48.0%      | 33.2%      | 48.1%         |             10 |                      95 |
-| zeroshot_large  | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__zeroshot_large.jsonl  |          98 |        24 | 24.5%      | 24.2%      | 35.0%         |             25 |                      95 |
+| model               | prediction_file                                                                                                     |   documents |   correct | accuracy   | macro_f1   | weighted_f1   |   needs_review |   anonymized_field_docs |
+|:--------------------|:--------------------------------------------------------------------------------------------------------------------|------------:|----------:|:-----------|:-----------|:--------------|---------------:|------------------------:|
+| tfidf               | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__tfidf.jsonl           |          98 |        86 | 87.8%      | 83.9%      | 89.7%         |              0 |                      95 |
+| logistic_regression | /Users/dogaizci/infoguide-classify/infoguide-classify/outputs/classification_outputs/supervised_baselines_cv.json   |          98 |        85 | 86.7%      | 66.4%      | 88.1%         |              0 |                       0 |
+| random_forest       | /Users/dogaizci/infoguide-classify/infoguide-classify/outputs/classification_outputs/supervised_baselines_cv.json   |          98 |        84 | 85.7%      | 66.0%      | 87.0%         |              0 |                       0 |
+| linear_svm          | /Users/dogaizci/infoguide-classify/infoguide-classify/outputs/classification_outputs/supervised_baselines_cv.json   |          98 |        83 | 84.7%      | 64.8%      | 85.9%         |              0 |                       0 |
+| embedding_large     | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__embedding_large.jsonl |          98 |        82 | 83.7%      | 83.0%      | 88.6%         |              8 |                      95 |
+| embedding           | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__embedding.jsonl       |          98 |        81 | 82.7%      | 90.2%      | 87.3%         |              8 |                      95 |
+| multinomial_nb      | /Users/dogaizci/infoguide-classify/infoguide-classify/outputs/classification_outputs/supervised_baselines_cv.json   |          98 |        76 | 77.6%      | 58.5%      | 77.8%         |              0 |                       0 |
+| distilbert          | /Users/dogaizci/infoguide-classify/infoguide-classify/outputs/classification_outputs/finetune_distilbert_cv.json    |          98 |        75 | 76.5%      | 57.2%      | 75.5%         |              0 |                       0 |
+| zeroshot            | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__zeroshot.jsonl        |          98 |        47 | 48.0%      | 33.2%      | 48.1%         |             10 |                      95 |
+| zeroshot_large      | /Users/dogaizci/infoguide-classify/infoguide-classify/data/classified/classification_results__zeroshot_large.jsonl  |          98 |        24 | 24.5%      | 24.2%      | 35.0%         |             25 |                      95 |
 
 ## Per-Document Predictions
 

@@ -1,0 +1,31 @@
+model,class,precision,recall,f1
+Logistic Regression,Forms_Structured,0.9474,0.9000,0.9231
+Logistic Regression,Policy_Procedure_Contract,0.8667,0.8966,0.8814
+Logistic Regression,Reports,0.9111,0.9111,0.9111
+Linear SVM,Forms_Structured,0.9474,0.9000,0.9231
+Linear SVM,Policy_Procedure_Contract,0.8846,0.7931,0.8364
+Linear SVM,Reports,0.8571,0.9333,0.8936
+Multinomial NB,Forms_Structured,1.0000,0.7500,0.8571
+Multinomial NB,Policy_Procedure_Contract,1.0000,0.5517,0.7111
+Multinomial NB,Reports,0.7143,1.0000,0.8333
+Random Forest,Forms_Structured,0.9524,1.0000,0.9756
+Random Forest,Policy_Procedure_Contract,0.8519,0.7931,0.8214
+Random Forest,Reports,0.8913,0.9111,0.9011
+TF-IDF cosine,Forms_Structured,0.9500,0.9500,0.9500
+TF-IDF cosine,Policy_Procedure_Contract,0.8929,0.8621,0.8772
+TF-IDF cosine,Reports,0.9318,0.9111,0.9213
+BGE Small embedding,Forms_Structured,0.9091,1.0000,0.9524
+BGE Small embedding,Policy_Procedure_Contract,0.9130,0.7241,0.8077
+BGE Small embedding,Reports,0.9512,0.8667,0.9070
+BGE Large embedding,Forms_Structured,0.9500,0.9500,0.9500
+BGE Large embedding,Policy_Procedure_Contract,0.9565,0.7586,0.8462
+BGE Large embedding,Reports,0.9524,0.8889,0.9195
+BART zero-shot NLI,Forms_Structured,0.4250,0.8500,0.5667
+BART zero-shot NLI,Policy_Procedure_Contract,0.0000,0.0000,0.0000
+BART zero-shot NLI,Reports,0.9375,0.6667,0.7792
+DeBERTa zero-shot NLI,Forms_Structured,1.0000,0.2500,0.4000
+DeBERTa zero-shot NLI,Policy_Procedure_Contract,0.1250,0.0345,0.0541
+DeBERTa zero-shot NLI,Reports,0.8571,0.4000,0.5455
+DistilBERT,Forms_Structured,0.9500,0.9500,0.9500
+DistilBERT,Policy_Procedure_Contract,0.8571,0.4138,0.5581
+DistilBERT,Reports,0.7333,0.9778,0.8381

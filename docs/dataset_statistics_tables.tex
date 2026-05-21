@@ -1,0 +1,107 @@
+% Dataset characterization tables for the report.
+% Requires: \usepackage{booktabs}  (and \usepackage{siunitx} optional for number alignment)
+% Drop each table where appropriate; captions/labels are placeholders.
+
+% ---------------------------------------------------------------------------
+\begin{table}[t]
+  \centering
+  \caption{Real corpus: documents per class (ground truth, $N=98$).
+  Class imbalance is severe (max:min $= 45{:}1$); the HR\_Documents singleton
+  is excluded from cross-validation, reducing CV to 3 classes ($N=94$).}
+  \label{tab:real-class-dist}
+  \begin{tabular}{lrr}
+    \toprule
+    Class & Count & Share \\
+    \midrule
+    Reports                    & 45 & 45.9\% \\
+    Policy\_Procedure\_Contract & 30 & 30.6\% \\
+    Forms\_Structured          & 22 & 22.4\% \\
+    HR\_Documents              &  1 &  1.0\% \\
+    \midrule
+    \textbf{Total}             & \textbf{98} & \textbf{100\%} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ---------------------------------------------------------------------------
+\begin{table}[t]
+  \centering
+  \caption{Real corpus: source and language distribution ($N=98$).
+  All documents are PDFs in English.}
+  \label{tab:real-source-lang}
+  \begin{tabular}{lrr}
+    \toprule
+    Source & Count & Share \\
+    \midrule
+    World Bank                   & 37 & 37.8\% \\
+    US Federal Reserve           & 24 & 24.5\% \\
+    BIS                          & 15 & 15.3\% \\
+    European Central Bank        & 11 & 11.2\% \\
+    Financial Action Task Force  & 11 & 11.2\% \\
+    \midrule
+    \textbf{Total}               & \textbf{98} & \textbf{100\%} \\
+    \midrule
+    Language: English (en)       & 98 & 100\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ---------------------------------------------------------------------------
+\begin{table}[t]
+  \centering
+  \caption{Real corpus: document length over 95 processed documents.
+  Total corpus size: 1{,}668{,}033 words. Length is highly variable
+  (SD $>$ mean for word count).}
+  \label{tab:doc-length}
+  \begin{tabular}{lrrrrr}
+    \toprule
+    Metric & Mean & Median & SD & Min & Max \\
+    \midrule
+    Words      &  17{,}558 &  11{,}342 &  18{,}781 & 131 &  82{,}321 \\
+    Characters & 114{,}688 &  75{,}005 & 120{,}644 & 943 & 540{,}630 \\
+    Sentences  &       695 &       506 &       744 &   5 &   3{,}495 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ---------------------------------------------------------------------------
+\begin{table}[t]
+  \centering
+  \caption{Real corpus: mean document length per class (words).
+  Length correlates strongly with class (Reports $\approx 7\times$
+  Forms\_Structured), a potential shortcut feature.}
+  \label{tab:length-per-class}
+  \begin{tabular}{lrrr}
+    \toprule
+    Class & $n$ & Mean & Median \\
+    \midrule
+    Reports                    & 45 & 25{,}258 & 16{,}106 \\
+    Policy\_Procedure\_Contract & 29 & 15{,}628 & 13{,}695 \\
+    Forms\_Structured          & 20 &  3{,}711 &     808 \\
+    HR\_Documents              &  1 &  4{,}000 &   4{,}000 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ---------------------------------------------------------------------------
+\begin{table}[t]
+  \centering
+  \caption{Synthetic corpus: documents per class ($N=66$).
+  Deliberately more balanced (max:min $= 2.2{:}1$) and covers classes
+  absent from real ground truth (Emails, Internal\_Communications).}
+  \label{tab:synthetic-class-dist}
+  \begin{tabular}{lrr}
+    \toprule
+    Class & Count & Share \\
+    \midrule
+    Policy\_Procedure\_Contract & 13 & 19.7\% \\
+    Reports                    & 13 & 19.7\% \\
+    Emails                     & 13 & 19.7\% \\
+    HR\_Documents              & 11 & 16.7\% \\
+    Internal\_Communications   & 10 & 15.2\% \\
+    Forms\_Structured          &  6 &  9.1\% \\
+    \midrule
+    \textbf{Total}             & \textbf{66} & \textbf{100\%} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
