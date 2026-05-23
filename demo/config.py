@@ -30,24 +30,31 @@ CLASSIFICATION_OUTPUTS_DIR = OUTPUTS / "classification_outputs"
 CLASSIFICATION_RESULTS_DIR = OUTPUTS / "classification_results"
 
 ANONYMIZATION_VARIANTS: dict[str, str] = {
-    "presidio_hybrid (sm, base)": "presidio_hybrid_documents.jsonl",
-    "presidio_hybrid (lg)": "presidio_hybrid_lg_documents.jsonl",
-    "presidio_hybrid (trf)": "presidio_hybrid_trf_documents.jsonl",
-    "presidio_hybrid (trf, context-filtered)": "presidio_hybrid_trf_context_filtered_documents.jsonl",
-    "presidio_hybrid (trf, generic placeholders)": "presidio_hybrid_trf_generic_placeholder_documents.jsonl",
-    "presidio (NER only)": "presidio_ner_only_documents.jsonl",
-    "presidio (regex only)": "presidio_regex_only_documents.jsonl",
+    "regex + spaCy hybrid (sm)": "regex_spacy_hybrid_documents.jsonl",
+    "regex + spaCy hybrid (lg)": "regex_spacy_hybrid_lg_documents.jsonl",
+    "regex + spaCy hybrid (trf)": "regex_spacy_hybrid_trf_documents.jsonl",
+    "regex + spaCy hybrid (trf, context-filtered)": "regex_spacy_hybrid_trf_context_filtered_documents.jsonl",
+    "regex + spaCy hybrid (trf, generic placeholders)": "regex_spacy_hybrid_trf_generic_placeholder_documents.jsonl",
+    "regex + DeBERTa hybrid (context-filtered)": "regex_deberta_hybrid_context_filtered_documents.jsonl",
+    "DeBERTa NER baseline": "deberta_ner_baseline_documents.jsonl",
+    "GLiNER baseline": "gliner_baseline_documents.jsonl",
+    "spaCy NER only": "spacy_ner_only_documents.jsonl",
+    "regex only": "regex_only_documents.jsonl",
 }
-ANONYMIZATION_DEFAULT = "presidio_hybrid (sm, base)"
+ANONYMIZATION_DEFAULT = "regex + spaCy hybrid (sm)"
 
 # Folder name -> human label, for outputs/anonymizer_evaluation/<folder>/
 ANON_EVAL_APPROACHES: dict[str, str] = {
-    "presidio_hybrid": "presidio_hybrid (sm, base)",
-    "presidio_hybrid_lg": "presidio_hybrid (lg)",
-    "presidio_hybrid_trf": "presidio_hybrid (trf)",
-    "presidio_hybrid_trf_context_filtered": "presidio_hybrid (trf, context-filtered)",
-    "presidio_ner_only": "presidio (NER only)",
-    "presidio_regex_only": "presidio (regex only)",
+    "regex_spacy_hybrid": "regex + spaCy hybrid (sm)",
+    "regex_spacy_hybrid_lg": "regex + spaCy hybrid (lg)",
+    "regex_spacy_hybrid_trf": "regex + spaCy hybrid (trf)",
+    "regex_spacy_hybrid_trf_context_filtered": "regex + spaCy hybrid (trf, context-filtered)",
+    "regex_deberta_hybrid_context_filtered": "regex + DeBERTa hybrid (context-filtered)",
+    "deberta_ner_baseline": "DeBERTa NER baseline",
+    "deberta_ner_baseline_full": "DeBERTa NER baseline (full)",
+    "gliner_baseline": "GLiNER baseline",
+    "spacy_ner_only": "spaCy NER only",
+    "regex_only": "regex only",
 }
 
 # Unified classification registry — every model is selectable regardless of corpus.
