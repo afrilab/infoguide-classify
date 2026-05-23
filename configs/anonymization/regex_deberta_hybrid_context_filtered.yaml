@@ -1,5 +1,5 @@
 benchmark_path: data/synthetic/benchmark.json
-input_docs: data/synthetic/benchmark.json
+input_docs: data/processed/clean_documents.jsonl
 
 regex_predictions: outputs/anonymizer_outputs/regex_only_predictions.jsonl
 ner_predictions: outputs/anonymizer_outputs/deberta_ner_baseline_predictions.jsonl

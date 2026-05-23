@@ -1,8 +1,9 @@
 import argparse
 import json
+import re
 import time
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import yaml
 
@@ -56,7 +57,32 @@ def iter_text_windows(
     text: str,
     max_chars: int,
     overlap_chars: int,
+    max_words: Optional[int] = None,
+    overlap_words: int = 0,
 ) -> Iterable[Tuple[int, str]]:
+    if max_words and max_words > 0:
+        word_spans = list(re.finditer(r"\S+", text))
+        if len(word_spans) <= max_words:
+            yield 0, text
+            return
+
+        step_words = max(1, max_words - max(0, overlap_words))
+        word_start = 0
+
+        while word_start < len(word_spans):
+            word_end = min(word_start + max_words, len(word_spans))
+            start = word_spans[word_start].start()
+            end = word_spans[word_end - 1].end()
+
+            yield start, text[start:end]
+
+            if word_end >= len(word_spans):
+                break
+
+            word_start += step_words
+
+        return
+
     if max_chars <= 0 or len(text) <= max_chars:
         yield 0, text
         return
@@ -127,10 +153,18 @@ def predict_doc_entities(
     threshold: float,
     max_chars: int,
     overlap_chars: int,
+    max_words: Optional[int],
+    overlap_words: int,
 ) -> List[Entity]:
     entities: List[Entity] = []
 
-    for offset, window_text in iter_text_windows(text, max_chars, overlap_chars):
+    for offset, window_text in iter_text_windows(
+        text=text,
+        max_chars=max_chars,
+        overlap_chars=overlap_chars,
+        max_words=max_words,
+        overlap_words=overlap_words,
+    ):
         raw_entities = model.predict_entities(
             window_text,
             labels,
@@ -176,6 +210,9 @@ def main() -> None:
     threshold = float(cfg.get("threshold", 0.5))
     max_chars = int(cfg.get("max_chars", 3000))
     overlap_chars = int(cfg.get("overlap_chars", 300))
+    max_words = cfg.get("max_words")
+    max_words = int(max_words) if max_words is not None else None
+    overlap_words = int(cfg.get("overlap_words", 0))
     doc_id_prefixes = [str(prefix) for prefix in cfg.get("doc_id_prefixes", [])]
     text_field = str(cfg.get("text_field", "processed_text"))
     apply_generic_org_filter = bool(cfg.get("apply_generic_org_filter", True))
@@ -214,6 +251,8 @@ def main() -> None:
             threshold=threshold,
             max_chars=max_chars,
             overlap_chars=overlap_chars,
+            max_words=max_words,
+            overlap_words=overlap_words,
         )
         if apply_generic_org_filter:
             entities = filter_generic_org_units(entities)
