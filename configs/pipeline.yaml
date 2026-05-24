@@ -22,23 +22,13 @@ steps:
       - "--alpha"
       - "0.7"
       - "--store_debug"
-  step2c_taxonomy_rule_boosted:
-    enabled: true
-    script: "src/taxonomy/assign_taxonomy_rule_boosted.py"
-    args:
-      - "--documents"
-      - "data/processed/clean_documents.jsonl"
-      - "--base_predictions"
-      - "data/outputs/taxonomy_assignments_embeddings.jsonl"
-      - "--output"
-      - "data/outputs/taxonomy_assignments_rule_boosted.jsonl"
   step2d_taxonomy_evaluation:
     enabled: true
     script: "src/taxonomy/evaluate_taxonomy_accuracy.py"
     args:
       - "--predictions"
-      - "data/outputs/taxonomy_assignments_rule_boosted.jsonl"
-      - "--gold"
+      - "data/outputs/taxonomy_assignments_embeddings.jsonl"
+      - "--labels"
       - "data/labels/taxonomy_gold_labels.jsonl"
   step3a_anonymization_regex_only:
     enabled: true
