@@ -1,4 +1,4 @@
-input_path: data/anonymized/presidio_hybrid_trf_generic_placeholder_documents.jsonl
+input_path: data/anonymized/regex_spacy_hybrid_trf_generic_placeholder_documents.jsonl
 output_path: data/classified/syn_tfidf_generic.jsonl
 text_fields_priority:
 - anonymized_text

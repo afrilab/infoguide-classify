@@ -1,0 +1,17 @@
+{
+  "variant": "regex_spacy_hybrid",
+  "stage": "anonymization",
+  "config_path": "configs/anonymization/regex_spacy_hybrid.yaml",
+  "created_at": "2026-05-16T16:55:46.174732+00:00",
+  "doc_count": 66,
+  "char_count": 146695,
+  "entity_count": 813,
+  "runtime_seconds": 4.022071916842833,
+  "throughput_docs_per_sec": 16.409452979599475,
+  "throughput_chars_per_sec": 36472.49552791432,
+  "latency_avg_ms": 47.22803153774955,
+  "latency_p50_ms": 50.14558357652277,
+  "latency_p95_ms": 77.9760098666884,
+  "latency_max_ms": 85.26783296838403,
+  "run_id": "20260516T165546175140Z"
+}

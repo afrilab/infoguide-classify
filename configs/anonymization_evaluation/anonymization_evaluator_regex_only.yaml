@@ -3,6 +3,6 @@
 benchmark_path: data/synthetic/benchmark.json
 
 models:
-  - model: presidio_regex_only
-    prediction_path: outputs/anonymizer_outputs/presidio_regex_only_predictions.jsonl
-    output_dir: outputs/anonymizer_evaluation/presidio_regex_only
+  - model: regex_only
+    prediction_path: outputs/anonymizer_outputs/regex_only_predictions.jsonl
+    output_dir: outputs/anonymizer_evaluation/regex_only

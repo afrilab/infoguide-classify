@@ -1,0 +1,81 @@
+doc_id,type,text,incorrectly_detected,matched_predictions
+syn_doc_001,ORG,The Risk Committee,False,[]
+syn_doc_001,ORG,Global Compliance Division,False,[]
+syn_doc_001,ORG,Audit and Monitoring Unit,False,[]
+syn_doc_003,ORG,Internal Review Board,False,[]
+syn_doc_003,ORG,Internal Audit Support Unit,False,[]
+syn_doc_003,ORG,Internal Audit Office,False,[]
+syn_doc_005,ORG,Anti-Money Laundering,False,[]
+syn_doc_005,ORG,Know Your Customer,False,[]
+syn_doc_005,ORG,The Compliance Review Panel,False,[]
+syn_doc_006,ORG,Audit Steering Committee,False,[]
+syn_doc_006,ORG,Audit Oversight Division,False,[]
+syn_doc_006,PERSON,Smith,True,"[{""type"": ""PERSON"", ""text"": ""Smith"", ""start"": 2422, ""end"": 2427, ""score"": 0.85}]"
+syn_doc_007,DATE,2025-12-25,False,[]
+syn_doc_008,ORG,Financial Oversight Panel,False,[]
+syn_doc_008,PHONE,532-123-4567,True,"[{""type"": ""PHONE"", ""text"": ""532-123-4567"", ""start"": 2680, ""end"": 2692, ""score"": 1.0}]"
+syn_doc_008,DATE,2023-778,False,[]
+syn_doc_009,ORG,Oversight Forum,False,[]
+syn_doc_009,IBAN,TP330006100519786457841326,False,[]
+syn_doc_009,PERSON,Becker,True,"[{""type"": ""PERSON"", ""text"": ""Becker"", ""start"": 2349, ""end"": 2355, ""score"": 0.85}]"
+syn_doc_010,ORG,Documentation Review Council,False,[]
+syn_doc_010,ORG,Governance and Documentation Division,False,[]
+syn_doc_010,PERSON,Anderson,True,"[{""type"": ""PERSON"", ""text"": ""Anderson"", ""start"": 1710, ""end"": 1718, ""score"": 0.85}]"
+syn_doc_011,ORG,central policy repository,False,[]
+syn_doc_011,DATE,2025-12-25,True,"[{""type"": ""DATE"", ""text"": ""2025-12-25"", ""start"": 1949, ""end"": 1959, ""score"": 1.0}]"
+syn_doc_011,PHONE,532-123-4567,True,"[{""type"": ""PHONE"", ""text"": ""532-123-4567"", ""start"": 2024, ""end"": 2036, ""score"": 1.0}]"
+syn_doc_012,ORG,Office of General Counsel,True,"[{""type"": ""ORG"", ""text"": ""Office of General Counsel"", ""start"": 68, ""end"": 93, ""score"": 0.85}]"
+syn_doc_012,IBAN,WT330006100519786457841326,False,[]
+syn_doc_013,ORG,central governance function,False,[]
+syn_doc_013,ORG,Governance Oversight Lead,False,[]
+syn_doc_013,PERSON,Johnson,False,[]
+syn_doc_014,CREDIT_CARD,4111 1111 1111 1111,False,[]
+syn_doc_015,DATE,2024,False,[]
+syn_doc_015,LOCATION,oslo,False,[]
+syn_doc_016,ORG,Cross-Border Transaction Anomaly Review Report,False,[]
+syn_doc_018,DATE,11/12/11,True,"[{""type"": ""DATE"", ""text"": ""11/12/11"", ""start"": 1650, ""end"": 1658, ""score"": 1.0}]"
+syn_doc_019,PHONE,22 678 4412,False,[]
+syn_doc_020,DATE,early November,False,[]
+syn_doc_020,ORG,Internal Coordination Office,False,[]
+syn_doc_021,PERSON,John Doe,True,"[{""type"": ""PERSON"", ""text"": ""John Doe"", ""start"": 2433, ""end"": 2441, ""score"": 0.85}]"
+syn_doc_023,PERSON,Jane Smith,True,"[{""type"": ""PERSON"", ""text"": ""Jane Smith"", ""start"": 2643, ""end"": 2653, ""score"": 0.85}]"
+syn_doc_023,LOCATION,Central Region,True,"[{""type"": ""LOCATION"", ""text"": ""Central Region"", ""start"": 2490, ""end"": 2504, ""score"": 0.85}]"
+syn_doc_024,ORG,Multi-Stage Transaction Activity Investigation Report,False,[]
+syn_doc_027,LOCATION,London Office,False,[]
+syn_doc_029,ORG,Paris Office,False,[]
+syn_doc_031,DATE,2024-04,False,[]
+syn_doc_031,ORG,security group,False,[]
+syn_doc_032,LOCATION,East Region Office Zone,True,"[{""type"": ""LOCATION"", ""text"": ""East Region Office Zone"", ""start"": 2309, ""end"": 2332, ""score"": 0.85}]"
+syn_doc_033,LOCATION,North Compliance Zone,True,"[{""type"": ""LOCATION"", ""text"": ""North Compliance Zone"", ""start"": 2505, ""end"": 2526, ""score"": 0.85}]"
+syn_doc_034,PERSON,Usern Temp,False,[]
+syn_doc_035,ORG,support coordination group,False,[]
+syn_doc_035,ORG,Regional Offices,False,[]
+syn_doc_039,EMAIL,finance.team@internal-ref,False,[]
+syn_doc_039,ORG,Berlin Office,False,[]
+syn_doc_040,EMAIL,client.update@hsbc-temp,False,[]
+syn_doc_042,PERSON,Payment Check,False,[]
+syn_doc_042,CREDIT_CARD,4532-7812-9944-1203,True,"[{""type"": ""CREDIT_CARD"", ""text"": ""4532-7812-9944-1203"", ""start"": 436, ""end"": 455, ""score"": 1.0}]"
+syn_doc_043,ORG,Finance Group,True,"[{""type"": ""ORG"", ""text"": ""Finance Group"", ""start"": 994, ""end"": 1007, ""score"": 0.85}]"
+syn_doc_043,ORG,London Office,False,[]
+syn_doc_044,ORG,Operations Team,False,[]
+syn_doc_045,ORG,Risk Team,False,[]
+syn_doc_046,PERSON,temp-user-01,False,[]
+syn_doc_046,PERSON,Chief,False,[]
+syn_doc_048,IBAN,ACC-009988,False,[]
+syn_doc_048,CREDIT_CARD,1111-1111-1111-1111,True,"[{""type"": ""CREDIT_CARD"", ""text"": ""1111-1111-1111-1111"", ""start"": 512, ""end"": 531, ""score"": 1.0}]"
+syn_doc_049,PERSON,P Temp,False,[]
+syn_doc_049,IBAN,IBAN-REF-2024-7788,False,[]
+syn_doc_050,ORG,Human Resources Department,False,[]
+syn_doc_051,ORG,New York Office,False,[]
+syn_doc_051,ORG,Financial Operations department,False,[]
+syn_doc_052,LOCATION,Austin,False,[]
+syn_doc_053,LOCATION,Paris,False,[]
+syn_doc_054,DATE,2024-05,False,[]
+syn_doc_057,DATE,Cycle 05 Update,False,[]
+syn_doc_057,PERSON,Captain,False,[]
+syn_doc_058,PERSON,Atatürk,False,[]
+syn_doc_061,DATE,2024-05,False,[]
+syn_doc_061,CREDIT_CARD,4532-7782-9900-1203,True,"[{""type"": ""CREDIT_CARD"", ""text"": ""4532-7782-9900-1203"", ""start"": 837, ""end"": 856, ""score"": 1.0}]"
+syn_doc_65,DATE,REG-2024-06-221,False,[]
+syn_doc_67,CREDIT_CARD,4532998877660000,False,[]
+syn_doc_67,DATE,06112024,False,[]

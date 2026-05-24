@@ -1,0 +1,17 @@
+{
+  "variant": "deberta_ner_baseline",
+  "stage": "anonymization",
+  "config_path": "configs/anonymization/deberta_ner_baseline.yaml",
+  "created_at": "2026-05-16T16:44:47.334487+00:00",
+  "doc_count": 66,
+  "char_count": 146695,
+  "entity_count": 531,
+  "runtime_seconds": 23.86501979106106,
+  "throughput_docs_per_sec": 2.7655539604757053,
+  "throughput_chars_per_sec": 6146.8627004846,
+  "latency_avg_ms": 295.38198151611584,
+  "latency_p50_ms": 322.07341655157506,
+  "latency_p95_ms": 480.26718728942797,
+  "latency_max_ms": 912.8452502191067,
+  "run_id": "20260516T164447334643Z"
+}

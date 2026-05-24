@@ -1,0 +1,17 @@
+{
+  "variant": "gliner_baseline",
+  "stage": "anonymization",
+  "config_path": "configs/anonymization/gliner_baseline.yaml",
+  "created_at": "2026-05-16T16:51:30.430799+00:00",
+  "doc_count": 66,
+  "char_count": 146695,
+  "entity_count": 926,
+  "runtime_seconds": 38.771954458905384,
+  "throughput_docs_per_sec": 1.7022613618808868,
+  "throughput_chars_per_sec": 3783.5337951684346,
+  "latency_avg_ms": 403.28928148444516,
+  "latency_p50_ms": 455.7179999537766,
+  "latency_p95_ms": 679.7351978020743,
+  "latency_max_ms": 822.6349169854075,
+  "run_id": "20260516T165130431210Z"
+}

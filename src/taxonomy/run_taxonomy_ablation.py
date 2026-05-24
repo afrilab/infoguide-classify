@@ -12,9 +12,9 @@ Usage:
   python src/taxonomy/run_taxonomy_ablation.py
 
 Outputs:
-  data/outputs/ablation/taxonomy_ablation_results.csv
-  data/outputs/ablation/taxonomy_ablation_results.md
-  data/outputs/ablation/*.jsonl
+  outputs/taxonomy/ablation/taxonomy_ablation_results.csv
+  outputs/taxonomy/ablation/taxonomy_ablation_results.md
+  outputs/taxonomy/ablation/*.jsonl
 """
 
 from __future__ import annotations
@@ -230,7 +230,7 @@ def build_experiments(
                     "--input",
                     str(input_path),
                     "--labels",
-                    "data/labels/taxonomy_gold_labels.jsonl",
+                    "outputs/taxonomy/labels/taxonomy_gold_labels.jsonl",
                     "--output",
                     str(out_dir / "flat_tfidf_logreg_loo.jsonl"),
                     "--method",
@@ -249,7 +249,7 @@ def build_experiments(
                     "--input",
                     str(input_path),
                     "--labels",
-                    "data/labels/taxonomy_gold_labels.jsonl",
+                    "outputs/taxonomy/labels/taxonomy_gold_labels.jsonl",
                     "--output",
                     str(out_dir / "topdown_tfidf_logreg_loo.jsonl"),
                     "--method",
@@ -268,7 +268,7 @@ def build_experiments(
                     "--input",
                     str(input_path),
                     "--labels",
-                    "data/labels/taxonomy_gold_labels.jsonl",
+                    "outputs/taxonomy/labels/taxonomy_gold_labels.jsonl",
                     "--output",
                     str(out_dir / "flat_tfidf_svm_loo.jsonl"),
                     "--method",
@@ -287,7 +287,7 @@ def build_experiments(
                     "--input",
                     str(input_path),
                     "--labels",
-                    "data/labels/taxonomy_gold_labels.jsonl",
+                    "outputs/taxonomy/labels/taxonomy_gold_labels.jsonl",
                     "--output",
                     str(out_dir / "topdown_tfidf_svm_loo.jsonl"),
                     "--method",
@@ -434,7 +434,7 @@ def write_markdown(path: Path, rows: List[Dict[str, Any]]) -> None:
             "{level_3_macro_f1:.4f} | {correct}/{total} | {notes} |".format(**row)
         )
     lines.append("")
-    lines.append("Manual single-annotator gold label file: `data/labels/taxonomy_gold_labels.jsonl`.")
+    lines.append("Gold labels: `outputs/taxonomy/labels/taxonomy_gold_labels.jsonl`.")
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -443,9 +443,9 @@ def main() -> None:
     ap.add_argument("--input", default="data/processed/clean_documents.jsonl")
     ap.add_argument("--chunks", default="data/processed/chunks.jsonl")
     ap.add_argument("--taxonomy", default="configs/taxonomy.yaml")
-    ap.add_argument("--labels", default="data/labels/taxonomy_gold_labels.jsonl")
+    ap.add_argument("--labels", default="outputs/taxonomy/labels/taxonomy_gold_labels.jsonl")
     ap.add_argument("--gold", dest="labels", help=argparse.SUPPRESS)
-    ap.add_argument("--out_dir", default="data/outputs/ablation")
+    ap.add_argument("--out_dir", default="outputs/taxonomy/ablation")
     ap.add_argument("--skip_existing", action="store_true")
     args = ap.parse_args()
 

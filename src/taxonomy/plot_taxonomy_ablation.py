@@ -3,8 +3,8 @@ Create visual comparisons for taxonomy ablation results.
 
 Usage:
   python src/taxonomy/plot_taxonomy_ablation.py \
-    --input data/outputs/ablation/taxonomy_ablation_results.csv \
-    --out_dir data/outputs/ablation/figures
+    --input outputs/taxonomy/ablation/taxonomy_ablation_results.csv \
+    --out_dir outputs/taxonomy/ablation/figures
 """
 
 from __future__ import annotations
@@ -262,15 +262,15 @@ def save_confusion_matrix(
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--input", default="data/outputs/ablation/taxonomy_ablation_results.csv")
-    ap.add_argument("--out_dir", default="data/outputs/ablation/figures")
-    ap.add_argument("--labels", default="data/labels/taxonomy_gold_labels.jsonl")
+    ap.add_argument("--input", default="outputs/taxonomy/ablation/taxonomy_ablation_results.csv")
+    ap.add_argument("--out_dir", default="outputs/taxonomy/ablation/figures")
+    ap.add_argument("--labels", default="outputs/taxonomy/labels/taxonomy_gold_labels.jsonl")
     ap.add_argument("--gold", dest="labels", help=argparse.SUPPRESS)
-    ap.add_argument("--learned_predictions", default="data/outputs/taxonomy_assignments_embeddings.jsonl")
-    ap.add_argument("--flat_predictions", default="data/outputs/ablation/flat_tfidf_logreg_loo.jsonl")
-    ap.add_argument("--topdown_predictions", default="data/outputs/ablation/topdown_tfidf_logreg_loo.jsonl")
-    ap.add_argument("--flat_svm_predictions", default="data/outputs/ablation/flat_tfidf_svm_loo.jsonl")
-    ap.add_argument("--topdown_svm_predictions", default="data/outputs/ablation/topdown_tfidf_svm_loo.jsonl")
+    ap.add_argument("--learned_predictions", default="outputs/taxonomy/taxonomy_assignments_embeddings.jsonl")
+    ap.add_argument("--flat_predictions", default="outputs/taxonomy/ablation/flat_tfidf_logreg_loo.jsonl")
+    ap.add_argument("--topdown_predictions", default="outputs/taxonomy/ablation/topdown_tfidf_logreg_loo.jsonl")
+    ap.add_argument("--flat_svm_predictions", default="outputs/taxonomy/ablation/flat_tfidf_svm_loo.jsonl")
+    ap.add_argument("--topdown_svm_predictions", default="outputs/taxonomy/ablation/topdown_tfidf_svm_loo.jsonl")
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)

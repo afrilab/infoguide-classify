@@ -31,6 +31,33 @@ DEFAULT_RUNS = {
     "zeroshot_large": ROOT / "data" / "classified" / "classification_results__zeroshot_large.jsonl",
 }
 
+# CV-based runs: per-doc predictions are nested inside aggregate CV JSON files.
+# Each entry maps a run name → (json path, accessor). The accessor returns a
+# list of {doc_id, y_pred} records given the loaded JSON.
+SUPERVISED_BASELINES_JSON = DEFAULT_OUT_DIR / "supervised_baselines_cv.json"
+DISTILBERT_JSON = DEFAULT_OUT_DIR / "finetune_distilbert_cv.json"
+
+
+def _supervised_baseline_predictions(blob: dict, model_key: str) -> list[dict]:
+    return (blob.get("models", {}).get(model_key, {}) or {}).get("predictions", []) or []
+
+
+def _distilbert_predictions(blob: dict) -> list[dict]:
+    return blob.get("predictions", []) or []
+
+
+DEFAULT_CV_RUNS: list[tuple[str, Path, "callable"]] = [
+    ("logistic_regression", SUPERVISED_BASELINES_JSON,
+     lambda b: _supervised_baseline_predictions(b, "LogisticRegression")),
+    ("linear_svm", SUPERVISED_BASELINES_JSON,
+     lambda b: _supervised_baseline_predictions(b, "LinearSVM")),
+    ("multinomial_nb", SUPERVISED_BASELINES_JSON,
+     lambda b: _supervised_baseline_predictions(b, "MultinomialNB")),
+    ("random_forest", SUPERVISED_BASELINES_JSON,
+     lambda b: _supervised_baseline_predictions(b, "RandomForest")),
+    ("distilbert", DISTILBERT_JSON, _distilbert_predictions),
+]
+
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
@@ -66,6 +93,28 @@ def load_predictions(name: str, path: Path) -> pd.DataFrame:
     )
 
 
+def load_cv_predictions(name: str, path: Path, accessor) -> pd.DataFrame:
+    """Load per-doc predictions from a CV-style JSON file (no confidence/margin)."""
+    cols = [f"{name}_prediction", f"{name}_confidence", f"{name}_margin", f"{name}_used_field"]
+    if not path.exists():
+        print(f"[WARN] Skipping {name}: {path} not found")
+        return pd.DataFrame(columns=["doc_id", *cols])
+
+    blob = json.loads(path.read_text(encoding="utf-8"))
+    records = accessor(blob)
+    if not records:
+        print(f"[WARN] Skipping {name}: no predictions found inside {path}")
+        return pd.DataFrame(columns=["doc_id", *cols])
+
+    df = pd.DataFrame(records)[["doc_id", "y_pred"]].rename(
+        columns={"y_pred": f"{name}_prediction"}
+    )
+    df[f"{name}_confidence"] = None
+    df[f"{name}_margin"] = None
+    df[f"{name}_used_field"] = None
+    return df[["doc_id", *cols]]
+
+
 def fmt_pct(value: float) -> str:
     return f"{value * 100:.1f}%"
 
@@ -97,16 +146,27 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     runs = dict(args.run) if args.run else {k: v for k, v in DEFAULT_RUNS.items() if v.exists()}
-    if not runs:
+    # CV-based runs are only added when the user hasn't manually specified --run.
+    cv_runs = [(n, p, a) for (n, p, a) in DEFAULT_CV_RUNS if p.exists()] if not args.run else []
+
+    if not runs and not cv_runs:
         print("No prediction files found — skipping comparison.")
         return
     gt_df = load_ground_truth(Path(args.gt_path) if args.gt_path else GT_PATH)
 
     summary_rows: list[dict[str, Any]] = []
     comparison_df = gt_df.copy()
+    # Unified iteration: (name, source_label, pred_df). source_label goes into the summary.
+    iter_runs: list[tuple[str, str, pd.DataFrame]] = [
+        (name, str(path), load_predictions(name, Path(path)))
+        for name, path in runs.items()
+    ]
+    iter_runs += [
+        (name, str(path), load_cv_predictions(name, path, accessor))
+        for name, path, accessor in cv_runs
+    ]
 
-    for name, path in runs.items():
-        pred_df = load_predictions(name, Path(path))
+    for name, source, pred_df in iter_runs:
         eval_df = gt_df.merge(pred_df, on="doc_id", how="left")
         y_true = eval_df["true_label"].tolist()
         y_pred = eval_df[f"{name}_prediction"].fillna("MISSING").tolist()
@@ -125,7 +185,7 @@ def main() -> None:
         summary_rows.append(
             {
                 "model": name,
-                "prediction_file": str(path),
+                "prediction_file": source,
                 "documents": len(eval_df),
                 "correct": int(correct.sum()),
                 "accuracy": accuracy_score(y_true, y_pred),

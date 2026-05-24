@@ -1,0 +1,4 @@
+type,strict_precision,strict_recall,strict_f1,strict_tp,strict_fp,strict_fn,relaxed_precision,relaxed_recall,relaxed_f1,relaxed_tp,relaxed_fp,relaxed_fn
+LOCATION,0.8483,0.8601,0.8542,123,22,20,0.9630,0.9091,0.9353,130,5,13
+ORG,0.8318,0.9175,0.8725,89,18,8,0.8505,0.9381,0.8922,91,16,6
+PERSON,0.9398,0.8638,0.9002,203,13,32,0.9859,0.8936,0.9375,210,3,25

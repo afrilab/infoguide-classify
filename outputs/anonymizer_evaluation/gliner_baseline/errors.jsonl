@@ -1,0 +1,823 @@
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "LOCATION", "ground_truth": {"text": "London", "start": 2112, "end": 2118}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "PERSON", "prediction": {"text": "Chief Compliance Officer", "start": 848, "end": 872}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "PERSON", "prediction": {"text": "employees", "start": 2025, "end": 2034}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "PHONE", "prediction": {"text": "London support line", "start": 2112, "end": 2131}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "gbank", "start": 2229, "end": 2234}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "LOCATION", "ground_truth": {"text": "London", "start": 2112, "end": 2118}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "PERSON", "prediction": {"text": "Chief Compliance Officer", "start": 848, "end": 872}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "PERSON", "prediction": {"text": "employees", "start": 2025, "end": 2034}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "PHONE", "prediction": {"text": "London support line", "start": 2112, "end": 2131}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_001", "type": "ORG", "prediction": {"text": "gbank", "start": 2229, "end": 2234}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_002", "type": "EMAIL", "ground_truth": {"text": "governance.records@meridiantrust.com", "start": 3582, "end": 3618}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_002", "type": "EMAIL", "ground_truth": {"text": "governance.records@meridiantrust.com", "start": 3582, "end": 3618}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "EMAIL", "ground_truth": {"text": "audit.submissions@northbridge.com", "start": 2641, "end": 2674}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "EMAIL", "ground_truth": {"text": "audit.support@northbridge.co.uk", "start": 2978, "end": 3009}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "PERSON", "prediction": {"text": "Senior auditors", "start": 1358, "end": 1373}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "PERSON", "prediction": {"text": "assigned audit manager", "start": 2140, "end": 2162}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_003", "type": "EMAIL", "prediction": {"text": "submissions@northbridge.com", "start": 2647, "end": 2674}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "EMAIL", "ground_truth": {"text": "audit.support@northbridge.co.uk", "start": 2978, "end": 3009}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "PERSON", "prediction": {"text": "Senior auditors", "start": 1358, "end": 1373}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_003", "type": "PERSON", "prediction": {"text": "assigned audit manager", "start": 2140, "end": 2162}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_003", "type": "EMAIL", "ground_truth": {"text": "audit.submissions@northbridge.com", "start": 2641, "end": 2674}, "prediction": {"text": "submissions@northbridge.com", "start": 2647, "end": 2674}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_004", "type": "EMAIL", "ground_truth": {"text": "contracts@silverlinebank.corn", "start": 3235, "end": 3264}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_004", "type": "PERSON", "prediction": {"text": "lead consultant", "start": 1392, "end": 1407}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_004", "type": "PHONE", "prediction": {"text": "contracts@silverlinebank.corn", "start": 3235, "end": 3264}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_004", "type": "EMAIL", "ground_truth": {"text": "contracts@silverlinebank.corn", "start": 3235, "end": 3264}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_004", "type": "PERSON", "prediction": {"text": "lead consultant", "start": 1392, "end": 1407}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_004", "type": "PHONE", "prediction": {"text": "contracts@silverlinebank.corn", "start": 3235, "end": 3264}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "PERSON", "ground_truth": {"text": "Becker", "start": 1338, "end": 1344}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "EMAIL", "ground_truth": {"text": "Aml.Support@horizonbank.com", "start": 2745, "end": 2772}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "PHONE", "ground_truth": {"text": "22 678 4412", "start": 2807, "end": 2818}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "PERSON", "prediction": {"text": "Compliance officers", "start": 1309, "end": 1328}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "PERSON", "prediction": {"text": "employees", "start": 2435, "end": 2444}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "PERSON", "prediction": {"text": "employees", "start": 2692, "end": 2701}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "EMAIL", "prediction": {"text": "22 678 4412", "start": 2807, "end": 2818}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "ORG", "prediction": {"text": "horizonbank", "start": 2902, "end": 2913}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "PERSON", "ground_truth": {"text": "Becker", "start": 1338, "end": 1344}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "EMAIL", "ground_truth": {"text": "Aml.Support@horizonbank.com", "start": 2745, "end": 2772}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "PHONE", "ground_truth": {"text": "22 678 4412", "start": 2807, "end": 2818}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "PERSON", "prediction": {"text": "Compliance officers", "start": 1309, "end": 1328}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "PERSON", "prediction": {"text": "employees", "start": 2435, "end": 2444}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "PERSON", "prediction": {"text": "employees", "start": 2692, "end": 2701}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "EMAIL", "prediction": {"text": "22 678 4412", "start": 2807, "end": 2818}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "ORG", "prediction": {"text": "horizonbank", "start": 2902, "end": 2913}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "ORG", "ground_truth": {"text": "Vertex", "start": 549, "end": 555}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "EMAIL", "ground_truth": {"text": "audit-monitoring@vertexfs.com", "start": 2596, "end": 2625}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "PHONE", "ground_truth": {"text": "+46 8 512 334 21", "start": 2663, "end": 2679}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "PHONE", "prediction": {"text": "regional support line", "start": 2638, "end": 2659}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_006", "type": "EMAIL", "prediction": {"text": "+46 8 512 334 21", "start": 2663, "end": 2679}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "ORG", "ground_truth": {"text": "Vertex", "start": 549, "end": 555}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "EMAIL", "ground_truth": {"text": "audit-monitoring@vertexfs.com", "start": 2596, "end": 2625}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "PHONE", "ground_truth": {"text": "+46 8 512 334 21", "start": 2663, "end": 2679}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "PHONE", "prediction": {"text": "regional support line", "start": 2638, "end": 2659}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_006", "type": "EMAIL", "prediction": {"text": "+46 8 512 334 21", "start": 2663, "end": 2679}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_007", "type": "PHONE", "ground_truth": {"text": "+49-89-7744-2201", "start": 2958, "end": 2974}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_007", "type": "PERSON", "prediction": {"text": "internal liaison", "start": 1376, "end": 1392}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_007", "type": "PHONE", "prediction": {"text": "central office line", "start": 2935, "end": 2954}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_007", "type": "EMAIL", "prediction": {"text": "+49-89-7744-2201", "start": 2958, "end": 2974}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_007", "type": "PHONE", "ground_truth": {"text": "+49-89-7744-2201", "start": 2958, "end": 2974}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_007", "type": "PERSON", "prediction": {"text": "internal liaison", "start": 1376, "end": 1392}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_007", "type": "PHONE", "prediction": {"text": "central office line", "start": 2935, "end": 2954}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_007", "type": "EMAIL", "prediction": {"text": "+49-89-7744-2201", "start": 2958, "end": 2974}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "PERSON", "ground_truth": {"text": "Santis", "start": 1341, "end": 1347}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "EMAIL", "ground_truth": {"text": "reporting.support @aurorabank.com", "start": 2865, "end": 2898}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "PHONE", "ground_truth": {"text": "+41 22 884 3300", "start": 2927, "end": 2942}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "PERSON", "prediction": {"text": "Chief Financial Officer", "start": 991, "end": 1014}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "PERSON", "prediction": {"text": "responsible finance manager", "start": 1878, "end": 1905}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "PERSON", "prediction": {"text": "employees", "start": 2812, "end": 2821}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "EMAIL", "prediction": {"text": "support @aurorabank.com", "start": 2875, "end": 2898}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "EMAIL", "prediction": {"text": "+41 22 884 3300", "start": 2927, "end": 2942}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "PERSON", "ground_truth": {"text": "Santis", "start": 1341, "end": 1347}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "PHONE", "ground_truth": {"text": "+41 22 884 3300", "start": 2927, "end": 2942}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "PERSON", "prediction": {"text": "Chief Financial Officer", "start": 991, "end": 1014}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "PERSON", "prediction": {"text": "responsible finance manager", "start": 1878, "end": 1905}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "PERSON", "prediction": {"text": "employees", "start": 2812, "end": 2821}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "EMAIL", "prediction": {"text": "+41 22 884 3300", "start": 2927, "end": 2942}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_008", "type": "EMAIL", "ground_truth": {"text": "reporting.support @aurorabank.com", "start": 2865, "end": 2898}, "prediction": {"text": "support @aurorabank.com", "start": 2875, "end": 2898}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "ground_truth": {"text": "Tornimäe 5, 10145 Tallinn, Estonia", "start": 743, "end": 777}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "EMAIL", "ground_truth": {"text": "controls.review@easterngate.eu", "start": 3363, "end": 3393}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "PHONE", "ground_truth": {"text": "+372 612 9088", "start": 3486, "end": 3499}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "prediction": {"text": "Tornimäe 5", "start": 743, "end": 753}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "prediction": {"text": "Tallinn", "start": 761, "end": 768}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "prediction": {"text": "Estonia", "start": 770, "end": 777}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "PERSON", "prediction": {"text": "Compliance Testing Manager", "start": 1487, "end": 1513}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "ORG", "prediction": {"text": "Oversight Forum", "start": 1778, "end": 1793}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "PHONE", "prediction": {"text": "review@easterngate.eu", "start": 3372, "end": 3393}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "PHONE", "prediction": {"text": "regional compliance coordination line", "start": 3445, "end": 3482}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "EMAIL", "prediction": {"text": "+372 612 9088", "start": 3486, "end": 3499}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "EMAIL", "ground_truth": {"text": "controls.review@easterngate.eu", "start": 3363, "end": 3393}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "PHONE", "ground_truth": {"text": "+372 612 9088", "start": 3486, "end": 3499}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "PERSON", "prediction": {"text": "Compliance Testing Manager", "start": 1487, "end": 1513}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "ORG", "prediction": {"text": "Oversight Forum", "start": 1778, "end": 1793}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "PHONE", "prediction": {"text": "review@easterngate.eu", "start": 3372, "end": 3393}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "PHONE", "prediction": {"text": "regional compliance coordination line", "start": 3445, "end": 3482}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "EMAIL", "prediction": {"text": "+372 612 9088", "start": 3486, "end": 3499}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_009", "type": "LOCATION", "ground_truth": {"text": "Tornimäe 5, 10145 Tallinn, Estonia", "start": 743, "end": 777}, "prediction": {"text": "Tornimäe 5", "start": 743, "end": 753}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "ORG", "ground_truth": {"text": "HBC", "start": 1632, "end": 1635}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "EMAIL", "ground_truth": {"text": "policy.governance+hr@heliosbank.com", "start": 2424, "end": 2459}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "PHONE", "ground_truth": {"text": "(532) 123 4567", "start": 2488, "end": 2502}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "PERSON", "prediction": {"text": "employees", "start": 2371, "end": 2380}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "ORG", "ground_truth": {"text": "HBC", "start": 1632, "end": 1635}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "EMAIL", "ground_truth": {"text": "policy.governance+hr@heliosbank.com", "start": 2424, "end": 2459}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "PHONE", "ground_truth": {"text": "(532) 123 4567", "start": 2488, "end": 2502}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "PERSON", "prediction": {"text": "employees", "start": 2371, "end": 2380}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "ground_truth": {"text": "Marina Bay Financial Centre Tower 3, Singapore 018982", "start": 816, "end": 869}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "ground_truth": {"text": "181 Bay Street, Toronto, ON M5J 2T3, Canada", "start": 875, "end": 918}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "EMAIL", "ground_truth": {"text": "legal.policy@orionglobal.bank.com", "start": 3005, "end": 3038}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "ORG", "prediction": {"text": "Office of the Chief Executive Officer", "start": 146, "end": 183}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "prediction": {"text": "Marina Bay Financial Centre Tower 3", "start": 816, "end": 851}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "prediction": {"text": "Singapore", "start": 853, "end": 862}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "prediction": {"text": "181 Bay Street", "start": 875, "end": 889}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "prediction": {"text": "Toronto", "start": 891, "end": 898}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "prediction": {"text": "ON", "start": 900, "end": 902}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "prediction": {"text": "Canada", "start": 912, "end": 918}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "PERSON", "prediction": {"text": "Sponsor", "start": 1352, "end": 1359}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "PHONE", "prediction": {"text": "governance support line", "start": 3049, "end": 3072}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_011", "type": "EMAIL", "ground_truth": {"text": "legal.policy@orionglobal.bank.com", "start": 3005, "end": 3038}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_011", "type": "ORG", "prediction": {"text": "Office of the Chief Executive Officer", "start": 146, "end": 183}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_011", "type": "PERSON", "prediction": {"text": "Sponsor", "start": 1352, "end": 1359}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_011", "type": "PHONE", "prediction": {"text": "governance support line", "start": 3049, "end": 3072}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_011", "type": "LOCATION", "ground_truth": {"text": "Marina Bay Financial Centre Tower 3, Singapore 018982", "start": 816, "end": 869}, "prediction": {"text": "Marina Bay Financial Centre Tower 3", "start": 816, "end": 851}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_011", "type": "LOCATION", "ground_truth": {"text": "181 Bay Street, Toronto, ON M5J 2T3, Canada", "start": 875, "end": 918}, "prediction": {"text": "181 Bay Street", "start": 875, "end": 889}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "EMAIL", "ground_truth": {"text": "governance . office@meridiantrust.com", "start": 2328, "end": 2365}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "PHONE", "ground_truth": {"text": "+971 4 556 7788", "start": 2401, "end": 2416}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "ORG", "prediction": {"text": "Office of General Counsel", "start": 68, "end": 93}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "EMAIL", "prediction": {"text": "office@meridiantrust.com", "start": 2341, "end": 2365}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "PHONE", "prediction": {"text": "regional support line", "start": 2376, "end": 2397}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "EMAIL", "prediction": {"text": "+971 4 556 7788", "start": 2401, "end": 2416}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_012", "type": "PHONE", "ground_truth": {"text": "+971 4 556 7788", "start": 2401, "end": 2416}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_012", "type": "ORG", "prediction": {"text": "Office of General Counsel", "start": 68, "end": 93}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_012", "type": "PHONE", "prediction": {"text": "regional support line", "start": 2376, "end": 2397}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_012", "type": "EMAIL", "prediction": {"text": "+971 4 556 7788", "start": 2401, "end": 2416}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_012", "type": "EMAIL", "ground_truth": {"text": "governance . office@meridiantrust.com", "start": 2328, "end": 2365}, "prediction": {"text": "office@meridiantrust.com", "start": 2341, "end": 2365}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_013", "type": "EMAIL", "ground_truth": {"text": "oversight.coordination@northernaxis.com", "start": 2421, "end": 2460}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_013", "type": "PHONE", "ground_truth": {"text": "+4722771554", "start": 2507, "end": 2518}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_013", "type": "EMAIL", "prediction": {"text": "+4722771554", "start": 2507, "end": 2518}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_013", "type": "EMAIL", "ground_truth": {"text": "oversight.coordination@northernaxis.com", "start": 2421, "end": 2460}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_013", "type": "PHONE", "ground_truth": {"text": "+4722771554", "start": 2507, "end": 2518}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_013", "type": "EMAIL", "prediction": {"text": "+4722771554", "start": 2507, "end": 2518}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_014", "type": "ORG", "ground_truth": {"text": "Lydian", "start": 207, "end": 213}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_014", "type": "EMAIL", "ground_truth": {"text": "incident-review@lydianbank.com", "start": 4419, "end": 4449}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_014", "type": "ORG", "prediction": {"text": "central compliance function", "start": 3824, "end": 3851}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_014", "type": "LOCATION", "prediction": {"text": "4111 1111 1111 1111", "start": 4010, "end": 4029}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_014", "type": "PERSON", "prediction": {"text": "client", "start": 4172, "end": 4178}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_014", "type": "PHONE", "prediction": {"text": "incident-review@lydianbank.com", "start": 4419, "end": 4449}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_014", "type": "ORG", "ground_truth": {"text": "Lydian", "start": 207, "end": 213}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_014", "type": "EMAIL", "ground_truth": {"text": "incident-review@lydianbank.com", "start": 4419, "end": 4449}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_014", "type": "ORG", "prediction": {"text": "central compliance function", "start": 3824, "end": 3851}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_014", "type": "LOCATION", "prediction": {"text": "4111 1111 1111 1111", "start": 4010, "end": 4029}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_014", "type": "PERSON", "prediction": {"text": "client", "start": 4172, "end": 4178}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_014", "type": "PHONE", "prediction": {"text": "incident-review@lydianbank.com", "start": 4419, "end": 4449}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_015", "type": "ORG", "ground_truth": {"text": "Helix Continental", "start": 563, "end": 580}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_015", "type": "EMAIL", "ground_truth": {"text": "finance.reporting@helixbank.com.uk", "start": 3267, "end": 3301}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_015", "type": "ORG", "prediction": {"text": "Continental", "start": 2797, "end": 2808}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_015", "type": "LOCATION", "prediction": {"text": "helixbank.com.uk", "start": 3285, "end": 3301}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_015", "type": "ORG", "ground_truth": {"text": "Helix Continental", "start": 563, "end": 580}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_015", "type": "EMAIL", "ground_truth": {"text": "finance.reporting@helixbank.com.uk", "start": 3267, "end": 3301}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_015", "type": "LOCATION", "prediction": {"text": "helixbank.com.uk", "start": 3285, "end": 3301}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_016", "type": "LOCATION", "ground_truth": {"text": "Rotterdam", "start": 2820, "end": 2829}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_016", "type": "EMAIL", "ground_truth": {"text": "Review.EscalaTion@vireonbank.com", "start": 3634, "end": 3666}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_016", "type": "PERSON", "prediction": {"text": "analyst", "start": 1669, "end": 1676}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_016", "type": "PERSON", "prediction": {"text": "analyst", "start": 2120, "end": 2127}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_016", "type": "PERSON", "prediction": {"text": "analyst", "start": 3188, "end": 3195}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_016", "type": "ORG", "prediction": {"text": "central compliance function", "start": 3328, "end": 3355}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_016", "type": "LOCATION", "ground_truth": {"text": "Rotterdam", "start": 2820, "end": 2829}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_016", "type": "EMAIL", "ground_truth": {"text": "Review.EscalaTion@vireonbank.com", "start": 3634, "end": 3666}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_016", "type": "PERSON", "prediction": {"text": "analyst", "start": 1669, "end": 1676}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_016", "type": "PERSON", "prediction": {"text": "analyst", "start": 2120, "end": 2127}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_016", "type": "PERSON", "prediction": {"text": "analyst", "start": 3188, "end": 3195}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_016", "type": "ORG", "prediction": {"text": "central compliance function", "start": 3328, "end": 3355}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_017", "type": "LOCATION", "ground_truth": {"text": "Zagreb", "start": 1958, "end": 1964}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_017", "type": "LOCATION", "ground_truth": {"text": "Ljubljana", "start": 2357, "end": 2366}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_017", "type": "EMAIL", "ground_truth": {"text": "audit.coordination@norvale.com", "start": 3581, "end": 3611}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_017", "type": "DATE", "prediction": {"text": "mid-2024", "start": 400, "end": 408}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_017", "type": "DATE", "prediction": {"text": "early March", "start": 458, "end": 469}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_017", "type": "ORG", "prediction": {"text": "central audit function", "start": 3435, "end": 3457}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_017", "type": "LOCATION", "ground_truth": {"text": "Zagreb", "start": 1958, "end": 1964}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_017", "type": "LOCATION", "ground_truth": {"text": "Ljubljana", "start": 2357, "end": 2366}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_017", "type": "EMAIL", "ground_truth": {"text": "audit.coordination@norvale.com", "start": 3581, "end": 3611}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_017", "type": "DATE", "prediction": {"text": "mid-2024", "start": 400, "end": 408}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_017", "type": "DATE", "prediction": {"text": "early March", "start": 458, "end": 469}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_017", "type": "ORG", "prediction": {"text": "central audit function", "start": 3435, "end": 3457}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_018", "type": "EMAIL", "ground_truth": {"text": "incident-support@bluerockbank.com", "start": 1940, "end": 1973}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_018", "type": "EMAIL", "ground_truth": {"text": "incident-support@bluerockbank.com", "start": 1940, "end": 1973}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_019", "type": "LOCATION", "ground_truth": {"text": "nice", "start": 1713, "end": 1717}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_019", "type": "EMAIL", "ground_truth": {"text": "audit.operations@deltacorebank.com", "start": 2960, "end": 2994}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_019", "type": "PERSON", "prediction": {"text": "audit manager", "start": 2348, "end": 2361}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_019", "type": "ORG", "prediction": {"text": "central audit function", "start": 2833, "end": 2855}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_019", "type": "LOCATION", "ground_truth": {"text": "nice", "start": 1713, "end": 1717}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_019", "type": "EMAIL", "ground_truth": {"text": "audit.operations@deltacorebank.com", "start": 2960, "end": 2994}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_019", "type": "PERSON", "prediction": {"text": "audit manager", "start": 2348, "end": 2361}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_019", "type": "ORG", "prediction": {"text": "central audit function", "start": 2833, "end": 2855}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "November 8", "start": 890, "end": 900}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_020", "type": "ORG", "prediction": {"text": "central compliance function", "start": 2831, "end": 2858}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_020", "type": "DATE", "ground_truth": {"text": "November 8", "start": 890, "end": 900}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_020", "type": "ORG", "prediction": {"text": "central compliance function", "start": 2831, "end": 2858}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "DATE", "ground_truth": {"text": "April and May 2025", "start": 1743, "end": 1761}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "LOCATION", "ground_truth": {"text": "Kartal", "start": 1947, "end": 1953}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "LOCATION", "ground_truth": {"text": "Maltepe", "start": 2077, "end": 2084}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "DATE", "prediction": {"text": "2025", "start": 203, "end": 207}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "DATE", "prediction": {"text": "May 2025", "start": 1753, "end": 1761}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_021", "type": "LOCATION", "ground_truth": {"text": "Kartal", "start": 1947, "end": 1953}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_021", "type": "LOCATION", "ground_truth": {"text": "Maltepe", "start": 2077, "end": 2084}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_021", "type": "DATE", "prediction": {"text": "2025", "start": 203, "end": 207}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_021", "type": "DATE", "ground_truth": {"text": "April and May 2025", "start": 1743, "end": 1761}, "prediction": {"text": "May 2025", "start": 1753, "end": 1761}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_022", "type": "LOCATION", "ground_truth": {"text": "Athens", "start": 2020, "end": 2026}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_022", "type": "EMAIL", "ground_truth": {"text": "audit.regional@alturionbank.com.tr", "start": 3096, "end": 3130}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_022", "type": "LOCATION", "ground_truth": {"text": "Athens", "start": 2020, "end": 2026}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_022", "type": "EMAIL", "ground_truth": {"text": "audit.regional@alturionbank.com.tr", "start": 3096, "end": 3130}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_023", "type": "LOCATION", "ground_truth": {"text": "Göteborg", "start": 2090, "end": 2098}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_023", "type": "EMAIL", "ground_truth": {"text": "financial.review@vertexlinebank.com", "start": 2827, "end": 2862}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_023", "type": "DATE", "prediction": {"text": "mid-April", "start": 805, "end": 814}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_023", "type": "DATE", "prediction": {"text": "May 2025", "start": 1217, "end": 1225}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_023", "type": "LOCATION", "prediction": {"text": "Central Region", "start": 2490, "end": 2504}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_023", "type": "PERSON", "prediction": {"text": "Jane Smith", "start": 2643, "end": 2653}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_023", "type": "LOCATION", "ground_truth": {"text": "Göteborg", "start": 2090, "end": 2098}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_023", "type": "EMAIL", "ground_truth": {"text": "financial.review@vertexlinebank.com", "start": 2827, "end": 2862}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_023", "type": "DATE", "prediction": {"text": "mid-April", "start": 805, "end": 814}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_023", "type": "DATE", "prediction": {"text": "May 2025", "start": 1217, "end": 1225}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_023", "type": "LOCATION", "prediction": {"text": "Central Region", "start": 2490, "end": 2504}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_023", "type": "PERSON", "prediction": {"text": "Jane Smith", "start": 2643, "end": 2653}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_024", "type": "DATE", "ground_truth": {"text": "August 30", "start": 969, "end": 978}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_024", "type": "LOCATION", "ground_truth": {"text": "Budapest", "start": 2073, "end": 2081}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_024", "type": "ORG", "prediction": {"text": "central compliance function", "start": 2696, "end": 2723}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_024", "type": "DATE", "ground_truth": {"text": "August 30", "start": 969, "end": 978}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_024", "type": "LOCATION", "ground_truth": {"text": "Budapest", "start": 2073, "end": 2081}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_024", "type": "ORG", "prediction": {"text": "central compliance function", "start": 2696, "end": 2723}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_025", "type": "EMAIL", "ground_truth": {"text": "exposure.analysis@aureliabank.com", "start": 2617, "end": 2650}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_025", "type": "LOCATION", "prediction": {"text": "5th Avenue unit", "start": 1496, "end": 1511}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_025", "type": "PERSON", "prediction": {"text": "senior financial analyst", "start": 1665, "end": 1689}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_025", "type": "PERSON", "prediction": {"text": "K.", "start": 1690, "end": 1692}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_025", "type": "EMAIL", "ground_truth": {"text": "exposure.analysis@aureliabank.com", "start": 2617, "end": 2650}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_025", "type": "LOCATION", "prediction": {"text": "5th Avenue unit", "start": 1496, "end": 1511}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_025", "type": "PERSON", "prediction": {"text": "senior financial analyst", "start": 1665, "end": 1689}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_025", "type": "PERSON", "ground_truth": {"text": "K. Jovanović", "start": 1690, "end": 1702}, "prediction": {"text": "K.", "start": 1690, "end": 1692}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_026", "type": "LOCATION", "ground_truth": {"text": "Vienna", "start": 1726, "end": 1732}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_026", "type": "EMAIL", "ground_truth": {"text": "audit.final@novabridgebank.com", "start": 3211, "end": 3241}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_026", "type": "DATE", "prediction": {"text": "early September 2025", "start": 423, "end": 443}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_026", "type": "ORG", "prediction": {"text": "central audit function", "start": 3110, "end": 3132}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_026", "type": "EMAIL", "prediction": {"text": "final@novabridgebank.com", "start": 3217, "end": 3241}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_026", "type": "LOCATION", "ground_truth": {"text": "Vienna", "start": 1726, "end": 1732}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_026", "type": "DATE", "prediction": {"text": "early September 2025", "start": 423, "end": 443}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_026", "type": "ORG", "prediction": {"text": "central audit function", "start": 3110, "end": 3132}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_026", "type": "EMAIL", "ground_truth": {"text": "audit.final@novabridgebank.com", "start": 3211, "end": 3241}, "prediction": {"text": "final@novabridgebank.com", "start": 3217, "end": 3241}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "EMAIL", "ground_truth": {"text": "daniel.carter@company.com", "start": 3313, "end": 3338}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "EMAIL", "ground_truth": {"text": "olivia.martinez@company.com", "start": 3352, "end": 3379}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "LOCATION", "prediction": {"text": "London Office", "start": 92, "end": 105}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "February 2024", "start": 411, "end": 424}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "February 2024", "start": 1726, "end": 1739}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "March 3, 2024", "start": 2447, "end": 2460}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "March 18, 2024", "start": 2827, "end": 2841}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "March 15, 2024", "start": 2909, "end": 2923}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "PHONE", "prediction": {"text": "olivia.martinez@company.com", "start": 3352, "end": 3379}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "EMAIL", "ground_truth": {"text": "daniel.carter@company.com", "start": 3313, "end": 3338}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "EMAIL", "ground_truth": {"text": "olivia.martinez@company.com", "start": 3352, "end": 3379}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "LOCATION", "prediction": {"text": "London Office", "start": 92, "end": 105}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "February 2024", "start": 411, "end": 424}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "February 2024", "start": 1726, "end": 1739}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "March 3, 2024", "start": 2447, "end": 2460}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "March 18, 2024", "start": 2827, "end": 2841}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "DATE", "prediction": {"text": "March 15, 2024", "start": 2909, "end": 2923}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "PHONE", "prediction": {"text": "olivia.martinez@company.com", "start": 3352, "end": 3379}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_028", "type": "DATE", "prediction": {"text": "Last Monday", "start": 60, "end": 71}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_028", "type": "PERSON", "prediction": {"text": "participants", "start": 2763, "end": 2775}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_028", "type": "ORG", "prediction": {"text": "shared documentation platform", "start": 2840, "end": 2869}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_028", "type": "DATE", "prediction": {"text": "Last Monday", "start": 60, "end": 71}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_028", "type": "PERSON", "prediction": {"text": "participants", "start": 2763, "end": 2775}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_028", "type": "ORG", "prediction": {"text": "shared documentation platform", "start": 2840, "end": 2869}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "ORG", "ground_truth": {"text": "global finance division", "start": 558, "end": 581}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "Dubois", "start": 923, "end": 929}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "ORG", "ground_truth": {"text": "global finance division", "start": 1471, "end": 1494}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "bianchi", "start": 2249, "end": 2256}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "LOCATION", "prediction": {"text": "Conference Room B", "start": 104, "end": 121}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "bianchi", "start": 1496, "end": 1503}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "bianchi", "start": 2249, "end": 2256}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "PERSON", "prediction": {"text": "participants", "start": 2824, "end": 2836}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "ORG", "ground_truth": {"text": "global finance division", "start": 558, "end": 581}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "Dubois", "start": 923, "end": 929}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "ORG", "ground_truth": {"text": "global finance division", "start": 1471, "end": 1494}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "bianchi", "start": 2249, "end": 2256}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "LOCATION", "prediction": {"text": "Conference Room B", "start": 104, "end": 121}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "bianchi", "start": 1496, "end": 1503}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "bianchi", "start": 2249, "end": 2256}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "PERSON", "prediction": {"text": "participants", "start": 2824, "end": 2836}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "DATE", "prediction": {"text": "Early April", "start": 66, "end": 77}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Head of Compliance", "start": 175, "end": 193}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Senior Risk Analyst", "start": 196, "end": 215}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Operations Supervisor", "start": 218, "end": 239}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Audit Coordinator", "start": 242, "end": 259}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Head of Compliance", "start": 690, "end": 708}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Senior Risk Analyst", "start": 952, "end": 971}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Operations Supervisor", "start": 1245, "end": 1266}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Audit Coordinator", "start": 1471, "end": 1488}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Head of Compliance", "start": 2554, "end": 2572}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Senior Risk Analyst", "start": 2630, "end": 2649}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Operations Supervisor", "start": 2716, "end": 2737}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Audit Coordinator", "start": 2784, "end": 2801}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "DATE", "prediction": {"text": "Early April", "start": 66, "end": 77}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Head of Compliance", "start": 175, "end": 193}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Senior Risk Analyst", "start": 196, "end": 215}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Operations Supervisor", "start": 218, "end": 239}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Audit Coordinator", "start": 242, "end": 259}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Head of Compliance", "start": 690, "end": 708}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Senior Risk Analyst", "start": 952, "end": 971}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Operations Supervisor", "start": 1245, "end": 1266}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Audit Coordinator", "start": 1471, "end": 1488}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Head of Compliance", "start": 2554, "end": 2572}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Senior Risk Analyst", "start": 2630, "end": 2649}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Operations Supervisor", "start": 2716, "end": 2737}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_030", "type": "PERSON", "prediction": {"text": "Audit Coordinator", "start": 2784, "end": 2801}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_031", "type": "DATE", "prediction": {"text": "Mid-April", "start": 66, "end": 75}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_031", "type": "ORG", "prediction": {"text": "teams", "start": 3041, "end": 3046}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_031", "type": "ORG", "prediction": {"text": "Teams", "start": 3153, "end": 3158}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_031", "type": "ORG", "prediction": {"text": "teams", "start": 3805, "end": 3810}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_031", "type": "DATE", "prediction": {"text": "Mid-April", "start": 66, "end": 75}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_031", "type": "ORG", "prediction": {"text": "teams", "start": 3041, "end": 3046}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_031", "type": "ORG", "prediction": {"text": "Teams", "start": 3153, "end": 3158}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_031", "type": "ORG", "prediction": {"text": "teams", "start": 3805, "end": 3810}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_032", "type": "EMAIL", "ground_truth": {"text": "sophia.clark@sterlingbank.com", "start": 2481, "end": 2510}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_032", "type": "LOCATION", "prediction": {"text": "East Region Office Zone", "start": 2309, "end": 2332}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_032", "type": "PERSON", "prediction": {"text": "sophia.clark", "start": 2481, "end": 2493}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_032", "type": "EMAIL", "ground_truth": {"text": "sophia.clark@sterlingbank.com", "start": 2481, "end": 2510}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_032", "type": "LOCATION", "prediction": {"text": "East Region Office Zone", "start": 2309, "end": 2332}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_032", "type": "PERSON", "prediction": {"text": "sophia.clark", "start": 2481, "end": 2493}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_033", "type": "PERSON", "prediction": {"text": "representative", "start": 1178, "end": 1192}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_033", "type": "LOCATION", "prediction": {"text": "North Compliance Zone", "start": 2505, "end": 2526}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_033", "type": "DATE", "prediction": {"text": "early April", "start": 2963, "end": 2974}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_033", "type": "PERSON", "prediction": {"text": "representative", "start": 1178, "end": 1192}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_033", "type": "LOCATION", "prediction": {"text": "North Compliance Zone", "start": 2505, "end": 2526}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_033", "type": "DATE", "prediction": {"text": "early April", "start": 2963, "end": 2974}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "LOCATION", "ground_truth": {"text": "Central Office, Texas, USA", "start": 130, "end": 156}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "PERSON", "ground_truth": {"text": "carter, m", "start": 796, "end": 805}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "PERSON", "ground_truth": {"text": "carter, m", "start": 2210, "end": 2219}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "DATE", "prediction": {"text": "Early May", "start": 53, "end": 62}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "PERSON", "prediction": {"text": "All System Administrators", "start": 94, "end": 119}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "LOCATION", "prediction": {"text": "Central Office", "start": 130, "end": 144}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "LOCATION", "prediction": {"text": "Texas", "start": 146, "end": 151}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "PERSON", "prediction": {"text": "carter", "start": 796, "end": 802}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "PERSON", "prediction": {"text": "carter", "start": 2210, "end": 2216}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "ORG", "prediction": {"text": "Teams", "start": 2533, "end": 2538}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "PERSON", "prediction": {"text": "system administrators", "start": 2868, "end": 2889}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_034", "type": "DATE", "prediction": {"text": "Early May", "start": 53, "end": 62}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_034", "type": "PERSON", "prediction": {"text": "All System Administrators", "start": 94, "end": 119}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_034", "type": "ORG", "prediction": {"text": "Teams", "start": 2533, "end": 2538}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_034", "type": "PERSON", "prediction": {"text": "system administrators", "start": 2868, "end": 2889}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_034", "type": "LOCATION", "ground_truth": {"text": "Central Office, Texas, USA", "start": 130, "end": 156}, "prediction": {"text": "Central Office", "start": 130, "end": 144}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_034", "type": "PERSON", "ground_truth": {"text": "carter, m", "start": 796, "end": 805}, "prediction": {"text": "carter", "start": 796, "end": 802}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_034", "type": "PERSON", "ground_truth": {"text": "carter, m", "start": 2210, "end": 2219}, "prediction": {"text": "carter", "start": 2210, "end": 2216}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_035", "type": "LOCATION", "prediction": {"text": "Regional Offices", "start": 77, "end": 93}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_035", "type": "ORG", "prediction": {"text": "teams", "start": 123, "end": 128}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_035", "type": "ORG", "prediction": {"text": "support coordination group", "start": 664, "end": 690}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_035", "type": "ORG", "prediction": {"text": "regional teams", "start": 721, "end": 735}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_035", "type": "PERSON", "prediction": {"text": "employees", "start": 1808, "end": 1817}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_035", "type": "LOCATION", "prediction": {"text": "Regional Offices", "start": 77, "end": 93}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_035", "type": "ORG", "prediction": {"text": "teams", "start": 123, "end": 128}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_035", "type": "ORG", "prediction": {"text": "support coordination group", "start": 664, "end": 690}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_035", "type": "ORG", "prediction": {"text": "regional teams", "start": 721, "end": 735}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_035", "type": "PERSON", "prediction": {"text": "employees", "start": 1808, "end": 1817}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_036", "type": "PERSON", "prediction": {"text": "employees", "start": 1949, "end": 1958}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_036", "type": "PERSON", "prediction": {"text": "employees", "start": 1949, "end": 1958}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 18, "end": 40}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 53, "end": 78}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "PERSON", "ground_truth": {"text": "John Smith", "start": 479, "end": 489}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "PERSON", "ground_truth": {"text": "John Smith", "start": 928, "end": 938}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 965, "end": 987}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "PERSON", "prediction": {"text": "john.smith", "start": 18, "end": 28}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "ORG", "prediction": {"text": "John Smith", "start": 479, "end": 489}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "IBAN", "prediction": {"text": "IBAN", "start": 490, "end": 494}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "ORG", "prediction": {"text": "John Smith", "start": 928, "end": 938}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_037", "type": "PERSON", "prediction": {"text": "john.smith", "start": 965, "end": 975}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 18, "end": 40}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 53, "end": 78}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "PERSON", "ground_truth": {"text": "John Smith", "start": 479, "end": 489}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "PERSON", "ground_truth": {"text": "John Smith", "start": 928, "end": 938}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 965, "end": 987}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "PERSON", "prediction": {"text": "john.smith", "start": 18, "end": 28}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "ORG", "prediction": {"text": "John Smith", "start": 479, "end": 489}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "IBAN", "prediction": {"text": "IBAN", "start": 490, "end": 494}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "ORG", "prediction": {"text": "John Smith", "start": 928, "end": 938}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_037", "type": "PERSON", "prediction": {"text": "john.smith", "start": 965, "end": 975}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 21, "end": 46}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "PERSON", "ground_truth": {"text": "Michael Brown", "start": 482, "end": 495}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "PERSON", "ground_truth": {"text": "Michael Brown", "start": 959, "end": 972}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 992, "end": 1017}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 21, "end": 34}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "ORG", "prediction": {"text": "Michael Brown", "start": 482, "end": 495}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "DATE", "prediction": {"text": "Expiration Date", "start": 529, "end": 544}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "DATE", "prediction": {"text": "09/26", "start": 546, "end": 551}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "ORG", "prediction": {"text": "Michael Brown", "start": 959, "end": 972}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_038", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 992, "end": 1005}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 21, "end": 46}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "PERSON", "ground_truth": {"text": "Michael Brown", "start": 482, "end": 495}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "PERSON", "ground_truth": {"text": "Michael Brown", "start": 959, "end": 972}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 992, "end": 1017}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 21, "end": 34}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "ORG", "prediction": {"text": "Michael Brown", "start": 482, "end": 495}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "DATE", "prediction": {"text": "Expiration Date", "start": 529, "end": 544}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "DATE", "prediction": {"text": "09/26", "start": 546, "end": 551}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "ORG", "prediction": {"text": "Michael Brown", "start": 959, "end": 972}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_038", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 992, "end": 1005}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "dilara.wilson@company.com", "start": 17, "end": 42}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "finance@company.com", "start": 62, "end": 81}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 204, "end": 210}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 1060, "end": 1066}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "dilara.wilson@company.com", "start": 1074, "end": 1099}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "PERSON", "prediction": {"text": "dilara.wilson", "start": 17, "end": 30}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "IBAN", "prediction": {"text": "IBAN", "start": 432, "end": 436}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "PERSON", "prediction": {"text": "dilara.wilson", "start": 1074, "end": 1087}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "dilara.wilson@company.com", "start": 17, "end": 42}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "finance@company.com", "start": 62, "end": 81}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 204, "end": 210}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 1060, "end": 1066}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "EMAIL", "ground_truth": {"text": "dilara.wilson@company.com", "start": 1074, "end": 1099}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "PERSON", "prediction": {"text": "dilara.wilson", "start": 17, "end": 30}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "IBAN", "prediction": {"text": "IBAN", "start": 432, "end": 436}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "PERSON", "prediction": {"text": "dilara.wilson", "start": 1074, "end": 1087}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@hsbc.com", "start": 21, "end": 43}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "support@hsbc.com", "start": 67, "end": 83}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@hsbc.com", "start": 1234, "end": 1256}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@hsbc.com", "start": 1341, "end": 1363}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 21, "end": 34}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "PHONE", "prediction": {"text": "+44 7911 123456", "start": 999, "end": 1014}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 1234, "end": 1247}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 1341, "end": 1354}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@hsbc.com", "start": 21, "end": 43}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "support@hsbc.com", "start": 67, "end": 83}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@hsbc.com", "start": 1234, "end": 1256}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_040", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@hsbc.com", "start": 1341, "end": 1363}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_040", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 21, "end": 34}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_040", "type": "PHONE", "prediction": {"text": "+44 7911 123456", "start": 999, "end": 1014}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_040", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 1234, "end": 1247}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_040", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 1341, "end": 1354}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "A. B. van Dijk", "start": 6, "end": 20}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "A. B. van Dijk", "start": 986, "end": 1000}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "A. B. van Dijk", "start": 1066, "end": 1080}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "ORG", "prediction": {"text": "A. B. van Dijk", "start": 6, "end": 20}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "ORG", "prediction": {"text": "A. B. van Dijk", "start": 986, "end": 1000}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "ORG", "prediction": {"text": "A. B. van Dijk", "start": 1066, "end": 1080}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "ORG", "prediction": {"text": "A. B. van Dijk", "start": 1206, "end": 1220}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "A. B. van Dijk", "start": 6, "end": 20}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "A. B. van Dijk", "start": 986, "end": 1000}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "A. B. van Dijk", "start": 1066, "end": 1080}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_041", "type": "ORG", "prediction": {"text": "A. B. van Dijk", "start": 6, "end": 20}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_041", "type": "ORG", "prediction": {"text": "A. B. van Dijk", "start": 986, "end": 1000}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_041", "type": "ORG", "prediction": {"text": "A. B. van Dijk", "start": 1066, "end": 1080}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_041", "type": "ORG", "prediction": {"text": "A. B. van Dijk", "start": 1206, "end": 1220}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 16, "end": 38}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 54, "end": 79}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "PERSON", "ground_truth": {"text": "Michael", "start": 112, "end": 119}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 655, "end": 677}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 749, "end": 774}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 790, "end": 812}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "john.smith", "start": 16, "end": 26}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 54, "end": 67}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "PHONE", "prediction": {"text": "4532-7812-9944-1203", "start": 436, "end": 455}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "john.smith", "start": 655, "end": 665}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 749, "end": 762}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "john.smith", "start": 790, "end": 800}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_042", "type": "DATE", "prediction": {"text": "yesterday evening", "start": 841, "end": 858}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 16, "end": 38}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 54, "end": 79}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "PERSON", "ground_truth": {"text": "Michael", "start": 112, "end": 119}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 655, "end": 677}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 749, "end": 774}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 790, "end": 812}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "john.smith", "start": 16, "end": 26}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 54, "end": 67}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "PHONE", "prediction": {"text": "4532-7812-9944-1203", "start": 436, "end": 455}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "john.smith", "start": 655, "end": 665}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 749, "end": 762}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "PERSON", "prediction": {"text": "john.smith", "start": 790, "end": 800}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_042", "type": "DATE", "prediction": {"text": "yesterday evening", "start": 841, "end": 858}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "EMAIL", "ground_truth": {"text": "sarah.davis@hsbc.com", "start": 19, "end": 39}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "EMAIL", "ground_truth": {"text": "david.wilson@hsbc.com", "start": 59, "end": 80}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "EMAIL", "ground_truth": {"text": "robert.king@clientmail.com", "start": 295, "end": 321}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "PHONE", "ground_truth": {"text": "(532) 123 4567", "start": 346, "end": 360}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 556, "end": 575}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "LOCATION", "ground_truth": {"text": "London", "start": 643, "end": 649}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "EMAIL", "prediction": {"text": "clientmail.com", "start": 307, "end": 321}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "IBAN", "prediction": {"text": "IBAN", "start": 509, "end": 513}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "IBAN", "prediction": {"text": "4532 0151 1283 0366", "start": 556, "end": 575}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "IBAN", "prediction": {"text": "IBAN", "start": 829, "end": 833}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "ORG", "prediction": {"text": "Finance Group", "start": 994, "end": 1007}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "EMAIL", "ground_truth": {"text": "sarah.davis@hsbc.com", "start": 19, "end": 39}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "EMAIL", "ground_truth": {"text": "david.wilson@hsbc.com", "start": 59, "end": 80}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "PHONE", "ground_truth": {"text": "(532) 123 4567", "start": 346, "end": 360}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 556, "end": 575}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "LOCATION", "ground_truth": {"text": "London", "start": 643, "end": 649}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "IBAN", "prediction": {"text": "IBAN", "start": 509, "end": 513}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "IBAN", "prediction": {"text": "4532 0151 1283 0366", "start": 556, "end": 575}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "IBAN", "prediction": {"text": "IBAN", "start": 829, "end": 833}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "ORG", "prediction": {"text": "Finance Group", "start": 994, "end": 1007}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_043", "type": "EMAIL", "ground_truth": {"text": "robert.king@clientmail.com", "start": 295, "end": 321}, "prediction": {"text": "clientmail.com", "start": 307, "end": 321}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "EMAIL", "ground_truth": {"text": "david.wilson@ing.com", "start": 20, "end": 40}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "EMAIL", "ground_truth": {"text": "laura.thompson@ing.com", "start": 62, "end": 84}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "CREDIT_CARD", "ground_truth": {"text": "4539 1488 0343 6467", "start": 596, "end": 615}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "CREDIT_CARD", "ground_truth": {"text": "**** **** 0343 6467", "start": 646, "end": 665}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "ORG", "prediction": {"text": "ing.com", "start": 77, "end": 84}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "IBAN", "prediction": {"text": "IBAN", "start": 519, "end": 523}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "IBAN", "prediction": {"text": "Secondary IBAN", "start": 544, "end": 558}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "IBAN", "prediction": {"text": "4539 1488 0343 6467", "start": 596, "end": 615}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_044", "type": "IBAN", "prediction": {"text": "0343 6467", "start": 656, "end": 665}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_044", "type": "EMAIL", "ground_truth": {"text": "david.wilson@ing.com", "start": 20, "end": 40}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_044", "type": "EMAIL", "ground_truth": {"text": "laura.thompson@ing.com", "start": 62, "end": 84}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_044", "type": "CREDIT_CARD", "ground_truth": {"text": "4539 1488 0343 6467", "start": 596, "end": 615}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_044", "type": "CREDIT_CARD", "ground_truth": {"text": "**** **** 0343 6467", "start": 646, "end": 665}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_044", "type": "ORG", "prediction": {"text": "ing.com", "start": 77, "end": 84}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_044", "type": "IBAN", "prediction": {"text": "IBAN", "start": 519, "end": 523}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_044", "type": "IBAN", "prediction": {"text": "Secondary IBAN", "start": 544, "end": 558}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_044", "type": "IBAN", "prediction": {"text": "4539 1488 0343 6467", "start": 596, "end": 615}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_044", "type": "IBAN", "prediction": {"text": "0343 6467", "start": 656, "end": 665}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 21, "end": 46}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 67, "end": 92}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "PERSON", "ground_truth": {"text": "King", "start": 468, "end": 472}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "robert.king@clientmail.com", "start": 474, "end": 500}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 1045, "end": 1070}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 21, "end": 34}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "PERSON", "prediction": {"text": "robert.king", "start": 474, "end": 485}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_045", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 1045, "end": 1058}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 21, "end": 46}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 67, "end": 92}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "PERSON", "ground_truth": {"text": "King", "start": 468, "end": 472}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "robert.king@clientmail.com", "start": 474, "end": 500}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 1045, "end": 1070}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 21, "end": 34}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "PERSON", "prediction": {"text": "robert.king", "start": 474, "end": 485}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_045", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 1045, "end": 1058}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "EMAIL", "ground_truth": {"text": "admin-notify@system.org", "start": 6, "end": 29}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "EMAIL", "ground_truth": {"text": "support@hsbc.com", "start": 34, "end": 50}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "EMAIL", "ground_truth": {"text": "john.smith@hsbc.com", "start": 288, "end": 307}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "CREDIT_CARD", "ground_truth": {"text": "**** **** **** 0366", "start": 998, "end": 1017}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 1111, "end": 1130}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 42, "end": 50}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "PERSON", "prediction": {"text": "john.smith", "start": 288, "end": 298}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 299, "end": 307}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "IBAN", "prediction": {"text": "4532 0151 1283 0366", "start": 1111, "end": 1130}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_046", "type": "PERSON", "prediction": {"text": "Chief", "start": 1210, "end": 1215}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "EMAIL", "ground_truth": {"text": "admin-notify@system.org", "start": 6, "end": 29}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "EMAIL", "ground_truth": {"text": "support@hsbc.com", "start": 34, "end": 50}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "EMAIL", "ground_truth": {"text": "john.smith@hsbc.com", "start": 288, "end": 307}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "CREDIT_CARD", "ground_truth": {"text": "**** **** **** 0366", "start": 998, "end": 1017}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 1111, "end": 1130}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 42, "end": 50}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "PERSON", "prediction": {"text": "john.smith", "start": 288, "end": 298}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 299, "end": 307}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "IBAN", "prediction": {"text": "4532 0151 1283 0366", "start": 1111, "end": 1130}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_046", "type": "PERSON", "prediction": {"text": "Chief", "start": 1210, "end": 1215}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "EMAIL", "ground_truth": {"text": "account-services@barclays.com.tr", "start": 6, "end": 38}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "EMAIL", "ground_truth": {"text": "support@barclays.com", "start": 43, "end": 63}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "CREDIT_CARD", "ground_truth": {"text": "9876", "start": 320, "end": 324}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "CREDIT_CARD", "ground_truth": {"text": "**** **** **** 9876", "start": 542, "end": 561}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "CREDIT_CARD", "ground_truth": {"text": "4716221051885662", "start": 629, "end": 645}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "PERSON", "prediction": {"text": "client", "start": 190, "end": 196}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "EMAIL", "prediction": {"text": "email", "start": 477, "end": 482}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "PERSON", "prediction": {"text": "client", "start": 755, "end": 761}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "IBAN", "prediction": {"text": "IBAN", "start": 798, "end": 802}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "IBAN", "prediction": {"text": "IBAN", "start": 948, "end": 952}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "EMAIL", "ground_truth": {"text": "account-services@barclays.com.tr", "start": 6, "end": 38}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "EMAIL", "ground_truth": {"text": "support@barclays.com", "start": 43, "end": 63}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "CREDIT_CARD", "ground_truth": {"text": "9876", "start": 320, "end": 324}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "CREDIT_CARD", "ground_truth": {"text": "**** **** **** 9876", "start": 542, "end": 561}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "CREDIT_CARD", "ground_truth": {"text": "4716221051885662", "start": 629, "end": 645}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "PERSON", "prediction": {"text": "client", "start": 190, "end": 196}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "EMAIL", "prediction": {"text": "email", "start": 477, "end": 482}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "PERSON", "prediction": {"text": "client", "start": 755, "end": 761}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "IBAN", "prediction": {"text": "IBAN", "start": 798, "end": 802}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "IBAN", "prediction": {"text": "IBAN", "start": 948, "end": 952}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "operations@company.com", "start": 6, "end": 28}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "finance@company.com", "start": 33, "end": 52}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "david.wilson@clientmail.com", "start": 281, "end": 308}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "CREDIT_CARD", "ground_truth": {"text": "2233", "start": 739, "end": 743}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "david.wilson@clientmail.com", "start": 1067, "end": 1094}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "operations@company.com", "start": 1100, "end": 1122}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "PERSON", "prediction": {"text": "david.wilson", "start": 281, "end": 293}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "EMAIL", "prediction": {"text": "clientmail.com", "start": 294, "end": 308}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "PERSON", "prediction": {"text": "david.wilson", "start": 1067, "end": 1079}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_048", "type": "ORG", "prediction": {"text": "operations@company.com", "start": 1100, "end": 1122}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "operations@company.com", "start": 6, "end": 28}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "finance@company.com", "start": 33, "end": 52}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_048", "type": "CREDIT_CARD", "ground_truth": {"text": "2233", "start": 739, "end": 743}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "david.wilson@clientmail.com", "start": 1067, "end": 1094}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "operations@company.com", "start": 1100, "end": 1122}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_048", "type": "PERSON", "prediction": {"text": "david.wilson", "start": 281, "end": 293}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_048", "type": "PERSON", "prediction": {"text": "david.wilson", "start": 1067, "end": 1079}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_048", "type": "ORG", "prediction": {"text": "operations@company.com", "start": 1100, "end": 1122}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_048", "type": "EMAIL", "ground_truth": {"text": "david.wilson@clientmail.com", "start": 281, "end": 308}, "prediction": {"text": "clientmail.com", "start": 294, "end": 308}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "EMAIL", "ground_truth": {"text": "audit@hsbc.com", "start": 6, "end": 20}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "EMAIL", "ground_truth": {"text": "compliance@hsbc.com", "start": 25, "end": 44}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "EMAIL", "ground_truth": {"text": "sarah.davis@hsbc.com", "start": 450, "end": 470}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 763, "end": 782}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "CREDIT_CARD", "ground_truth": {"text": "4716 2210 5188 5662", "start": 799, "end": 818}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 12, "end": 20}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 36, "end": 44}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "PERSON", "prediction": {"text": "sarah.davis", "start": 450, "end": 461}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 462, "end": 470}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "IBAN", "prediction": {"text": "IBAN", "start": 719, "end": 723}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "IBAN", "prediction": {"text": "4532 0151 1283 0366", "start": 763, "end": 782}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "IBAN", "prediction": {"text": "4716 2210 5188 5662", "start": 799, "end": 818}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "IBAN", "prediction": {"text": "IBAN-REF-2024-7788", "start": 877, "end": 895}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "EMAIL", "ground_truth": {"text": "audit@hsbc.com", "start": 6, "end": 20}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "EMAIL", "ground_truth": {"text": "compliance@hsbc.com", "start": 25, "end": 44}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "EMAIL", "ground_truth": {"text": "sarah.davis@hsbc.com", "start": 450, "end": 470}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 763, "end": 782}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "CREDIT_CARD", "ground_truth": {"text": "4716 2210 5188 5662", "start": 799, "end": 818}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 12, "end": 20}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 36, "end": 44}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "PERSON", "prediction": {"text": "sarah.davis", "start": 450, "end": 461}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "ORG", "prediction": {"text": "hsbc.com", "start": 462, "end": 470}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "IBAN", "prediction": {"text": "IBAN", "start": 719, "end": 723}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "IBAN", "prediction": {"text": "4532 0151 1283 0366", "start": 763, "end": 782}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "IBAN", "prediction": {"text": "4716 2210 5188 5662", "start": 799, "end": 818}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "IBAN", "prediction": {"text": "IBAN-REF-2024-7788", "start": 877, "end": 895}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_050", "type": "EMAIL", "ground_truth": {"text": "hr@company.com", "start": 6, "end": 20}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_050", "type": "EMAIL", "ground_truth": {"text": "h.ruiz@company.com", "start": 35, "end": 53}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_050", "type": "EMAIL", "ground_truth": {"text": "hr@company.com", "start": 1273, "end": 1287}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_050", "type": "IBAN", "prediction": {"text": "IBAN", "start": 356, "end": 360}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_050", "type": "DATE", "prediction": {"text": "email", "start": 1081, "end": 1086}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_050", "type": "PHONE", "prediction": {"text": "hr@company.com", "start": 1273, "end": 1287}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_050", "type": "EMAIL", "ground_truth": {"text": "hr@company.com", "start": 6, "end": 20}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_050", "type": "EMAIL", "ground_truth": {"text": "h.ruiz@company.com", "start": 35, "end": 53}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_050", "type": "EMAIL", "ground_truth": {"text": "hr@company.com", "start": 1273, "end": 1287}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_050", "type": "IBAN", "prediction": {"text": "IBAN", "start": 356, "end": 360}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_050", "type": "DATE", "prediction": {"text": "email", "start": 1081, "end": 1086}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_050", "type": "PHONE", "prediction": {"text": "hr@company.com", "start": 1273, "end": 1287}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "PHONE", "ground_truth": {"text": "+1 415 555 0134", "start": 87, "end": 102}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "PERSON", "ground_truth": {"text": "m. brown", "start": 1059, "end": 1067}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "EMAIL", "prediction": {"text": "+1 415 555 0134", "start": 87, "end": 102}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Financial Operations", "start": 148, "end": 168}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "PERSON", "prediction": {"text": "Operations Analyst", "start": 179, "end": 197}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Human Resources", "start": 354, "end": 369}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "PERSON", "prediction": {"text": "Operations Analyst", "start": 593, "end": 611}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "EMAIL", "prediction": {"text": "email addresses", "start": 919, "end": 934}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Human Resources", "start": 955, "end": 970}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "IBAN", "prediction": {"text": "IBAN", "start": 1068, "end": 1072}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "IBAN", "prediction": {"text": "IBAN", "start": 1102, "end": 1106}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "cross-functional teams", "start": 1347, "end": 1369}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "PHONE", "ground_truth": {"text": "+1 415 555 0134", "start": 87, "end": 102}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "PERSON", "ground_truth": {"text": "m. brown", "start": 1059, "end": 1067}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "EMAIL", "prediction": {"text": "+1 415 555 0134", "start": 87, "end": 102}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Financial Operations", "start": 148, "end": 168}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "PERSON", "prediction": {"text": "Operations Analyst", "start": 179, "end": 197}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Human Resources", "start": 354, "end": 369}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "PERSON", "prediction": {"text": "Operations Analyst", "start": 593, "end": 611}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "EMAIL", "prediction": {"text": "email addresses", "start": 919, "end": 934}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Human Resources", "start": 955, "end": 970}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "IBAN", "prediction": {"text": "IBAN", "start": 1068, "end": 1072}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "IBAN", "prediction": {"text": "IBAN", "start": 1102, "end": 1106}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "cross-functional teams", "start": 1347, "end": 1369}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "PHONE", "ground_truth": {"text": "532-123-4567", "start": 87, "end": 99}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "EMAIL", "prediction": {"text": "532-123-4567", "start": 87, "end": 99}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Risk & Compliance", "start": 166, "end": 183}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "PERSON", "prediction": {"text": "Compliance Analyst", "start": 194, "end": 212}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "PERSON", "prediction": {"text": "Compliance Analyst", "start": 521, "end": 539}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "PHONE", "prediction": {"text": "contact number", "start": 840, "end": 854}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "EMAIL", "prediction": {"text": "email address", "start": 859, "end": 872}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Human Resources", "start": 895, "end": 910}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "IBAN", "prediction": {"text": "IBAN", "start": 967, "end": 971}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "IBAN", "prediction": {"text": "IBAN", "start": 1003, "end": 1007}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "DATE", "prediction": {"text": "start date", "start": 1291, "end": 1301}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "PHONE", "ground_truth": {"text": "532-123-4567", "start": 87, "end": 99}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "EMAIL", "prediction": {"text": "532-123-4567", "start": 87, "end": 99}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Risk & Compliance", "start": 166, "end": 183}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "PERSON", "prediction": {"text": "Compliance Analyst", "start": 194, "end": 212}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "PERSON", "prediction": {"text": "Compliance Analyst", "start": 521, "end": 539}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "PHONE", "prediction": {"text": "contact number", "start": 840, "end": 854}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "EMAIL", "prediction": {"text": "email address", "start": 859, "end": 872}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Human Resources", "start": 895, "end": 910}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "IBAN", "prediction": {"text": "IBAN", "start": 967, "end": 971}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "IBAN", "prediction": {"text": "IBAN", "start": 1003, "end": 1007}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "DATE", "prediction": {"text": "start date", "start": 1291, "end": 1301}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_053", "type": "PERSON", "ground_truth": {"text": "Paris S.", "start": 46, "end": 54}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_053", "type": "PERSON", "ground_truth": {"text": "Paris S.", "start": 97, "end": 105}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_053", "type": "PHONE", "ground_truth": {"text": "+49 151 87654321", "start": 336, "end": 352}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_053", "type": "EMAIL", "ground_truth": {"text": "paris-smith@company.com", "start": 389, "end": 412}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_053", "type": "EMAIL", "ground_truth": {"text": "hr@company.com", "start": 638, "end": 652}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_053", "type": "ORG", "prediction": {"text": "Paris S.", "start": 46, "end": 54}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_053", "type": "ORG", "prediction": {"text": "Paris S.", "start": 97, "end": 105}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_053", "type": "EMAIL", "prediction": {"text": "+49 151 87654321", "start": 336, "end": 352}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_053", "type": "PERSON", "ground_truth": {"text": "Paris S.", "start": 46, "end": 54}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_053", "type": "PERSON", "ground_truth": {"text": "Paris S.", "start": 97, "end": 105}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_053", "type": "PHONE", "ground_truth": {"text": "+49 151 87654321", "start": 336, "end": 352}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_053", "type": "EMAIL", "ground_truth": {"text": "paris-smith@company.com", "start": 389, "end": 412}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_053", "type": "EMAIL", "ground_truth": {"text": "hr@company.com", "start": 638, "end": 652}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_053", "type": "ORG", "prediction": {"text": "Paris S.", "start": 46, "end": 54}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_053", "type": "ORG", "prediction": {"text": "Paris S.", "start": 97, "end": 105}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_053", "type": "EMAIL", "prediction": {"text": "+49 151 87654321", "start": 336, "end": 352}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_054", "type": "EMAIL", "ground_truth": {"text": "sarah.davis@company.com", "start": 203, "end": 226}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_054", "type": "IBAN", "prediction": {"text": "IBAN", "start": 474, "end": 478}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_054", "type": "DATE", "prediction": {"text": "2024-05", "start": 579, "end": 586}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_054", "type": "EMAIL", "ground_truth": {"text": "sarah.davis@company.com", "start": 203, "end": 226}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_054", "type": "IBAN", "prediction": {"text": "IBAN", "start": 474, "end": 478}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_054", "type": "DATE", "prediction": {"text": "2024-05", "start": 579, "end": 586}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 109, "end": 117}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 120, "end": 128}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "PHONE", "ground_truth": {"text": "+1 617 555 0145", "start": 324, "end": 339}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 555, "end": 563}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 647, "end": 655}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "ORG", "prediction": {"text": "Brooklyn", "start": 120, "end": 128}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "IBAN", "prediction": {"text": "+1 617 555 0145", "start": 324, "end": 339}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "ORG", "prediction": {"text": "Brooklyn", "start": 555, "end": 563}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "PHONE", "prediction": {"text": "Brooklyn", "start": 647, "end": 655}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 109, "end": 117}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 120, "end": 128}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "PHONE", "ground_truth": {"text": "+1 617 555 0145", "start": 324, "end": 339}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 555, "end": 563}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 647, "end": 655}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "ORG", "prediction": {"text": "Brooklyn", "start": 120, "end": 128}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "IBAN", "prediction": {"text": "+1 617 555 0145", "start": 324, "end": 339}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "ORG", "prediction": {"text": "Brooklyn", "start": 555, "end": 563}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "PHONE", "prediction": {"text": "Brooklyn", "start": 647, "end": 655}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_056", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 255, "end": 277}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_056", "type": "IBAN", "prediction": {"text": "IBAN", "start": 544, "end": 548}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_056", "type": "EMAIL", "ground_truth": {"text": "john.smith@company.com", "start": 255, "end": 277}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_056", "type": "IBAN", "prediction": {"text": "IBAN", "start": 544, "end": 548}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 127, "end": 152}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "PHONE", "ground_truth": {"text": "+49 152 33445566", "start": 154, "end": 170}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 398, "end": 423}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "PHONE", "ground_truth": {"text": "+1 415 555 0190", "start": 425, "end": 440}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "LOCATION", "ground_truth": {"text": "88 Market Street, San Francisco, CA, USA", "start": 458, "end": 498}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 127, "end": 140}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "EMAIL", "prediction": {"text": "+49 152 33445566", "start": 154, "end": 170}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 398, "end": 411}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "EMAIL", "prediction": {"text": "+1 415 555 0190", "start": 425, "end": 440}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "LOCATION", "prediction": {"text": "88 Market Street", "start": 458, "end": 474}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_057", "type": "LOCATION", "prediction": {"text": "San Francisco", "start": 476, "end": 489}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_057", "type": "EMAIL", "ground_truth": {"text": "emily.johnson@company.com", "start": 127, "end": 152}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_057", "type": "PHONE", "ground_truth": {"text": "+49 152 33445566", "start": 154, "end": 170}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_057", "type": "EMAIL", "ground_truth": {"text": "michael.brown@company.com", "start": 398, "end": 423}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_057", "type": "PHONE", "ground_truth": {"text": "+1 415 555 0190", "start": 425, "end": 440}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_057", "type": "PERSON", "prediction": {"text": "emily.johnson", "start": 127, "end": 140}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_057", "type": "EMAIL", "prediction": {"text": "+49 152 33445566", "start": 154, "end": 170}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_057", "type": "PERSON", "prediction": {"text": "michael.brown", "start": 398, "end": 411}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_057", "type": "EMAIL", "prediction": {"text": "+1 415 555 0190", "start": 425, "end": 440}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_057", "type": "LOCATION", "ground_truth": {"text": "88 Market Street, San Francisco, CA, USA", "start": 458, "end": 498}, "prediction": {"text": "88 Market Street", "start": 458, "end": 474}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_058", "type": "EMAIL", "ground_truth": {"text": "hande@company.bank.com", "start": 159, "end": 181}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_058", "type": "IBAN", "prediction": {"text": "IBAN", "start": 544, "end": 548}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_058", "type": "EMAIL", "ground_truth": {"text": "hande@company.bank.com", "start": 159, "end": 181}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_058", "type": "IBAN", "prediction": {"text": "IBAN", "start": 544, "end": 548}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_060", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 526, "end": 545}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_060", "type": "CREDIT_CARD", "ground_truth": {"text": "4716 2210 5188 5662", "start": 562, "end": 581}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "IBAN", "start": 481, "end": 485}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "4532 0151 1283 0366", "start": 526, "end": 545}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "4716 2210 5188 5662", "start": 562, "end": 581}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "IBAN", "start": 660, "end": 664}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "IBAN", "start": 861, "end": 865}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_060", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 0151 1283 0366", "start": 526, "end": 545}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_060", "type": "CREDIT_CARD", "ground_truth": {"text": "4716 2210 5188 5662", "start": 562, "end": 581}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "IBAN", "start": 481, "end": 485}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "4532 0151 1283 0366", "start": 526, "end": 545}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "4716 2210 5188 5662", "start": 562, "end": 581}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "IBAN", "start": 660, "end": 664}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_060", "type": "IBAN", "prediction": {"text": "IBAN", "start": 861, "end": 865}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "EMAIL", "ground_truth": {"text": "aisha.khan@company.com", "start": 211, "end": 233}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "LOCATION", "ground_truth": {"text": "Sheikh Zayed Road, Dubai, United Arab Emirates", "start": 283, "end": 329}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "EMAIL", "ground_truth": {"text": "mehmet.yilmaz@company.com", "start": 553, "end": 578}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "LOCATION", "ground_truth": {"text": "Bağdat Caddesi 120, Istanbul, Turkey", "start": 628, "end": 664}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "PERSON", "prediction": {"text": "aisha.khan", "start": 211, "end": 221}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "LOCATION", "prediction": {"text": "Sheikh Zayed Road", "start": 283, "end": 300}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "LOCATION", "prediction": {"text": "Dubai", "start": 302, "end": 307}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "IBAN", "prediction": {"text": "IBAN", "start": 395, "end": 399}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "LOCATION", "prediction": {"text": "Bağdat Caddesi 120", "start": 628, "end": 646}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "LOCATION", "prediction": {"text": "Istanbul", "start": 648, "end": 656}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_061", "type": "IBAN", "prediction": {"text": "IBAN", "start": 756, "end": 760}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_061", "type": "EMAIL", "ground_truth": {"text": "aisha.khan@company.com", "start": 211, "end": 233}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_061", "type": "EMAIL", "ground_truth": {"text": "mehmet.yilmaz@company.com", "start": 553, "end": 578}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_061", "type": "PERSON", "prediction": {"text": "aisha.khan", "start": 211, "end": 221}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_061", "type": "IBAN", "prediction": {"text": "IBAN", "start": 395, "end": 399}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_061", "type": "IBAN", "prediction": {"text": "IBAN", "start": 756, "end": 760}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_061", "type": "LOCATION", "ground_truth": {"text": "Sheikh Zayed Road, Dubai, United Arab Emirates", "start": 283, "end": 329}, "prediction": {"text": "Sheikh Zayed Road", "start": 283, "end": 300}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_061", "type": "LOCATION", "ground_truth": {"text": "Bağdat Caddesi 120, Istanbul, Turkey", "start": 628, "end": 664}, "prediction": {"text": "Bağdat Caddesi 120", "start": 628, "end": 646}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_062", "type": "EMAIL", "ground_truth": {"text": "mehmet.yilmaz@company.com", "start": 127, "end": 152}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_062", "type": "IBAN", "prediction": {"text": "IBAN", "start": 379, "end": 383}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_062", "type": "EMAIL", "ground_truth": {"text": "mehmet.yilmaz@company.com", "start": 127, "end": 152}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_062", "type": "IBAN", "prediction": {"text": "IBAN", "start": 379, "end": 383}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "EMAIL", "ground_truth": {"text": "rajesh.patel@example.com", "start": 86, "end": 110}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "LOCATION", "ground_truth": {"text": "14 MG Road, Bengaluru, India", "start": 128, "end": 156}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "EMAIL", "ground_truth": {"text": "aisha.khan@example.com", "start": 346, "end": 368}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "LOCATION", "ground_truth": {"text": "Sheikh Zayed Road, Dubai, United Arab Emirates", "start": 388, "end": 434}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "LOCATION", "prediction": {"text": "14 MG Road", "start": 128, "end": 138}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "LOCATION", "prediction": {"text": "Bengaluru", "start": 140, "end": 149}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "IBAN", "prediction": {"text": "IBAN", "start": 249, "end": 253}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "LOCATION", "prediction": {"text": "Sheikh Zayed Road", "start": 388, "end": 405}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "LOCATION", "prediction": {"text": "Dubai", "start": 407, "end": 412}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_063", "type": "EMAIL", "ground_truth": {"text": "rajesh.patel@example.com", "start": 86, "end": 110}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_063", "type": "EMAIL", "ground_truth": {"text": "aisha.khan@example.com", "start": 346, "end": 368}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_063", "type": "IBAN", "prediction": {"text": "IBAN", "start": 249, "end": 253}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_063", "type": "LOCATION", "ground_truth": {"text": "14 MG Road, Bengaluru, India", "start": 128, "end": 156}, "prediction": {"text": "14 MG Road", "start": 128, "end": 138}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_063", "type": "LOCATION", "ground_truth": {"text": "Sheikh Zayed Road, Dubai, United Arab Emirates", "start": 388, "end": 434}, "prediction": {"text": "Sheikh Zayed Road", "start": 388, "end": 405}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "EMAIL", "ground_truth": {"text": "kenji.sato@company.com", "start": 84, "end": 106}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "LOCATION", "ground_truth": {"text": "3-2-1 Shibuya, Tokyo, Japan", "start": 152, "end": 179}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "CREDIT_CARD", "ground_truth": {"text": "4111 2222 3333 4444", "start": 323, "end": 342}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "LOCATION", "prediction": {"text": "3-2-1 Shibuya", "start": 152, "end": 165}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "LOCATION", "prediction": {"text": "Tokyo", "start": 167, "end": 172}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "IBAN", "prediction": {"text": "4111 2222 3333 4444", "start": 323, "end": 342}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "IBAN", "prediction": {"text": "IBAN", "start": 442, "end": 446}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_64", "type": "EMAIL", "ground_truth": {"text": "kenji.sato@company.com", "start": 84, "end": 106}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_64", "type": "CREDIT_CARD", "ground_truth": {"text": "4111 2222 3333 4444", "start": 323, "end": 342}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_64", "type": "IBAN", "prediction": {"text": "4111 2222 3333 4444", "start": 323, "end": 342}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_64", "type": "IBAN", "prediction": {"text": "IBAN", "start": 442, "end": 446}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_64", "type": "LOCATION", "ground_truth": {"text": "3-2-1 Shibuya, Tokyo, Japan", "start": 152, "end": 179}, "prediction": {"text": "3-2-1 Shibuya", "start": 152, "end": 165}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_65", "type": "EMAIL", "ground_truth": {"text": "ahmed.ali@example.com", "start": 133, "end": 154}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_65", "type": "EMAIL", "ground_truth": {"text": "a.h.ali@oldmail.com", "start": 441, "end": 460}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_65", "type": "IBAN", "prediction": {"text": "IBAN", "start": 349, "end": 353}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_65", "type": "EMAIL", "ground_truth": {"text": "ahmed.ali@example.com", "start": 133, "end": 154}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_65", "type": "EMAIL", "ground_truth": {"text": "a.h.ali@oldmail.com", "start": 441, "end": 460}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_65", "type": "IBAN", "prediction": {"text": "IBAN", "start": 349, "end": 353}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_66", "type": "EMAIL", "ground_truth": {"text": "minh.nguyen@example.com", "start": 80, "end": 103}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_66", "type": "EMAIL", "prediction": {"text": "Email", "start": 73, "end": 78}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_66", "type": "IBAN", "prediction": {"text": "IBAN", "start": 326, "end": 330}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_66", "type": "EMAIL", "ground_truth": {"text": "minh.nguyen@example.com", "start": 80, "end": 103}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_66", "type": "EMAIL", "prediction": {"text": "Email", "start": 73, "end": 78}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_66", "type": "IBAN", "prediction": {"text": "IBAN", "start": 326, "end": 330}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_67", "type": "EMAIL", "ground_truth": {"text": "c.mendes@example.com", "start": 79, "end": 99}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_67", "type": "IBAN", "ground_truth": {"text": "BR1500001234567890123456", "start": 211, "end": 235}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_67", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 9988 7766 5544", "start": 303, "end": 322}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_67", "type": "EMAIL", "prediction": {"text": "Email", "start": 72, "end": 77}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_67", "type": "CREDIT_CARD", "prediction": {"text": "BR1500001234567890123456", "start": 211, "end": 235}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_67", "type": "CREDIT_CARD", "prediction": {"text": "4532998877660000", "start": 376, "end": 392}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_67", "type": "EMAIL", "ground_truth": {"text": "c.mendes@example.com", "start": 79, "end": 99}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_67", "type": "IBAN", "ground_truth": {"text": "BR1500001234567890123456", "start": 211, "end": 235}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_67", "type": "CREDIT_CARD", "ground_truth": {"text": "4532 9988 7766 5544", "start": 303, "end": 322}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_67", "type": "EMAIL", "prediction": {"text": "Email", "start": 72, "end": 77}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_67", "type": "CREDIT_CARD", "prediction": {"text": "BR1500001234567890123456", "start": 211, "end": 235}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_67", "type": "CREDIT_CARD", "prediction": {"text": "4532998877660000", "start": 376, "end": 392}}

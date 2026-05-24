@@ -1,0 +1,17 @@
+{
+  "variant": "regex_spacy_hybrid_trf",
+  "stage": "anonymization",
+  "config_path": "configs/anonymization/regex_spacy_hybrid_trf.yaml",
+  "created_at": "2026-05-16T16:54:20.500390+00:00",
+  "doc_count": 66,
+  "char_count": 146695,
+  "entity_count": 820,
+  "runtime_seconds": 13.293151332996786,
+  "throughput_docs_per_sec": 4.964962659845163,
+  "throughput_chars_per_sec": 11035.38177857555,
+  "latency_avg_ms": 162.08429489933857,
+  "latency_p50_ms": 162.89785387925804,
+  "latency_p95_ms": 267.27865677094087,
+  "latency_max_ms": 300.184375140816,
+  "run_id": "20260516T165420500841Z"
+}

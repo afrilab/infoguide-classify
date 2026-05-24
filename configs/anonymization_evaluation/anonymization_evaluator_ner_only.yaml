@@ -3,6 +3,6 @@
 benchmark_path: data/synthetic/benchmark.json
 
 models:
-  - model: presidio_ner_only
-    prediction_path: outputs/anonymizer_outputs/presidio_ner_only_predictions.jsonl
-    output_dir: outputs/anonymizer_evaluation/presidio_ner_only
+  - model: spacy_ner_only
+    prediction_path: outputs/anonymizer_outputs/spacy_ner_only_predictions.jsonl
+    output_dir: outputs/anonymizer_evaluation/spacy_ner_only

@@ -1,0 +1,198 @@
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_002", "type": "ORG", "ground_truth": {"text": "MTB", "start": 782, "end": 785}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_002", "type": "ORG", "ground_truth": {"text": "MTB", "start": 782, "end": 785}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_005", "type": "PERSON", "ground_truth": {"text": "Becker", "start": 1338, "end": 1344}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_005", "type": "PERSON", "ground_truth": {"text": "Becker", "start": 1338, "end": 1344}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_008", "type": "PERSON", "ground_truth": {"text": "Santis", "start": 1341, "end": 1347}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_008", "type": "PERSON", "ground_truth": {"text": "Santis", "start": 1341, "end": 1347}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "ground_truth": {"text": "Tornimäe 5, 10145 Tallinn, Estonia", "start": 743, "end": 777}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "prediction": {"text": "Tornimäe 5", "start": 743, "end": 753}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "prediction": {"text": "10", "start": 755, "end": 757}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "prediction": {"text": "Tallinn", "start": 761, "end": 768}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "LOCATION", "prediction": {"text": "Estonia", "start": 770, "end": 777}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_009", "type": "ORG", "prediction": {"text": "Oversight Forum", "start": 1778, "end": 1793}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_009", "type": "ORG", "prediction": {"text": "Oversight Forum", "start": 1778, "end": 1793}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_009", "type": "LOCATION", "ground_truth": {"text": "Tornimäe 5, 10145 Tallinn, Estonia", "start": 743, "end": 777}, "prediction": {"text": "Tornimäe 5", "start": 743, "end": 753}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "ORG", "ground_truth": {"text": "HBC", "start": 1632, "end": 1635}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_010", "type": "ORG", "prediction": {"text": "Documentation Review Council", "start": 1240, "end": 1268}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "ORG", "ground_truth": {"text": "HBC", "start": 1632, "end": 1635}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_010", "type": "ORG", "prediction": {"text": "Documentation Review Council", "start": 1240, "end": 1268}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "ground_truth": {"text": "Marina Bay Financial Centre Tower 3, Singapore 018982", "start": 816, "end": 869}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "prediction": {"text": "Marina Bay Financial Centre Tower 3", "start": 816, "end": 851}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_011", "type": "LOCATION", "prediction": {"text": "Singapore", "start": 853, "end": 862}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_011", "type": "LOCATION", "ground_truth": {"text": "Marina Bay Financial Centre Tower 3, Singapore 018982", "start": 816, "end": 869}, "prediction": {"text": "Marina Bay Financial Centre Tower 3", "start": 816, "end": 851}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "PERSON", "ground_truth": {"text": "Petrova, E. M.", "start": 135, "end": 149}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "LOCATION", "ground_truth": {"text": "Duba i", "start": 529, "end": 535}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "ORG", "prediction": {"text": "Office of General Counsel", "start": 68, "end": 93}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "PERSON", "prediction": {"text": "Petrova", "start": 135, "end": 142}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_012", "type": "LOCATION", "prediction": {"text": "Duba", "start": 529, "end": 533}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_012", "type": "ORG", "prediction": {"text": "Office of General Counsel", "start": 68, "end": 93}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_012", "type": "PERSON", "ground_truth": {"text": "Petrova, E. M.", "start": 135, "end": 149}, "prediction": {"text": "Petrova", "start": 135, "end": 142}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_012", "type": "LOCATION", "ground_truth": {"text": "Duba i", "start": 529, "end": 535}, "prediction": {"text": "Duba", "start": 529, "end": 533}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_013", "type": "PERSON", "prediction": {"text": "Johnson", "start": 1527, "end": 1534}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_013", "type": "PERSON", "prediction": {"text": "Johnson", "start": 1527, "end": 1534}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_014", "type": "PERSON", "prediction": {"text": "Ms. Alvarez", "start": 1128, "end": 1139}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_014", "type": "PERSON", "prediction": {"text": "Ms. Alvarez", "start": 1128, "end": 1139}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_015", "type": "LOCATION", "ground_truth": {"text": "paris", "start": 1493, "end": 1498}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_015", "type": "LOCATION", "ground_truth": {"text": "milan", "start": 1557, "end": 1562}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_015", "type": "LOCATION", "ground_truth": {"text": "amsterdam", "start": 2548, "end": 2557}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_015", "type": "LOCATION", "ground_truth": {"text": "paris", "start": 1493, "end": 1498}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_015", "type": "LOCATION", "ground_truth": {"text": "milan", "start": 1557, "end": 1562}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_015", "type": "LOCATION", "ground_truth": {"text": "amsterdam", "start": 2548, "end": 2557}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_018", "type": "LOCATION", "ground_truth": {"text": "Sofia", "start": 1330, "end": 1335}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_018", "type": "LOCATION", "ground_truth": {"text": "Sofia", "start": 1330, "end": 1335}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_019", "type": "LOCATION", "ground_truth": {"text": "nice", "start": 485, "end": 489}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_019", "type": "LOCATION", "ground_truth": {"text": "nice", "start": 1713, "end": 1717}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_019", "type": "LOCATION", "ground_truth": {"text": "nice", "start": 485, "end": 489}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_019", "type": "LOCATION", "ground_truth": {"text": "nice", "start": 1713, "end": 1717}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "LOCATION", "ground_truth": {"text": "Kartal", "start": 1947, "end": 1953}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "LOCATION", "ground_truth": {"text": "Maltepe", "start": 2077, "end": 2084}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "ORG", "prediction": {"text": "Kartal", "start": 1947, "end": 1953}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_021", "type": "ORG", "prediction": {"text": "Maltepe", "start": 2077, "end": 2084}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_021", "type": "LOCATION", "ground_truth": {"text": "Kartal", "start": 1947, "end": 1953}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_021", "type": "LOCATION", "ground_truth": {"text": "Maltepe", "start": 2077, "end": 2084}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_021", "type": "ORG", "prediction": {"text": "Kartal", "start": 1947, "end": 1953}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_021", "type": "ORG", "prediction": {"text": "Maltepe", "start": 2077, "end": 2084}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_022", "type": "PERSON", "ground_truth": {"text": "ilker çil", "start": 1491, "end": 1500}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_022", "type": "PERSON", "prediction": {"text": "ilker", "start": 1491, "end": 1496}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_022", "type": "PERSON", "ground_truth": {"text": "ilker çil", "start": 1491, "end": 1500}, "prediction": {"text": "ilker", "start": 1491, "end": 1496}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_023", "type": "LOCATION", "ground_truth": {"text": "Berlin-DE", "start": 1681, "end": 1690}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_023", "type": "PERSON", "prediction": {"text": "Jane Smith", "start": 2643, "end": 2653}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_023", "type": "LOCATION", "ground_truth": {"text": "Berlin-DE", "start": 1681, "end": 1690}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_023", "type": "PERSON", "prediction": {"text": "Jane Smith", "start": 2643, "end": 2653}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_025", "type": "LOCATION", "ground_truth": {"text": "Bağdat Caddesi", "start": 1859, "end": 1873}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_025", "type": "LOCATION", "ground_truth": {"text": "Bağdat Caddesi", "start": 1859, "end": 1873}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "yasemin ç.", "start": 245, "end": 255}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "arzu ulak", "start": 276, "end": 285}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "yasemin ç.", "start": 1438, "end": 1448}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "arzu ulak", "start": 1900, "end": 1909}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "yasemin ç.", "start": 2614, "end": 2624}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "arzu ulak", "start": 2696, "end": 2705}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "LOCATION", "prediction": {"text": "London", "start": 92, "end": 98}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_027", "type": "PERSON", "prediction": {"text": "yasemin", "start": 1438, "end": 1445}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "yasemin ç.", "start": 245, "end": 255}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "arzu ulak", "start": 276, "end": 285}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "arzu ulak", "start": 1900, "end": 1909}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "yasemin ç.", "start": 2614, "end": 2624}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "arzu ulak", "start": 2696, "end": 2705}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_027", "type": "LOCATION", "prediction": {"text": "London", "start": 92, "end": 98}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_027", "type": "PERSON", "ground_truth": {"text": "yasemin ç.", "start": 1438, "end": 1448}, "prediction": {"text": "yasemin", "start": 1438, "end": 1445}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "novak", "start": 275, "end": 280}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "ORG", "ground_truth": {"text": "global finance division", "start": 558, "end": 581}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "bianchi", "start": 1010, "end": 1017}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "ORG", "ground_truth": {"text": "global finance division", "start": 1471, "end": 1494}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "novak", "start": 2307, "end": 2312}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "novak", "start": 275, "end": 280}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "bianchi", "start": 1010, "end": 1017}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "novak", "start": 2307, "end": 2312}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "novak", "start": 275, "end": 280}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "ORG", "ground_truth": {"text": "global finance division", "start": 558, "end": 581}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "bianchi", "start": 1010, "end": 1017}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "ORG", "ground_truth": {"text": "global finance division", "start": 1471, "end": 1494}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "PERSON", "ground_truth": {"text": "novak", "start": 2307, "end": 2312}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "novak", "start": 275, "end": 280}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "bianchi", "start": 1010, "end": 1017}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_029", "type": "ORG", "prediction": {"text": "novak", "start": 2307, "end": 2312}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_031", "type": "LOCATION", "prediction": {"text": "Istanbul", "start": 1791, "end": 1799}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_031", "type": "LOCATION", "prediction": {"text": "Istanbul", "start": 1791, "end": 1799}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_033", "type": "LOCATION", "ground_truth": {"text": "Pariser Platz 4A, 10117 Berlin, Germany", "start": 119, "end": 158}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_033", "type": "LOCATION", "prediction": {"text": "Pariser Platz 4A", "start": 119, "end": 135}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_033", "type": "LOCATION", "prediction": {"text": "Berlin", "start": 143, "end": 149}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_033", "type": "LOCATION", "prediction": {"text": "Germany", "start": 151, "end": 158}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_033", "type": "LOCATION", "ground_truth": {"text": "Pariser Platz 4A, 10117 Berlin, Germany", "start": 119, "end": 158}, "prediction": {"text": "Pariser Platz 4A", "start": 119, "end": 135}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "ORG", "ground_truth": {"text": "JPMorgan Chase & Co.", "start": 69, "end": 89}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "LOCATION", "ground_truth": {"text": "Central Office, Texas, USA", "start": 130, "end": 156}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "PERSON", "ground_truth": {"text": "carter, m", "start": 796, "end": 805}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "ORG", "ground_truth": {"text": "JPMorgan Chase & Co.", "start": 1940, "end": 1960}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "PERSON", "ground_truth": {"text": "carter, m", "start": 2210, "end": 2219}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "ORG", "prediction": {"text": "JPMorgan Chase", "start": 69, "end": 83}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "LOCATION", "prediction": {"text": "Texas", "start": 146, "end": 151}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "LOCATION", "prediction": {"text": "USA", "start": 153, "end": 156}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "PERSON", "prediction": {"text": "carter", "start": 796, "end": 802}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_034", "type": "ORG", "prediction": {"text": "JPMorgan Chase", "start": 1940, "end": 1954}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_034", "type": "PERSON", "ground_truth": {"text": "carter, m", "start": 2210, "end": 2219}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_034", "type": "ORG", "ground_truth": {"text": "JPMorgan Chase & Co.", "start": 69, "end": 89}, "prediction": {"text": "JPMorgan Chase", "start": 69, "end": 83}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_034", "type": "LOCATION", "ground_truth": {"text": "Central Office, Texas, USA", "start": 130, "end": 156}, "prediction": {"text": "Texas", "start": 146, "end": 151}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_034", "type": "PERSON", "ground_truth": {"text": "carter, m", "start": 796, "end": 805}, "prediction": {"text": "carter", "start": 796, "end": 802}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_034", "type": "ORG", "ground_truth": {"text": "JPMorgan Chase & Co.", "start": 1940, "end": 1960}, "prediction": {"text": "JPMorgan Chase", "start": 1940, "end": 1954}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_036", "type": "LOCATION", "ground_truth": {"text": "Global Offices, Zurich, Switzerland", "start": 95, "end": 130}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_036", "type": "LOCATION", "prediction": {"text": "Zurich", "start": 111, "end": 117}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_036", "type": "LOCATION", "prediction": {"text": "Switzerland", "start": 119, "end": 130}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_036", "type": "LOCATION", "ground_truth": {"text": "Global Offices, Zurich, Switzerland", "start": 95, "end": 130}, "prediction": {"text": "Zurich", "start": 111, "end": 117}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "PERSON", "ground_truth": {"text": "Dilara W.", "start": 6, "end": 15}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 204, "end": 210}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "PERSON", "ground_truth": {"text": "Dilara W.", "start": 422, "end": 431}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "PERSON", "ground_truth": {"text": "Dilara W.", "start": 1031, "end": 1040}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 1060, "end": 1066}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "PERSON", "ground_truth": {"text": "Dilara W.", "start": 6, "end": 15}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 204, "end": 210}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "PERSON", "ground_truth": {"text": "Dilara W.", "start": 422, "end": 431}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "PERSON", "ground_truth": {"text": "Dilara W.", "start": 1031, "end": 1040}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_039", "type": "LOCATION", "ground_truth": {"text": "Berlin", "start": 1060, "end": 1066}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "PERSON", "ground_truth": {"text": "Em1ly Johnson", "start": 514, "end": 527}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "PERSON", "ground_truth": {"text": "Em1ly Johnson", "start": 1310, "end": 1323}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "PERSON", "prediction": {"text": "Em", "start": 514, "end": 516}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_040", "type": "PERSON", "prediction": {"text": "ly Johnson", "start": 517, "end": 527}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_040", "type": "PERSON", "ground_truth": {"text": "Em1ly Johnson", "start": 1310, "end": 1323}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_040", "type": "PERSON", "ground_truth": {"text": "Em1ly Johnson", "start": 514, "end": 527}, "prediction": {"text": "Em", "start": 514, "end": 516}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "sami ay", "start": 1555, "end": 1562}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "Mehmet Y.", "start": 1910, "end": 1919}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_041", "type": "PERSON", "prediction": {"text": "sami a", "start": 1555, "end": 1561}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "Mehmet Y.", "start": 1910, "end": 1919}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_041", "type": "PERSON", "ground_truth": {"text": "sami ay", "start": 1555, "end": 1562}, "prediction": {"text": "sami a", "start": 1555, "end": 1561}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "LOCATION", "ground_truth": {"text": "London", "start": 643, "end": 649}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_043", "type": "ORG", "prediction": {"text": "Finance Group", "start": 994, "end": 1007}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "LOCATION", "ground_truth": {"text": "London", "start": 643, "end": 649}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_043", "type": "ORG", "prediction": {"text": "Finance Group", "start": 994, "end": 1007}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "PERSON", "ground_truth": {"text": "Michael Brown", "start": 1043, "end": 1056}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_047", "type": "ORG", "ground_truth": {"text": "Barclays Bank PLC", "start": 1324, "end": 1341}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "PERSON", "ground_truth": {"text": "Michael Brown", "start": 1043, "end": 1056}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_047", "type": "ORG", "ground_truth": {"text": "Barclays Bank PLC", "start": 1324, "end": 1341}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_049", "type": "ORG", "ground_truth": {"text": "HSBC Holdings plc", "start": 1502, "end": 1519}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_049", "type": "ORG", "ground_truth": {"text": "HSBC Holdings plc", "start": 1502, "end": 1519}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_050", "type": "PERSON", "ground_truth": {"text": "Mr. Ruiz", "start": 25, "end": 33}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_050", "type": "PERSON", "prediction": {"text": ". Ruiz", "start": 27, "end": 33}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_050", "type": "ORG", "prediction": {"text": "Human Resources", "start": 569, "end": 584}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_050", "type": "ORG", "prediction": {"text": "Human Resources", "start": 569, "end": 584}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_050", "type": "PERSON", "ground_truth": {"text": "Mr. Ruiz", "start": 25, "end": 33}, "prediction": {"text": ". Ruiz", "start": 27, "end": 33}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Human Resources", "start": 354, "end": 369}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Financial Operations", "start": 545, "end": 565}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Human Resources", "start": 955, "end": 970}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "PERSON", "prediction": {"text": "m", "start": 1059, "end": 1060}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_051", "type": "PERSON", "prediction": {"text": "brown", "start": 1062, "end": 1067}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Human Resources", "start": 354, "end": 369}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Financial Operations", "start": 545, "end": 565}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_051", "type": "ORG", "prediction": {"text": "Human Resources", "start": 955, "end": 970}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_051", "type": "PERSON", "ground_truth": {"text": "m. brown", "start": 1059, "end": 1067}, "prediction": {"text": "m", "start": 1059, "end": 1060}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Human Resources", "start": 319, "end": 334}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Risk & Compliance", "start": 551, "end": 568}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Human Resources", "start": 895, "end": 910}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Human Resources", "start": 319, "end": 334}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Risk & Compliance", "start": 551, "end": 568}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_052", "type": "ORG", "prediction": {"text": "Human Resources", "start": 895, "end": 910}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 109, "end": 117}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_055", "type": "LOCATION", "prediction": {"text": "Brooklyn", "start": 109, "end": 117}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "PERSON", "ground_truth": {"text": "Brooklyn", "start": 109, "end": 117}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_055", "type": "LOCATION", "prediction": {"text": "Brooklyn", "start": 109, "end": 117}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_062", "type": "PERSON", "ground_truth": {"text": "Mehmet Yılmaz", "start": 705, "end": 718}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_062", "type": "LOCATION", "prediction": {"text": "Turkish", "start": 86, "end": 93}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_062", "type": "PERSON", "ground_truth": {"text": "Mehmet Yılmaz", "start": 705, "end": 718}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_062", "type": "LOCATION", "prediction": {"text": "Turkish", "start": 86, "end": 93}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_063", "type": "PERSON", "ground_truth": {"text": "Rajesh Kumar Patel", "start": 717, "end": 735}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_063", "type": "PERSON", "ground_truth": {"text": "Rajesh Kumar Patel", "start": 717, "end": 735}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "LOCATION", "ground_truth": {"text": "3-2-1 Shibuya, Tokyo, Japan", "start": 152, "end": 179}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "PERSON", "ground_truth": {"text": "K. Sato", "start": 823, "end": 830}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "LOCATION", "prediction": {"text": "Shibuya", "start": 158, "end": 165}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "LOCATION", "prediction": {"text": "Tokyo", "start": 167, "end": 172}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_64", "type": "LOCATION", "prediction": {"text": "Japan", "start": 174, "end": 179}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_64", "type": "PERSON", "ground_truth": {"text": "K. Sato", "start": 823, "end": 830}}
+{"error_type": "boundary_error", "doc_id": "syn_doc_64", "type": "LOCATION", "ground_truth": {"text": "3-2-1 Shibuya, Tokyo, Japan", "start": 152, "end": 179}, "prediction": {"text": "Shibuya", "start": 158, "end": 165}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_65", "type": "PERSON", "ground_truth": {"text": "Ahmed Hassan Ali", "start": 318, "end": 334}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_65", "type": "PERSON", "ground_truth": {"text": "Ahmed Hassan Ali", "start": 664, "end": 680}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_65", "type": "PERSON", "ground_truth": {"text": "Ahmed Hassan Ali", "start": 318, "end": 334}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_65", "type": "PERSON", "ground_truth": {"text": "Ahmed Hassan Ali", "start": 664, "end": 680}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_66", "type": "PERSON", "ground_truth": {"text": "Nguyen Thi Minh", "start": 631, "end": 646}}
+{"error_type": "false_positive", "match_mode": "strict", "doc_id": "syn_doc_66", "type": "LOCATION", "prediction": {"text": "Vietnamese", "start": 259, "end": 269}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_66", "type": "PERSON", "ground_truth": {"text": "Nguyen Thi Minh", "start": 631, "end": 646}}
+{"error_type": "false_positive", "match_mode": "relaxed", "doc_id": "syn_doc_66", "type": "LOCATION", "prediction": {"text": "Vietnamese", "start": 259, "end": 269}}
+{"error_type": "false_negative", "match_mode": "strict", "doc_id": "syn_doc_67", "type": "PERSON", "ground_truth": {"text": "Carlos Eduardo Mendes", "start": 836, "end": 857}}
+{"error_type": "false_negative", "match_mode": "relaxed", "doc_id": "syn_doc_67", "type": "PERSON", "ground_truth": {"text": "Carlos Eduardo Mendes", "start": 836, "end": 857}}

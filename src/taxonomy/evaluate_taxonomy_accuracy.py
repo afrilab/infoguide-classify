@@ -7,8 +7,8 @@ the broad banking domain right but misses the functional category or topic.
 
 Usage:
   python src/taxonomy/evaluate_taxonomy_accuracy.py \
-    --predictions data/outputs/taxonomy_assignments_evidence.jsonl \
-    --labels data/labels/taxonomy_gold_labels.jsonl
+    --predictions outputs/taxonomy/taxonomy_assignments_evidence.jsonl \
+    --labels outputs/taxonomy/labels/taxonomy_gold_labels.jsonl
 """
 
 from __future__ import annotations
@@ -139,7 +139,7 @@ def path_value(row: Dict[str, Any]) -> Optional[str]:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--predictions", required=True, help="Predicted taxonomy JSONL")
-    ap.add_argument("--labels", default="data/labels/taxonomy_gold_labels.jsonl", help="Manual single-annotator label JSONL")
+    ap.add_argument("--labels", default="outputs/taxonomy/labels/taxonomy_gold_labels.jsonl", help="Manual single-annotator label JSONL")
     ap.add_argument("--gold", dest="labels", help=argparse.SUPPRESS)
     ap.add_argument("--show_errors", action="store_true", help="Print each mismatched document")
     ap.add_argument(

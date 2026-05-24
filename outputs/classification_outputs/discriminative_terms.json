@@ -1,0 +1,452 @@
+{
+  "n_examples": 94,
+  "class_distribution": {
+    "Reports": 45,
+    "Policy_Procedure_Contract": 29,
+    "Forms_Structured": 20
+  },
+  "class_labels": [
+    "Forms_Structured",
+    "Policy_Procedure_Contract",
+    "Reports"
+  ],
+  "vectorizer": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "lowercase": true,
+    "min_df": 1,
+    "vocab_size": 41316
+  },
+  "top_n": 20,
+  "per_class": {
+    "Forms_Structured": [
+      {
+        "rank": 1,
+        "term": "borrower",
+        "in_class_mean_tfidf": 0.1525463834509521,
+        "out_class_mean_tfidf": 0.0010921019870211018,
+        "discriminative_score": 0.15145428146393097
+      },
+      {
+        "rank": 2,
+        "term": "reserve",
+        "in_class_mean_tfidf": 0.08126307848129627,
+        "out_class_mean_tfidf": 0.001517055857011907,
+        "discriminative_score": 0.07974602262428436
+      },
+      {
+        "rank": 3,
+        "term": "participant",
+        "in_class_mean_tfidf": 0.07515192277431067,
+        "out_class_mean_tfidf": 0.0002363069369618236,
+        "discriminative_score": 0.07491561583734885
+      },
+      {
+        "rank": 4,
+        "term": "agreement",
+        "in_class_mean_tfidf": 0.07579070755770921,
+        "out_class_mean_tfidf": 0.001500056608592769,
+        "discriminative_score": 0.07429065094911644
+      },
+      {
+        "rank": 5,
+        "term": "reserve bank",
+        "in_class_mean_tfidf": 0.0685664595137033,
+        "out_class_mean_tfidf": 0.0003316310703751005,
+        "discriminative_score": 0.0682348284433282
+      },
+      {
+        "rank": 6,
+        "term": "excess",
+        "in_class_mean_tfidf": 0.05938384546060009,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.05938384546060009
+      },
+      {
+        "rank": 7,
+        "term": "title",
+        "in_class_mean_tfidf": 0.05665752728709961,
+        "out_class_mean_tfidf": 0.00022454003253149195,
+        "discriminative_score": 0.056432987254568114
+      },
+      {
+        "rank": 8,
+        "term": "excess balance",
+        "in_class_mean_tfidf": 0.056335961246278904,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.056335961246278904
+      },
+      {
+        "rank": 9,
+        "term": "agent",
+        "in_class_mean_tfidf": 0.05657058876440873,
+        "out_class_mean_tfidf": 0.00028981072428080405,
+        "discriminative_score": 0.056280778040127925
+      },
+      {
+        "rank": 10,
+        "term": "oc",
+        "in_class_mean_tfidf": 0.053863783443754636,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.053863783443754636
+      },
+      {
+        "rank": 11,
+        "term": "oc 10",
+        "in_class_mean_tfidf": 0.053863783443754636,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.053863783443754636
+      },
+      {
+        "rank": 12,
+        "term": "correspondent",
+        "in_class_mean_tfidf": 0.055036563835436765,
+        "out_class_mean_tfidf": 0.003632178436673985,
+        "discriminative_score": 0.051404385398762784
+      },
+      {
+        "rank": 13,
+        "term": "balance account",
+        "in_class_mean_tfidf": 0.04924239887495525,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.04924239887495525
+      },
+      {
+        "rank": 14,
+        "term": "authorized",
+        "in_class_mean_tfidf": 0.05011253042804298,
+        "out_class_mean_tfidf": 0.0013162455819162938,
+        "discriminative_score": 0.048796284846126685
+      },
+      {
+        "rank": 15,
+        "term": "account",
+        "in_class_mean_tfidf": 0.04836873374406492,
+        "out_class_mean_tfidf": 0.004143142055186153,
+        "discriminative_score": 0.04422559168887877
+      },
+      {
+        "rank": 16,
+        "term": "balance",
+        "in_class_mean_tfidf": 0.043027531153182016,
+        "out_class_mean_tfidf": 0.002479208923666612,
+        "discriminative_score": 0.040548322229515404
+      },
+      {
+        "rank": 17,
+        "term": "resolutions",
+        "in_class_mean_tfidf": 0.04002335926125211,
+        "out_class_mean_tfidf": 0.00026720189764399083,
+        "discriminative_score": 0.03975615736360812
+      },
+      {
+        "rank": 18,
+        "term": "operating circular",
+        "in_class_mean_tfidf": 0.037397504257189906,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.037397504257189906
+      },
+      {
+        "rank": 19,
+        "term": "authorization",
+        "in_class_mean_tfidf": 0.037642533687745686,
+        "out_class_mean_tfidf": 0.0004565356192677341,
+        "discriminative_score": 0.03718599806847795
+      },
+      {
+        "rank": 20,
+        "term": "circular",
+        "in_class_mean_tfidf": 0.03642212904494601,
+        "out_class_mean_tfidf": 0.000224089618288721,
+        "discriminative_score": 0.03619803942665729
+      }
+    ],
+    "Policy_Procedure_Contract": [
+      {
+        "rank": 1,
+        "term": "fatf",
+        "in_class_mean_tfidf": 0.09444166720960168,
+        "out_class_mean_tfidf": 0.00027685300405917024,
+        "discriminative_score": 0.0941648142055425
+      },
+      {
+        "rank": 2,
+        "term": "risk",
+        "in_class_mean_tfidf": 0.08275476422837869,
+        "out_class_mean_tfidf": 0.012189003423084835,
+        "discriminative_score": 0.07056576080529385
+      },
+      {
+        "rank": 3,
+        "term": "guidance",
+        "in_class_mean_tfidf": 0.049222928805410716,
+        "out_class_mean_tfidf": 0.002351184873538655,
+        "discriminative_score": 0.04687174393187206
+      },
+      {
+        "rank": 4,
+        "term": "credit risk",
+        "in_class_mean_tfidf": 0.03769447630318406,
+        "out_class_mean_tfidf": 0.00106827995868689,
+        "discriminative_score": 0.03662619634449717
+      },
+      {
+        "rank": 5,
+        "term": "credit",
+        "in_class_mean_tfidf": 0.04950902047103571,
+        "out_class_mean_tfidf": 0.013018656901984647,
+        "discriminative_score": 0.03649036356905107
+      },
+      {
+        "rank": 6,
+        "term": "ccr",
+        "in_class_mean_tfidf": 0.0361595723163134,
+        "out_class_mean_tfidf": 0.0003749808940720559,
+        "discriminative_score": 0.035784591422241344
+      },
+      {
+        "rank": 7,
+        "term": "principles",
+        "in_class_mean_tfidf": 0.036442691120694454,
+        "out_class_mean_tfidf": 0.004256330510403784,
+        "discriminative_score": 0.03218636061029067
+      },
+      {
+        "rank": 8,
+        "term": "committee",
+        "in_class_mean_tfidf": 0.03416293712232495,
+        "out_class_mean_tfidf": 0.00822445561625102,
+        "discriminative_score": 0.025938481506073932
+      },
+      {
+        "rank": 9,
+        "term": "operational",
+        "in_class_mean_tfidf": 0.030246500655795545,
+        "out_class_mean_tfidf": 0.004672279657337646,
+        "discriminative_score": 0.0255742209984579
+      },
+      {
+        "rank": 10,
+        "term": "operational resilience",
+        "in_class_mean_tfidf": 0.025113540874146623,
+        "out_class_mean_tfidf": 0.000367308886037829,
+        "discriminative_score": 0.024746231988108793
+      },
+      {
+        "rank": 11,
+        "term": "countries",
+        "in_class_mean_tfidf": 0.027180312854179673,
+        "out_class_mean_tfidf": 0.0028035051748578526,
+        "discriminative_score": 0.02437680767932182
+      },
+      {
+        "rank": 12,
+        "term": "supervision",
+        "in_class_mean_tfidf": 0.034496447130267456,
+        "out_class_mean_tfidf": 0.011139737617962546,
+        "discriminative_score": 0.02335670951230491
+      },
+      {
+        "rank": 13,
+        "term": "cft",
+        "in_class_mean_tfidf": 0.024694877344102792,
+        "out_class_mean_tfidf": 0.0017604013784171567,
+        "discriminative_score": 0.022934475965685635
+      },
+      {
+        "rank": 14,
+        "term": "laundering",
+        "in_class_mean_tfidf": 0.025702720041516674,
+        "out_class_mean_tfidf": 0.0033105615948302546,
+        "discriminative_score": 0.02239215844668642
+      },
+      {
+        "rank": 15,
+        "term": "exposures",
+        "in_class_mean_tfidf": 0.02454651871049639,
+        "out_class_mean_tfidf": 0.002232817653023918,
+        "discriminative_score": 0.022313701057472473
+      },
+      {
+        "rank": 16,
+        "term": "counterparty",
+        "in_class_mean_tfidf": 0.024086837692693007,
+        "out_class_mean_tfidf": 0.0017868793927232848,
+        "discriminative_score": 0.02229995829996972
+      },
+      {
+        "rank": 17,
+        "term": "financial inclusion",
+        "in_class_mean_tfidf": 0.02440494931855898,
+        "out_class_mean_tfidf": 0.002223925658925171,
+        "discriminative_score": 0.02218102365963381
+      },
+      {
+        "rank": 18,
+        "term": "aml cft",
+        "in_class_mean_tfidf": 0.023712790960675023,
+        "out_class_mean_tfidf": 0.0017604013784171567,
+        "discriminative_score": 0.021952389582257866
+      },
+      {
+        "rank": 19,
+        "term": "money laundering",
+        "in_class_mean_tfidf": 0.025250470107618873,
+        "out_class_mean_tfidf": 0.0033105615948302546,
+        "discriminative_score": 0.021939908512788618
+      },
+      {
+        "rank": 20,
+        "term": "aml",
+        "in_class_mean_tfidf": 0.024157759086474523,
+        "out_class_mean_tfidf": 0.0023658044923085706,
+        "discriminative_score": 0.02179195459416595
+      }
+    ],
+    "Reports": [
+      {
+        "rank": 1,
+        "term": "government",
+        "in_class_mean_tfidf": 0.03991381252183361,
+        "out_class_mean_tfidf": 0.0008069895460075006,
+        "discriminative_score": 0.039106822975826114
+      },
+      {
+        "rank": 2,
+        "term": "mr",
+        "in_class_mean_tfidf": 0.036132900144231435,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.036132900144231435
+      },
+      {
+        "rank": 3,
+        "term": "world",
+        "in_class_mean_tfidf": 0.038441713388312454,
+        "out_class_mean_tfidf": 0.0026677572285819886,
+        "discriminative_score": 0.03577395615973047
+      },
+      {
+        "rank": 4,
+        "term": "world bank",
+        "in_class_mean_tfidf": 0.036283138797882475,
+        "out_class_mean_tfidf": 0.0016913545536972692,
+        "discriminative_score": 0.03459178424418521
+      },
+      {
+        "rank": 5,
+        "term": "sector",
+        "in_class_mean_tfidf": 0.040219965361717874,
+        "out_class_mean_tfidf": 0.0071207602241147505,
+        "discriminative_score": 0.03309920513760312
+      },
+      {
+        "rank": 6,
+        "term": "assessment",
+        "in_class_mean_tfidf": 0.03866236780327191,
+        "out_class_mean_tfidf": 0.005762583242976492,
+        "discriminative_score": 0.032899784560295416
+      },
+      {
+        "rank": 7,
+        "term": "public",
+        "in_class_mean_tfidf": 0.0368184933296299,
+        "out_class_mean_tfidf": 0.005297061636496404,
+        "discriminative_score": 0.0315214316931335
+      },
+      {
+        "rank": 8,
+        "term": "development",
+        "in_class_mean_tfidf": 0.03270875115913336,
+        "out_class_mean_tfidf": 0.0026043521635035977,
+        "discriminative_score": 0.030104398995629764
+      },
+      {
+        "rank": 9,
+        "term": "pi",
+        "in_class_mean_tfidf": 0.029849526688572308,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.029849526688572308
+      },
+      {
+        "rank": 10,
+        "term": "pfm",
+        "in_class_mean_tfidf": 0.02939412593113723,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.02939412593113723
+      },
+      {
+        "rank": 11,
+        "term": "erusolcsid cilbup",
+        "in_class_mean_tfidf": 0.029866630610536526,
+        "out_class_mean_tfidf": 0.0009560731320847892,
+        "discriminative_score": 0.028910557478451736
+      },
+      {
+        "rank": 12,
+        "term": "cilbup",
+        "in_class_mean_tfidf": 0.029866630610536526,
+        "out_class_mean_tfidf": 0.0009560731320847892,
+        "discriminative_score": 0.028910557478451736
+      },
+      {
+        "rank": 13,
+        "term": "erusolcsid",
+        "in_class_mean_tfidf": 0.029866630610536526,
+        "out_class_mean_tfidf": 0.0009560731320847892,
+        "discriminative_score": 0.028910557478451736
+      },
+      {
+        "rank": 14,
+        "term": "dezirohtua",
+        "in_class_mean_tfidf": 0.029866630610536526,
+        "out_class_mean_tfidf": 0.0009560731320847892,
+        "discriminative_score": 0.028910557478451736
+      },
+      {
+        "rank": 15,
+        "term": "dezirohtua erusolcsid",
+        "in_class_mean_tfidf": 0.029866630610536526,
+        "out_class_mean_tfidf": 0.0009560731320847892,
+        "discriminative_score": 0.028910557478451736
+      },
+      {
+        "rank": 16,
+        "term": "financial",
+        "in_class_mean_tfidf": 0.06020495863894699,
+        "out_class_mean_tfidf": 0.03185465441407098,
+        "discriminative_score": 0.028350304224876006
+      },
+      {
+        "rank": 17,
+        "term": "team",
+        "in_class_mean_tfidf": 0.025453891358792835,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.025453891358792835
+      },
+      {
+        "rank": 18,
+        "term": "expenditure",
+        "in_class_mean_tfidf": 0.0246434562308227,
+        "out_class_mean_tfidf": 0.0,
+        "discriminative_score": 0.0246434562308227
+      },
+      {
+        "rank": 19,
+        "term": "financial sector",
+        "in_class_mean_tfidf": 0.027085677813429195,
+        "out_class_mean_tfidf": 0.003164746309009416,
+        "discriminative_score": 0.02392093150441978
+      },
+      {
+        "rank": 20,
+        "term": "budget",
+        "in_class_mean_tfidf": 0.023852587296786812,
+        "out_class_mean_tfidf": 0.0007562873683969878,
+        "discriminative_score": 0.023096299928389824
+      }
+    ]
+  }
+}

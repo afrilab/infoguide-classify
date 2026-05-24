@@ -1,5 +1,5 @@
-input_path: data/anonymized/presidio_hybrid_documents.jsonl
-anonymized_docs_path: data/anonymized/presidio_hybrid_documents.jsonl
+input_path: data/anonymized/regex_spacy_hybrid_documents.jsonl
+anonymized_docs_path: data/anonymized/regex_spacy_hybrid_documents.jsonl
 output_path: data/classified/classification_results__embedding.jsonl
 text_fields_priority:
 - anonymized_text

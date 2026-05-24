@@ -9,7 +9,7 @@ sources:
       - html
 
   synthetic:
-    enabled: false
+    enabled: true
     input_dir: data/synthetic/raw
     supported_types:
       - txt

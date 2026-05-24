@@ -1,0 +1,17 @@
+{
+  "variant": "regex_deberta_hybrid_context_filtered",
+  "stage": "hybrid_combination",
+  "config_path": "configs/anonymization/regex_deberta_hybrid_context_filtered.yaml",
+  "created_at": "2026-05-16T17:03:01.531308+00:00",
+  "doc_count": 66,
+  "char_count": 146695,
+  "entity_count": 800,
+  "runtime_seconds": 0.010864374926313758,
+  "throughput_docs_per_sec": 6074.900806317585,
+  "throughput_chars_per_sec": 13502387.48155694,
+  "latency_avg_ms": 0.010138296409312523,
+  "latency_p50_ms": 0.00879156868904829,
+  "latency_p95_ms": 0.01958332723006606,
+  "latency_max_ms": 0.03658398054540157,
+  "run_id": "20260516T170301531567Z"
+}
