@@ -13,7 +13,7 @@ Available taxonomy assigners:
 - `src/taxonomy/assign_taxonomy_baseline.py`: keyword baseline.
 - `src/taxonomy/assign_taxonomy_embeddings.py`: whole-document hierarchical embedding/keyword hybrid.
 - `src/taxonomy/assign_taxonomy_evidence.py`: chunk-evidence assigner that scores complete taxonomy paths, aggregates top supporting chunks, and flags low-margin cases for review.
-- `src/taxonomy/assign_taxonomy_rule_boosted.py`: recommended final taxonomy output; applies deterministic banking-domain rules on top of the best hybrid output.
+- `src/taxonomy/assign_taxonomy_literature_baselines.py`: literature-style TF-IDF baselines with Logistic Regression or Linear SVM, including flat Level 3 and top-down hierarchical classifiers.
 
 ## Reproducible Pipeline
 
@@ -75,28 +75,31 @@ conda run -n infoguide_env python src/taxonomy/assign_taxonomy_evidence.py \
   --store_debug
 ```
 
-Rule-boosted final output:
+Literature-style comparison baselines:
 
 ```bash
-conda run -n infoguide_env python src/taxonomy/assign_taxonomy_rule_boosted.py \
-  --documents data/processed/clean_documents.jsonl \
-  --base_predictions data/outputs/taxonomy_assignments_embeddings.jsonl \
-  --output data/outputs/taxonomy_assignments_rule_boosted.jsonl
+conda run -n infoguide_env python src/taxonomy/assign_taxonomy_literature_baselines.py \
+  --input data/processed/clean_documents.jsonl \
+  --labels data/labels/taxonomy_gold_labels.jsonl \
+  --output data/outputs/ablation/topdown_tfidf_logreg_loo.jsonl \
+  --method topdown_tfidf_logreg \
+  --train_mode leave_one_out
 ```
 
-### 5. Evaluate taxonomy accuracy
+### 5. Evaluate taxonomy agreement
 
 ```bash
 conda run -n infoguide_env python src/taxonomy/evaluate_taxonomy_accuracy.py \
-  --predictions data/outputs/taxonomy_assignments_rule_boosted.jsonl \
-  --gold data/labels/taxonomy_gold_labels.jsonl \
+  --predictions data/outputs/taxonomy_assignments_embeddings.jsonl \
+  --labels data/labels/taxonomy_gold_labels.jsonl \
   --show_errors
 ```
 
-Gold labels can be regenerated from the current reviewed/rule-normalized output:
+The single-annotator gold label file can be regenerated after document review:
 
 ```bash
-conda run -n infoguide_env python src/taxonomy/build_taxonomy_gold_labels.py
+conda run -n infoguide_env python src/taxonomy/build_taxonomy_gold_labels.py \
+  --labels data/labels/taxonomy_gold_labels.jsonl
 ```
 
 ### 6. Run ablation study and plots
@@ -114,8 +117,8 @@ Outputs:
 
 ## Current Taxonomy Result
 
-The recommended final taxonomy assignment file is:
+The recommended unsupervised/semantic taxonomy assignment file is:
 
-- `data/outputs/taxonomy_assignments_rule_boosted.jsonl`
+- `data/outputs/taxonomy_assignments_embeddings.jsonl`
 
-On the current 123-document provisional gold set, the rule-boosted hierarchical output reaches `123/123` internal consistency. This should be interpreted as a corpus-specific regression result, not a broad generalization claim; see `docs/taxonomy_evaluation.md` for limitations.
+On the current 123-document manual single-annotator gold label set, the strongest literature-style baseline is top-down TF-IDF + logistic regression with leave-one-out prediction: `68/123` full-path agreement and `101/123` Level 1 agreement. The flat TF-IDF + Linear SVM baseline is close behind at `67/123` full-path agreement. The best semantic embedding baseline reaches `51/123` full-path agreement and `84/123` Level 1 agreement. The deterministic rule-boosted variant was removed from the project outputs because its retrospective `123/123` agreement created a circular-evaluation credibility risk.

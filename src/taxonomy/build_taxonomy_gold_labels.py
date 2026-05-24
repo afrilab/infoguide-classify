@@ -1,4 +1,9 @@
-"""Build provisional hierarchical taxonomy labels from reviewed assignment output."""
+"""Build manual single-annotator hierarchical taxonomy label files.
+
+This utility serializes reviewed taxonomy assignments into the project label
+format. The resulting labels are treated as single-annotator gold labels; they
+are not double-annotated, so inter-annotator agreement is unavailable.
+"""
 
 from __future__ import annotations
 
@@ -46,8 +51,9 @@ def split_dev_test(records: List[Dict[str, Any]], test_ratio: float) -> tuple[li
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--documents", default="data/processed/clean_documents.jsonl")
-    ap.add_argument("--predictions", default="outputs/taxonomy/taxonomy_assignments_rule_boosted.jsonl")
-    ap.add_argument("--gold", default="outputs/taxonomy/labels/taxonomy_gold_labels.jsonl")
+    ap.add_argument("--predictions", default="outputs/taxonomy/taxonomy_assignments_embeddings.jsonl")
+    ap.add_argument("--labels", default="outputs/taxonomy/labels/taxonomy_gold_labels.jsonl")
+    ap.add_argument("--gold", dest="labels", help=argparse.SUPPRESS)
     ap.add_argument("--dev", default="outputs/taxonomy/labels/taxonomy_gold_dev.jsonl")
     ap.add_argument("--test", default="outputs/taxonomy/labels/taxonomy_gold_test.jsonl")
     ap.add_argument("--test_ratio", type=float, default=0.30)
@@ -59,9 +65,6 @@ def main() -> None:
         doc_id = pred["doc_id"]
         doc = docs.get(doc_id, {})
         taxonomy = pred.get("taxonomy") if isinstance(pred.get("taxonomy"), dict) else {}
-        rule_boost = (pred.get("debug") or {}).get("rule_boost") or {}
-        reason = rule_boost.get("reason")
-
         records.append(
             {
                 "doc_id": doc_id,
@@ -73,19 +76,26 @@ def main() -> None:
                     "level_2": taxonomy.get("level_2"),
                     "level_3": taxonomy.get("level_3"),
                 },
+                "annotation_status": "manual_single_annotator",
+                "label_source": "manual_document_review",
+                "independent_second_review": False,
                 "rationale": (
-                    "Assigned to banking taxonomy path "
+                    "Manual single-annotator banking taxonomy label: "
                     f"{taxonomy.get('level_1')} > {taxonomy.get('level_2')} > {taxonomy.get('level_3')}"
-                    + (f" using rule signal {reason}." if reason else " using embedding similarity fallback.")
+                    ". No second annotator was used; inter-annotator agreement is not available."
                 ),
             }
         )
 
     dev, test = split_dev_test(records, args.test_ratio)
-    write_jsonl(args.gold, records)
+    write_jsonl(args.labels, records)
     write_jsonl(args.dev, dev)
     write_jsonl(args.test, test)
 
+    print(
+        "WARNING: labels are manual single-annotator labels. "
+        "Inter-annotator agreement is not available without a second reviewer."
+    )
     print(f"gold={len(records)} {dict(Counter(r['taxonomy']['level_1'] for r in records))}")
     print(f"dev={len(dev)} {dict(Counter(r['taxonomy']['level_1'] for r in dev))}")
     print(f"test={len(test)} {dict(Counter(r['taxonomy']['level_1'] for r in test))}")

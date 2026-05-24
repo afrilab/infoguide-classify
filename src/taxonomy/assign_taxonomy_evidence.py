@@ -112,6 +112,8 @@ def sparse_cosine(vec_a: Dict[str, float], vec_b: Dict[str, float]) -> float:
 
 
 def load_sentence_transformer(model_name: str) -> Tuple[Optional[Any], Optional[Any], Optional[str]]:
+    if model_name.strip().lower() in {"local", "local_ngram", "none", "disabled"}:
+        return None, None, "embedding backend disabled by --model"
     try:
         from sentence_transformers import SentenceTransformer, util
 
